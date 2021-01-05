@@ -1,0 +1,15 @@
+body {
+  background-color: #a8d4d9;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-attachment: fixed;
+  background-position: center;
+  animation-name: bggrass;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+}
+
+/*# sourceMappingURL=mobile.css.map */

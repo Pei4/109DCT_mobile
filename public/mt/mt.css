@@ -1,0 +1,5 @@
+@keyframes bggrass {
+    0% {background-image: url("../material/mobilebggrass.jpg")}
+    50% {background-image: url("../material/mobilebggrass_2.jpg")}
+    100% {background-image: url("../material/mobilebggrass.jpg")}
+}
