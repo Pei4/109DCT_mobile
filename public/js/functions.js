@@ -1,4 +1,5 @@
 const Instascan = require('instascan');
+
 let checkpoint = 0;
 let planetDialogNum = -1;
 let meDialogNum = -1;

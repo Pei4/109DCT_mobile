@@ -19,7 +19,7 @@ img {
   position: absolute;
   max-width: 80%;
   max-height: 80%;
-  bottom: 20vh;
+  bottom: 15vh;
   left: 50vw;
   transform: translate(-50%, 0);
 }
@@ -73,7 +73,7 @@ img {
   position: absolute;
   top: 15vh;
   width: 100vw;
-  height: 40vh;
+  height: 50vh;
 }
 
 /*# sourceMappingURL=mobile.css.map */
