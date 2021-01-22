@@ -1,3 +1,4 @@
+const Instascan = require('instascan');
 let checkpoint = 0;
 let planetDialogNum = -1;
 let meDialogNum = -1;
@@ -54,7 +55,7 @@ function dialogControl(){
     if(checkpoint == 1){
         showSth('lv1Btn');
         disableSth('nextBtn');
-    }
+    };
     if(meCont.includes(checkpoint)){
         meDialogNum ++;
         changeHtml('me',meDialogArray[meDialogNum]);
@@ -66,7 +67,7 @@ function dialogControl(){
         changeHtml('planet',planetDialogArray[planetDialogNum]);
         showSth('planet');
         hideSth('me');
-    }
+    };
 };
 
 function btnCheck(){
@@ -76,7 +77,18 @@ function btnCheck(){
     showSth('me');
     hideSth('planet');
     document.querySelector('#main').style.display = 'none';
-
     //instacan
-    /**/
+    let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+    scanner.addListener('scan', function (content) {
+        alert(content);
+    });
+    Instascan.Camera.getCameras().then(function (cameras) {
+        if (cameras.length > 0) {
+            scanner.start(cameras[0]);
+        } else {
+            console.error('No cameras found.');
+        }
+    }).catch(function (e) {
+        alert(e);
+    });
 }
