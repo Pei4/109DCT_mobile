@@ -32,7 +32,7 @@ img {
 
 #lv1Btn {
   position: fixed;
-  bottom: 22vh;
+  bottom: 17vh;
   right: 15px;
 }
 
@@ -41,7 +41,7 @@ img {
   bottom: 0;
   background-color: #1E1E1E;
   width: 100vw;
-  height: 20vh;
+  height: 15vh;
 }
 
 #me {
@@ -71,8 +71,9 @@ img {
 #insta {
   background-color: #1E1E1E;
   position: absolute;
+  top: 15vh;
   width: 100vw;
-  height: 50vh;
+  height: 40vh;
 }
 
 /*# sourceMappingURL=mobile.css.map */
