@@ -68,4 +68,10 @@ img {
   text-shadow: 0px 0px 15px #FFFFFF;
 }
 
+#insta {
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
+}
+
 /*# sourceMappingURL=mobile.css.map */

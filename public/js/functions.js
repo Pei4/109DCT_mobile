@@ -78,8 +78,8 @@ function btnCheck(){
     document.querySelector('#main').style.display = 'none';
 }
 
-//instacam
-let scanner = new Instascan.Scanner({
+//instacan
+/*let scanner = new Instascan.Scanner({
     video: document.getElementById('preview')
 });
 scanner.addEventListener()('scan', function(content) {
@@ -93,4 +93,4 @@ Instascan.Camera.getCameras().then(function(cameras) {
     }
 }).catch(function(e) {
     console.error(e);
-});
+});*/
