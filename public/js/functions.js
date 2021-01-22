@@ -55,7 +55,7 @@ function dialogControl(){
     if(checkpoint == 1){
         showSth('lv1Btn');
         disableSth('nextBtn');
-    };
+    }
     if(meCont.includes(checkpoint)){
         meDialogNum ++;
         changeHtml('me',meDialogArray[meDialogNum]);
@@ -67,8 +67,8 @@ function dialogControl(){
         changeHtml('planet',planetDialogArray[planetDialogNum]);
         showSth('planet');
         hideSth('me');
-    };
-};
+    }
+}
 
 function btnCheck(){
     checkpoint ++;
