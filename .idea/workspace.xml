@@ -12,6 +12,7 @@
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -27,23 +28,28 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/html" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion" />
-      <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion\public" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion\web_scss" />
       <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion" />
       <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion\public" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\109DCT_mobile\public\html" />
+      <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion" />
+      <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion\public" />
+    </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.wt.html">
+  <component name="RunManager" selected="JavaScript Debug.lv1.html">
+    <configuration name="lv1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/109DCT_mobile/public/html/lv1.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="mt.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LongCompanion/public/mt/mt.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -58,6 +64,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.lv1.html" />
         <item itemvalue="JavaScript Debug.wt.html" />
         <item itemvalue="JavaScript Debug.mt.html" />
         <item itemvalue="JavaScript Debug.template.html (1)" />
@@ -83,6 +90,7 @@
       <workItem from="1609256724789" duration="656000" />
       <workItem from="1609571642228" duration="32000" />
       <workItem from="1609826692499" duration="622000" />
+      <workItem from="1611217254511" duration="7445000" />
     </task>
     <servers />
   </component>
@@ -102,5 +110,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1609210069517" />
+    <state x="753" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1611287016058">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="753" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1611287016058" />
   </component>
 </project>

@@ -1,4 +1,4 @@
-@mixin flash($name,$dur){
+/*@mixin flash($name,$dur){
   animation-name: $name;
   animation-duration: $dur;
   animation-iteration-count: infinite;
@@ -14,4 +14,38 @@ body {
   background-attachment: fixed;
   background-position: center;
   @include flash(bggrass,0.8s);
+}*/
+#lv1Btn{
+  position: fixed;
+  bottom: 22vh;
+  right:15px;
+}
+#dialog{
+  position: fixed;
+  bottom: 0;
+  background-color: #1E1E1E;
+  width: 100vw;
+  height: 20vh;
+}
+#me{
+  position: absolute;
+  display: block;
+  margin: 15px;
+  font-family: Noto Sans CJK TC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  color: #FFFFFF;
+  text-shadow: 0px 0px 15px #FFFFFF;
+}
+#planet{
+  position: absolute;
+  display: block;
+  margin: 15px;
+  font-family: Noto Sans CJK TC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  color: #FFE352;
+  text-shadow: 0px 0px 15px #FFFFFF;
 }
