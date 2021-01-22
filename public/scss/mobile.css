@@ -69,6 +69,7 @@ img {
 }
 
 #preview {
+  background-color: #1E1E1E;
   position: absolute;
   width: 100vw;
   height: 50vh;
