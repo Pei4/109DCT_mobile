@@ -40,18 +40,21 @@ function hideSth(sth){
     document.getElementById(sth).style.display = 'none';
 }
 function disableSth(sth){
-    document.querySelector(sth).style.pointerEvents = 'none';
+    document.getElementById(sth).disabled = true;
 }
 function enableSth(sth){
-    document.querySelector(`#${sth}`).style.pointerEvents = 'auto';
+    document.getElementById(sth).disabled = false;
 }
 function changeHtml(id,what){
     document.getElementById(id).innerHTML = what;
 }
 
-
 function dialogControl(){
     checkpoint ++;
+    if(checkpoint == 1){
+        showSth('lv1Btn');
+        disableSth('nextBtn');
+    }
     if(meCont.includes(checkpoint)){
         meDialogNum ++;
         changeHtml('me',meDialogArray[meDialogNum]);
@@ -64,9 +67,30 @@ function dialogControl(){
         showSth('planet');
         hideSth('me');
     }
-    if(checkpoint == 1){
-        console.log('stopDialog');
-        showSth('lv1Btn');
-        disableSth('dialog');
-    }
 };
+
+function btnCheck(){
+    checkpoint ++;
+    meDialogNum ++;
+    changeHtml('me',meDialogArray[meDialogNum]);
+    showSth('me');
+    hideSth('planet');
+    document.querySelector('#main').style.display = 'none';
+}
+
+//instacam
+let scanner = new Instascan.Scanner({
+    video: document.getElementById('preview')
+});
+scanner.addEventListener()('scan', function(content) {
+    console.log(content);
+});
+Instascan.Camera.getCameras().then(function(cameras) {
+    if (cameras.length > 0) {
+        scanner.start(cameras[0]);
+    } else {
+        console.error('No cameras found.');
+    }
+}).catch(function(e) {
+    console.error(e);
+});

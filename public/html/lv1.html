@@ -7,15 +7,22 @@
     <link rel=stylesheet type="text/css" href="../reset.css">
     <link rel="stylesheet" type="text/css" href="../scss/mobile.css">
     <script src="../js/functions.js"></script>
+    <script type="text/javascript" src="instascan.min.js"></script>
 </head>
 <body>
 <div id="star"></div>
 <div id="main">
-    <button id="lv1Btn" style="display: none"><img src="">水</button>
+    <img src="../material/handplanet_0.png">
+    <button id="lv1Btn" style="display: none" onclick="btnCheck()"><img src="">水</button>
 </div>
-<div id="dialog" onclick="dialogControl()">
+<div id="instacam">
+    <video id="preview"></video>
+
+</div>
+<div id="dialog">
     <a id="me" style="display: none"></a>
     <a id="planet">我好乾...好渴喔...</a>
+    <button id="nextBtn" onclick="dialogControl()">下</button>
 </div>
 </body>
 </html>

@@ -15,6 +15,21 @@ body {
   background-position: center;
   @include flash(bggrass,0.8s);
 }*/
+img {
+  position: absolute;
+  max-width: 80%;
+  max-height: 80%;
+  bottom: 20vh;
+  left: 50vw;
+  transform: translate(-50%, 0);
+}
+
+#nextBtn {
+  position: fixed;
+  bottom: 5vh;
+  right: 15px;
+}
+
 #lv1Btn {
   position: fixed;
   bottom: 22vh;
