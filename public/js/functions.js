@@ -1,6 +1,9 @@
 let checkpoint = 0;
 let planetDialogNum = -1;
 let meDialogNum = -1;
+let scanner = new Instascan.Scanner({
+    video: document.getElementById('preview')
+});
 
 let planetDialogArray =[
     '我...好餓',
@@ -78,9 +81,6 @@ function btnCheck(){
     hideSth('planet');
     hideSth('main');
     //instacan
-    let scanner = new Instascan.Scanner({
-        video: document.getElementById('preview')
-    });
     alert(scanner.video.id);
     scanner.addListener('scan', function (content) {
         alert(content);
