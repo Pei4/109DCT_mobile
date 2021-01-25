@@ -1,8 +1,6 @@
 let checkpoint = 0;
 let planetDialogNum = -1;
 let meDialogNum = -1;
-let scanner = new Instascan.Scanner({video: document.getElementById('preview')});
-
 let planetDialogArray =[
     '我...好餓',
     '我小星球啦',
@@ -33,6 +31,7 @@ let meDialogArray =[
 ];
 let planetCont = [3,7,8,9,10,11,12,13,14,17,19,20,21,22,23,24,25];
 let meCont = [1,2,4,5,6,15,16,18];
+let scanner = new Instascan.Scanner({video: document.getElementById('preview')});
 
 function showSth(sth){
     document.getElementById(sth).style.display = 'block';
