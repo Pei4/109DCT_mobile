@@ -88,8 +88,8 @@ function btnCheck(){
         if (cameras.length > 0) {
             scanner.start(cameras[0]);
         }
-        else{
-            scanner.start(cameras);
+        else {
+            console.error('No cameras found.');
         }
     }).catch(function (e) {
         alert.error(e);
