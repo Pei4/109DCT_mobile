@@ -81,7 +81,7 @@ function btnCheck(){
     let scanner = new Instascan.Scanner({
         video: document.querySelector('#preview')
     });
-    alert(scanner);
+    alert(scanner.video);
     scanner.addListener('scan', function (content) {
         alert(content);
     });
