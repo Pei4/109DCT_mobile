@@ -79,7 +79,7 @@ function btnCheck(){
     hideSth('main');
     //instacan
     let scanner = new Instascan.Scanner({
-        video: document.getElementById('preview')
+        video: document.querySelector('#preview')
     });
     scanner.addListener('scan', function (content) {
         alert(content);
