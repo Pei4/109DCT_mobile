@@ -74,8 +74,9 @@ function btnCheck(){
     meDialogNum ++;
     changeHtml('me',meDialogArray[meDialogNum]);
     showSth('me');
+    showSth('insta');
     hideSth('planet');
-    document.querySelector('#main').style.display = 'none';
+    hideSth('main');
     //instacan
     let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
     scanner.addListener('scan', function (content) {
