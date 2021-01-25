@@ -76,6 +76,7 @@ function btnCheck(){
     showSth('insta');
     hideSth('planet');
     hideSth('main');
+    document.getElementById('preview').play();
     //instacan
     /*let scanner = new Instascan.Scanner({video: document.getElementById('preview')});
     alert(scanner.video.id);
