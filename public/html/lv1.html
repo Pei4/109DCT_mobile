@@ -17,6 +17,25 @@
 </div>
 <div id="insta" style="display: none">
     <video id="preview" autoplay="autoplay"></video>
+    <script type="text/javascript">
+        //instacan
+        let scanner = new Instascan.Scanner({
+            video: document.getElementById('preview')
+        });
+        scanner.addListener('scan', function (content) {
+            alert(content);
+        });
+        Instascan.Camera.getCameras().then(function (cameras) {
+            if (cameras.length > 0) {
+                scanner.start(cameras[0]);
+            }
+            else {
+                console.error('No cameras found.');
+            }
+        }).catch(function (e) {
+            alert.error(e);
+        });
+    </script>
 </div>
 <div id="dialog">
     <a id="me" style="display: none"></a>
