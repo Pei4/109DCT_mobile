@@ -77,7 +77,7 @@ function btnCheck(){
     hideSth('planet');
     hideSth('main');
     //instacan
-    let scanner = new Instascan.Scanner({video: document.getElementById('preview')});
+    /*let scanner = new Instascan.Scanner({video: document.getElementById('preview')});
     alert(scanner.video.id);
     scanner.addListener('scan', function (content) {
         alert(content);
@@ -91,5 +91,5 @@ function btnCheck(){
         }
     }).catch(function (e) {
         alert(e);
-    });
+    });*/
 }
