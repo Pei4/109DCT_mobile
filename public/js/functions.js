@@ -31,6 +31,11 @@ let meDialogArray =[
 ];
 let planetCont = [3,7,8,9,10,11,12,13,14,17,19,20,21,22,23,24,25];
 let meCont = [1,2,4,5,6,15,16,18];
+//WebRTC
+let width = 320;
+let height = 0;
+let streaming = false;
+let preview = null;
 
 function showSth(sth){
     document.getElementById(sth).style.display = 'block';
@@ -76,9 +81,8 @@ function btnCheck(){
     showSth('insta');
     hideSth('planet');
     hideSth('main');
-    document.getElementById('preview').play();
     //instascan
-    let scanner = new Instascan.Scanner({continuous: true,video: document.getElementById('preview'),scanPeriod:5});
+    /*let scanner = new Instascan.Scanner({continuous: true,video: document.getElementById('preview'),scanPeriod:5});
     scanner.addListener('scan', function (content) {
         alert(content);
     });
@@ -91,5 +95,35 @@ function btnCheck(){
         }
     }).catch(function (e) {
         alert(e);
-    });
+    });*/
+    //WebRTC
+    startup();
+    function startup(){
+        preview = document.getElementById('preview');
+        navigator.getMedia(
+            navigator.getUserMedia ||
+            navigator.webkitGetUserMedia ||
+            navigator.mozGetUserMedia ||
+            navigator.msGetUserMedia
+        );
+        navigator.getMedia(
+            {
+                video: true,
+                audio: false
+            },
+            function(stream){
+                if(navigator.mozGetUserMedia){
+                    preview.mozSrcObject = stream;
+                }
+                else{
+                    let vendorURL = window.URL || window.webkitURL;
+                    preview.src = vendorURL.createObjectURL(stream);
+                }
+                preview.play();
+            },
+            function(err){
+                alert('An error occured: '+err);
+            }
+        );
+    }
 }
