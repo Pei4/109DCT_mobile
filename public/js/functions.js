@@ -100,7 +100,7 @@ function btnCheck(){
     startup();
     function startup(){
         preview = document.getElementById('preview');
-        navigator.getMedia(
+        navigator.getMedia=(
             navigator.getUserMedia ||
             navigator.webkitGetUserMedia ||
             navigator.mozGetUserMedia ||
