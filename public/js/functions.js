@@ -76,8 +76,22 @@ function btnCheck(){
     showSth('insta');
     hideSth('planet');
     hideSth('main');
-    //document.getElementById('preview').play();
-    var constraints = {video: true};
+    //instascan
+    /*let scanner = new Instascan.Scanner({video: document.getElementById('preview'),scanPeriod:5});
+    scanner.addListener('scan', function (content) {
+        alert(content);
+    });
+    Instascan.Camera.getCameras().then(function (cameras) {
+        if (cameras.length > 0) {
+            scanner.start(cameras[0]);
+        }
+        else {
+            alert('No cameras found.');
+        }
+    }).catch(function (e) {
+        alert(e);
+    });*/
+    var constraints = {video: {facingMode: { exact: "environment" } }};
     var video = document.querySelector('#preview');
     function handleSuccess(stream) {
         window.stream = stream; // only to make stream available to console
