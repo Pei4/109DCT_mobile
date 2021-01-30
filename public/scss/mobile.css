@@ -20,8 +20,10 @@ img {
   max-height: 80%;
 }
 
-#star img {
-  margin: 3vh 3vh 0 0;
+#star {
+  float: right;
+  top: 2vh;
+  right: 2vh;
 }
 
 #main img {
@@ -57,7 +59,7 @@ img {
   font-family: Noto Sans CJK TC;
   font-style: normal;
   font-weight: normal;
-  font-size: 6.5vw;
+  font-size: 6.4vw;
 }
 
 #me {
