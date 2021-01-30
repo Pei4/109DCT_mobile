@@ -78,7 +78,7 @@ function btnCheck(){
     hideSth('main');
     document.getElementById('preview').play();
     //instascan
-    let scanner = new Instascan.Scanner({video: document.getElementById('preview'),scanPeriod:5});
+    /*let scanner = new Instascan.Scanner({video: document.getElementById('preview'),scanPeriod:5});
     scanner.addListener('scan', function (content) {
         alert(content);
     });
@@ -91,5 +91,22 @@ function btnCheck(){
         }
     }).catch(function (e) {
         alert(e);
-    });
+    });*/
+    var constraints = {
+        video: true
+    };
+
+    var video = document.querySelector('#preview');
+
+    function handleSuccess(stream) {
+        window.stream = stream; // only to make stream available to console
+        video.srcObject = stream;
+    }
+
+    function handleError(error) {
+        console.log('getUserMedia error: ', error);
+    }
+
+    navigator.mediaDevices.getUserMedia(constraints).
+    then(handleSuccess).catch(handleError);
 }
