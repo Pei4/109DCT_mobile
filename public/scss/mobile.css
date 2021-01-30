@@ -16,9 +16,12 @@ body {
   @include flash(bggrass,0.8s);
 }*/
 img {
-  position: absolute;
   max-width: 80%;
   max-height: 80%;
+}
+
+#main img {
+  position: absolute;
   bottom: 15vh;
   left: 50vw;
   transform: translate(-50%, 0);
