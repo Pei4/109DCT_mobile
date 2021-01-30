@@ -20,7 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f04ad6df-73fa-4367-9788-90d2fd4086d0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/html/instascan.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/html/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/instascan.min.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
