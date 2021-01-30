@@ -78,7 +78,7 @@ function btnCheck(){
     hideSth('main');
     document.getElementById('preview').play();
     //instascan
-    let scanner = new Instascan.Scanner({continuous: true,video: document.getElementById('preview'),scanPeriod:5});
+    let scanner = new Instascan.Scanner({video: document.getElementById('preview'),scanPeriod:5});
     scanner.addListener('scan', function (content) {
         alert(content);
     });
