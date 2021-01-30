@@ -91,11 +91,12 @@ function btnCheck(){
     }).catch(function (e) {
         alert(e);
     });*/
-    var constraints = {video: {facingMode: { exact: "environment" } }};
-    var video = document.querySelector('#preview');
-    constraints.addListener('scan', function(content) {
+    let scanner = new Instascan.Scanner({video: document.getElementById('preview'),scanPeriod:5});
+    scanner.addListener('scan', function (content) {
         alert(content);
     });
+    var constraints = {video: {facingMode: { exact: "environment" } }};
+    var video = document.querySelector('#preview');
     function handleSuccess(stream) {
         window.stream = stream;
         video.srcObject = stream;
