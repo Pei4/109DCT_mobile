@@ -91,15 +91,14 @@ function btnCheck(){
     }).catch(function (e) {
         alert(e);
     });*/
-    let scanner = new Instascan.Scanner({video: document.getElementById('preview'),scanPeriod:5});
-    scanner.addListener('scan', function (content) {
-        alert('scan!');
-    });
-    var constraints = {video: {facingMode: { exact: "environment" } }};
-    var video = document.querySelector('#preview');
+    let constraints = {video: {facingMode: { exact: "environment" } }};
+    let video = document.querySelector('#preview');
     function handleSuccess(stream) {
         window.stream = stream;
         video.srcObject = stream;
+        video.addListener('scan', function (content) {
+            alert('scan!');
+        });
     }
     function handleError(error) {
         console.log('getUserMedia error: ', error);
