@@ -93,7 +93,7 @@ function btnCheck(){
     });*/
     let scanner = new Instascan.Scanner({video: document.getElementById('preview'),scanPeriod:5});
     scanner.addListener('scan', function (content) {
-        alert(content);
+        alert('scan!');
     });
     var constraints = {video: {facingMode: { exact: "environment" } }};
     var video = document.querySelector('#preview');
