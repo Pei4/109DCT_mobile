@@ -72,9 +72,7 @@ img {
   background-color: #1E1E1E;
   position: absolute;
   top: 5vh;
-  left: 50vw;
   /*height: 70vh;*/
-  transform: translate(-50, 0);
   object-fit: cover;
 }
 
