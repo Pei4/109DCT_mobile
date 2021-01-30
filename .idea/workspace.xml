@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f04ad6df-73fa-4367-9788-90d2fd4086d0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/html/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/html/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/test.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,11 +40,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1lx8CKdcGDJ53aeH7BpGhQeGKoT" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -129,6 +133,9 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="0" y="104" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1609826875800">
       <screen x="0" y="0" width="1280" height="680" />
@@ -138,6 +145,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="82" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1609571660874" />
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1611996446092">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1611996446092" />
+    <state width="1259" height="163" key="GridCell.Tab.0.center" timestamp="1611996446092">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1611996446092" />
+    <state width="1259" height="163" key="GridCell.Tab.0.left" timestamp="1611996446092">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1611996446092" />
+    <state width="1259" height="163" key="GridCell.Tab.0.right" timestamp="1611996446092">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1611996446092" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1611303689253">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
