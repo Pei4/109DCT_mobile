@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f04ad6df-73fa-4367-9788-90d2fd4086d0" name="Default Changelist" comment="" />
+    <list default="true" id="f04ad6df-73fa-4367-9788-90d2fd4086d0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +48,7 @@
       <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion\public" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.lv1.html">
+  <component name="RunManager" selected="Node.js.instascan.min.js">
     <configuration name="lv1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/109DCT_mobile/public/html/lv1.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -56,19 +58,19 @@
     <configuration name="template.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LongCompanion/public/mobile templates/template.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="template.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LongCompanion/public/templates/template.html" useBuiltInWebServerPort="true">
+    <configuration name="wt.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LongCompanion/public/wt/wt.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="wt.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LongCompanion/public/wt/wt.html" useBuiltInWebServerPort="true">
+    <configuration name="instascan.min.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/public/js/instascan.min.js" working-dir="$PROJECT_DIR$/public/js">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.instascan.min.js" />
         <item itemvalue="JavaScript Debug.lv1.html" />
         <item itemvalue="JavaScript Debug.wt.html" />
         <item itemvalue="JavaScript Debug.mt.html" />
         <item itemvalue="JavaScript Debug.template.html (1)" />
-        <item itemvalue="JavaScript Debug.template.html" />
       </list>
     </recent_temporary>
   </component>
@@ -91,7 +93,8 @@
       <workItem from="1609571642228" duration="32000" />
       <workItem from="1609826692499" duration="622000" />
       <workItem from="1611217254511" duration="14515000" />
-      <workItem from="1611559930701" duration="14994000" />
+      <workItem from="1611559930701" duration="15362000" />
+      <workItem from="1611995648459" duration="168000" />
     </task>
     <servers />
   </component>
