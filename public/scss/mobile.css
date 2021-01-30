@@ -73,8 +73,15 @@ img {
   position: absolute;
   top: 5vh;
   left: 50vw;
-  height: 70vh;
+  /*height: 70vh;*/
   transform: translate(-50, 0);
+  object-fit: cover;
+}
+
+@media (min-width: 100vw) {
+  #preview {
+    height: 70vh;
+  }
 }
 
 /*# sourceMappingURL=mobile.css.map */

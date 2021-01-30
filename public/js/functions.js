@@ -94,7 +94,7 @@ function btnCheck(){
     var constraints = {video: {facingMode: { exact: "environment" } }};
     var video = document.querySelector('#preview');
     function handleSuccess(stream) {
-        window.stream = stream; // only to make stream available to console
+        window.stream = stream;
         video.srcObject = stream;
     }
     function handleError(error) {
