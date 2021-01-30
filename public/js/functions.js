@@ -79,10 +79,10 @@ function btnCheck(){
     //instascan
     let constraints = {video: {facingMode: { exact: "environment" } }};
     let video = document.querySelector('#preview');
+    video.addListener('scan', function (content) {alert('scan!');});
     function handleSuccess(stream) {
         window.stream = stream;
         video.srcObject = stream;
-        stream.addListener('scan', function (content) {alert('scan!');});
     }
     function handleError(error) {
         console.log('getUserMedia error: ', error);
