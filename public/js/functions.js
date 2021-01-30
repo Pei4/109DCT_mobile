@@ -93,6 +93,9 @@ function btnCheck(){
     });*/
     var constraints = {video: {facingMode: { exact: "environment" } }};
     var video = document.querySelector('#preview');
+    scanner.addListener('scan', function(content) {
+        alert(content);
+    });
     function handleSuccess(stream) {
         window.stream = stream;
         video.srcObject = stream;
