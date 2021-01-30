@@ -77,28 +77,12 @@ function btnCheck(){
     hideSth('planet');
     hideSth('main');
     //instascan
-    /*let scanner = new Instascan.Scanner({video: document.getElementById('preview'),scanPeriod:5});
-    scanner.addListener('scan', function (content) {
-        alert(content);
-    });
-    Instascan.Camera.getCameras().then(function (cameras) {
-        if (cameras.length > 0) {
-            scanner.start(cameras[0]);
-        }
-        else {
-            alert('No cameras found.');
-        }
-    }).catch(function (e) {
-        alert(e);
-    });*/
     let constraints = {video: {facingMode: { exact: "environment" } }};
     let video = document.querySelector('#preview');
     function handleSuccess(stream) {
         window.stream = stream;
         video.srcObject = stream;
-        video.addListener('scan', function (content) {
-            alert('scan!');
-        });
+        stream.addListener('scan', function (content) {alert('scan!');});
     }
     function handleError(error) {
         console.log('getUserMedia error: ', error);
