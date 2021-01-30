@@ -20,9 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f04ad6df-73fa-4367-9788-90d2fd4086d0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/html/instascan.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/html/instascan.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/instascan.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/html/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/instascan.min.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,18 +61,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion\web_scss" />
-      <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion" />
-      <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion\public" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\109DCT_mobile\public\html" />
       <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion" />
       <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion\public" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\109DCT_mobile\public\js" />
+      <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion\web_scss" />
+      <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion" />
+      <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion\public" />
+    </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.lv1.html">
+  <component name="RunManager" selected="JavaScript Debug.test.html">
     <configuration name="lv1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/109DCT_mobile/public/html/lv1.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -82,7 +83,7 @@
     <configuration name="template.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LongCompanion/public/mobile templates/template.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="template.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LongCompanion/public/templates/template.html" useBuiltInWebServerPort="true">
+    <configuration name="test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/109DCT_mobile/public/html/test.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="wt.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LongCompanion/public/wt/wt.html" useBuiltInWebServerPort="true">
@@ -90,11 +91,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.test.html" />
         <item itemvalue="JavaScript Debug.lv1.html" />
         <item itemvalue="JavaScript Debug.wt.html" />
         <item itemvalue="JavaScript Debug.mt.html" />
         <item itemvalue="JavaScript Debug.template.html (1)" />
-        <item itemvalue="JavaScript Debug.template.html" />
       </list>
     </recent_temporary>
   </component>
