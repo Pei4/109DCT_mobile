@@ -19,6 +19,9 @@ img{
   max-width: 80%;
   max-height: 80%;
 }
+#star img{
+  margin: 3vh 3vh 0 0;
+}
 #main img{
   position: absolute;
   bottom: 15vh;
@@ -41,26 +44,21 @@ img{
   background-color: #1E1E1E;
   width: 100vw;
   height: 15vh;
+  a{
+    position: absolute;
+    display: block;
+    margin: 15px;
+    font-family: Noto Sans CJK TC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 6.5vw;
+  }
 }
 #me{
-  position: absolute;
-  display: block;
-  margin: 15px;
-  font-family: Noto Sans CJK TC;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
   color: #FFFFFF;
   text-shadow: 0px 0px 15px #FFFFFF;
 }
 #planet{
-  position: absolute;
-  display: block;
-  margin: 15px;
-  font-family: Noto Sans CJK TC;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
   color: #FFE352;
   text-shadow: 0px 0px 15px #FFFFFF;
 }
