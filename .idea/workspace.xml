@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f04ad6df-73fa-4367-9788-90d2fd4086d0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/functions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +32,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -71,14 +72,11 @@
       <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion\public" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.test.html">
+  <component name="RunManager" selected="Node.js.functions.js">
     <configuration name="lv1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/109DCT_mobile/public/html/lv1.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="mt.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LongCompanion/public/mt/mt.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="template.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LongCompanion/public/mobile templates/template.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/109DCT_mobile/public/html/test.html" useBuiltInWebServerPort="true">
@@ -87,13 +85,16 @@
     <configuration name="wt.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LongCompanion/public/wt/wt.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="functions.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/public/js/functions.js" working-dir="$PROJECT_DIR$/public/js">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.functions.js" />
         <item itemvalue="JavaScript Debug.test.html" />
         <item itemvalue="JavaScript Debug.lv1.html" />
         <item itemvalue="JavaScript Debug.wt.html" />
         <item itemvalue="JavaScript Debug.mt.html" />
-        <item itemvalue="JavaScript Debug.template.html (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -146,22 +147,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="82" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1609571660874" />
-    <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1611996446092">
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1612084021545">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1611996446092" />
-    <state width="1259" height="163" key="GridCell.Tab.0.center" timestamp="1611996446092">
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1612084021545" />
+    <state width="1259" height="163" key="GridCell.Tab.0.center" timestamp="1612084021545">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1611996446092" />
-    <state width="1259" height="163" key="GridCell.Tab.0.left" timestamp="1611996446092">
+    <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1612084021545" />
+    <state width="1259" height="163" key="GridCell.Tab.0.left" timestamp="1612084021544">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1611996446092" />
-    <state width="1259" height="163" key="GridCell.Tab.0.right" timestamp="1611996446092">
+    <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1612084021544" />
+    <state width="1259" height="163" key="GridCell.Tab.0.right" timestamp="1612084021545">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1611996446092" />
+    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1612084021545" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1611303689253">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
