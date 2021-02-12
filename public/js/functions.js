@@ -77,15 +77,16 @@ function btnCheck(){
     hideSth('planet');
     hideSth('main');
     //instascan
+    let scanner = new Instascan.Scanner();
+    scanner.addListener('scan', function (content) {
+        alert('scan!');
+        alert(content);
+    });
     let constraints = {video: {facingMode: { exact: "environment" } }};
     let video = document.querySelector('#preview');
     function handleSuccess(stream) {
         window.stream = stream;
         video.srcObject = stream;
-        constraints.addListener('scan', function (content) {
-            alert('scan');
-            alert(content);
-        });
     }
     function handleError(error) {
         console.log('getUserMedia error: ', error);
