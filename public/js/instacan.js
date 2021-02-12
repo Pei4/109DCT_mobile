@@ -10,6 +10,6 @@ function triggerInstas(){
         console.log('getUserMedia error: ', error);
     }
     scanner.addEventListener('scan',function(content){
-        alert(content);
+        alert('scan!');
     });
 }
