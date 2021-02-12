@@ -78,10 +78,11 @@ function btnCheck(){
     hideSth('main');
     //instascan
     let self = this;
-    self.scanner = new Instascan.Scanner({video: document.querySelector('#preview'), mirror: false, facingMode: { exact: "environment" }});
+    self.scanner = new Instascan.Scanner();
     self.scanner.addListener('scan', function (){
         alert('scan!');
     });
+    let constraints = {video: {facingMode: { exact: "environment" } }};
     let video = document.querySelector('#preview');
     function handleSuccess(stream) {
         window.stream = stream;
@@ -90,6 +91,8 @@ function btnCheck(){
     function handleError(error) {
         console.log('getUserMedia error: ', error);
     }
+    navigator.mediaDevices.getUserMedia(constraints).
+    then(handleSuccess).catch(handleError);
     /*
     let constraints = {video: {facingMode: { exact: "environment" } }};
     let video = document.querySelector('#preview');
