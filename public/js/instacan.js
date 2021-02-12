@@ -1,4 +1,5 @@
 function triggerInstas(){
+    const Instascan = require('instascan');
     let scanner = new Instascan.Scanner({video: {facingMode: { exact: "environment" } }});
     let video = document.querySelector('#preview');
     function handleSuccess(stream) {
