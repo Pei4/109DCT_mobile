@@ -79,7 +79,7 @@ function btnCheck(){
     //in
     //stascan
     let self = this;
-    self.scanner = new Instascan.Scanner({video: document.querySelector('#preview')});
+    self.scanner = new Instascan.Scanner({video: document.querySelector('#preview'), mirror: false});
     self.scanner.addListener('scan', function (content, image){
         self.scans.unshift({content: content});
     });
