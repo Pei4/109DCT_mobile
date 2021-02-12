@@ -78,10 +78,6 @@ function btnCheck(){
     hideSth('main');
     //instascan
     let scanner = new Instascan.Scanner();
-    scanner.addListener('scan', function (content) {
-        alert('scan!');
-        alert(content);
-    });
     let constraints = {video: {facingMode: { exact: "environment" } }};
     let video = document.querySelector('#preview');
     function handleSuccess(stream) {
@@ -94,6 +90,11 @@ function btnCheck(){
     navigator.mediaDevices.getUserMedia(constraints)
         .then(handleSuccess)
         .catch(handleError)
+    scanner.addListener('scan', function (content) {
+        alert('scan!');
+        alert(content);
+    });
+
 
     /*
     let constraints = {video: {facingMode: { exact: "environment" } }};
