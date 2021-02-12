@@ -86,13 +86,9 @@ function btnCheck(){
     function handleError(error) {
         console.log('getUserMedia error: ', error);
     }
-    navigator.mediaDevices.getUserMedia(constraints).
-    then(handleSuccess).catch(handleError);
-    let scanner = new Instascan.Scanner();
-    scanner.addListener('scan', function (){
-        alert('scan!');
-    });
-
+    navigator.mediaDevices.getUserMedia(constraints)
+        .then(function (){alert('yes');})
+        .catch(function(){alert('no');});
     /*
     let constraints = {video: {facingMode: { exact: "environment" } }};
     let video = document.querySelector('#preview');
