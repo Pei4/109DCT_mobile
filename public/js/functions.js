@@ -82,13 +82,18 @@ function btnCheck(){
     function handleSuccess(stream) {
         window.stream = stream;
         video.srcObject = stream;
+        constraints.addListener('scan', function (content) {
+            alert('scan');
+            alert(content);
+        });
     }
     function handleError(error) {
         console.log('getUserMedia error: ', error);
     }
     navigator.mediaDevices.getUserMedia(constraints)
-        .then(function (){alert('yes');})
-        .catch(function(){alert('no');});
+        .then(handleSuccess)
+        .catch(handleError)
+
     /*
     let constraints = {video: {facingMode: { exact: "environment" } }};
     let video = document.querySelector('#preview');
