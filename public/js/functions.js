@@ -76,7 +76,6 @@ function btnCheck(){
     showSth('insta');
     hideSth('planet');
     hideSth('main');
-    triggerInstas();
     //in
     //stascan
     let self = this;
