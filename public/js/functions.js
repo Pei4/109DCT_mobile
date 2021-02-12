@@ -76,12 +76,11 @@ function btnCheck(){
     showSth('insta');
     hideSth('planet');
     hideSth('main');
-    //in
-    //stascan
+    //instascan
     let self = this;
     self.scanner = new Instascan.Scanner({video: document.querySelector('#preview'), mirror: false});
-    self.scanner.addListener('scan', function (content, image){
-        self.scans.unshift({content: content});
+    self.scanner.addListener('scan', function (){
+        alert('scan!');
     });
     let constraints = {video: {facingMode: { exact: "environment" } }};
     let video = document.querySelector('#preview');
