@@ -1,7 +1,0 @@
-let planetDialogArray = [
-   ];
-
-let meDialogArray =[
-
-];
-

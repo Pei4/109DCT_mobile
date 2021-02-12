@@ -76,8 +76,9 @@ function btnCheck(){
     showSth('insta');
     hideSth('planet');
     hideSth('main');
+    triggerInstas();
     //instascan
-    let constraints = {video: {facingMode: { exact: "environment" } }};
+    /*let constraints = {video: {facingMode: { exact: "environment" } }};
     let video = document.querySelector('#preview');
     function handleSuccess(stream) {
         window.stream = stream;
@@ -88,5 +89,5 @@ function btnCheck(){
     }
     navigator.mediaDevices.getUserMedia(constraints).
     then(handleSuccess).catch(handleError);
-    video.addListener('scan', function (content) {alert('scan!');});
+    video.addListener('scan', function (content) {alert('scan!');});*/
 }

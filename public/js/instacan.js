@@ -1,16 +1,14 @@
-let scanner = new Instascan.Scanner({
-    video: document.getElementById('preview')
-});
-scanner.addListener('scan', function (content) {
-    alert(content);
-});
-Instascan.Camera.getCameras().then(function (cameras) {
-    if (cameras.length > 0) {
-        scanner.start(cameras[0]);
+function triggerInstas(){
+    let scanner = new Instascan.Scanner({video: {facingMode: { exact: "environment" } }});
+    let video = document.querySelector('#preview');
+    function handleSuccess(stream) {
+        window.stream = stream;
+        video.srcObject = stream;
     }
-    else {
-        console.error('No cameras found.');
+    function handleError(error) {
+        console.log('getUserMedia error: ', error);
     }
-}).catch(function (e) {
-    alert.error(e);
-});
+    scanner.addEventListener('scan',function(content){
+        alert(content);
+    });
+}
