@@ -77,7 +77,7 @@ function btnCheck(){
     hideSth('planet');
     hideSth('main');
     //instascan
-    let scanner = new Instascan.Scanner();
+    let scanner = new Instascan.Scanner({video:document.querySelector('#preview')});
     let constraints = {video: {facingMode: { exact: "environment" } }};
     let video = document.querySelector('#preview');
     function handleSuccess(stream) {
