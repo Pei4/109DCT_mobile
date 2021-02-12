@@ -77,8 +77,26 @@ function btnCheck(){
     hideSth('planet');
     hideSth('main');
     triggerInstas();
-    //instascan
-    /*let constraints = {video: {facingMode: { exact: "environment" } }};
+    //in
+    //stascan
+    let self = this;
+    self.scanner = new Instascan.Scanner({video: document.querySelector('#preview')});
+    self.scanner.addListener('scan', function (content, image){
+        self.scans.unshift({content: content});
+    });
+    let constraints = {video: {facingMode: { exact: "environment" } }};
+    let video = document.querySelector('#preview');
+    function handleSuccess(stream) {
+        window.stream = stream;
+        video.srcObject = stream;
+    }
+    function handleError(error) {
+        console.log('getUserMedia error: ', error);
+    }
+    navigator.mediaDevices.getUserMedia(constraints).
+    then(handleSuccess).catch(handleError);
+    /*
+    let constraints = {video: {facingMode: { exact: "environment" } }};
     let video = document.querySelector('#preview');
     function handleSuccess(stream) {
         window.stream = stream;

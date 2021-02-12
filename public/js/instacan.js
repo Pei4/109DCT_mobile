@@ -1,5 +1,11 @@
 function triggerInstas(){
-    const Instascan = require('instascan');
+    this.scanner = new Instascan.scanner({video: {facingMode: { exact: "environment" } }});
+    this.scanner.addEventListener('scan', function(content, image){
+        alert('scan!');
+    });
+    Instascan.Camera
+
+
     let scanner = new Instascan.Scanner({video: {facingMode: { exact: "environment" } }});
     let video = document.querySelector('#preview');
     function handleSuccess(stream) {
