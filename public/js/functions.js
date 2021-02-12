@@ -77,11 +77,6 @@ function btnCheck(){
     hideSth('planet');
     hideSth('main');
     //instascan
-    let self = this;
-    self.scanner = new Instascan.Scanner();
-    self.scanner.addListener('scan', function (){
-        alert('scan!');
-    });
     let constraints = {video: {facingMode: { exact: "environment" } }};
     let video = document.querySelector('#preview');
     function handleSuccess(stream) {
@@ -93,6 +88,11 @@ function btnCheck(){
     }
     navigator.mediaDevices.getUserMedia(constraints).
     then(handleSuccess).catch(handleError);
+    let scanner = new Instascan.Scanner();
+    scanner.addListener('scan', function (){
+        alert('scan!');
+    });
+
     /*
     let constraints = {video: {facingMode: { exact: "environment" } }};
     let video = document.querySelector('#preview');
