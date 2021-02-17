@@ -86,7 +86,8 @@ function btnCheck(){
             alert('scan!');
             alert(content);
         });*/
-        codeReader.decodeFromVideoDevice(null, 'preview', (result, err) => {
+        const codeReader = new ZXing.BrowserQRCodeReader();
+        codeReader.decodeFromVideoDevice(undefined, 'preview', (result, err) => {
             if (result) {
                 alert(result.text);
             }
