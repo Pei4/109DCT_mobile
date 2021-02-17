@@ -77,10 +77,15 @@ function btnCheck(){
     hideSth('planet');
     hideSth('main');
     //instascan
-    let scanner = new Instascan.Scanner({video:document.querySelector('#preview')});
-    let constraints = {video: {facingMode: { exact: "environment" } }};
+    let scanner = new Instascan.Scanner({video:document.querySelector('#preview'),facingMode: { exact: "environment" }});
+    scanner.addListener('scan', function (content,image) {
+        alert('scan!');
+        alert(content);
+    });
+    let constraints = {video: { }};
     let video = document.querySelector('#preview');
     function handleSuccess(stream) {
+        scanner.start(stream);
         window.stream = stream;
         video.srcObject = stream;
     }
@@ -90,10 +95,7 @@ function btnCheck(){
     navigator.mediaDevices.getUserMedia(constraints)
         .then(handleSuccess)
         .catch(handleError)
-    scanner.addListener('scan', function (content) {
-        alert('scan!');
-        alert(content);
-    });
+
 
 
     /*
