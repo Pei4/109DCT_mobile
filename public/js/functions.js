@@ -86,6 +86,11 @@ function btnCheck(){
             alert('scan!');
             alert(content);
         });*/
+        const codeReader = new ZXing.BrowserQRCodeReader();
+        codeReader
+            .decodeFromInputVideoDevice(undefined, 'preview')  // uses the default input
+            .then(result => alert(result.text))  // this happens when the barcode is found / recognized
+            .catch(err => alert.error(err));
         window.stream = stream;
         video.srcObject = stream;
     }
