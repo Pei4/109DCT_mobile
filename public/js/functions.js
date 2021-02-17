@@ -86,13 +86,21 @@ function btnCheck(){
             alert('scan!');
             alert(content);
         });*/
-        const codeReader = new ZXing.BrowserQRCodeReader();
-        codeReader
-            .decodeFromInputVideoDevice(undefined, 'preview')  // uses the default input
-        video.addEventListener('playing',function(){
-            codeReader
-                .then(result => alert(result.text))  // this happens when the barcode is found / recognized
-                .catch(err => alert.error(err));
+        codeReader.decodeFromVideoDevice(null, 'preview', (result, err) => {
+            if (result) {
+                alert(result.text);
+            }
+            if (err) {
+                if (err instanceof ZXing.NotFoundException) {
+                    alert('No QR code found.')
+                }
+                if (err instanceof ZXing.ChecksumException) {
+                    alert('A code was found, but it\'s read value was not valid.')
+                }
+                if (err instanceof ZXing.FormatException) {
+                    alert('A code was found, but it was in a invalid format.')
+                }
+            }
         })
         window.stream = stream;
         video.srcObject = stream;
