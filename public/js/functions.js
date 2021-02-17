@@ -78,15 +78,14 @@ function btnCheck(){
     hideSth('main');
     //instascan
     let scanner = new Instascan.Scanner({video:document.querySelector('#preview'),mirror: false});
-    scanner.addListener('scan', function (content,image) {
-        alert('scan!');
-        alert(content);
-    });
     let constraints = {video: {facingMode: { exact: "environment" }}};
     let video = document.querySelector('#preview');
     function handleSuccess(stream) {
-        alert('stream');
         scanner.start(stream);
+        scanner.addListener('scan', function (content,image) {
+            alert('scan!');
+            alert(content);
+        });
         window.stream = stream;
         video.srcObject = stream;
     }
