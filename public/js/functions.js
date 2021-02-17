@@ -91,17 +91,6 @@ function btnCheck(){
             if (result) {
                 alert(result.text);
             }
-            if (err) {
-                if (err instanceof ZXing.NotFoundException) {
-                    alert('No QR code found.')
-                }
-                if (err instanceof ZXing.ChecksumException) {
-                    alert('A code was found, but it\'s read value was not valid.')
-                }
-                if (err instanceof ZXing.FormatException) {
-                    alert('A code was found, but it was in a invalid format.')
-                }
-            }
         })
         window.stream = stream;
         video.srcObject = stream;
