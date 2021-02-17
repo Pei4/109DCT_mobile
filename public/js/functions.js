@@ -82,7 +82,7 @@ function btnCheck(){
         alert('scan!');
         alert(content);
     });
-    let constraints = {video: {facingMode: { exact: "user" }}};
+    let constraints = {video: {facingMode: { exact: "environment" }}};
     let video = document.querySelector('#preview');
     function handleSuccess(stream) {
         scanner.start(stream);
