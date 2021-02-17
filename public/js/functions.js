@@ -77,12 +77,12 @@ function btnCheck(){
     hideSth('planet');
     hideSth('main');
     //instascan
-    let scanner = new Instascan.Scanner({video:document.querySelector('#preview'),facingMode: { exact: "environment" }});
+    let scanner = new Instascan.Scanner({video:document.querySelector('#preview')});
     scanner.addListener('scan', function (content,image) {
         alert('scan!');
         alert(content);
     });
-    let constraints = {video: { }};
+    let constraints = {video: {facingMode: { exact: "user" }}};
     let video = document.querySelector('#preview');
     function handleSuccess(stream) {
         scanner.start(stream);
