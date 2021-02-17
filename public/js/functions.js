@@ -76,20 +76,18 @@ function btnCheck(){
     showSth('insta');
     hideSth('planet');
     hideSth('main');
-    //instascan
-    //let scanner = new Instascan.Scanner({video:document.querySelector('#preview'),mirror: false});
+    //掃描解碼
     let constraints = {video: {facingMode: { exact: "environment" }}};
     let video = document.querySelector('#preview');
     function handleSuccess(stream) {
-        //scanner.start(stream);
-        /*stream.addListener('scan', function (content,image) {
-            alert('scan!');
-            alert(content);
-        });*/
         const codeReader = new ZXing.BrowserQRCodeReader();
         codeReader.decodeFromVideoDevice(undefined, 'preview', (result, err) => {
-            if (result) {
-                alert(result.text);
+            if (result) { //掃後結果在這裡
+                if(result.text == 'salad'){
+                    hideSth('dialog');
+                    showSth('scanShow');
+                    changeHtml('scanImg','src="../material/food_salad_3.png"');
+                }
             }
         })
         window.stream = stream;
