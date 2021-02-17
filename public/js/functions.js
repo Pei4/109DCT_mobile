@@ -82,7 +82,7 @@ function btnCheck(){
     let video = document.querySelector('#preview');
     function handleSuccess(stream) {
         scanner.start(stream);
-        scanner.addListener('scan', function (content,image) {
+        stream.addListener('scan', function (content,image) {
             alert('scan!');
             alert(content);
         });
