@@ -88,7 +88,7 @@ function btnCheck(){
             if (result) { //掃後結果在這裡
                 if(result.text == 'salad'){
                     hideSth('dialog');
-                    changeSource('scanImg',"../material/food_salad_3.png");
+                    changeSource('scanImg','../material/food_salad_3.png');
                 }
             }
         })
