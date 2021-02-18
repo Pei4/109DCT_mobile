@@ -88,7 +88,18 @@ function btnCheck(){
             if (result) { //掃後結果在這裡
                 if(result.text == 'salad'){
                     hideSth('dialog');
+                    showSth('scanShow');
                     changeSource('scanImg','../material/food_salad_3.png');
+                }
+                if(result.text == 'steak'){
+                    hideSth('dialog');
+                    showSth('scanShow');
+                    changeSource('scanImg','../material/food_steak_3.png');
+                }
+                if(result.text == 'chicken'){
+                    hideSth('dialog');
+                    showSth('scanShow');
+                    changeSource('scanImg','../material/food_chicken_3.png');
                 }
             }
         })
