@@ -44,8 +44,11 @@ function disableSth(sth){
 function enableSth(sth){
     document.getElementById(sth).disabled = false;
 }
-function changeHtml(id,what){
+function htmlContent(id,what){
     document.getElementById(id).innerHTML = what;
+}
+function changeSource(id,what){
+    document.getElementById(id).src = what;
 }
 
 function dialogControl(){
@@ -56,13 +59,13 @@ function dialogControl(){
     }
     if(meCont.includes(checkpoint)){
         meDialogNum ++;
-        changeHtml('me',meDialogArray[meDialogNum]);
+        htmlContent('me',meDialogArray[meDialogNum]);
         showSth('me');
         hideSth('planet');
     }
     else if(planetCont.includes(checkpoint)){
         planetDialogNum ++;
-        changeHtml('planet',planetDialogArray[planetDialogNum]);
+        htmlContent('planet',planetDialogArray[planetDialogNum]);
         showSth('planet');
         hideSth('me');
     }
@@ -71,7 +74,7 @@ function dialogControl(){
 function btnCheck(){
     checkpoint ++;
     meDialogNum ++;
-    changeHtml('me',meDialogArray[meDialogNum]);
+    htmlContent('me',meDialogArray[meDialogNum]);
     showSth('me');
     showSth('insta');
     hideSth('planet');
@@ -85,7 +88,7 @@ function btnCheck(){
             if (result) { //掃後結果在這裡
                 if(result.text == 'salad'){
                     hideSth('dialog');
-                    changeHtml('scanImg',src="../material/food_salad_3.png");
+                    changeSource('scanImg',"../material/food_salad_3.png");
                 }
             }
         })
