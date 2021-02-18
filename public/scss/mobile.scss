@@ -19,6 +19,12 @@ img{
   max-width: 80%;
   max-height: 80%;
 }
+#insta{
+  position: absolute;
+  bottom: 15vh;
+  left: 50vw;
+  transform: translate(-50%,0);
+}
 #star img{
   float: right;
   top: 2vh;
