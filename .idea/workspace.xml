@@ -20,12 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f04ad6df-73fa-4367-9788-90d2fd4086d0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/html/lv2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/json/longcompanion-305702-fa459d92b179.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/spreadsheet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/json/credentials.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/html/lv2.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/lv2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/instascan.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/json/longcompanion-305702-fa459d92b179.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/longcompanion-305702-fa459d92b179.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/spreadsheet.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/spreadsheet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +37,8 @@
       <list>
         <option value="CSS File" />
         <option value="HTML File" />
-        <option value="package.json" />
         <option value="JavaScript File" />
+        <option value="package.json" />
       </list>
     </option>
   </component>
@@ -66,8 +66,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\109DCT_mobile\public\js\json" />
       <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\109DCT_mobile\public\js" />
+      <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\109DCT_mobile\public\js\json" />
       <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion\web_scss" />
       <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion" />
       <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion\public" />
@@ -126,7 +126,7 @@
       <workItem from="1611559930701" duration="13060000" />
       <workItem from="1612708639702" duration="21350000" />
       <workItem from="1613662129093" duration="3942000" />
-      <workItem from="1614043795724" duration="2234000" />
+      <workItem from="1614043795724" duration="12695000" />
     </task>
     <servers />
   </component>
@@ -160,22 +160,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="82" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1609571660874" />
-    <state width="619" height="157" key="GridCell.Tab.0.bottom" timestamp="1613578186112">
+    <state width="1259" height="154" key="GridCell.Tab.0.bottom" timestamp="1614064741730">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="619" height="157" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1613578186112" />
-    <state width="619" height="157" key="GridCell.Tab.0.center" timestamp="1613578186112">
+    <state width="1259" height="154" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1614064741730" />
+    <state width="1259" height="154" key="GridCell.Tab.0.center" timestamp="1614064741728">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="619" height="157" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1613578186112" />
-    <state width="619" height="157" key="GridCell.Tab.0.left" timestamp="1613578186112">
+    <state width="1259" height="154" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1614064741728" />
+    <state width="1259" height="154" key="GridCell.Tab.0.left" timestamp="1614064741726">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="619" height="157" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1613578186112" />
-    <state width="619" height="157" key="GridCell.Tab.0.right" timestamp="1613578186112">
+    <state width="1259" height="154" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1614064741726" />
+    <state width="1259" height="154" key="GridCell.Tab.0.right" timestamp="1614064741730">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="619" height="157" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1613578186112" />
+    <state width="1259" height="154" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1614064741730" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1611303689253">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
