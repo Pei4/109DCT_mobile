@@ -4,7 +4,7 @@ function send() {
     let test1 = document.querySelector('#t1').value;
     let test2 = document.querySelector('#t2').value;
     $.ajax({
-        url: "https://script.google.com/macros/library/d/1XiLjhss0MacrmkthWg3Cx_90iW21aslr-LyHq2HlCd95F6X4H_ZCuzyU/2",
+        url: "https://script.google.com/macros/s/AKfycbxczugTBSFn2zVudV0D0rf61q7o7WMJ7UVBfAYtZIzsu-aqry0_udg9LA/exec",
         data: {
             "test1": test1,
             "test2": test2
