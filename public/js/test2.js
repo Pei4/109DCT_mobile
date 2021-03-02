@@ -1,4 +1,3 @@
-window.googleDocCallback = function () { return true; };
 function send() {
     console.log("go");
     let test1 = document.querySelector('#t1').value;
