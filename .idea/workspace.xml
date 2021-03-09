@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f04ad6df-73fa-4367-9788-90d2fd4086d0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/js/html2canvas.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/html/lv3.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/lv3.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +126,7 @@
       <workItem from="1614498625031" duration="13911000" />
       <workItem from="1614705327883" duration="342000" />
       <workItem from="1614792784748" duration="330000" />
-      <workItem from="1615266119461" duration="2081000" />
+      <workItem from="1615266119461" duration="2349000" />
     </task>
     <servers />
   </component>
