@@ -112,20 +112,4 @@ function btnCheck(){
     navigator.mediaDevices.getUserMedia(constraints)
         .then(handleSuccess)
         .catch(handleError)
-
-
-
-    /*
-    let constraints = {video: {facingMode: { exact: "environment" } }};
-    let video = document.querySelector('#preview');
-    function handleSuccess(stream) {
-        window.stream = stream;
-        video.srcObject = stream;
-    }
-    function handleError(error) {
-        console.log('getUserMedia error: ', error);
-    }
-    navigator.mediaDevices.getUserMedia(constraints).
-    then(handleSuccess).catch(handleError);
-    video.addListener('scan', function (content) {alert('scan!');});*/
 }
