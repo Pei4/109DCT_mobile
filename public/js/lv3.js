@@ -28,6 +28,8 @@ function screenshot(){
         a.href = getshot.src;
         a.download = "workout_log " + dateTime + " " + startTime + ".png";
         a.click();
+        imageURL = canvas.toDataURL();
+        openInNewTab(imageURL);
         document.getElementById('capture').removeChild(img);
         //normal
         /*document.getElementById('capture').appendChild(canvas);
