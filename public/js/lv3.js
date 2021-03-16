@@ -18,7 +18,7 @@ function runVid(){
 //截圖（拍照）
 function screenshot(){
     html2canvas(document.getElementById('capture')).then(function(canvas) {
-        document.body.appendChild(canvas);
+        document.getElementById('capture').appendChild(canvas);
         var a = document.createElement('a');
         a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
         a.download = 'image.jpg';
