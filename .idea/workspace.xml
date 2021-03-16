@@ -20,10 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f04ad6df-73fa-4367-9788-90d2fd4086d0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/js/html2canvas.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/html/lv3.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/lv3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/html2canvas.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/lv3.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/lv3.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +128,7 @@
       <workItem from="1614792784748" duration="330000" />
       <workItem from="1615266119461" duration="4069000" />
       <workItem from="1615523183742" duration="1700000" />
-      <workItem from="1615859143355" duration="2552000" />
+      <workItem from="1615859143355" duration="3176000" />
     </task>
     <servers />
   </component>

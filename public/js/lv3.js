@@ -19,9 +19,9 @@ function runVid(){
 function screenshot(){
     html2canvas(document.getElementById('capture')).then(function(canvas) {
         document.body.appendChild(canvas);
-        var a = document.createElement('a');
+        /*var a = document.createElement('a');
         a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
         a.download = 'image.jpg';
-        a.click();
+        a.click();*/
     });
 }
