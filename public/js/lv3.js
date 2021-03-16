@@ -1,10 +1,10 @@
 function runVid(){
     let constraints = {video: {facingMode: { exact: "environment" }}};
-    let vid = document.querySelector('#preview');
+    let video = document.querySelector('#preview');
     //存取相機
     function handleSuccess(stream) {
         window.stream = stream;
-        vid.srcObject = stream;
+        video.srcObject = stream;
     }
     function handleError(error) {
         console.log('getUserMedia error: ', error);
