@@ -22,6 +22,7 @@
     <list default="true" id="f04ad6df-73fa-4367-9788-90d2fd4086d0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/html/lv3.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/lv3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/lv3.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/lv3.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,11 +75,11 @@
       <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion\public" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.lv2.js">
-    <configuration name="test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/109DCT_mobile/public/html/test.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="Node.js.js2test.js">
+    <configuration name="functions.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/public/js/functions.js" working-dir="$PROJECT_DIR$/public/js">
       <method v="2" />
     </configuration>
-    <configuration name="functions.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/public/js/functions.js" working-dir="$PROJECT_DIR$/public/js">
+    <configuration name="js2test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/public/js/js2test.js" working-dir="$PROJECT_DIR$/public/js">
       <method v="2" />
     </configuration>
     <configuration name="lv2.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/public/js/lv2.js" working-dir="$PROJECT_DIR$/public/js">
@@ -92,11 +93,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.js2test.js" />
         <item itemvalue="Node.js.lv2.js" />
         <item itemvalue="Node.js.test.js" />
         <item itemvalue="Node.js.spreadSheet.js" />
         <item itemvalue="Node.js.functions.js" />
-        <item itemvalue="JavaScript Debug.test.html" />
       </list>
     </recent_temporary>
   </component>
@@ -127,6 +128,8 @@
       <workItem from="1614705327883" duration="342000" />
       <workItem from="1614792784748" duration="330000" />
       <workItem from="1615266119461" duration="4069000" />
+      <workItem from="1615523183742" duration="1700000" />
+      <workItem from="1615859143355" duration="1469000" />
     </task>
     <servers />
   </component>
@@ -164,22 +167,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="82" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1609571660874" />
-    <state width="1259" height="154" key="GridCell.Tab.0.bottom" timestamp="1614671931071">
+    <state width="1259" height="154" key="GridCell.Tab.0.bottom" timestamp="1615525544952">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="154" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1614671931071" />
-    <state width="1259" height="154" key="GridCell.Tab.0.center" timestamp="1614671931071">
+    <state width="1259" height="154" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1615525544952" />
+    <state width="1259" height="154" key="GridCell.Tab.0.center" timestamp="1615525544951">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="154" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1614671931071" />
-    <state width="1259" height="154" key="GridCell.Tab.0.left" timestamp="1614671931070">
+    <state width="1259" height="154" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1615525544951" />
+    <state width="1259" height="154" key="GridCell.Tab.0.left" timestamp="1615525544951">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="154" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1614671931070" />
-    <state width="1259" height="154" key="GridCell.Tab.0.right" timestamp="1614671931071">
+    <state width="1259" height="154" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1615525544951" />
+    <state width="1259" height="154" key="GridCell.Tab.0.right" timestamp="1615525544952">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="154" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1614671931071" />
+    <state width="1259" height="154" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1615525544952" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1611303689253">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
