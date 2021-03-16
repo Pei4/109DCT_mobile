@@ -27,7 +27,7 @@ function screenshot(){
         document.getElementById('capture').appendChild(img);
         var a = document.createElement("a");
         a.href = getshot.src;
-        a.download = "workout_log " + dateTime + " " + startTime + ".png";
+        a.download = "workout_log.png";
         a.click();
         openInNewTab(imageURL);
         document.getElementById('capture').removeChild(img);
