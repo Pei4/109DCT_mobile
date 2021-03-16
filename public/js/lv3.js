@@ -1,16 +1,16 @@
 var video = document.getElementById('preview');
 var canvas = document.getElementById('shotCanvas');
 var context = canvas.getContext('2d');
-//var w, h, ratio;
+var w, h, ratio;
 
 //影片比例
-/*video.addEventListener('loadedmetadata', function() {
+video.addEventListener('loadedmetadata', function() {
     ratio = video.videoWidth / video.videoHeight;
     w = video.videoWidth - 100;
     h = parseInt(w / ratio, 10);
     canvas.width = w;
     canvas.height = h;
-}, false);*/
+}, false);
 
 function runVid(){
     let constraints = {video: {facingMode: { exact: "environment" }}};
