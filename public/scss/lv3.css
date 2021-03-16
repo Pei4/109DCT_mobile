@@ -2,4 +2,14 @@
     display: block;
     background: aquamarine;
     width: 100vw;
+    height: 40vh;
+}
+#capture{
+    display: block;
+    background: black;
+    width: 100vw;
+    height: 40vh;
+}
+#demoPlanet{
+    transform: translate(0,-50);
 }
