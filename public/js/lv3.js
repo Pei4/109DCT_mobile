@@ -19,6 +19,7 @@ function runVid(){
 function screenshot(){
     html2canvas(document.getElementById('capture')).then(function(canvas) {
         //iOS
+        imageURL = canvas.toDataURL();
         var img = new Image();
         img.crossOrigin = "Anonymous";
         img.id = "getshot";
@@ -28,7 +29,6 @@ function screenshot(){
         a.href = getshot.src;
         a.download = "workout_log " + dateTime + " " + startTime + ".png";
         a.click();
-        imageURL = canvas.toDataURL();
         openInNewTab(imageURL);
         document.getElementById('capture').removeChild(img);
         //normal
