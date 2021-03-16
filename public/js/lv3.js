@@ -20,16 +20,15 @@ function screenshot(){
     html2canvas(document.getElementById('capture')).then(function(canvas) {
         //iOS
         imageURL = canvas.toDataURL();
-        var img = new Image();
+        let img = document.getElementById('screenShotImg');
         img.crossOrigin = "Anonymous";
         img.id = "getshot";
         img.src = imageURL;
         document.getElementById('capture').appendChild(img);
-        var a = document.createElement("a");
+        let a = document.createElement("a");
         a.href = getshot.src;
         a.download = "workout_log.png";
         a.click();
-        openInNewTab(imageURL);
         document.getElementById('capture').removeChild(img);
         //normal
         /*document.getElementById('capture').appendChild(canvas);
