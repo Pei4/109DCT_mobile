@@ -1,12 +1,12 @@
-#showImg{
-    display: block;
-    background: aquamarine;
-    width: 100vw;
-    height: 40vh;
-}
 #capture{
     display: block;
     background: black;
+    width: 100vw;
+    height: 40vh;
+}
+#shotCanvas{
+    display: block;
+    background: aquamarine;
     width: 100vw;
     height: 40vh;
 }
