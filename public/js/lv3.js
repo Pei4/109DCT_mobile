@@ -18,10 +18,22 @@ function runVid(){
 //截圖（拍照）
 function screenshot(){
     html2canvas(document.getElementById('capture')).then(function(canvas) {
-        document.getElementById('capture').appendChild(canvas);
+        //iOS
+        var img = new Image();
+        img.crossOrigin = "Anonymous";
+        img.id = "getshot";
+        img.src = imageURL;
+        document.getElementById('capture').appendChild(img);
+        var a = document.createElement("a");
+        a.href = getshot.src;
+        a.download = "workout_log " + dateTime + " " + startTime + ".png";
+        a.click();
+        document.getElementById('capture').removeChild(img);
+        //normal
+        /*document.getElementById('capture').appendChild(canvas);
         var a = document.createElement('a');
         a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
         a.download = 'image.jpg';
-        a.click();
+        a.click();*/
     });
 }
