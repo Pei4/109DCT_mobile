@@ -12,7 +12,7 @@ window.onload = function(){
         canvas.height = h;
     }, false);
 
-    
+
 }
 
 function runVid(){
