@@ -1,11 +1,11 @@
-let vid = document.getElementById('preview');
 let canvas = document.getElementById('shotCanvas');
 let context = canvas.getContext('2d');
+let video = document.querySelector('#preview');
 let w, h, ratio;
 
-vid.addEventListener('loadedmetadata', function() {
-    ratio = vid.videoWidth / vid.videoHeight;
-    w = vid.videoWidth - 100;
+video.addEventListener('loadedmetadata', function() {
+    ratio = video.videoWidth / video.videoHeight;
+    w = video.videoWidth - 100;
     h = parseInt(w / ratio, 10);
     canvas.width = w;
     canvas.height = h;
@@ -13,7 +13,6 @@ vid.addEventListener('loadedmetadata', function() {
 
 function runVid(){
     let constraints = {video: {facingMode: { exact: "environment" }}};
-    let video = document.querySelector('#preview');
     //存取相機
     function handleSuccess(stream) {
         window.stream = stream;
@@ -27,12 +26,15 @@ function runVid(){
         .catch(handleError)
 }
 window.onload = function (){
-    document.getElementById('screenShot').addEventListener('click',screenshot);
-    //截圖（拍照）
-    function screenshot(){
-        //影片比例
+    document.getElementById('screenShot').addEventListener('click',function(){
         context.fillRect(0, 0, w, h);
-        context.drawImage(vid, 0, 0, w, h);
+        context.drawImage(video, 0, 0, w, h);
+    });
+    //截圖（拍照）
+    //function screenshot(){
+        //影片比例
+        //context.fillRect(0, 0, w, h);
+        //context.drawImage(vid, 0, 0, w, h);
         //html2canvas(document.getElementById('capture')).then(function(canvas) {
         //iOS
         /*imageURL = canvas.toDataURL();
@@ -57,7 +59,7 @@ window.onload = function (){
         a.click();
         document.getElementById('capture').removeChild(img);*/
         //});
-    }
+    //}
 }
 
 
