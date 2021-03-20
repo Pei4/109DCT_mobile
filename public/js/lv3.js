@@ -1,12 +1,13 @@
-var video = document.getElementById('preview');
-var canvas = document.getElementById('shotCanvas');
-var context = canvas.getContext('2d');
-var w, h, ratio;
+window.onload = function(){
+    let vid = document.getElementById('preview');
+    let canvas = document.getElementById('shotCanvas');
+    const context = canvas.getContext('2d');
+    let w, h, ratio;
+}
 
-//影片比例
-video.addEventListener('loadedmetadata', function() {
-    ratio = video.videoWidth / video.videoHeight;
-    w = video.videoWidth - 100;
+vid.addEventListener('loadedmetadata', function() {
+    ratio = vid.videoWidth / vid.videoHeight;
+    w = vid.videoWidth - 100;
     h = parseInt(w / ratio, 10);
     canvas.width = w;
     canvas.height = h;
@@ -28,12 +29,13 @@ function runVid(){
         .catch(handleError)
 }
 
-
 //截圖（拍照）
 function screenshot(){
-    html2canvas(document.getElementById('capture')).then(function(canvas) {
-        context.fillRect(0, 0, w, h);
-        context.drawImage(video, 0, 0, w, h);
+    //影片比例
+    context.fillRect(0, 0, w, h);
+    context.drawImage(vid, 0, 0, w, h);
+
+        //html2canvas(document.getElementById('capture')).then(function(canvas) {
         //iOS
         /*imageURL = canvas.toDataURL();
         let img = document.getElementById('screenShotImg');
@@ -56,5 +58,5 @@ function screenshot(){
         a.download = "workout_log.png";
         a.click();
         document.getElementById('capture').removeChild(img);*/
-    });
+    //});
 }
