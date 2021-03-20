@@ -27,12 +27,12 @@ function runVid(){
         .catch(handleError)
 }
 window.onload = function (){
+    document.getElementById('screenShot').addEventListener('click',screenshot);
     //截圖（拍照）
     function screenshot(){
         //影片比例
         context.fillRect(0, 0, w, h);
         context.drawImage(vid, 0, 0, w, h);
-
         //html2canvas(document.getElementById('capture')).then(function(canvas) {
         //iOS
         /*imageURL = canvas.toDataURL();
@@ -58,7 +58,6 @@ window.onload = function (){
         document.getElementById('capture').removeChild(img);*/
         //});
     }
-    document.getElementById('screenShot').addEventListener('click',screenshot);
 }
 
 
