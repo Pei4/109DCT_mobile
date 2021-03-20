@@ -1,20 +1,3 @@
-window.onload = function(){
-    let vid = document.getElementById('preview');
-    let canvas = document.getElementById('shotCanvas');
-    const context = canvas.getContext('2d');
-    let w, h, ratio;
-
-    vid.addEventListener('loadedmetadata', function() {
-        ratio = vid.videoWidth / vid.videoHeight;
-        w = vid.videoWidth - 100;
-        h = parseInt(w / ratio, 10);
-        canvas.width = w;
-        canvas.height = h;
-    }, false);
-
-
-}
-
 function runVid(){
     let constraints = {video: {facingMode: { exact: "environment" }}};
     let video = document.querySelector('#preview');
@@ -29,6 +12,18 @@ function runVid(){
     navigator.mediaDevices.getUserMedia(constraints)
         .then(handleSuccess)
         .catch(handleError)
+    let vid = document.getElementById('preview');
+    let canvas = document.getElementById('shotCanvas');
+    const context = canvas.getContext('2d');
+    let w, h, ratio;
+
+    vid.addEventListener('loadedmetadata', function() {
+        ratio = vid.videoWidth / vid.videoHeight;
+        w = vid.videoWidth - 100;
+        h = parseInt(w / ratio, 10);
+        canvas.width = w;
+        canvas.height = h;
+    }, false);
 }
 
 //截圖（拍照）
