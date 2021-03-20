@@ -3,37 +3,36 @@ window.onload = function(){
     let canvas = document.getElementById('shotCanvas');
     const context = canvas.getContext('2d');
     let w, h, ratio;
-}
 
-vid.addEventListener('loadedmetadata', function() {
-    ratio = vid.videoWidth / vid.videoHeight;
-    w = vid.videoWidth - 100;
-    h = parseInt(w / ratio, 10);
-    canvas.width = w;
-    canvas.height = h;
-}, false);
+    vid.addEventListener('loadedmetadata', function() {
+        ratio = vid.videoWidth / vid.videoHeight;
+        w = vid.videoWidth - 100;
+        h = parseInt(w / ratio, 10);
+        canvas.width = w;
+        canvas.height = h;
+    }, false);
 
-function runVid(){
-    let constraints = {video: {facingMode: { exact: "environment" }}};
-    let video = document.querySelector('#preview');
-    //存取相機
-    function handleSuccess(stream) {
-        window.stream = stream;
-        video.srcObject = stream;
+    function runVid(){
+        let constraints = {video: {facingMode: { exact: "environment" }}};
+        let video = document.querySelector('#preview');
+        //存取相機
+        function handleSuccess(stream) {
+            window.stream = stream;
+            video.srcObject = stream;
+        }
+        function handleError(error) {
+            console.log('getUserMedia error: ', error);
+        }
+        navigator.mediaDevices.getUserMedia(constraints)
+            .then(handleSuccess)
+            .catch(handleError)
     }
-    function handleError(error) {
-        console.log('getUserMedia error: ', error);
-    }
-    navigator.mediaDevices.getUserMedia(constraints)
-        .then(handleSuccess)
-        .catch(handleError)
-}
 
-//截圖（拍照）
-function screenshot(){
-    //影片比例
-    context.fillRect(0, 0, w, h);
-    context.drawImage(vid, 0, 0, w, h);
+    //截圖（拍照）
+    function screenshot(){
+        //影片比例
+        context.fillRect(0, 0, w, h);
+        context.drawImage(vid, 0, 0, w, h);
 
         //html2canvas(document.getElementById('capture')).then(function(canvas) {
         //iOS
@@ -58,5 +57,11 @@ function screenshot(){
         a.download = "workout_log.png";
         a.click();
         document.getElementById('capture').removeChild(img);*/
-    //});
+        //});
+    }
 }
+
+
+
+
+
