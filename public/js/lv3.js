@@ -58,6 +58,7 @@ window.onload = function (){
         document.getElementById('capture').removeChild(img);*/
         //});
     }
+    document.getElementById('screenShot').addEventListener('click',screenshot);
 }
 
 
