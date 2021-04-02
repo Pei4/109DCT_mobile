@@ -1,12 +1,10 @@
 #capture{
     display: block;
     background: black;
-    width: 100vw;
     height: 90vh;
 }
 #shotCanvas{
     visibility: hidden;
-    display: block;
     position: absolute;
     transform: translate(0,-100);
     background: aquamarine;
