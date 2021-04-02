@@ -25,11 +25,12 @@ vid.addEventListener('loadedmetadata', function() {
     canvas.width = w;
     canvas.height = h;
 }, false);
-window.onload = function (){
-    document.querySelector('#screenShot').addEventListener('click',function(){
-        context.fillRect(0, 0, w, h);
-        context.drawImage(vid, 0, 0, w, h);
-    });
+
+function screenShot(){
+    console.log('click');
+    context.fillRect(0, 0, w, h);
+    context.drawImage(vid, 0, 0, w, h);
+};
     //截圖（拍照）
     //function screenshot(){
         //影片比例
@@ -60,6 +61,5 @@ window.onload = function (){
         document.getElementById('capture').removeChild(img);*/
         //});
     //}
-}
 
 
