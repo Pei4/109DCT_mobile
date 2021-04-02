@@ -11,6 +11,6 @@
     height: 40vh;
 }
 #demoPlanet{
-    position: fixed;
-    transform: translate(-200,-50);
+    position: absolute;
+    transform: translate(200,-50);
 }
