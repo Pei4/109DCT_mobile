@@ -23,6 +23,7 @@
 </html>
 <script>
     let vid = document.querySelector('#preview');
+    let cap = document.querySelector('#capture');
     let canvas = document.querySelector('#shotCanvas')
     let context = canvas.getContext('2d');
     let w, h, ratio;
@@ -53,6 +54,6 @@
     function screenShot(){
         document.querySelector('#shotCanvas').style.visibility = 'visible';
         context.fillRect(0, 0, w, h);
-        context.drawImage(vid, 0, 0, w, h);
+        context.drawImage(cap, 0, 0, w, h);
     };
 </script>
