@@ -14,8 +14,7 @@
 }
 #demoPlanet{
     position: absolute;
-    transform: translate(200,50);
-    -webkit-transform: translate(200,50);
+    transform: translate(200%,50%);
 }
 
 .before{
