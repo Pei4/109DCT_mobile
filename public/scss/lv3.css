@@ -18,10 +18,10 @@
     -webkit-transform: translate(200,50);
 }
 
-:before{
+.before{
     visibility: hidden;
 }
-:after{
+.after{
     visibility: visible;
     position: absolute;
     top: 0;
