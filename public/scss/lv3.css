@@ -2,13 +2,16 @@
     display: block;
     background: black;
     width: 100vw;
-    height: 40vh;
+    height: 90vh;
 }
 #shotCanvas{
+    visibility: hidden;
     display: block;
+    position: absolute;
+    transform: translate(0,-100);
     background: aquamarine;
     width: 100vw;
-    height: 40vh;
+    height: 90vh;
 }
 #demoPlanet{
     position: absolute;

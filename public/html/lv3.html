@@ -51,7 +51,7 @@
     }, false);
 
     function screenShot(){
-        console.log('click');
+        document.querySelector('#shotCanvas').style.visibility = 'visible';
         context.fillRect(0, 0, w, h);
         context.drawImage(vid, 0, 0, w, h);
     };
