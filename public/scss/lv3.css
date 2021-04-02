@@ -1,6 +1,9 @@
 #capture{
     display: block;
     background: black;
+}
+#preview{
+    width: 100vw;
     height: 90vh;
 }
 #shotCanvas{
