@@ -21,3 +21,38 @@
 </div>
 </body>
 </html>
+<script>
+    let vid = document.querySelector('#preview');
+    let canvas = document.querySelector('#shotCanvas')
+    let context = canvas.getContext('2d');
+    let w, h, ratio;
+
+    function runVid(){
+        let constraints = {video: {facingMode: { exact: "environment" }}};
+        let video = document.querySelector('#preview');
+        //存取相機
+        function handleSuccess(stream) {
+            window.stream = stream;
+            video.srcObject = stream;
+        }
+        function handleError(error) {
+            console.log('getUserMedia error: ', error);
+        }
+        navigator.mediaDevices.getUserMedia(constraints)
+            .then(handleSuccess)
+            .catch(handleError)
+    }
+    vid.addEventListener('loadedmetadata', function() {
+        ratio = vid.videoWidth / vid.videoHeight;
+        w = vid.videoWidth - 100;
+        h = parseInt(w / ratio, 10);
+        canvas.width = w;
+        canvas.height = h;
+    }, false);
+
+    function screenShot(){
+        console.log('click');
+        context.fillRect(0, 0, w, h);
+        context.drawImage(vid, 0, 0, w, h);
+    };
+</script>
