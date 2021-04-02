@@ -3,14 +3,6 @@ let canvas = document.querySelector('#shotCanvas')
 let context = canvas.getContext('2d');
 let w, h, ratio;
 
-vid.addEventListener('loadedmetadata', function() {
-    ratio = vid.videoWidth / vid.videoHeight;
-    w = vid.videoWidth - 100;
-    h = parseInt(w / ratio, 10);
-    canvas.width = w;
-    canvas.height = h;
-}, false);
-
 function runVid(){
     let constraints = {video: {facingMode: { exact: "environment" }}};
     let video = document.querySelector('#preview');
@@ -26,6 +18,13 @@ function runVid(){
         .then(handleSuccess)
         .catch(handleError)
 }
+vid.addEventListener('loadedmetadata', function() {
+    ratio = vid.videoWidth / vid.videoHeight;
+    w = vid.videoWidth - 100;
+    h = parseInt(w / ratio, 10);
+    canvas.width = w;
+    canvas.height = h;
+}, false);
 window.onload = function (){
     document.querySelector('#screenShot').addEventListener('click',function(){
         context.fillRect(0, 0, w, h);
