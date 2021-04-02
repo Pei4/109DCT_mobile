@@ -12,10 +12,10 @@
 <body>
 <div id="takePhoto"> <!--拍照有關的功能-->
     <div id="capture"> <!--要截圖的東西放這邊-->
-        <img id="demoPlanet" src="../material/button_drink.png">
         <video id="preview" autoplay loop playsinline></video>
     </div>
     <canvas id="shotCanvas"></canvas>
+    <img id="demoPlanet" src="../material/button_drink.png">
     <button onclick="screenShot()"></button>
     <button onclick="runVid()"></button>
 </div>
@@ -23,7 +23,6 @@
 </html>
 <script>
     let vid = document.querySelector('#preview');
-    let cap = document.querySelector('#capture');
     let canvas = document.querySelector('#shotCanvas')
     let context = canvas.getContext('2d');
     let w, h, ratio;
@@ -54,6 +53,6 @@
     function screenShot(){
         document.querySelector('#shotCanvas').style.visibility = 'visible';
         context.fillRect(0, 0, w, h);
-        context.drawImage(cap, 0, 0, w, h);
+        context.drawImage(vid, 0, 0, w, h);
     };
 </script>
