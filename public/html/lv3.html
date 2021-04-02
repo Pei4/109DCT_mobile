@@ -11,11 +11,11 @@
 </head>
 <body>
 <div id="takePhoto"> <!--拍照有關的功能-->
-    <div id="capture"> <!--要截圖的東西放這邊-->
-        <video id="preview" autoplay loop playsinline></video>
+    <video id="preview" autoplay loop playsinline></video>
+    <div id="capture"> <!--要存檔的東西放這邊-->
+        <canvas id="shotCanvas"></canvas>
+        <img id="demoPlanet" src="../material/button_drink.png">
     </div>
-    <canvas id="shotCanvas"></canvas>
-    <img id="demoPlanet" src="../material/button_drink.png">
     <button onclick="screenShot()"></button>
     <button onclick="runVid()"></button>
 </div>
@@ -51,7 +51,8 @@
     }, false);
 
     function screenShot(){
-        document.querySelector('#shotCanvas').style.visibility = 'visible';
+        document.querySelector('#capture').style.visibility = 'visible';
+        document.querySelector('#capture').style.transform = 'translate(0,-100)';
         context.fillRect(0, 0, w, h);
         context.drawImage(vid, 0, 0, w, h);
     };

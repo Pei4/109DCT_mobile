@@ -1,13 +1,13 @@
 #capture{
     display: block;
     background: black;
+    visibility: hidden;
 }
 #preview{
     width: 100vw;
     height: 90vh;
 }
 #shotCanvas{
-    visibility: hidden;
     position: absolute;
     transform: translate(0,-100);
     background: aquamarine;
