@@ -1,7 +1,6 @@
 #capture{
     display: block;
     background: black;
-    visibility: hidden;
 }
 #preview{
     width: 100vw;
@@ -9,12 +8,22 @@
 }
 #shotCanvas{
     position: absolute;
-    transform: translate(0,-100);
     background: aquamarine;
     width: 100vw;
     height: 90vh;
 }
 #demoPlanet{
     position: absolute;
-    transform: translate(200,-50);
+    transform: translate(200,50);
+    -webkit-transform: translate(200,50);
+}
+
+:before{
+    visibility: hidden;
+}
+:after{
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
