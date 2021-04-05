@@ -3,7 +3,7 @@ let num = 1;
 function read(){
     $.ajax({
         type: "get",
-        url: "https://script.google.com/macros/s/AKfycbxyq7f7N1DMjodmJUk0ldT5fZY-vTL2NsKgrOhmQ16NK-Vv8cNe7fOePC55vQ5anrwlkQ/exec",
+        url: "https://script.google.com/macros/s/AKfycbxAl9GvX2nAfEUnCi-v8DT-I0jCHJDH-WWNYetDKh4oFkX0RVxiEugGLLTJLGQtDzdZGQ/exec?callback=googleDocCallback",
         data: {
             "num":num
         },
