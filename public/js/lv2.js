@@ -10,11 +10,6 @@ function send() {
             "method":"write",
             "test1": test1,
             "test2": test2
-        },
-        success: function(response) {
-            if(response == "成功"){
-                alert("成功");
-            }
-        },
+        }
     });
 };
