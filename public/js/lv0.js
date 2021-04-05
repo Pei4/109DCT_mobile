@@ -1,9 +1,9 @@
 window.googleDocCallback = function () { return true; };
-let num = 1;
+const num = 2;
 function read(){
     $.ajax({
         type: "get",
-        url: "https://script.google.com/macros/s/AKfycbwU8IvoL42RzKqYUT8xcm6fxDG00ve5oNfVVQvKCE2lUdO3JgdUWzWsy_kc2FGQsD5Crw/exec?callback=googleDocCallback",
+        url: "https://script.google.com/macros/s/AKfycbzrScWJX4Jk42ckUKAZ6HKHbBxCR5PZWVnzkHpj2dPBJDaQ5_wvuS3WfYVikkb9kjszHg/exec?callback=googleDocCallback",
         data: {
             "num":num
         },
