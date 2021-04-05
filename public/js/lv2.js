@@ -5,7 +5,7 @@ function send() {
     let test2 = document.querySelector('#t2').value;
     $.ajax({
         type: "get",
-        url: "https://script.google.com/macros/s/AKfycbxczugTBSFn2zVudV0D0rf61q7o7WMJ7UVBfAYtZIzsu-aqry0_udg9LA/exec?callback=googleDocCallback",
+        url: "https://script.google.com/macros/s/AKfycbxd4UmVaIwRdI9nUXst8gZ-8rwgss7WzUHuVyf1m6gVwEBM-ntdGjMo5p5_WBi7fV1k7w/exec",
         data: {
             "method":"write",
             "test1": test1,
