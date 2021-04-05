@@ -1,4 +1,3 @@
-
     //截圖（拍照）
     //function screenshot(){
         //影片比例
