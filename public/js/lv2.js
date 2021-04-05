@@ -4,14 +4,10 @@ function send() {
     let test2 = document.querySelector('#t2').value;
     $.ajax({
         type: "post",
-        url: "https://script.google.com/macros/s/AKfycbxd4UmVaIwRdI9nUXst8gZ-8rwgss7WzUHuVyf1m6gVwEBM-ntdGjMo5p5_WBi7fV1k7w/exec",
+        url: "https://script.google.com/macros/s/AKfycbxyq7f7N1DMjodmJUk0ldT5fZY-vTL2NsKgrOhmQ16NK-Vv8cNe7fOePC55vQ5anrwlkQ/exec",
         data: {
-            "method":"write",
             "test1": test1,
             "test2": test2
-        },
-        error: function(xhr, ajaxOptions, thrownError){
-            alert(thrownError);
         }
     });
 };
