@@ -11,7 +11,7 @@ function read(){
         success: function(response) {
             console.log(response);
             console.log('read');
-        },
+        }
     });
 }
 
