@@ -1,12 +1,18 @@
 window.googleDocCallback = function () { return true; };
-function callGas(m,v1,v2){
+let nu;
+let num;
+let cate;
+function callGas(m){
+    nu = document.querySelector('#getNum').value;
+    num = parseInt(nu) + 1;
+    cate = document.querySelector('#getCate').value;
     $.ajax({
         type: "get",
-        url: "https://script.google.com/macros/s/AKfycbz7Zp1HdGHFDSyTU8vx-rE5IYiddFPHlewPtbq5e7XX8H5wYCm54VcNKuvL8BUhVLZyEw/exec?callback=googleDocCallback",
+        url: "https://script.google.com/macros/s/AKfycbxTfABwbU6aGDUnXc66Xe5fhIY5ykHKU8ItZPek_4IOH3qhkNDcbt0hiATTwe_7iYxCSw/exec?callback=googleDocCallback",
         data: {
             "method":m,
-            "num":v1,
-            "cate":v2
+            "num":num,
+            "cate":cate
         },
         success: function(response) {
             if (m == "read"){
@@ -19,11 +25,8 @@ function callGas(m,v1,v2){
         }
     })
 }
-function read(){
-    let nu = document.querySelector('#getNum').value;
-    let num = parseInt(nu) + 1;
-    console.log(num);
-    callGas("read",num);
+function readGas(){
+    callGas("read");
     /*$.ajax({
         type: "get",
         url: "https://script.google.com/macros/s/AKfycbz7Zp1HdGHFDSyTU8vx-rE5IYiddFPHlewPtbq5e7XX8H5wYCm54VcNKuvL8BUhVLZyEw/exec?callback=googleDocCallback",
@@ -37,11 +40,8 @@ function read(){
         }
     });*/
 }
-function write(){
-    let nu = document.querySelector('#getNum').value;
-    let nu2 = parseInt(nu) + 1;
-    let cat = document.querySelector('#getCate').value;
-    callGas("write",nu2,cat);
+function writeGas(){
+    callGas("write");
     /*$.ajax({
         type: "get",
         url: "https://script.google.com/macros/s/AKfycbz7Zp1HdGHFDSyTU8vx-rE5IYiddFPHlewPtbq5e7XX8H5wYCm54VcNKuvL8BUhVLZyEw/exec?callback=googleDocCallback",
