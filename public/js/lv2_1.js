@@ -3,7 +3,7 @@ let check = 0; // Default/continue 0, overload/almost 1, ready 2
 function callGas(method,successFnt){
     $.ajax({
         type: "get",
-        url: "https://script.google.com/macros/s/AKfycbxm6TgIaHS9LtBMZLyahdC-CX_Ldgfhnqw-jZIqhzaeSZ1DLWaI1x7lpw8Bt6kivtJOIQ/exec?callback=googleDocCallback",
+        url: "https://script.google.com/macros/s/AKfycbzmlZafI4Oec2xMk1qn98XPRBeYp8skmTwt0QxvlGQbiUvv_vhiSHfQrjCyzk19-BMuvA/exec?callback=googleDocCallback",
         data: {
             "method": method,
             "id":parseInt(document.querySelector('#id').value)+1
@@ -36,18 +36,35 @@ let tryCheck = function(e){
 }
 function read() {
     callGas("addPlayer",tryCheck);
-    for(check < 2 ;check += 0;){
-        if(check == 1){  //太多人時過久一點再試
-            window.setTimeout(function (){
+    if(check < 2){
+        if(check == 0){  //快速檢查是否登錄
+            let connectInternal = setInterval(function (){
                 callGas("addPlayer", tryCheck);
-                console.log("try again");
-            },5000);
+                if(check == 2){
+                    console.log("0-2");
+                    clearInterval(connectInternal);
+                }
+                if(check == 1){
+                    console.log("0-1");
+                    clearInterval(connectInternal);
+                    let retryInternal = setInterval(function (){
+                        callGas("addPlayer", tryCheck);
+                        if(check == 2){
+                            console.log("0-1-2");
+                            clearInterval(retryInternal);
+                        }
+                    },5000);
+                }
+            },2000);
         }
-        else if(check == 0) {  //快速檢查是否登錄
-            window.setTimeout(function () {
+        if (check == 1) {  //太多人時過久一點再試
+            let retryInternal = setInterval(function () {
                 callGas("addPlayer", tryCheck);
-                console.log("doubleCheck");
-            }, 2000);
+                if (check == 2){
+                    console.log("1-2");
+                    clearInterval(retryInternal);
+                }
+            }, 5000);
         }
     }
 };
