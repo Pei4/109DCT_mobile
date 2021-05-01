@@ -1,20 +1,36 @@
 window.googleDocCallback = function () { return true; };
-function callGas(method){
+let check = 0;
+function callGas(method,successFnt){
     $.ajax({
         type: "get",
-        url: "https://script.google.com/macros/s/AKfycbzZ6uTliUhVJC9aulC3Rej4PAoVCBIsYfeFe9iGBRwlKxqfXivlceqg1EVzuoNkBYn2gQ/exec?callback=googleDocCallback",
+        url: "https://script.google.com/macros/s/AKfycbykVhu7hk1sWNbZe2n9FQV84mxhxCSrMAA4WphTOpSMsNbUURAfo79jEdgkLI9Jp-1bnQ/exec?callback=googleDocCallback",
         data: {
             "method": method,
             "id":parseInt(document.querySelector('#id').value)+1
         },
         success: function(response) {
-            console.log(response);
+            successFnt(response);
         }
     });
 }
+let test = function(e){
+    console.log(e);
+};
+let tryCheck = function(e){
+    if(e == "retry"){
+        check = 0;
+    }
+    if(e == "access"){
+        check = 1;
+    };
+}
 function read() {
-    callGas("addPlayer");
+    callGas("addPlayer",test);
+    for(check !== 1;check +0;){
+        window.setTimeout(callGas("checkPlayer",tryCheck),2000);
+        callGas("addPlayer",test);
+    }
 };
 function water(){
-    callGas("goWater");
+    callGas("goWater",test);
 }
