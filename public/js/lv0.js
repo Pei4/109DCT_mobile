@@ -8,7 +8,7 @@ function updatePlanets(){
     //num = parseInt(nu) + 1;
     $.ajax({
         type: "get",
-        url: "https://script.google.com/macros/s/AKfycbx5OlpJh0uU6LXLUpoFRn_6qE314bY7tXHY9d2Ef97bqk54dI5I_mdhAXGBM_qTA_-mLA/exec?callback=googleDocCallback",
+        url: "https://script.google.com/macros/s/AKfycbxt8PDMRJ4KplyJWdsIQ0jY3dNi5KTX6D_h4j6Y5w12OUTIBkzWIASTAGOTilFz_zp3zQ/exec?callback=googleDocCallback",
         success: function(response) {
             planets.length = 0;
             let responseString = response.split(",");
