@@ -26,7 +26,7 @@ let tryCheck = function(e){
 }
 function read() {
     callGas("addPlayer",test);
-    for(check !== 1;check +0;){
+    for(check !== 1;check += 0;){
         window.setTimeout(callGas("checkPlayer",tryCheck),2000);
         callGas("addPlayer",test);
     }
