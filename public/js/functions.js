@@ -1,6 +1,8 @@
-let checkpoint = 0;
-let planetDialogNum = -1;
-let meDialogNum = -1;
+let id = parseInt(localStorage.getItem('id'));
+let checkpoint = parseInt(localStorage.getItem('checkPoint'));
+let planetDialogNum = parseInt(localStorage.getItem('planetDialogNum'));
+let meDialogNum = parseInt(localStorage.getItem('meDialogNum'));
+
 let planetDialogArray =[
     '我...好餓', //0-3
     '我小星球啦',  //1-7
@@ -24,13 +26,13 @@ let meDialogArray =[
     '要喝什麼好呢？',  //1-2
     '找點食物給它吃吧',  //2-4
     '要吃什麼好呢？',  //3-5
-    '你誰',  //4-6
-    '唉呦好痛啊！哪來的垃圾？',  //5-15
-    '該丟進哪個垃圾桶好呢？',  //6-16
-    '你要回去哪裡？'  //7-18
+    '你誰',  //4-7
+    '唉呦好痛啊！哪來的垃圾？',  //5-16
+    '該丟進哪個垃圾桶好呢？',  //6-17
+    '你要回去哪裡？'  //7-19
 ];
 let planetCont = [3,7,8,9,10,11,12,13,14,17,19,20,21,22,23,24,25];
-let meCont = [1,2,4,5,6,15,16,18];
+let meCont = [1,2,4,5,7,16,17,19];
 
 function showSth(sth){
     document.getElementById(sth).style.display = 'block';
@@ -56,6 +58,13 @@ function dialogControl(){
     if(checkpoint == 1){
         showSth('lv1Btn');
         disableSth('nextBtn');
+    }
+    if(checkpoint == 6){
+        localStorage.setItem('id', id.toString());
+        localStorage.setItem('checkPoint', checkpoint.toString());
+        localStorage.setItem('planetDialogNum', planetDialogNum.toString());
+        localStorage.setItem('meDialogNum', meDialogNum.toString());
+        location.href='http://localhost:63342/109DCT_mobile/public/html/lv2_1.html';
     }
     if(meCont.includes(checkpoint)){
         meDialogNum ++;

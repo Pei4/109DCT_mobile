@@ -1,5 +1,6 @@
 window.googleDocCallback = function () { return true; };
 let check = 0; // Default/continue 0, overload/almost 1, ready 2
+dialogControl();
 
 function callGas(method,successFnt){
     $.ajax({
@@ -7,7 +8,7 @@ function callGas(method,successFnt){
         url: "https://script.google.com/macros/s/AKfycbzmlZafI4Oec2xMk1qn98XPRBeYp8skmTwt0QxvlGQbiUvv_vhiSHfQrjCyzk19-BMuvA/exec?callback=googleDocCallback",
         data: {
             "method": method,
-            "id":parseInt(document.querySelector('#id').value)+1
+            "id":id+1
         },
         success: function(response) {
             successFnt(response);

@@ -1,7 +1,12 @@
 let food = 0;
 let chooseCheck = 0;  //  Default/掃描中 0, 掃描到 1
 let option;
-let id = 2;
+
+//localStorage 初始化
+localStorage.setItem('id', '2');
+localStorage.setItem('checkPoint','0');
+localStorage.setItem('planetDialogNum','-1');
+localStorage.setItem('meDialogNum','-1');
 
 window.googleDocCallback = function () { return true; };
 function callGas(method,choose,successFnt){
@@ -31,6 +36,7 @@ function sure(){  //確定
     hideSth('scanShow');
     hideSth('scanOption');
     showSth('dialog');
+    showSth('me');
     callGas("food",food);
     dialogControl();
     showSth('nextBtn');
