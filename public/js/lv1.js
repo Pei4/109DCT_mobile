@@ -1,5 +1,54 @@
 let food = 0;
-function btnCheck(){
+let chooseCheck = 0;  //  Default/掃描中 0, 掃描到 1
+let option;
+
+function callGas(method,choose,successFnt){
+    $.ajax({
+        type: "get",
+        url: "https://script.google.com/macros/s/AKfycbyWybm7KgqrlukAA516BCr_KCGBd-pxYdh0lGemGBeyXftUfC813fXVNpq4_2MaJIrKGg/exec?callback=googleDocCallback",
+        data: {
+            "method": method,
+            "id":parseInt(document.querySelector('#id').value)+1,
+            "choose":choose
+        },
+        success: function(response) {
+            successFnt(response);
+        }
+    });
+}
+
+function correct(){  //再考慮看看
+    chooseCheck = 0;
+    showSth('dialog');
+    hideSth('scanShow');
+    hideSth('scanOption');
+}
+
+function sure(){  //確定
+    hideSth('insta');
+    hideSth('scanOption');
+    showSth('dialog');
+    callGas("food",food);
+}
+
+function chooseFnt(src){  //更新圖片與參數
+    if (src == 'steak'){
+        option = 1;
+    }
+    else if(src == 'chicken'){
+        option = 2;
+    }
+    else if(src == 'salad'){
+        option = 3;
+    }
+    food = option;
+    hideSth('dialog');
+    showSth('scanShow');
+    showSth('scanOption');
+    changeSource('scanImg',`../material/food_${src}_3.png`);
+}
+
+function btnCheck(){  //開始掃描
     checkpoint ++;
     meDialogNum ++;
     htmlContent('me',meDialogArray[meDialogNum]);
@@ -12,60 +61,14 @@ function btnCheck(){
     let video = document.querySelector('#preview');
     function handleSuccess(stream) {
         const codeReader = new ZXing.BrowserQRCodeReader();
-        const control = codeReader.decodeFromVideoDevice(undefined, 'preview',(result, error, controls) => {
+        codeReader.decodeFromVideoDevice(undefined, 'preview', (result, err) => {
             if (result) { //掃後結果在這裡
-                if(result.text == 'salad'){
-                    food = 1;
-                    hideSth('dialog');
-                    showSth('scanShow');
-                    showSth('scanOption');
-                    changeSource('scanImg','../material/food_salad_3.png');
-                    controls.stop();
-                }
-                if(result.text == 'steak'){
-                    food = 2;
-                    hideSth('dialog');
-                    showSth('scanShow');
-                    showSth('scanOption');
-                    changeSource('scanImg','../material/food_steak_3.png');
-                    controls.stop();
-                }
-                if(result.text == 'chicken'){
-                    food = 3;
-                    hideSth('dialog');
-                    showSth('scanShow');
-                    showSth('scanOption');
-                    changeSource('scanImg','../material/food_chicken_3.png');
-                    controls.stop();
-                }
+                if(chooseCheck == 0){
+                    chooseFnt(result.text); //還沒選的話就更新
+                    chooseCheck = 1;
+                }   //已選就不反應
             }
         })
-        /*codeReader.decodeFromVideoDevice(undefined, 'preview', (result, err) => {
-            if (result) { //掃後結果在這裡
-                if(result.text == 'salad'){
-                    food = 1;
-                    hideSth('dialog');
-                    showSth('scanShow');
-                    showSth('scanOption');
-                    changeSource('scanImg','../material/food_salad_3.png');
-                }
-                if(result.text == 'steak'){
-                    food = 2;
-                    hideSth('dialog');
-                    showSth('scanShow');
-                    showSth('scanOption');
-                    changeSource('scanImg','../material/food_steak_3.png');
-                }
-                if(result.text == 'chicken'){
-                    food = 3;
-                    hideSth('dialog');
-                    showSth('scanShow');
-                    showSth('scanOption');
-                    changeSource('scanImg','../material/food_chicken_3.png');
-
-                }
-            }
-        })*/
         window.stream = stream;
         video.srcObject = stream;
     }

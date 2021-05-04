@@ -1,5 +1,6 @@
 window.googleDocCallback = function () { return true; };
 let check = 0; // Default/continue 0, overload/almost 1, ready 2
+
 function callGas(method,successFnt){
     $.ajax({
         type: "get",
@@ -13,6 +14,7 @@ function callGas(method,successFnt){
         }
     });
 }
+
 let test = function(e){
     console.log(e);
 };

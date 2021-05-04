@@ -25,6 +25,7 @@ img {
   bottom: 30vh;
   left: 50vw;
   transform: translate(-50%, 0);
+  display: none;
 }
 
 #star img {
