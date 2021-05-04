@@ -27,9 +27,12 @@ function correct(){  //再考慮看看
 
 function sure(){  //確定
     hideSth('insta');
+    hideSth('scanShow');
     hideSth('scanOption');
     showSth('dialog');
     callGas("food",food);
+    checkpoint ++;
+    showSth('nextBtn');
 }
 
 function chooseFnt(src){  //更新圖片與參數

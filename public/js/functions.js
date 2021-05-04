@@ -1,7 +1,6 @@
 let checkpoint = 0;
 let planetDialogNum = -1;
 let meDialogNum = -1;
-let gasUrl; //GAS 的 url
 let planetDialogArray =[
     '我...好餓',
     '我小星球啦',
