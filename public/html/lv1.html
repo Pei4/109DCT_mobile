@@ -6,7 +6,9 @@
     <title>lv1</title>
     <link rel=stylesheet type="text/css" href="../reset.css">
     <link rel="stylesheet" type="text/css" href="../scss/mobile.css">
+    <link rel="stylesheet" type="text/css" href="../scss/lv1.css">
     <script src="../js/functions.js"></script>
+    <script src="../js/lv1.js"></script>
     <script type="text/javascript" src="https://unpkg.com/@zxing/library@latest"></script>
 </head>
 <body>
@@ -25,6 +27,10 @@
     <a id="me" style="display: none"></a>
     <a id="planet">我好乾...好渴喔...</a>
     <button id="nextBtn" onclick="dialogControl()">下</button>
+</div>
+<div id="scanOption">
+    <button id="correct" style="display: none" onclick="correct()">再考慮一下</button>
+    <button id="sure" style="display: none" onclick="sure()">確定</button>
 </div>
 </body>
 </html>
