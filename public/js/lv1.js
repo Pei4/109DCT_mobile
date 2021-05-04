@@ -3,6 +3,7 @@ let chooseCheck = 0;  //  Default/掃描中 0, 掃描到 1
 let option;
 let id = 2;
 
+window.googleDocCallback = function () { return true; };
 function callGas(method,choose,successFnt){
     $.ajax({
         type: "get",
