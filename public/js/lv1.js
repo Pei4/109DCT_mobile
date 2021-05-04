@@ -1,6 +1,7 @@
 let food = 0;
 let chooseCheck = 0;  //  Default/掃描中 0, 掃描到 1
 let option;
+let id = 2;
 
 function callGas(method,choose,successFnt){
     $.ajax({
@@ -8,7 +9,7 @@ function callGas(method,choose,successFnt){
         url: "https://script.google.com/macros/s/AKfycbyWybm7KgqrlukAA516BCr_KCGBd-pxYdh0lGemGBeyXftUfC813fXVNpq4_2MaJIrKGg/exec?callback=googleDocCallback",
         data: {
             "method": method,
-            "id":parseInt(document.querySelector('#id').value)+1,
+            "id":id+1,
             "choose":choose
         },
         success: function(response) {
