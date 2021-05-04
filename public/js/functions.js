@@ -64,7 +64,7 @@ function dialogControl(){
         localStorage.setItem('checkPoint', checkpoint.toString());
         localStorage.setItem('planetDialogNum', planetDialogNum.toString());
         localStorage.setItem('meDialogNum', meDialogNum.toString());
-        location.href='https://pei4.github.io/109DCT_mobile/public/html/lv2_1';
+        location.href='https://pei4.github.io/109DCT_mobile/public/html/lv2_1.html';
     }
     if(meCont.includes(checkpoint)){
         meDialogNum ++;
