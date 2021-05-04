@@ -31,7 +31,7 @@ function sure(){  //確定
     hideSth('scanOption');
     showSth('dialog');
     callGas("food",food);
-    checkpoint ++;
+    dialogControl();
     showSth('nextBtn');
 }
 
