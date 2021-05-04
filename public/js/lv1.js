@@ -34,6 +34,7 @@ function sure(){  //確定
     callGas("food",food);
     dialogControl();
     showSth('nextBtn');
+    enableSth('nextBtn');
 }
 
 function chooseFnt(src){  //更新圖片與參數
