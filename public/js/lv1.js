@@ -18,10 +18,10 @@ function callGas(method,choose,successFnt){
 }
 
 function correct(){  //再考慮看看
-    chooseCheck = 0;
     showSth('dialog');
     hideSth('scanShow');
     hideSth('scanOption');
+    chooseCheck = 0;
 }
 
 function sure(){  //確定
