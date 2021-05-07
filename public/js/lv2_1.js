@@ -5,7 +5,7 @@ dialogControl();
 function callGas(method,successFnt){
     $.ajax({
         type: "get",
-        url: "https://script.google.com/macros/s/AKfycbzQMjajnn5fGrSWYlmjhDI6ZCDfotrGI-6QrLnTCVzUBNJb2vcAIss1qZy94JKPOadS-w/exec?callback=googleDocCallback",
+        url: "https://script.google.com/macros/s/AKfycbzmlZafI4Oec2xMk1qn98XPRBeYp8skmTwt0QxvlGQbiUvv_vhiSHfQrjCyzk19-BMuvA/exec?callback=googleDocCallback",
         data: {
             "method": method,
             "id":id+1
