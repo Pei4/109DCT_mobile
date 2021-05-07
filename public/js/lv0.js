@@ -4,8 +4,6 @@ let shineImg,planetImg,planetR,planetW,planetB;
 
 //呼叫 Google Apps Script
 function updatePlanets(){
-    //nu = document.querySelector('#getNum').value;
-    //num = parseInt(nu) + 1;
     $.ajax({
         type: "get",
         url: "https://script.google.com/macros/s/AKfycbxt8PDMRJ4KplyJWdsIQ0jY3dNi5KTX6D_h4j6Y5w12OUTIBkzWIASTAGOTilFz_zp3zQ/exec?callback=googleDocCallback",
