@@ -52,19 +52,27 @@ function htmlContent(id,what){
 function changeSource(id,what){
     document.getElementById(id).src = what;
 }
+function reUrl(url){
+    //更新 localStorage
+    localStorage.setItem('id', id.toString());
+    localStorage.setItem('checkPoint', checkpoint.toString());
+    localStorage.setItem('planetDialogNum', planetDialogNum.toString());
+    localStorage.setItem('meDialogNum', meDialogNum.toString());
+    location.href=`https://pei4.github.io/109DCT_mobile/public/html/${url}.html`;
+}
 
 function dialogControl(){
     checkpoint ++;
     if(checkpoint == 1){
         showSth('lv1Btn');
-        disableSth('nextBtn');
+        hideSth('nextBtn');
+    }
+    if(checkpoint == 4){
+        showSth('lv2Btn');
+        hideSth('nextBtn');
     }
     if(checkpoint == 6){
-        localStorage.setItem('id', id.toString());
-        localStorage.setItem('checkPoint', checkpoint.toString());
-        localStorage.setItem('planetDialogNum', planetDialogNum.toString());
-        localStorage.setItem('meDialogNum', meDialogNum.toString());
-        location.href='https://pei4.github.io/109DCT_mobile/public/html/lv2_1.html';
+        reUrl('lv2_1');
     }
     if(meCont.includes(checkpoint)){
         meDialogNum ++;

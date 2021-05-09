@@ -16,7 +16,6 @@ function callGas(method,successFnt){
         },
         success: function(response) {
             successFnt(response);
-
         }
     });
 }
@@ -25,43 +24,35 @@ function test(e){
     console.log(e);
 };
 function tryCheck(e){
-    console.log(check);
     if(e == "overload"){
-        alert("overload, wait for 5 sec");
+        alert("overload, wait for 5 sec");  //人數過多，請稍待
         check = 1;
     }
-    if(e == "almost, wait for 5 sec"){
-        alert("almost");
+    if(e == "almost"){
+        alert("almost, wait for 5 sec");  //快完成了，靜候下一輪
         check = 1;
     }
     if(e == "continue"){
-        alert("connecting2");
         check = 0;
     }
     if(e == "ready"){
         alert("success");
         check = 2;
     }
-    //return new Promise(resolve => setTimeout(resolve, 10));
 }
 function goCheck(){
-    console.log('goCheck');
     if(check < 2){
         if(check == 0){  //快速檢查是否登錄
-            console.log('check0');
             let connectInterval = setInterval(function (){
                 callGas("addPlayer", tryCheck)
                 if(check == 2){
-                    console.log("0-2");
                     clearInterval(connectInterval);
                 }
                 if(check == 1){
-                    console.log("0-1");
                     clearInterval(connectInterval);
                     let retryInterval = setInterval(function (){
                         callGas("addPlayer", tryCheck);
                         if(check == 2){
-                            console.log("0-1-2");
                             clearInterval(retryInterval);
                         }
                     },5000);
@@ -70,10 +61,8 @@ function goCheck(){
         }
         if (check == 1) {  //太多人時過久一點再試
             let retryInternal = setInterval(async function () {
-                console.log('retry');
                 callGas("addPlayer", tryCheck);
                 if (check == 2){
-                    console.log("1-2");
                     clearInterval(retryInternal);
                 }
             }, 5000);
@@ -82,7 +71,7 @@ function goCheck(){
 }
 
 function read() {
-    alert('connecting');
+    alert('connecting');  //通知連接中
     callGas("addPlayer",tryCheck);
     goCheck();
 };

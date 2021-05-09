@@ -1,4 +1,3 @@
-let food = 0;
 let chooseCheck = 0;  //  Default/掃描中 0, 掃描到 1
 let option;
 
@@ -37,27 +36,46 @@ function sure(){  //確定
     hideSth('scanOption');
     showSth('dialog');
     showSth('me');
-    callGas("food",food);
+    if(checkpoint < 4){
+        callGas("drink",option);
+    }
+    else{
+        callGas("food",option);
+    }
     dialogControl();
     showSth('nextBtn');
     enableSth('nextBtn');
 }
 
 function chooseFnt(src){  //更新圖片與參數
+    if (src == 'water'){
+        option = 'A';
+        src = 'drink_water';
+    }
+    else if(src == 'pack'){
+        src = 'drink_pack';
+        option = 'B';
+    }
+    else if(src == 'tea'){
+        src = 'drink_tea';
+        option = 'C';
+    }
     if (src == 'steak'){
+        src = 'food_steak_3';
         option = 1;
     }
     else if(src == 'chicken'){
         option = 2;
+        src = 'food_chicken_3';
     }
     else if(src == 'salad'){
         option = 3;
+        src = 'food_salad_3';
     }
-    food = option;
     hideSth('dialog');
     showSth('scanShow');
     showSth('scanOption');
-    changeSource('scanImg',`../material/food_${src}_3.png`);
+    changeSource('scanImg',`../material/${src}.png`);
 }
 
 function btnCheck(){  //開始掃描
@@ -69,25 +87,35 @@ function btnCheck(){  //開始掃描
     hideSth('planet');
     hideSth('main');
     //掃描解碼
-    let constraints = {video: {facingMode: { exact: "environment" }}};
-    let video = document.querySelector('#preview');
-    function handleSuccess(stream) {
-        const codeReader = new ZXing.BrowserQRCodeReader();
-        codeReader.decodeFromVideoDevice(undefined, 'preview', (result, err) => {
-            if (result) { //掃後結果在這裡
-                if(chooseCheck == 0){
-                    chooseFnt(result.text); //還沒選的話就更新
-                    chooseCheck = 1;
-                }   //已選就不反應
-            }
-        })
-        window.stream = stream;
-        video.srcObject = stream;
+    setCamera().then(()=>{
+        function handleSuccess(stream) {
+            const codeReader = new ZXing.BrowserQRCodeReader();
+            codeReader.decodeFromVideoDevice(undefined, 'preview', (result, err) => {
+                if (result) { //掃後結果在這裡
+                    if(chooseCheck == 0){
+                        chooseFnt(result.text); //還沒選的話就更新
+                        chooseCheck = 1;
+                    }   //已選就不反應
+                }
+            })
+            window.stream = stream;
+            video.srcObject = stream;
+        }
+        function handleError(error) {
+            console.log('getUserMedia error: ', error);
+        }
+        navigator.mediaDevices.getUserMedia(constraints)
+            .then(handleSuccess)
+            .catch(handleError)
+    })
+}
+
+async function setCamera(){
+    await function(){
+        if(checkpoint < 4){
+            let constraints = {video: {facingMode: { exact: "environment" }}};
+            let video = document.querySelector('#preview');
+        }
+        return new Promise(resolve => {});
     }
-    function handleError(error) {
-        console.log('getUserMedia error: ', error);
-    }
-    navigator.mediaDevices.getUserMedia(constraints)
-        .then(handleSuccess)
-        .catch(handleError)
 }

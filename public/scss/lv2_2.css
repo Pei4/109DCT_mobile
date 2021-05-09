@@ -1,0 +1,55 @@
+#loadBar{
+    background: white;
+    border-radius: 50px;
+    width: 20vw;
+    height: auto;
+    left: 50vw;
+    bottom: 13vh;
+    box-shadow: inset 0px 0px 2px 2px rgba(0,0,0,0.2);
+}
+#inBar{
+    position: relative;
+    background: cornflowerblue;
+    border-radius: 50px;
+    width: 8vw;
+    height: 30px;
+    left: 0;
+    transform: none;
+}
+div{
+    display: block;
+    position: absolute;
+    transform: translate(-50%,0);
+}
+div img{
+    width: 10vw;
+}
+#p1{
+    top: 13vh;
+    left: 52vw;
+}
+#p2{
+    top: 25vh;
+    left: 30vw;
+}
+#p3{
+    top: 25vh;
+    left: 65vw;
+    transform: scaleX(-1);
+}
+#p4{
+    top:45vh;
+    left: 18vw;
+}
+#p5{
+    top: 45vh;
+    left: 77vw;
+    transform: scaleX(-1);
+}
+#flower{
+    top: 40vh;
+    left: 50vw;
+}
+#flower img{
+    width: 20vw;
+}
