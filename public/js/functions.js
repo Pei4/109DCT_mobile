@@ -52,6 +52,12 @@ function htmlContent(id,what){
 function changeSource(id,what){
     document.getElementById(id).src = what;
 }
+function addClass(sth, what){
+    document.getElementById(sth).classList.add(what);
+}
+function removeClass(sth, what){
+    document.getElementById(sth).classList.remove(what);
+}
 function reUrl(url){
     //更新 localStorage
     localStorage.setItem('id', id.toString());

@@ -24,6 +24,28 @@ div{
 div img{
     width: 10vw;
 }
+img[class^=drop]{
+    position: relative;
+    top: 5vw;
+    width: 5vw !important;
+}
+.drop1{
+    left: -2vw;
+}
+.drop2{
+    right: 2vw;
+}
+.dropDown{
+    animation-duration: 3s;
+    animation-name: dropAnim;
+    animation-iteration-count: 1;
+}
+@keyframes dropAnim{
+    0%{top: 5vw}
+    50%{top: 6vw}
+    100%{top: 7vw}
+}
+
 #p1{
     top: 13vh;
     left: 52vw;
