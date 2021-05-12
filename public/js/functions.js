@@ -41,10 +41,10 @@ function hideSth(sth){
     document.getElementById(sth).style.display = 'none';
 }
 function disableSth(sth){
-    document.getElementById(sth).disabled = true;
+    document.getElementById(sth).style.pointerEvents = 'none';
 }
 function enableSth(sth){
-    document.getElementById(sth).disabled = false;
+    document.getElementById(sth).style.pointerEvents = 'auto';
 }
 function htmlContent(id,what){
     document.getElementById(id).innerHTML = what;
@@ -54,6 +54,7 @@ function changeSource(id,what){
 }
 function addClass(sth, what){
     document.getElementById(sth).classList.add(what);
+    return new Promise(()=>{});
 }
 function removeClass(sth, what){
     document.getElementById(sth).classList.remove(what);
@@ -69,12 +70,14 @@ function reUrl(url){
 
 function dialogControl(){
     checkpoint ++;
-    if(checkpoint == 1){
+    if(checkpoint == 2){
         showSth('lv1Btn');
+        disableSth('dialog');
         hideSth('nextBtn');
     }
     if(checkpoint == 4){
         showSth('lv2Btn');
+        disableSth('dialog');
         hideSth('nextBtn');
     }
     if(checkpoint == 6){

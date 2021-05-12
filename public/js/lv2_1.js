@@ -9,7 +9,7 @@ function callGas(method,successFnt){
     $.ajax({
         type: "get",
         async: false,
-        url: "https://script.google.com/macros/s/AKfycbyI5hk18g3cu6F_hFDxqorwd4axTcfA5hGdjOZ8l70IGGknHbdOoOwmI_D-NeHBUROQlQ/exec?callback=googleDocCallback",
+        url: "https://script.google.com/macros/s/AKfycbyk1G18028mYn8PNzxYNrG1slH9LedvY8cv4j6DmSDYOVz0T-Y9hv2jobVMGdYyF0SS/exec?callback=googleDocCallback",
         data: {
             "method": method,
             "id":id+1

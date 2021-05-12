@@ -16,8 +16,8 @@
 <div id="star"><img src="../material/star_000.png"></div>
 <div id="main">
     <img src="../material/handplanet_0.png">
-    <button id="lv1Btn" style="display: none" onclick="btnCheck()">吃</button>
-    <button id="lv2Btn" style="display: none" onclick="btnCheck()">喝</button>
+    <button id="lv1Btn" style="display: none" onclick="btnCheck()">找喝的</button>
+    <button id="lv2Btn" style="display: none" onclick="btnCheck()">找吃的</button>
 </div>
 <div id="insta" style="display: none">
     <video id="preview" autoplay loop playsinline></video>
@@ -25,7 +25,7 @@
 <div id="scanShow">
     <img id="scanImg" src="../material/food_steak_3.png">
 </div>
-<div id="dialog">
+<div id="dialog" onclick="dialogControl()">
     <a id="me" style="display: none"></a>
     <a id="planet">我好乾...好渴喔...</a>
     <button id="nextBtn" onclick="dialogControl()">下</button>

@@ -17,7 +17,7 @@ body {
 }*/
 img{
   max-width: 80%;
-  max-height: 80%;
+  max-height: 60%;
 }
 #scanShow{
   position: absolute;
@@ -27,9 +27,14 @@ img{
   display: none;
 }
 #star img{
-  float: right;
+  position: absolute;
+  display: inline-block;
   top: 2vh;
-  right: 2vh;
+  left: 50vw;
+  transform: translate(15%,0);
+  -webkit-transform: translate(15%,0);
+  -moz-transform: translate(15%,0);
+  height: 10vh;
 }
 #main img{
   position: absolute;

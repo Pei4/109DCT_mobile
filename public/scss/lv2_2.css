@@ -22,33 +22,43 @@ div{
     transform: translate(-50%,0);
 }
 div img{
-    width: 10vw;
+    width: 8vw;
 }
 img[class^=drop]{
     position: relative;
-    top: 5vw;
-    width: 5vw !important;
+    top: 0vh;
+    width: 3vw !important;
+}
+.drop0{
+    left: 7vw;
 }
 .drop1{
-    left: -2vw;
+    left: 7vw;
 }
 .drop2{
-    right: 2vw;
+    right: -7vw;
 }
 .dropDown{
-    animation-duration: 3s;
-    animation-name: dropAnim;
-    animation-iteration-count: 1;
+    animation: dropAnim 1s ease-out 0s 1;
+    -webkit-animation: dropAnim 1s ease-out 0s 1;
+    -moz-animation: dropAnim 1s ease-out 0s 1;
 }
 @keyframes dropAnim{
-    0%{top: 5vw}
-    50%{top: 6vw}
-    100%{top: 7vw}
+    0%{top: 0vh}
+    100%{top: 5vh}
+}
+@-webkit-keyframes dropAnim{
+    0%{top: 0vh}
+    100%{top: 5vh}
+}
+@-moz-keyframes dropAnim {
+    0%{top: 0vh}
+    100%{top: 5vh}
 }
 
 #p1{
-    top: 13vh;
-    left: 52vw;
+    top: 8vh;
+    left: 46vw;
 }
 #p2{
     top: 25vh;

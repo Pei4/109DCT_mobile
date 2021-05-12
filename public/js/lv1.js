@@ -43,8 +43,7 @@ function sure(){  //確定
         callGas("food",option);
     }
     dialogControl();
-    showSth('nextBtn');
-    enableSth('nextBtn');
+    enableSth('dialog');
 }
 
 function chooseFnt(src){  //更新圖片與參數

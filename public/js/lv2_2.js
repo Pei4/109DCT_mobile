@@ -6,7 +6,7 @@ let player = 0;  //紀錄人數
 function update(){
     $.ajax({
         type: "get",
-        url: "https://script.google.com/macros/s/AKfycbxTho3IqNqjynhM19BZSAosRXLPFjJe-HaFmrY6CCxW/dev?callback=googleDocCallback",
+        url: "https://script.google.com/macros/s/AKfycbyO9KaqyTC4ncTruqa2X37Yp_-6ICXB02VMsaczsEXAPb4kGPYnBe5TkPipMb6-ZUWMuw/exec?callback=googleDocCallback",
         success: function(response) {
             if (response == "finish") {
                 //重設
@@ -19,12 +19,12 @@ function update(){
 };
 
 function setDrop(id, size){
-    $(`d${id}`).attr('style',`width: ${size/7*5}vw !important;`);
+    document.getElementById(id).style.width=`${size/7*5}vw !important`;
 }
 
 async function dropDown(id){
-    await addClass(`d${i+1}`,'dropDown');
-    await setTimeout(()=>{},3000);
+    await addClass(`d${id+1}`,'dropDown');
+    await setTimeout(()=>{},1000);
 }
 
 function goCheck(e){
@@ -38,10 +38,10 @@ function goCheck(e){
             if(localArray[i] == NaN){ //如果沒有紀錄
                 showSth(`p${i+1}`);  //新增水桶數
                 setDrop(i+1,gasArray[i]);  //初始設定玩家水滴大小
-                dropDown(`i+1`,'dropDown').then(()=>{removeClass(`d${i+1}`,'dropDown')}) //滴完後消失
+                dropDown(i+1).then(()=>{removeClass(`d${i+1}`,'dropDown')}) //滴完後消失
             }
             else if(localArray[i]<gasArray[i]){
-                dropDown(i+1,'dropDown').then(()=>{removeClass(`d${i+1}`,'dropDown')})
+                dropDown(i+1).then(()=>{removeClass(`d${i+1}`,'dropDown')})
                 localArray[i] = gasArray[i];
             }
         }
