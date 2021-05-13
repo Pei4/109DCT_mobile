@@ -85,8 +85,29 @@ function btnCheck(){  //開始掃描
     showSth('insta');
     hideSth('planet');
     hideSth('main');
+    let constraints = {video: {facingMode: { exact: "environment" }}};
+    let video = document.querySelector('#preview');
+    function handleSuccess(stream) {
+        const codeReader = new ZXing.BrowserQRCodeReader();
+        codeReader.decodeFromVideoDevice(undefined, 'preview', (result, err) => {
+            if (result) { //掃後結果在這裡
+                if(chooseCheck == 0){
+                    chooseFnt(result.text); //還沒選的話就更新
+                    chooseCheck = 1;
+                }   //已選就不反應
+            }
+        })
+        window.stream = stream;
+        video.srcObject = stream;
+    }
+    function handleError(error) {
+        console.log('getUserMedia error: ', error);
+    }
+    navigator.mediaDevices.getUserMedia(constraints)
+        .then(handleSuccess)
+        .catch(handleError)
     //掃描解碼
-    setCamera().then(()=>{
+    /*setCamera().then(()=>{
         function handleSuccess(stream) {
             const codeReader = new ZXing.BrowserQRCodeReader();
             codeReader.decodeFromVideoDevice(undefined, 'preview', (result, err) => {
@@ -106,10 +127,10 @@ function btnCheck(){  //開始掃描
         navigator.mediaDevices.getUserMedia(constraints)
             .then(handleSuccess)
             .catch(handleError)
-    })
+    })*/
 }
 
-async function setCamera(){
+/*async function setCamera(){
     await function(){
         if(checkpoint < 4){
             let constraints = {video: {facingMode: { exact: "environment" }}};
@@ -117,4 +138,4 @@ async function setCamera(){
         }
         return new Promise(()=> {});
     }
-}
+}*/
