@@ -31,6 +31,7 @@ function correct(){  //再考慮看看
 }
 
 function sure(){  //確定
+    alert(checkpoint);
     hideSth('insta');
     hideSth('scanShow');
     hideSth('scanOption');
