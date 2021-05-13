@@ -78,9 +78,10 @@ function dialogControl(){
     if(checkpoint == 3){
         enableSth('dialog');
         showSth('main');
+        showSth('lv2Btn');
     }
     if(checkpoint == 4){
-        showSth('lv2Btn');
+
         disableSth('dialog');
     }
     if(checkpoint == 6){
