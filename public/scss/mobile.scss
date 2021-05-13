@@ -17,7 +17,7 @@ body {
 }*/
 img{
   max-width: 80%;
-  max-height: 60%;
+  max-height: 50%;
 }
 #scanShow{
   position: absolute;
@@ -31,9 +31,9 @@ img{
   display: inline-block;
   top: 2vh;
   left: 50vw;
-  transform: translate(15%,0);
-  -webkit-transform: translate(15%,0);
-  -moz-transform: translate(15%,0);
+  transform: translate(10%,0);
+  -webkit-transform: translate(10%,0);
+  -moz-transform: translate(10%,0);
   height: 10vh;
 }
 #main img{
@@ -41,11 +41,6 @@ img{
   bottom: 15vh;
   left: 50vw;
   transform: translate(-50%,0);
-}
-#nextBtn{
-  position: fixed;
-  bottom: 5vh;
-  right: 15px;
 }
 #dialog{
   position: fixed;
@@ -60,7 +55,7 @@ img{
     font-family: Noto Sans CJK TC;
     font-style: normal;
     font-weight: normal;
-    font-size: 6.4vw;
+    font-size: 24px;
   }
 }
 #me{
@@ -78,4 +73,19 @@ img{
   top:10vh;
   height: 50vh;
   width: 100vw;
+}
+
+@media (max-width: 375px) {
+  #dialog{
+    a{
+      font-size: 20px;
+    }
+  }
+  #star img{
+    width: 40vw;
+    height: auto;
+    transform: translate(10%,0);
+    -webkit-transform: translate(10%,0);
+    -moz-transform: translate(10%,0);
+  }
 }
