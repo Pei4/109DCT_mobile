@@ -38,6 +38,7 @@ function sure(){  //確定
     showSth('me');
     if(checkpoint < 4){
         callGas("drink",option);
+        chooseCheck = 0;
     }
     else{
         callGas("food",option);
