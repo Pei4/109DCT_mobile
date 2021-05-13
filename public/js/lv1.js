@@ -40,12 +40,10 @@ function sure(){  //確定
     if(checkpoint < 4){
         callGas("drink",option);
         enableSth('dialog');
-        dialogControl();
     }
     else{
         callGas("food",option);
         enableSth('dialog');
-        dialogControl();
     }
 }
 
