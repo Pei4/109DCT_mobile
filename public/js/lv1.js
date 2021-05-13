@@ -31,7 +31,6 @@ function correct(){  //再考慮看看
 }
 
 function sure(){  //確定
-    alert(checkpoint);
     hideSth('insta');
     hideSth('scanShow');
     hideSth('scanOption');
@@ -43,7 +42,6 @@ function sure(){  //確定
     else{
         callGas("food",option);
     }
-    enableSth('dialog');
     dialogControl();
 }
 
