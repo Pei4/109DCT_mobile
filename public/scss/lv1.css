@@ -36,6 +36,15 @@ body {
     height: 7vh;
     bottom: 6vh;
     left: 50vw;
+    font-family: Noto Sans CJK TC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.41px;
 }
 #correct{
     background: #FFFFFF;
@@ -44,6 +53,7 @@ body {
     border-radius: 5px;
     width: 36.8vw;
     transform: translate(-100%,0);
+    color: #747373;
 }
 #sure{
     background: #747373;
@@ -52,4 +62,5 @@ body {
     border-radius: 5px;
     width: 12.8vw;
     transform: translate(90%,0);
+    color: white;
 }
