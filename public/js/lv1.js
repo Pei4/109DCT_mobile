@@ -50,14 +50,14 @@ function sure(){  //確定
 function chooseFnt(src){  //更新圖片與參數
     if (src == 'water'){
         option = 'A';
-        src = 'drink_water';
+        src = 'drink_bottle';
     }
     else if(src == 'pack'){
         src = 'drink_pack';
         option = 'B';
     }
     else if(src == 'tea'){
-        src = 'drink_tea';
+        src = 'drink_tea_3';
         option = 'C';
     }
     if (src == 'steak'){
@@ -107,36 +107,4 @@ function btnCheck(){  //開始掃描
     navigator.mediaDevices.getUserMedia(constraints)
         .then(handleSuccess)
         .catch(handleError)
-    //掃描解碼
-    /*setCamera().then(()=>{
-        function handleSuccess(stream) {
-            const codeReader = new ZXing.BrowserQRCodeReader();
-            codeReader.decodeFromVideoDevice(undefined, 'preview', (result, err) => {
-                if (result) { //掃後結果在這裡
-                    if(chooseCheck == 0){
-                        chooseFnt(result.text); //還沒選的話就更新
-                        chooseCheck = 1;
-                    }   //已選就不反應
-                }
-            })
-            window.stream = stream;
-            video.srcObject = stream;
-        }
-        function handleError(error) {
-            console.log('getUserMedia error: ', error);
-        }
-        navigator.mediaDevices.getUserMedia(constraints)
-            .then(handleSuccess)
-            .catch(handleError)
-    })*/
 }
-
-/*async function setCamera(){
-    await function(){
-        if(checkpoint < 4){
-            let constraints = {video: {facingMode: { exact: "environment" }}};
-            let video = document.querySelector('#preview');
-        }
-        return new Promise(()=> {});
-    }
-}*/
