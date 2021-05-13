@@ -35,7 +35,8 @@ img{
   transform: translate(10%,0);
   -webkit-transform: translate(10%,0);
   -moz-transform: translate(10%,0);
-  height: 10vh;
+  width: 40vw;
+  height: auto;
 }
 #main img{
   position: absolute;
@@ -74,14 +75,4 @@ img{
   top:10vh;
   height: 50vh;
   width: 100vw;
-}
-
-@media (max-width: 375px) {
-  #star img{
-    width: 40vw;
-    height: auto;
-    transform: translate(10%,0);
-    -webkit-transform: translate(10%,0);
-    -moz-transform: translate(10%,0);
-  }
 }
