@@ -47,46 +47,40 @@ function sure(){  //確定
 }
 
 function chooseFnt1(src){  //更新圖片與參數
-    if(src == 'steak' || src == 'chicken' || src == 'salad'){
-
+    if (src == 'water'){
+        option = 'A';
+        src = 'drink_bottle';
     }
-    else{
-        if (src == 'water'){
-            option = 'A';
-            src = 'drink_bottle';
-        }
-        else if(src == 'pack'){
-            src = 'drink_pack';
-            option = 'B';
-        }
-        else if(src == 'tea'){
-            src = 'drink_tea_3';
-            option = 'C';
-        }
-        hideSth('dialog');
-        showSth('scanShow');
-        showSth('scanOption');
-        changeSource('scanImg',`../material/${src}.png`);
+    else if(src == 'pack'){
+        src = 'drink_pack';
+        option = 'B';
     }
+    else if(src == 'tea'){
+        src = 'drink_tea_3';
+        option = 'C';
+    }
+    hideSth('dialog');
+    showSth('scanShow');
+    showSth('scanOption');
+    changeSource('scanImg',`../material/${src}.png`);
 }
 function chooseFnt2(src){  //更新圖片與參數
-
-        if (src == 'steak'){
-            src = 'food_steak_3';
-            option = 1;
-        }
-        else if(src == 'chicken'){
-            option = 2;
-            src = 'food_chicken_3';
-        }
-        else if(src == 'salad'){
-            option = 3;
-            src = 'food_salad_3';
-        }
-        hideSth('dialog');
-        showSth('scanShow');
-        showSth('scanOption');
-        changeSource('scanImg',`../material/${src}.png`);
+    if (src == 'steak'){
+        src = 'food_steak_3';
+        option = 1;
+    }
+    else if(src == 'chicken'){
+        option = 2;
+        src = 'food_chicken_3';
+    }
+    else if(src == 'salad'){
+        option = 3;
+        src = 'food_salad_3';
+    }
+    hideSth('dialog');
+    showSth('scanShow');
+    showSth('scanOption');
+    changeSource('scanImg',`../material/${src}.png`);
 }
 
 function btnCheck(){  //開始掃描
@@ -108,7 +102,6 @@ function btnCheck(){  //開始掃描
                     if(checkpoint < 4){
                         if(temp == 'water' || temp == 'pack' || temp == 'tea'){
                             alert('這不是喝的喔～');
-                            chooseCheck = 0;
                         }
                         else{
                             chooseFnt1(temp); //還沒選的話就更新
@@ -118,7 +111,6 @@ function btnCheck(){  //開始掃描
                     else {
                         if (temp == 'water' || temp == 'pack' || temp == 'tea') {
                             alert('這不是吃的喔～');
-                            chooseCheck = 0;
                         } else {
                             chooseFnt2(temp); //還沒選的話就更新
                             chooseCheck = 1;
