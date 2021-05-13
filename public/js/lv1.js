@@ -39,12 +39,12 @@ function sure(){  //確定
     showSth('me');
     if(checkpoint < 4){
         callGas("drink",option);
-        enableSth('dialog');
     }
     else{
         callGas("food",option);
-        enableSth('dialog');
     }
+    enableSth('dialog');
+    dialogControl();
 }
 
 function chooseFnt(src){  //更新圖片與參數
