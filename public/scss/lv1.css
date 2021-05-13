@@ -8,21 +8,26 @@
     transform: translate(20%,0);
     -webkit-transform: translate(20%,0);
     -moz-transform: translate(20%,0);
-    border: 2px solid #7AD6EA;
+    border: none;
     background: #7AD6EA;
     box-sizing: border-box;
     border-radius: 5px;
     box-shadow: inset 0px 0px 10px rgba(119, 132, 140, 0.3);
     filter: drop-shadow(0px 0px 30px #FFFFFF);
+    font-family: Noto Sans CJK TC;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.41px;
+    color: #FFFFFF;
 }
 
 body {
-    background-color: #1E1E1E;
     background-image: url('../material/mbg_sea.jpg');
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: auto 85%;
-    height: 100vh;
 }
 @media (max-width: 375px){
     #lv1Btn, #lv2Btn{
@@ -31,5 +36,7 @@ body {
         transform: translate(25%,0);
         -webkit-transform: translate(25%,0);
         -moz-transform: translate(25%,0);
+        font-size: 6vw;
+        line-height: 1vh;
     }
 }

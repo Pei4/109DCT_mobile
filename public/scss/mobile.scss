@@ -6,15 +6,14 @@
   -webkit-animation-iteration-count: infinite;
   -o-animation-iteration-count: infinite;
 }
-
+*/
 body {
   background-color: #a8d4d9;
+  background-position: center top;
   background-repeat: no-repeat;
-  background-size: auto;
-  background-attachment: fixed;
-  background-position: center;
-  @include flash(bggrass,0.8s);
-}*/
+  background-size: auto 85%;
+  height: 100vh;
+}
 img{
   max-width: 80%;
   max-height: 50%;
