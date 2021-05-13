@@ -30,3 +30,26 @@
 body {
     background-image: url('../material/mbg_sea.jpg');
 }
+.opt{
+    position: absolute;
+    display: inline-block;
+    height: 7vh;
+    bottom: 6vh;
+    left: 50vw;
+}
+#correct{
+    background: #FFFFFF;
+    border: 2px solid #747373;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 36.8vw;
+    transform: translate(-100%,0);
+}
+#sure{
+    background: #747373;
+    border: 2px solid #747373;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 12.8vw;
+    transform: translate(90%,0);
+}
