@@ -70,15 +70,14 @@ function reUrl(url){
 
 function dialogControl(){
     checkpoint ++;
+    alert(checkpoint);
     if(checkpoint == 2){
         showSth('lv1Btn');
         disableSth('dialog');
-        hideSth('nextBtn');
     }
     if(checkpoint == 4){
         showSth('lv2Btn');
         disableSth('dialog');
-        hideSth('nextBtn');
     }
     if(checkpoint == 6){
         reUrl('lv2_1');
