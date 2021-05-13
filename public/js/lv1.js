@@ -115,6 +115,6 @@ async function setCamera(){
             let constraints = {video: {facingMode: { exact: "environment" }}};
             let video = document.querySelector('#preview');
         }
-        return new Promise(resolve => {});
+        return new Promise(()=> {});
     }
 }
