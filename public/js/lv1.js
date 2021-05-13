@@ -48,8 +48,7 @@ function sure(){  //確定
 
 function chooseFnt1(src){  //更新圖片與參數
     if(src == 'steak' || src == 'chicken' || src == 'salad'){
-        alert('這不是喝的喔～');
-        chooseCheck = 0;
+
     }
     else{
         if (src == 'water'){
@@ -71,11 +70,7 @@ function chooseFnt1(src){  //更新圖片與參數
     }
 }
 function chooseFnt2(src){  //更新圖片與參數
-    if(src == 'water' || src == 'pack' || src == 'tea'){
-        alert('這不是吃的喔～');
-        chooseCheck = 0;
-    }
-    else{
+
         if (src == 'steak'){
             src = 'food_steak_3';
             option = 1;
@@ -92,7 +87,6 @@ function chooseFnt2(src){  //更新圖片與參數
         showSth('scanShow');
         showSth('scanOption');
         changeSource('scanImg',`../material/${src}.png`);
-    }
 }
 
 function btnCheck(){  //開始掃描
@@ -110,13 +104,25 @@ function btnCheck(){  //開始掃描
         codeReader.decodeFromVideoDevice(undefined, 'preview', (result, err) => {
             if (result) { //掃後結果在這裡
                 if(chooseCheck == 0){
+                    let temp = result.test;
                     if(checkpoint < 4){
-                        chooseFnt1(result.text); //還沒選的話就更新
-                        chooseCheck = 1;
+                        if(temp == 'water' || temp == 'pack' || temp == 'tea'){
+                            alert('這不是喝的喔～');
+                            chooseCheck = 0;
+                        }
+                        else{
+                            chooseFnt1(temp); //還沒選的話就更新
+                            chooseCheck = 1;
+                        }
                     }
                     else {
-                        chooseFnt2(result.text); //還沒選的話就更新
-                        chooseCheck = 1;
+                        if (temp == 'water' || temp == 'pack' || temp == 'tea') {
+                            alert('這不是吃的喔～');
+                            chooseCheck = 0;
+                        } else {
+                            chooseFnt2(temp); //還沒選的話就更新
+                            chooseCheck = 1;
+                        }
                     }
                 }   //已選就不反應
             }
