@@ -14,6 +14,8 @@
     border-radius: 5px;
     box-shadow: inset 0px 0px 10px rgba(119, 132, 140, 0.3);
     filter: drop-shadow(0px 0px 30px #FFFFFF);
+    -webkit-filter: drop-shadow(0px 0px 30px #FFFFFF);
+    -moz-filter: drop-shadow(0px 0px 30px #FFFFFF);
     font-family: Noto Sans CJK TC;
     font-style: normal;
     font-weight: 500;
@@ -25,7 +27,6 @@
     letter-spacing: -0.41px;
     color: #FFFFFF;
 }
-
 body {
     background-image: url('../material/mbg_sea.jpg');
 }

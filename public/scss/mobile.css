@@ -5,8 +5,7 @@
   -moz-animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
   -o-animation-iteration-count: infinite;
-}
-*/
+}*/
 body {
   background-color: #a8d4d9;
   background-position: center top;
@@ -60,7 +59,7 @@ img {
   font-family: Noto Sans CJK TC;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 26px;
 }
 
 #me {
@@ -82,10 +81,6 @@ img {
 }
 
 @media (max-width: 375px) {
-  #dialog a {
-    font-size: 20px;
-  }
-
   #star img {
     width: 40vw;
     height: auto;
