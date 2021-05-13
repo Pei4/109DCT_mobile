@@ -8,11 +8,11 @@
 }*/
 body {
   background-color: #a8d4d9;
-  background-attachment: scroll;
+  background-attachment: fixed;
   position: static;
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: auto 85%;
+  background-size: auto 85vh;
   height: 100vh;
   overflow: hidden;
 }
