@@ -70,7 +70,6 @@ function reUrl(url){
 
 function dialogControl(){
     checkpoint ++;
-    alert(checkpoint);
     if(checkpoint == 1){
         showSth('lv1Btn');
         disableSth('dialog');

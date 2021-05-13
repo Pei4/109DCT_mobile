@@ -39,11 +39,11 @@ function sure(){  //確定
     if(checkpoint < 4){
         callGas("drink",option);
         chooseCheck = 0;
+        dialogControl();
     }
     else{
         callGas("food",option);
     }
-    dialogControl();
 }
 
 function chooseFnt(src){  //更新圖片與參數
