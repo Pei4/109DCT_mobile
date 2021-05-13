@@ -44,7 +44,7 @@ function disableSth(sth){
     document.getElementById(sth).style.pointerEvents = 'none';
 }
 function enableSth(sth){
-    document.getElementById(sth).style.pointerEvents = 'auto !important';
+    document.getElementById(sth).style.pointerEvents = 'auto';
 }
 function htmlContent(id,what){
     document.getElementById(id).innerHTML = what;
