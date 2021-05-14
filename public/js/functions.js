@@ -54,7 +54,7 @@ function changeSource(id,what){
 }
 function addClass(sth, what){
     document.getElementById(sth).className = what;
-    return new Promise(()=>{});
+    //return new Promise(()=>{});
 }
 function removeClass(sth){
     document.getElementById(sth).className = '';

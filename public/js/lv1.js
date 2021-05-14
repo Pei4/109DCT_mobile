@@ -44,6 +44,8 @@ function sure(){  //確定
     else{
         callGas("food",option);
     }
+    addClass('hand','drinkAnim');
+    setTimeout(()=>removeClass('hand','drinkAnim'),3000);
 }
 
 function chooseFnt1(src){  //更新圖片與參數
@@ -63,8 +65,6 @@ function chooseFnt1(src){  //更新圖片與參數
     showSth('scanShow');
     showSth('scanOption');
     changeSource('scanImg',`../material/${src}.png`);
-    setTimeout()
-    addClass('hand','drinkAnim').then(()=>{removeClass('hand','drinkAnim')});
 }
 function chooseFnt2(src){  //更新圖片與參數
     if (src == 'steak'){
