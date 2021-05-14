@@ -57,11 +57,12 @@ body {
 }
 #sure{
     background: #747373;
-    width: 20vw;
-    transform: translate(60%,0);
+    width: 22vw;
+    transform: translate(58%,0);
     color: white;
 }
 .drinkAnim{
+    bottom: 20vh;
     animation: drinkAnim 500ms linear 0s infinite;
     -webkit-animation: drinkAnim 500ms linear 0s infinite;
     -moz-animation: drinkAnim 500ms linear 0s infinite;

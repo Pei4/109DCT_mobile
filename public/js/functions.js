@@ -53,11 +53,11 @@ function changeSource(id,what){
     document.getElementById(id).src = what;
 }
 function addClass(sth, what){
-    document.getElementById(sth).classList.add(what);
+    document.getElementById(sth).className = what;
     return new Promise(()=>{});
 }
-function removeClass(sth, what){
-    document.getElementById(sth).classList.remove(what);
+function removeClass(sth){
+    document.getElementById(sth).className = '';
 }
 function reUrl(url){
     //更新 localStorage

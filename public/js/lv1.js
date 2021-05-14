@@ -63,7 +63,8 @@ function chooseFnt1(src){  //更新圖片與參數
     showSth('scanShow');
     showSth('scanOption');
     changeSource('scanImg',`../material/${src}.png`);
-    addClass('hand','drinkAnim');
+    setTimeout()
+    addClass('hand','drinkAnim').then(()=>{removeClass('hand','drinkAnim')});
 }
 function chooseFnt2(src){  //更新圖片與參數
     if (src == 'steak'){
