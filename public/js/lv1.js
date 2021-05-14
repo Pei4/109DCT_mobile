@@ -98,7 +98,7 @@ function btnCheck(){  //開始掃描
         codeReader.decodeFromVideoDevice(undefined, 'preview', (result, err) => {
             if (result) { //掃後結果在這裡
                 if(chooseCheck == 0){
-                    let temp = result.test;
+                    let temp = result.text;
                     if(checkpoint < 4){
                         if(temp == 'water' || temp == 'pack' || temp == 'tea'){
                             alert('這不是喝的喔～');
