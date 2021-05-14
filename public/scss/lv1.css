@@ -61,3 +61,43 @@ body {
     transform: translate(60%,0);
     color: white;
 }
+.drinkAnim{
+    animation: drinkAnim 500ms linear 0s infinite;
+    -webkit-animation: drinkAnim 500ms linear 0s infinite;
+    -moz-animation: drinkAnim 500ms linear 0s infinite;
+}
+@keyframes drinkAnim{
+    0%{background-image: url("../material/handplanet_1.png")}
+    50%{background-image: url("../material/handplanet_2.png")}
+}
+@-webkit-keyframes drinkAnim{
+    0%{background-image: url("../material/handplanet_1.png")}
+    50%{background-image: url("../material/handplanet_2.png")}
+}
+@-moz-keyframes drinkAnim{
+    0%{background-image: url("../material/handplanet_1.png")}
+    50%{background-image: url("../material/handplanet_2.png")}
+}
+.waterAnim{
+    animation: waterAnim 3s linear 0s 1;
+    -webkit-animation: waterAnim 3s linear 0s 1;
+    -moz-animation: waterAnim 3s linear 0s 1;
+}
+@keyframes waterAnim {
+    0%{background-image: url("../material/drink_bottle_3.png")}
+    30%{background-image: url("../material/drink_bottle_2.png")}
+    60%{background-image: url("../material/drink_bottle_1.png")}
+    90%{background-image: url("../material/drink_bottle_0.png")}
+}
+@-webkit-keyframes waterAnim {
+    0%{background-image: url("../material/drink_bottle_3.png")}
+    30%{background-image: url("../material/drink_bottle_2.png")}
+    60%{background-image: url("../material/drink_bottle_1.png")}
+    90%{background-image: url("../material/drink_bottle_0.png")}
+}
+@-moz-keyframes waterAnim {
+    0%{background-image: url("../material/drink_bottle_3.png")}
+    30%{background-image: url("../material/drink_bottle_2.png")}
+    60%{background-image: url("../material/drink_bottle_1.png")}
+    90%{background-image: url("../material/drink_bottle_0.png")}
+}
