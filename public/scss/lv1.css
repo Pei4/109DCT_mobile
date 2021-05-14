@@ -79,7 +79,7 @@ body {
     0%{background-image: url("../material/handplanet_1.png")}
     50%{background-image: url("../material/handplanet_2.png")}
 }
-.waterAnim{
+.drink_bottle{
     animation: waterAnim 3s linear 0s 1;
     -webkit-animation: waterAnim 3s linear 0s 1;
     -moz-animation: waterAnim 3s linear 0s 1;

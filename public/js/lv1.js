@@ -1,5 +1,6 @@
 let chooseCheck = 0;  //  Default/掃描中 0, 掃描到 1
 let option;
+let optSrc;
 
 //localStorage 初始化
 localStorage.setItem('id', '2');
@@ -39,50 +40,53 @@ function sure(){  //確定
     if(checkpoint < 4){
         callGas("drink",option);
         chooseCheck = 0;
+        optSrc = '';
         dialogControl();
     }
     else{
         callGas("food",option);
     }
     addClass('hand','drinkAnim');
+    addClass('object',`${optSrc}`);
     setTimeout(()=>removeClass('hand','drinkAnim'),3000);
+    setTimeout(()=>removeClass('object',`${optSrc}`),3000);
 }
 
-function chooseFnt1(src){  //更新圖片與參數
-    if (src == 'water'){
+function chooseFnt1(){  //更新圖片與參數
+    if (optSrc == 'water'){
         option = 'A';
-        src = 'drink_bottle';
+        optSrc = 'drink_bottle';
     }
-    else if(src == 'pack'){
-        src = 'drink_pack';
+    else if(optSrc == 'pack'){
+        optSrc = 'drink_pack';
         option = 'B';
     }
-    else if(src == 'tea'){
-        src = 'drink_tea_3';
+    else if(optSrc == 'tea'){
+        optSrc = 'drink_tea_3';
         option = 'C';
     }
     hideSth('dialog');
     showSth('scanShow');
     showSth('scanOption');
-    changeSource('scanImg',`../material/${src}.png`);
+    changeSource('scanImg',`../material/${optSrc}.png`);
 }
-function chooseFnt2(src){  //更新圖片與參數
-    if (src == 'steak'){
-        src = 'food_steak_3';
+function chooseFnt2(){  //更新圖片與參數
+    if (optSrc == 'steak'){
+        optSrc = 'food_steak_3';
         option = 1;
     }
-    else if(src == 'chicken'){
+    else if(optSrc == 'chicken'){
         option = 2;
-        src = 'food_chicken_3';
+        optSrc = 'food_chicken_3';
     }
-    else if(src == 'salad'){
+    else if(optSrc == 'salad'){
         option = 3;
-        src = 'food_salad_3';
+        optSrc = 'food_salad_3';
     }
     hideSth('dialog');
     showSth('scanShow');
     showSth('scanOption');
-    changeSource('scanImg',`../material/${src}.png`);
+    changeSource('scanImg',`../material/${optSrc}.png`);
 }
 
 function btnCheck(){  //開始掃描
@@ -100,21 +104,21 @@ function btnCheck(){  //開始掃描
         codeReader.decodeFromVideoDevice(undefined, 'preview', (result, err) => {
             if (result) { //掃後結果在這裡
                 if(chooseCheck == 0){
-                    let temp = result.text;
+                    optSrc = result.text;
                     if(checkpoint < 4){
-                        if(temp == 'steak' || temp == 'chicken' || temp == 'salad'){
+                        if(optSrc == 'steak' || optSrc == 'chicken' || optSrc == 'salad'){
                             alert('這不是喝的喔～');
                         }
                         else{
-                            chooseFnt1(temp); //還沒選的話就更新
+                            chooseFnt1(); //還沒選的話就更新
                             chooseCheck = 1;
                         }
                     }
                     else {
-                        if (temp == 'water' || temp == 'pack' || temp == 'tea') {
+                        if (optSrc == 'water' || optSrc == 'pack' || optSrc == 'tea') {
                             alert('這不是吃的喔～');
                         } else {
-                            chooseFnt2(temp); //還沒選的話就更新
+                            chooseFnt2(); //還沒選的話就更新
                             chooseCheck = 1;
                         }
                     }
