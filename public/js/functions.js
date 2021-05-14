@@ -70,15 +70,19 @@ function reUrl(url){
 
 function dialogControl(){
     checkpoint ++;
-    if(checkpoint == 1){
+    if(checkpoint == 1){  //飲料關
         showSth('lv1Btn');
         disableSth('dialog');
     }
-    if(checkpoint == 3){
-        enableSth('dialog');
+    if(checkpoint == 3){  //選完飲料開始喝
         showSth('main');
+        hideSth('lv1Btn');
+        hideSth('dialog');
     }
-    if(checkpoint == 4){
+    if(checkpoint == 4){  //喝完飲料換食物關
+        enableSth('dialog');
+    }
+    if(checkpoint == 5){  //
         showSth('lv2Btn');
         disableSth('dialog');
     }
