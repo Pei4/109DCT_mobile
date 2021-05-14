@@ -45,22 +45,19 @@ body {
     align-items: center;
     text-align: center;
     letter-spacing: -0.41px;
+    border: 4px solid #747373;
+    box-sizing: border-box;
+    border-radius: 10px;
 }
 #correct{
     background: #FFFFFF;
-    border: 2px solid #747373;
-    box-sizing: border-box;
-    border-radius: 5px;
     width: 36.8vw;
     transform: translate(-100%,0);
     color: #747373;
 }
 #sure{
     background: #747373;
-    border: 2px solid #747373;
-    box-sizing: border-box;
-    border-radius: 5px;
-    width: 12.8vw;
-    transform: translate(90%,0);
+    width: 25vw;
+    transform: translate(45%,0);
     color: white;
 }
