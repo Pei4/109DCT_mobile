@@ -100,7 +100,7 @@ function btnCheck(){  //開始掃描
                 if(chooseCheck == 0){
                     let temp = result.text;
                     if(checkpoint < 4){
-                        if(temp == 'water' || temp == 'pack' || temp == 'tea'){
+                        if(temp == 'steak' || temp == 'chicken' || temp == 'salad'){
                             alert('這不是喝的喔～');
                         }
                         else{
