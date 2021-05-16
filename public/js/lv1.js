@@ -37,6 +37,7 @@ function sure(){  //確定
     hideSth('scanOption');
     showSth('dialog');
     showSth('me');
+    dialogControl();
     if(checkpoint < 4){
         callGas("drink",option);
         addClass('object',`${optSrc}`);

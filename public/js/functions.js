@@ -62,6 +62,9 @@ function addClass(sth, what){
 function removeClass(sth){
     document.getElementById(sth).className = '';
 }
+function addStar(){
+    
+}
 function reUrl(url){
     //更新 localStorage
     localStorage.setItem('id', id.toString());
