@@ -39,6 +39,8 @@ function sure(){  //確定
     showSth('me');
     if(checkpoint < 4){
         callGas("drink",option);
+        addClass('object',`${optSrc}`);
+        setTimeout(()=>removeClass('object',`${optSrc}`),3000);
         chooseCheck = 0;
         optSrc = '';
         addClass('hand','drinkAnim');
@@ -47,10 +49,10 @@ function sure(){  //確定
     else{
         callGas("food",option);
         addClass('hand','eatAnim');
+        addClass('object',`${optSrc}`);
+        setTimeout(()=>removeClass('object',`${optSrc}`),3000);
         setTimeout(()=>{removeClass('hand','eatAnim');dialogControl();},3000);
     }
-    addClass('object',`${optSrc}`);
-    setTimeout(()=>removeClass('object',`${optSrc}`),3000);
 }
 
 function chooseFnt1(){  //更新圖片與參數
