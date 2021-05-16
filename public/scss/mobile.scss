@@ -38,11 +38,17 @@ img{
   width: 40vw;
   height: auto;
 }
-#main img{
+#main div {
   position: absolute;
+  display: inline-block;
   bottom: 15vh;
   left: 50vw;
-  transform: translate(-50%,0);
+  transform: translate(-50%, 0);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
 }
 #dialog{
   position: fixed;

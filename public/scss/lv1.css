@@ -61,8 +61,15 @@ body {
     transform: translate(58%,0);
     color: white;
 }
+#object{
+    height: 28vh !important;
+    bottom: 25vh !important;
+}
+#hand{
+    background-image: url("../material/handplanet_0.png");
+}
 .drinkAnim{
-    /*bottom: 20vh;*/
+    bottom: 28vh !important;
     animation: drinkAnim 1s linear 0s infinite;
     -webkit-animation: drinkAnim 1s linear 0s infinite;
     -moz-animation: drinkAnim 1s linear 0s infinite;
@@ -70,14 +77,17 @@ body {
 @keyframes drinkAnim{
     0%{background-image: url("../material/handplanet_1.png")}
     50%{background-image: url("../material/handplanet_2.png")}
+    100%{background-image: url("../material/handplanet_1.png")}
 }
 @-webkit-keyframes drinkAnim{
     0%{background-image: url("../material/handplanet_1.png")}
     50%{background-image: url("../material/handplanet_2.png")}
+    100%{background-image: url("../material/handplanet_1.png")}
 }
 @-moz-keyframes drinkAnim{
     0%{background-image: url("../material/handplanet_1.png")}
     50%{background-image: url("../material/handplanet_2.png")}
+    100%{background-image: url("../material/handplanet_1.png")}
 }
 .drink_bottle{
     animation: waterAnim 3s linear 0s 1;
@@ -88,17 +98,17 @@ body {
     0%{background-image: url("../material/drink_bottle_3.png")}
     30%{background-image: url("../material/drink_bottle_2.png")}
     60%{background-image: url("../material/drink_bottle_1.png")}
-    90%{background-image: url("../material/drink_bottle_0.png")}
+    100%{background-image: url("../material/drink_bottle_0.png")}
 }
 @-webkit-keyframes waterAnim {
     0%{background-image: url("../material/drink_bottle_3.png")}
     30%{background-image: url("../material/drink_bottle_2.png")}
     60%{background-image: url("../material/drink_bottle_1.png")}
-    90%{background-image: url("../material/drink_bottle_0.png")}
+    100%{background-image: url("../material/drink_bottle_0.png")}
 }
 @-moz-keyframes waterAnim {
     0%{background-image: url("../material/drink_bottle_3.png")}
     30%{background-image: url("../material/drink_bottle_2.png")}
     60%{background-image: url("../material/drink_bottle_1.png")}
-    90%{background-image: url("../material/drink_bottle_0.png")}
+    100%{background-image: url("../material/drink_bottle_0.png")}
 }
