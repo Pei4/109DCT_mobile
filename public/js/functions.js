@@ -52,6 +52,9 @@ function htmlContent(id,what){
 function changeSource(id,what){
     document.getElementById(id).src = what;
 }
+function changeAnimSrc(id,what){
+    document.getElementById(id).style.backgroundImage = `url("../material/${what}.png")`;
+}
 function addClass(sth, what){
     document.getElementById(sth).className = what;
     //return new Promise(()=>{});
@@ -80,7 +83,9 @@ function dialogControl(){
         hideSth('dialog');
     }
     if(checkpoint == 4){  //喝完飲料換食物關
+        showSth('dialog');
         enableSth('dialog');
+        changeAnimSrc('hand','handplanet_3');
     }
     if(checkpoint == 5){  //
         showSth('lv2Btn');
