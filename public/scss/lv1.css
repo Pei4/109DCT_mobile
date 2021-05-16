@@ -68,6 +68,7 @@ body {
 #hand{
     background-image: url("../material/handplanet_0.png");
 }
+/*星球喝*/
 .drinkAnim{
     bottom: 28vh !important;
     animation: drinkAnim 1s linear 0s infinite;
@@ -89,6 +90,29 @@ body {
     50%{background-image: url("../material/handplanet_2.png")}
     100%{background-image: url("../material/handplanet_1.png")}
 }
+/*星球吃*/
+.eatAnim{
+    bottom: 28vh !important;
+    animation: eatAnim 1s linear 0s infinite;
+    -webkit-animation: eatAnim 1s linear 0s infinite;
+    -moz-animation: eatAnim 1s linear 0s infinite;
+}
+@keyframes eatAnim{
+    0%{background-image: url("../material/handplanet_4.png")}
+    50%{background-image: url("../material/handplanet_5.png")}
+    100%{background-image: url("../material/handplanet_4.png")}
+}
+@-webkit-keyframes eatAnim{
+    0%{background-image: url("../material/handplanet_4.png")}
+    50%{background-image: url("../material/handplanet_5.png")}
+    100%{background-image: url("../material/handplanet_4.png")}
+}
+@-moz-keyframes eatAnim{
+    0%{background-image: url("../material/handplanet_4.png")}
+    50%{background-image: url("../material/handplanet_5.png")}
+    100%{background-image: url("../material/handplanet_4.png")}
+}
+/*喝水動畫*/
 .drink_bottle{
     animation: waterAnim 3s linear 0s 1;
     -webkit-animation: waterAnim 3s linear 0s 1;

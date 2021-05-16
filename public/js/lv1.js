@@ -41,14 +41,15 @@ function sure(){  //確定
         callGas("drink",option);
         chooseCheck = 0;
         optSrc = '';
-        dialogControl();
+        addClass('hand','drinkAnim');
+        setTimeout(()=>{removeClass('hand','drinkAnim');dialogControl();},3000);
     }
     else{
         callGas("food",option);
+        addClass('hand','eatAnim');
+        setTimeout(()=>{removeClass('hand','eatAnim');dialogControl();},3000);
     }
-    addClass('hand','drinkAnim');
     addClass('object',`${optSrc}`);
-    setTimeout(()=>removeClass('hand','drinkAnim'),3000);
     setTimeout(()=>removeClass('object',`${optSrc}`),3000);
 }
 
