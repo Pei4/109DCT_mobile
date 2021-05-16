@@ -42,11 +42,17 @@ img {
   height: auto;
 }
 
-#main img {
+#main div {
   position: absolute;
+  display: inline-block;
   bottom: 15vh;
   left: 50vw;
   transform: translate(-50%, 0);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
 }
 
 #dialog {
@@ -83,5 +89,7 @@ img {
   height: 50vh;
   width: 100vw;
 }
-
+#hand{
+  background-image: url("../material/handplanet_0.png");
+}
 /*# sourceMappingURL=mobile.css.map */
