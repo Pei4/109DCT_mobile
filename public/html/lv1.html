@@ -13,10 +13,11 @@
     <script type="text/javascript" src="https://unpkg.com/@zxing/library@latest"></script>
 </head>
 <body>
-<div id="star"><img src="../material/star_000.png"></div>
+<div id="star"><img id="starImg" src="../material/star_000.png"></div>
 <div id="main">
     <div id="hand"></div>
     <div id="object"></div>
+    <img id="flyStar" src="../material/star_fly.png" style="display: none">
     <button id="lv1Btn" style="display: none" onclick="btnCheck()">找喝的</button>
     <button id="lv2Btn" style="display: none" onclick="btnCheck()">找吃的</button>
 </div>
@@ -28,7 +29,7 @@
 </div>
 <div id="dialog" onclick="dialogControl()">
     <a id="me" style="display: none"></a>
-    <a id="planet">我好乾...好渴喔...</a>
+    <a id="planet">我好乾好渴喔......</a>
 </div>
 <div id="scanOption" style="display: none">
     <button id="correct" class="opt" onclick="correct()">再考慮一下</button>

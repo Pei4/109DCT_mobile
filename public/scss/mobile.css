@@ -89,3 +89,55 @@ img {
   height: 50vh;
   width: 100vw;
 }
+
+#flyStar {
+  position: absolute;
+  display: inline-block;
+  left: 50vw;
+  bottom: 40vh;
+  transform: translate(-50%, 0);
+}
+
+.starFly {
+  animation: starFly 1s ease-out 0s 1;
+  -webkit-animation: starFly 1s ease-out 0s 1;
+  -moz-animation: starFly 1s ease-out 0s 1;
+}
+
+@keyframes starFly {
+  100% {
+    transform: translate(15vw, -45vh);
+    -webkit-transform: translate(15vw, -45vh);
+    -moz-transform: translate(15vw, -45vh);
+  }
+}
+@-webkit-keyframes starFly {
+  100% {
+    transform: translate(15vw, -45vh);
+    -webkit-transform: translate(15vw, -45vh);
+    -moz-transform: translate(15vw, -45vh);
+  }
+}
+@-moz-keyframes starFly {
+  100% {
+    transform: translate(15vw, -45vh);
+    -webkit-transform: translate(15vw, -45vh);
+    -moz-transform: translate(15vw, -45vh);
+  }
+}
+.state1 {
+  background-image: url("../material/handplanet_2.png");
+  bottom: 28vh !important;
+}
+
+.state2 {
+  background-image: url("../material/planet_smile.png");
+  bottom: 28vh !important;
+}
+
+.state3 {
+  background-image: url("../material/planet_happy_blue.png");
+  bottom: 28vh !important;
+}
+
+/*# sourceMappingURL=mobile.css.map */

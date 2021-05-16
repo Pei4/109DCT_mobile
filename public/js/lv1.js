@@ -41,18 +41,35 @@ function sure(){  //確定
     if(checkpoint < 4){
         callGas("drink",option);
         addClass('object',`${optSrc}`);
-        setTimeout(()=>removeClass('object',`${optSrc}`),3000);
+        addClass('hand','drinkAnim');
+        document.body.style.backgroundImage = 'url("../material/mbg_pink.png")';
+        setTimeout(()=>{
+            removeClass('object',`${optSrc}`);
+            removeClass('hand','drinkAnim');
+            goStar('state1');
+        },3000);
+        setTimeout(()=>{
+            stopStar('state1','../material/star_200.png');
+            document.body.style.backgroundImage = 'url("../material/mbg_sea.png")';
+            dialogControl();
+        },4000)
         chooseCheck = 0;
         optSrc = '';
-        addClass('hand','drinkAnim');
-        setTimeout(()=>{removeClass('hand','drinkAnim');dialogControl();},3000);
     }
     else{
         callGas("food",option);
         addClass('hand','eatAnim');
         addClass('object',`${optSrc}`);
-        setTimeout(()=>removeClass('object',`${optSrc}`),3000);
-        setTimeout(()=>{removeClass('hand','eatAnim');dialogControl();},3000);
+        setTimeout(()=>{
+            removeClass('object',`${optSrc}`);
+            removeClass('hand','eatAnim');
+            goStar('state2');
+        },3000);
+        setTimeout(()=>{
+            stopStar('state2','../material/star_220.png');
+            document.body.style.backgroundImage = 'url("../material/mbg_sea.png")';
+            dialogControl();
+        },4000);
     }
 }
 

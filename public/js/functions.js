@@ -4,35 +4,36 @@ let planetDialogNum = parseInt(localStorage.getItem('planetDialogNum'));
 let meDialogNum = parseInt(localStorage.getItem('meDialogNum'));
 
 let planetDialogArray =[
-    '我...好餓', //0-3
-    '我小星球啦',  //1-7
-    '那邊好香喔！',  //2-8
-    '有東西在發光耶',  //3-9
-    '我們過去看看吧',  //4-10
-    '哇~好多漂亮的花喔',  //5-11
-    '可以挑一朵適合的給我嗎',  //6-12
-    '我好喜歡~謝謝你！',  //7-13
-    '風好大ㄛ',  //8-14
-    '我好像該回去了...',  //9-17
-    '其實我是新生的小星球',  //10-19
-    '要在某處遊歷之後',  //11-20
-    '才能回到宇宙的行列',  //12-21
-    '成為一顆獨立的星球',  //13-22
-    '這段日子......',  //14-23
-    '謝謝你的陪伴！',  //15-24
-    '在回去之前\n想和你留下最後的回憶'];  //16-25
+    '我肚子有點餓.....', //0-4
+    '謝謝你找東西給我吃！', //1-?
+    '欸！那邊好香喔！！',  //2-?
+    '有東西在發光耶',  //3-
+    '我們過去看看吧',  //4-
+    '哇～好多漂亮的花喔',  //5-
+    '可以挑一朵適合的給我嗎',  //6-
+    '我好喜歡～謝謝你！',  //7-
+    '哎呀...我好像該回去了...',  //8-
+    '我好像該回去了...',  //9-
+    '其實我是新生的小星球',  //10-
+    '要在某處遊歷之後',  //11-
+    '才能回到宇宙的行列',  //12-
+    '成為一顆獨立的星球',  //13-
+    '這段日子',  //14-
+    '謝謝你的陪伴！',  //15-
+    '在回去之前\n想和你留下最後的回憶'];  //16-
 let meDialogArray =[
     '是不是該找點喝的東西給它呢...',  //0-1
     '要喝什麼好呢？',  //1-2
-    '找點食物給它吃吧',  //2-4
-    '要吃什麼好呢？',  //3-5
-    '你誰',  //4-7
-    '唉呦好痛啊！哪來的垃圾？',  //5-16
-    '該丟進哪個垃圾桶好呢？',  //6-17
-    '你要回去哪裡？'  //7-19
+    '找點食物給它吃吧',  //2-?
+    '要吃什麼好呢？',  //3-?
+    '所以你是從哪裡...',  //4-?
+    '這傢伙完全無視我呢...',  //5-?
+    '剛剛發生了...什麼事？',  //6-
+    '你要回去哪裡？！', //7-
+    '......' //8-
 ];
-let planetCont = [3,7,8,9,10,11,12,13,14,17,19,20,21,22,23,24,25];
-let meCont = [1,2,4,5,7,16,17,19];
+let planetCont = [4];
+let meCont = [1,2,5];
 
 function showSth(sth){
     document.getElementById(sth).style.display = 'block';
@@ -57,13 +58,20 @@ function changeAnimSrc(id,what){
 }
 function addClass(sth, what){
     document.getElementById(sth).className = what;
-    //return new Promise(()=>{});
 }
 function removeClass(sth){
     document.getElementById(sth).className = '';
 }
-function addStar(){
-    
+function goStar(state){
+    showSth('flyStar');
+    addClass('flyStar','starFly');
+    addClass('hand',state);
+}
+function stopStar(state,starUrl){
+    hideSth('flyStar');
+    removeClass('flyStar','starFly');
+    removeClass('hand',state);
+    changeSource('starImg',starUrl);
 }
 function reUrl(url){
     //更新 localStorage

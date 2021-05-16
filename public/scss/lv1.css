@@ -28,7 +28,7 @@
     color: #FFFFFF;
 }
 body {
-    background-image: url('../material/mbg_sea.jpg');
+    background-image: url('../material/mbg_sea.png');
 }
 .opt{
     position: absolute;
@@ -68,6 +68,7 @@ body {
 #hand{
     background-image: url("../material/handplanet_0.png");
 }
+
 /*星球喝*/
 .drinkAnim{
     bottom: 28vh !important;
@@ -75,6 +76,7 @@ body {
     -webkit-animation: drinkAnim 1s linear 0s infinite;
     -moz-animation: drinkAnim 1s linear 0s infinite;
 }
+
 @keyframes drinkAnim{
     0%{background-image: url("../material/handplanet_1.png")}
     50%{background-image: url("../material/handplanet_2.png")}
