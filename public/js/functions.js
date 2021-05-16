@@ -32,8 +32,8 @@ let meDialogArray =[
     '你要回去哪裡？！', //7-
     '......' //8-
 ];
-let planetCont = [4];
-let meCont = [1,2,5];
+let planetCont = [4,8];
+let meCont = [1,2,5,9];
 
 function showSth(sth){
     document.getElementById(sth).style.display = 'block';
@@ -84,11 +84,12 @@ function reUrl(url){
 
 function dialogControl(){
     checkpoint ++;
+    console.log(checkpoint);
     if(checkpoint == 1){  //飲料關
         showSth('lv1Btn');
         disableSth('dialog');
     }
-    if(checkpoint == 3){  //選完飲料開始喝
+    if(checkpoint == 3){  //選完開始喝
         showSth('main');
         hideSth('lv1Btn');
         hideSth('dialog');
@@ -98,11 +99,35 @@ function dialogControl(){
         enableSth('dialog');
         changeAnimSrc('hand','handplanet_3');
     }
-    if(checkpoint == 5){  //
+    if(checkpoint == 5){  //食物關
         showSth('lv2Btn');
         disableSth('dialog');
     }
-    if(checkpoint == 6){
+    if(checkpoint == 7){  //選完開始吃
+        showSth('main');
+        hideSth('lv2Btn');
+        hideSth('dialog');
+    }
+    if(checkpoint == 8){  //吃完進過場
+        showSth('dialog');
+        enableSth('dialog');
+        changeAnimSrc('hand','planet_smile');
+        document.getElementById('hand').style.height = '30vh';
+        document.getElementById('hand').style.bottom = '28vh';
+    }
+    if(checkpoint == 9){
+        hideSth('next');
+        setTimeout(()=>{
+            checkpoint ++;
+            planetDialogNum ++;
+            htmlContent('planet',planetDialogArray[planetDialogNum]);
+            showSth('planet');
+            changeAnimSrc('hand','planet_smell');
+            hideSth('me');
+            showSth('next');
+        },1000);
+    }
+    if(checkpoint == 100){
         reUrl('lv2_1');
     }
     if(meCont.includes(checkpoint)){
@@ -116,5 +141,14 @@ function dialogControl(){
         htmlContent('planet',planetDialogArray[planetDialogNum]);
         showSth('planet');
         hideSth('me');
+    }
+    if(checkpoint == 9){
+        hideSth('next');
+    }
+    else if(document.getElementById('dialog').style.pointerEvents == 'auto'){
+        showSth('next');
+    }
+    else{
+        hideSth('next');
     }
 }

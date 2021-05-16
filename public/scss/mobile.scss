@@ -66,6 +66,14 @@ img{
     font-size: 50px;
   }
 }
+#next{
+  position: absolute;
+  display: inline-block;
+  left: 50vw;
+  bottom: .1vh;
+  width: 15vw;
+  transform: translate(200%,0);
+}
 #me{
   color: #FFFFFF;
   text-shadow: 0px 0px 15px #FFFFFF;
@@ -120,14 +128,15 @@ img{
   }
 }
 .state1{
-  background-image: url("../material/handplanet_2.png");
+  background-image: url("../material/handplanet_2.png") !important;
   bottom: 28vh !important;
 }
 .state2{
-  background-image: url("../material/planet_smile.png");
+  background-image: url("../material/planet_smile.png") !important;;
   bottom: 28vh !important;
+  height: 30vh !important;
 }
 .state3{
-  background-image: url("../material/planet_happy_blue.png");
+  background-image: url("../material/planet_happy_blue.png") !important;;
   bottom: 28vh !important;
 }

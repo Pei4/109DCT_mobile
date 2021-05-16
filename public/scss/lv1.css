@@ -9,7 +9,7 @@
     -webkit-transform: translate(20%,0);
     -moz-transform: translate(20%,0);
     border: none;
-    background: #7AD6EA;
+    background: #FF96A8;
     box-sizing: border-box;
     border-radius: 5px;
     box-shadow: inset 0px 0px 10px rgba(119, 132, 140, 0.3);
@@ -45,19 +45,21 @@ body {
     align-items: center;
     text-align: center;
     letter-spacing: -0.41px;
-    border: 4px solid #747373;
     box-sizing: border-box;
     border-radius: 10px;
 }
 #correct{
     background: #FFFFFF;
+    border: 4px solid #C48A1C;
     width: 36.8vw;
     transform: translate(-100%,0);
-    color: #747373;
+    color: #C48A1C;
+
 }
 #sure{
-    background: #747373;
-    width: 21vw;
+    background: #FFE352;
+    border: 4px solid #F3D63B;
+    width: 22vw;
     transform: translate(58%,0);
     color: white;
 }
@@ -72,9 +74,9 @@ body {
 /*星球喝*/
 .drinkAnim{
     bottom: 28vh !important;
-    animation: drinkAnim 1s linear 0s infinite;
-    -webkit-animation: drinkAnim 1s linear 0s infinite;
-    -moz-animation: drinkAnim 1s linear 0s infinite;
+    animation: drinkAnim 1s steps(1, end) 0s infinite;
+    -webkit-animation: drinkAnim 1s steps(1, end) 0s infinite;
+    -moz-animation: drinkAnim 1s steps(1, end) 0s infinite;
 }
 
 @keyframes drinkAnim{
@@ -95,9 +97,9 @@ body {
 /*星球吃*/
 .eatAnim{
     bottom: 28vh !important;
-    animation: eatAnim 1s linear 0s infinite;
-    -webkit-animation: eatAnim 1s linear 0s infinite;
-    -moz-animation: eatAnim 1s linear 0s infinite;
+    animation: eatAnim 1s steps(1, end) 0s infinite;
+    -webkit-animation: eatAnim 1s steps(1, end) 0s infinite;
+    -moz-animation: eatAnim 1s steps(1, end) 0s infinite;
 }
 @keyframes eatAnim{
     0%{background-image: url("../material/handplanet_4.png")}
@@ -116,25 +118,107 @@ body {
 }
 /*喝水動畫*/
 .drink_bottle{
-    animation: waterAnim 3s linear 0s 1;
-    -webkit-animation: waterAnim 3s linear 0s 1;
-    -moz-animation: waterAnim 3s linear 0s 1;
+    animation: waterAnim 4s linear 0s 1;
+    -webkit-animation: waterAnim 4s linear 0s 1;
+    -moz-animation: waterAnim 4s linear 0s 1;
 }
 @keyframes waterAnim {
     0%{background-image: url("../material/drink_bottle_3.png")}
-    30%{background-image: url("../material/drink_bottle_2.png")}
-    60%{background-image: url("../material/drink_bottle_1.png")}
+    20%{background-image: url("../material/drink_bottle_2.png")}
+    40%{background-image: url("../material/drink_bottle_1.png")}
+    60%{background-image: url("../material/drink_bottle_0.png")}
     100%{background-image: url("../material/drink_bottle_0.png")}
 }
 @-webkit-keyframes waterAnim {
     0%{background-image: url("../material/drink_bottle_3.png")}
-    30%{background-image: url("../material/drink_bottle_2.png")}
-    60%{background-image: url("../material/drink_bottle_1.png")}
+    20%{background-image: url("../material/drink_bottle_2.png")}
+    40%{background-image: url("../material/drink_bottle_1.png")}
+    60%{background-image: url("../material/drink_bottle_0.png")}
     100%{background-image: url("../material/drink_bottle_0.png")}
 }
 @-moz-keyframes waterAnim {
     0%{background-image: url("../material/drink_bottle_3.png")}
-    30%{background-image: url("../material/drink_bottle_2.png")}
-    60%{background-image: url("../material/drink_bottle_1.png")}
+    20%{background-image: url("../material/drink_bottle_2.png")}
+    40%{background-image: url("../material/drink_bottle_1.png")}
+    60%{background-image: url("../material/drink_bottle_0.png")}
     100%{background-image: url("../material/drink_bottle_0.png")}
+}
+/*喝茶動畫*/
+.drink_pack{
+    left: 60vw !important;
+    animation: packAnim 4s step-end 0s 1;
+    -webkit-animation: packAnim 4s step-end 0s 1;
+    -moz-animation: packAnim 4s step-end 0s 1;
+}
+@keyframes packAnim {
+    0%{background-image: url("../material/drink_pack_3.png")}
+    30%{background-image: url("../material/drink_pack_2.png")}
+    60%{background-image: url("../material/drink_pack_1.png")}
+    100%{background-image: url("../material/drink_pack_1.png")}
+}
+@-webkit-keyframes packAnim {
+    0%{background-image: url("../material/drink_pack_3.png")}
+    30%{background-image: url("../material/drink_pack_2.png")}
+    60%{background-image: url("../material/drink_pack_1.png")}
+    100%{background-image: url("../material/drink_pack_1.png")}
+}
+@-moz-keyframes packAnim {
+    0%{background-image: url("../material/drink_pack_3.png")}
+    30%{background-image: url("../material/drink_pack_2.png")}
+    60%{background-image: url("../material/drink_pack_1.png")}
+    100%{background-image: url("../material/drink_pack_1.png")}
+}
+/*喝手搖動畫*/
+.drink_tea_3{
+    animation: teaAnim 4s linear 0s 1;
+    -webkit-animation: teaAnim 4s linear 0s 1;
+    -moz-animation: teaAnim 4s linear 0s 1;
+}
+@keyframes teaAnim {
+    0%{background-image: url("../material/drink_tea_3.png")}
+    20%{background-image: url("../material/drink_tea_3.png")}
+    40%{background-image: url("../material/drink_tea_2.png")}
+    60%{background-image: url("../material/drink_tea_1.png")}
+    100%{background-image: url("../material/drink_tea_0.png")}
+}
+@-webkit-keyframes teaAnim {
+    0%{background-image: url("../material/drink_tea_3.png")}
+    20%{background-image: url("../material/drink_tea_3.png")}
+    40%{background-image: url("../material/drink_tea_2.png")}
+    60%{background-image: url("../material/drink_tea_1.png")}
+    100%{background-image: url("../material/drink_tea_0.png")}
+}
+@-moz-keyframes teaAnim {
+    0%{background-image: url("../material/drink_tea_3.png")}
+    20%{background-image: url("../material/drink_tea_3.png")}
+    40%{background-image: url("../material/drink_tea_2.png")}
+    60%{background-image: url("../material/drink_tea_1.png")}
+    100%{background-image: url("../material/drink_tea_0.png")}
+}
+/*吃沙拉*/
+.food_salad_3{
+    animation: saladAnim 4s linear 0s 1;
+    -webkit-animation: saladAnim 4s linear 0s 1;
+    -moz-animation: saladAnim 4s linear 0s 1;
+}
+@keyframes saladAnim {
+    0%{background-image: url("../material/food_salad_3.png")}
+    20%{background-image: url("../material/food_salad_3.png")}
+    40%{background-image: url("../material/food_salad_2.png")}
+    60%{background-image: url("../material/food_salad_1.png")}
+    100%{background-image: url("../material/food_salad_0.png")}
+}
+@-webkit-keyframes saladAnim {
+    0%{background-image: url("../material/food_salad_3.png")}
+    20%{background-image: url("../material/food_salad_3.png")}
+    40%{background-image: url("../material/food_salad_2.png")}
+    60%{background-image: url("../material/food_salad_1.png")}
+    100%{background-image: url("../material/food_salad_0.png")}
+}
+@-moz-keyframes saladAnim {
+    0%{background-image: url("../material/food_salad_3.png")}
+    20%{background-image: url("../material/food_salad_3.png")}
+    40%{background-image: url("../material/food_salad_2.png")}
+    60%{background-image: url("../material/food_salad_1.png")}
+    100%{background-image: url("../material/food_salad_0.png")}
 }

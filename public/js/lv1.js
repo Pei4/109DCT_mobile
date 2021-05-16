@@ -47,29 +47,30 @@ function sure(){  //確定
             removeClass('object',`${optSrc}`);
             removeClass('hand','drinkAnim');
             goStar('state1');
-        },3000);
+        },4000);
         setTimeout(()=>{
             stopStar('state1','../material/star_200.png');
             document.body.style.backgroundImage = 'url("../material/mbg_sea.png")';
             dialogControl();
-        },4000)
+        },5000)
         chooseCheck = 0;
         optSrc = '';
     }
     else{
         callGas("food",option);
-        addClass('hand','eatAnim');
         addClass('object',`${optSrc}`);
+        addClass('hand','eatAnim');
+        document.body.style.backgroundImage = 'url("../material/mbg_pink.png")';
         setTimeout(()=>{
             removeClass('object',`${optSrc}`);
             removeClass('hand','eatAnim');
             goStar('state2');
-        },3000);
+        },4000);
         setTimeout(()=>{
             stopStar('state2','../material/star_220.png');
             document.body.style.backgroundImage = 'url("../material/mbg_sea.png")';
             dialogControl();
-        },4000);
+        },5000);
     }
 }
 
@@ -118,8 +119,10 @@ function btnCheck(){  //開始掃描
     showSth('insta');
     hideSth('planet');
     hideSth('main');
-    let constraints = {video: {facingMode: { exact: "environment" }}};
-    let video = document.querySelector('#preview');
+    if(checkpoint < 4){
+        let constraints = {video: {facingMode: { exact: "environment" }}};
+        let video = document.querySelector('#preview');
+    }
     function handleSuccess(stream) {
         const codeReader = new ZXing.BrowserQRCodeReader();
         codeReader.decodeFromVideoDevice(undefined, 'preview', (result, err) => {

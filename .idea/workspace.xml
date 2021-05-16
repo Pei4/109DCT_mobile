@@ -20,27 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f04ad6df-73fa-4367-9788-90d2fd4086d0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/material/mbg_grass_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/material/mbg_grass_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/material/mbg_grass_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/material/mbg_grass_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/material/mbg_grass_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/material/mbg_sea.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/material/mbg_server_bud.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/material/mbg_server_seed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/material/star_fly.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/next.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/html/lv1.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/lv1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/functions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/lv1.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/lv1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/material/mbg_grass_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/material/mbg_grass_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/material/mbg_grass_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/material/mbg_grass_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/material/mbg_grass_5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/material/mbg_sea.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/material/mbg_server_bud.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/material/mbg_server_seed.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/scss/lv1.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/lv1.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/scss/mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/mobile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/scss/mobile.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/mobile.css.map" afterDir="false" />
@@ -173,7 +157,7 @@
       <workItem from="1620865171411" duration="6170000" />
       <workItem from="1620914191243" duration="13079000" />
       <workItem from="1620952063162" duration="5348000" />
-      <workItem from="1621070713669" duration="17104000" />
+      <workItem from="1621070713669" duration="32458000" />
     </task>
     <servers />
   </component>
