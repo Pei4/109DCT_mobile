@@ -119,10 +119,8 @@ function btnCheck(){  //開始掃描
     showSth('insta');
     hideSth('planet');
     hideSth('main');
-    if(checkpoint < 4){
-        let constraints = {video: {facingMode: { exact: "environment" }}};
-        let video = document.querySelector('#preview');
-    }
+    let constraints = {video: {facingMode: { exact: "environment" }}};
+    let video = document.querySelector('#preview');
     function handleSuccess(stream) {
         const codeReader = new ZXing.BrowserQRCodeReader();
         codeReader.decodeFromVideoDevice(undefined, 'preview', (result, err) => {
