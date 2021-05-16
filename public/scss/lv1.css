@@ -64,7 +64,6 @@ body {
 #object{
     height: 28vh !important;
     bottom: 25vh !important;
-    background-image: url("../material/drink_bottle_3.png");
 }
 #hand{
     background-image: url("../material/handplanet_0.png");
