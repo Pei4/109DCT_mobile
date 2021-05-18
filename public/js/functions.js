@@ -2,11 +2,19 @@ let id = parseInt(localStorage.getItem('id'));
 let checkpoint = parseInt(localStorage.getItem('checkPoint'));
 let planetDialogNum = parseInt(localStorage.getItem('planetDialogNum'));
 let meDialogNum = parseInt(localStorage.getItem('meDialogNum'));
+let images = new Array();
+
+function preload() {
+    for (let i = 0; i < preload.arguments.length; i++) {
+        images[i] = new Image()
+        images[i].src = preload.arguments[i]
+    }
+}
 
 let planetDialogArray =[
     '我肚子有點餓.....', //0-4
-    '謝謝你找東西給我吃！', //1-?
-    '欸！那邊好香喔！！',  //2-?
+    '謝謝你找東西給我吃！', //1-8
+    '欸！那邊好香喔！！',  //2-9跳10
     '有東西在發光耶',  //3-
     '我們過去看看吧',  //4-
     '哇～好多漂亮的花喔',  //5-
@@ -24,16 +32,16 @@ let planetDialogArray =[
 let meDialogArray =[
     '是不是該找點喝的東西給它呢...',  //0-1
     '要喝什麼好呢？',  //1-2
-    '找點食物給它吃吧',  //2-?
-    '要吃什麼好呢？',  //3-?
-    '所以你是從哪裡...',  //4-?
-    '這傢伙完全無視我呢...',  //5-?
+    '找點食物給它吃吧',  //2-5
+    '要吃什麼好呢？',  //3-6
+    '所以你是從哪裡...',  //4-9
+    '這傢伙完全無視我呢...',  //5-11
     '剛剛發生了...什麼事？',  //6-
     '你要回去哪裡？！', //7-
     '......' //8-
 ];
 let planetCont = [4,8];
-let meCont = [1,2,5,9];
+let meCont = [1,2,5,6,9];
 
 function showSth(sth){
     document.getElementById(sth).style.display = 'block';

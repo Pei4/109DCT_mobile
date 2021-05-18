@@ -222,3 +222,57 @@ body {
     60%{background-image: url("../material/food_salad_1.png")}
     100%{background-image: url("../material/food_salad_0.png")}
 }
+/*吃烤雞*/
+.food_chicken_3{
+    animation: chickenAnim 4s linear 0s 1;
+    -webkit-animation: chickenAnim 4s linear 0s 1;
+    -moz-animation: chickenAnim 4s linear 0s 1;
+}
+@keyframes chickenAnim {
+    0%{background-image: url("../material/food_chicken_3.png")}
+    20%{background-image: url("../material/food_chicken_3.png")}
+    40%{background-image: url("../material/food_chicken_2.png")}
+    60%{background-image: url("../material/food_chicken_1.png")}
+    100%{background-image: url("../material/food_steak_0.png")}
+}
+@-webkit-keyframes chickenAnim {
+    0%{background-image: url("../material/food_chicken_3.png")}
+    20%{background-image: url("../material/food_chicken_3.png")}
+    40%{background-image: url("../material/food_chicken_2.png")}
+    60%{background-image: url("../material/food_chicken_1.png")}
+    100%{background-image: url("../material/food_steak_0.png")}
+}
+@-moz-keyframes chickenAnim {
+    0%{background-image: url("../material/food_chicken_3.png")}
+    20%{background-image: url("../material/food_chicken_3.png")}
+    40%{background-image: url("../material/food_chicken_2.png")}
+    60%{background-image: url("../material/food_chicken_1.png")}
+    100%{background-image: url("../material/food_steak_0.png")}
+}
+/*吃牛排*/
+.food_steak_3{
+    animation: steakAnim 4s linear 0s 1;
+    -webkit-animation: steakAnim 4s linear 0s 1;
+    -moz-animation: steakAnim 4s linear 0s 1;
+}
+@keyframes steakAnim {
+    0%{background-image: url("../material/food_steak_3.png")}
+    20%{background-image: url("../material/food_steak_3.png")}
+    40%{background-image: url("../material/food_steak_2.png")}
+    60%{background-image: url("../material/food_steak_1.png")}
+    100%{background-image: url("../material/food_steak_0.png")}
+}
+@-webkit-keyframes steakAnim {
+    0%{background-image: url("../material/food_steak_3.png")}
+    20%{background-image: url("../material/food_steak_3.png")}
+    40%{background-image: url("../material/food_steak_2.png")}
+    60%{background-image: url("../material/food_steak_1.png")}
+    100%{background-image: url("../material/food_steak_0.png")}
+}
+@-moz-keyframes steakAnim {
+    0%{background-image: url("../material/food_steak_3.png")}
+    20%{background-image: url("../material/food_steak_3.png")}
+    40%{background-image: url("../material/food_steak_2.png")}
+    60%{background-image: url("../material/food_steak_1.png")}
+    100%{background-image: url("../material/food_steak_0.png")}
+}

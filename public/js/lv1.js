@@ -78,15 +78,36 @@ function chooseFnt1(){  //更新圖片與參數
     if (optSrc == 'water'){
         option = 'A';
         optSrc = 'drink_bottle';
+        preload(
+            "../material/drink_bottle_3.png",
+            "../material/drink_bottle_2.png",
+            "../material/drink_bottle_1.png",
+            "../material/drink_bottle_0.png"
+        )
     }
     else if(optSrc == 'pack'){
         optSrc = 'drink_pack';
         option = 'B';
+        preload(
+            "../material/drink_pack_3.png",
+            "../material/drink_pack_2.png",
+            "../material/drink_pack_1.png",
+        )
     }
     else if(optSrc == 'tea'){
         optSrc = 'drink_tea_3';
         option = 'C';
+        preload(
+            "../material/drink_tea_2.png",
+            "../material/drink_tea_1.png",
+            "../material/drink_tea_0.png"
+        )
     }
+    preload(
+        "../material/handplanet_1.png",
+        "../material/handplanet_2.png",
+        "../material/handplanet_3.png"
+    )
     hideSth('dialog');
     showSth('scanShow');
     showSth('scanOption');
@@ -96,15 +117,36 @@ function chooseFnt2(){  //更新圖片與參數
     if (optSrc == 'steak'){
         optSrc = 'food_steak_3';
         option = 1;
+        preload(
+            "../material/food_steak_2.png",
+            "../material/food_steak_1.png",
+            "../material/food_steak_0.png"
+        )
     }
     else if(optSrc == 'chicken'){
         option = 2;
         optSrc = 'food_chicken_3';
+        preload(
+            "../material/food_chicken_2.png",
+            "../material/food_chicken_1.png",
+            "../material/food_steak_0.png"
+        )
     }
     else if(optSrc == 'salad'){
         option = 3;
         optSrc = 'food_salad_3';
+        preload(
+            "../material/food_salad_2.png",
+            "../material/food_salad_1.png",
+            "../material/food_salad_0.png"
+        )
     }
+    preload(
+        "../material/handplanet_4.png",
+        "../material/handplanet_5.png",
+        "../material/planet_smile.png",
+        "../material/planet_smell.png"
+    )
     hideSth('dialog');
     showSth('scanShow');
     showSth('scanOption');
@@ -119,6 +161,14 @@ function btnCheck(){  //開始掃描
     showSth('insta');
     hideSth('planet');
     hideSth('main');
+    preload(
+        "../material/drink_bottle.png",
+        "../material/drink_pack.png",
+        "../material/drink_tea_3.png",
+        "../material/food_salad_3.png",
+        "../material/food_chicken_3.png",
+        "../material/food_steak_3.png"
+    )
     let constraints = {video: {facingMode: { exact: "environment" }}};
     let video = document.querySelector('#preview');
     function handleSuccess(stream) {
