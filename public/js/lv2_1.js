@@ -2,9 +2,17 @@ window.googleDocCallback = function () { return true; };
 let check = 0; // Default/continue 0, overload/almost 1, ready 2
 window.onload = function(){
     dialogControl();
+    preload(
+        "../material/planet_run.png",
+        "../material/planet_runaway.png",
+        "../material/mbg_grass_3.png",
+        "../material/waterer_blue.png",
+        "../material/waterer_green.png",
+        "../material/waterer_orange.png",
+        "../material/waterer_purple.png",
+        "../material/waterer_red.png",
+    )
 }
-
-
 function callGas(method,successFnt){
     $.ajax({
         type: "get",
@@ -74,6 +82,15 @@ function read() {
     alert('connecting');  //通知連接中
     callGas("addPlayer",tryCheck);
     goCheck();
+    preload(
+        "../material/flower_blue_small.png",
+        "../material/flower_red_small.png",
+        "../material/flower_white_small.png",
+        "../material/planet_watereye.png",
+        "../material/planet_happy_blue.png",
+        "../material/planet_happy_red.png",
+        "../material/planet_happy_white.png"
+    )
 };
 function water(){
     callGas("goWater",test);

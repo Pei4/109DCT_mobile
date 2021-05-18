@@ -88,7 +88,7 @@ function reUrl(url){
     localStorage.setItem('checkPoint', checkpoint.toString());
     localStorage.setItem('planetDialogNum', planetDialogNum.toString());
     localStorage.setItem('meDialogNum', meDialogNum.toString());
-    location.href=`https://pei4.github.io/109DCT_mobile/public/html/${url}.html`;
+    location.href=`http://localhost:63342/109DCT_mobile/public/html/${url}.html`;
 }
 
 function dialogControl(){
@@ -135,10 +135,17 @@ function dialogControl(){
             hideSth('me');
             showSth('next');
         },1000);
-        setTimeout(()=>addClass('hand','planetMove'),1500);
+        setTimeout(()=>addClass('hand','planetMove1'),1300);
     }
     if(checkpoint == 12){
         reUrl('lv2_1');
+    }
+    if(checkpoint == 14){
+        changeAnimSrc('hand','planet_run');
+        setTimeout(()=>{
+            changeAnimSrc('hand','planet_runaway');
+            addClass('hand','planetMove2');
+        },500)
     }
     if(meCont.includes(checkpoint)){
         meDialogNum ++;

@@ -171,29 +171,29 @@ body {
 }
 /*喝手搖動畫*/
 .drink_tea_3{
-    animation: teaAnim 4s linear 0s 1;
-    -webkit-animation: teaAnim 4s linear 0s 1;
-    -moz-animation: teaAnim 4s linear 0s 1;
+    animation: teaAnim 4s step-end 0s 1;
+    -webkit-animation: teaAnim 4s step-end 0s 1;
+    -moz-animation: teaAnim 4s step-end 0s 1;
 }
 @keyframes teaAnim {
     0%{background-image: url("../material/drink_tea_3.png")}
-    20%{background-image: url("../material/drink_tea_3.png")}
-    40%{background-image: url("../material/drink_tea_2.png")}
-    60%{background-image: url("../material/drink_tea_1.png")}
+    20%{background-image: url("../material/drink_tea_2.png")}
+    40%{background-image: url("../material/drink_tea_1.png")}
+    60%{background-image: url("../material/drink_tea_0.png")}
     100%{background-image: url("../material/drink_tea_0.png")}
 }
 @-webkit-keyframes teaAnim {
     0%{background-image: url("../material/drink_tea_3.png")}
-    20%{background-image: url("../material/drink_tea_3.png")}
-    40%{background-image: url("../material/drink_tea_2.png")}
-    60%{background-image: url("../material/drink_tea_1.png")}
+    20%{background-image: url("../material/drink_tea_2.png")}
+    40%{background-image: url("../material/drink_tea_1.png")}
+    60%{background-image: url("../material/drink_tea_0.png")}
     100%{background-image: url("../material/drink_tea_0.png")}
 }
 @-moz-keyframes teaAnim {
     0%{background-image: url("../material/drink_tea_3.png")}
-    20%{background-image: url("../material/drink_tea_3.png")}
-    40%{background-image: url("../material/drink_tea_2.png")}
-    60%{background-image: url("../material/drink_tea_1.png")}
+    20%{background-image: url("../material/drink_tea_2.png")}
+    40%{background-image: url("../material/drink_tea_1.png")}
+    60%{background-image: url("../material/drink_tea_0.png")}
     100%{background-image: url("../material/drink_tea_0.png")}
 }
 /*吃沙拉*/
@@ -276,4 +276,49 @@ body {
     40%{background-image: url("../material/food_steak_2.png")}
     60%{background-image: url("../material/food_steak_1.png")}
     100%{background-image: url("../material/food_steak_0.png")}
+}
+
+.planetMove1{
+    animation: planetMove1 2s ease-in 0s 1;
+    -webkit-animation: planetMove1 2s ease-in 0s 1;
+    -moz-animation: planetMove1 2s ease-in 0s 1;
+}
+@keyframes planetMove1 {
+    0%{
+        transform: translate(-50%,0);
+    }
+    100%{
+        transform: translate(50%,0);
+        -webkit-transform: translate(50%,0);
+        -moz-transform: translate(50%,0);
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+    }
+}
+@-webkit-keyframes planetMove1 {
+    0%{
+        transform: translate(-50%,0);
+    }
+    100%{
+        transform: translate(50%,0);
+        -webkit-transform: translate(50%,0);
+        -moz-transform: translate(50%,0);
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+    }
+}
+@-moz-keyframes planetMove1 {
+    0%{
+        transform: translate(-50%,0);
+    }
+    100%{
+        transform: translate(50%,0);
+        -webkit-transform: translate(50%,0);
+        -moz-transform: translate(50%,0);
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+    }
 }

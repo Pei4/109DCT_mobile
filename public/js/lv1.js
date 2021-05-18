@@ -106,7 +106,8 @@ function chooseFnt1(){  //更新圖片與參數
     preload(
         "../material/handplanet_1.png",
         "../material/handplanet_2.png",
-        "../material/handplanet_3.png"
+        "../material/handplanet_3.png",
+        "../material/mbg_pink.png"
     )
     hideSth('dialog');
     showSth('scanShow');

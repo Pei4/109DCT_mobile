@@ -1,10 +1,30 @@
 body{
-    background-image: url("../material/mbg_grass_1.png");
+    animation: flash 1.3s linear 0s infinite;
+    -webkit-animation: flash 1.3s linear 0s infinite;
+    -moz-animation: flash 1.3s linear 0s infinite;
 }
+@keyframes flash {
+    0%{background-image: url("../material/mbg_grass_1.png")}
+    50%{background-image: url("../material/mbg_grass_2.png")}
+    100%{background-image: url("../material/mbg_grass_1.png")}
+}
+@-webkit-keyframes flash {
+    0%{background-image: url("../material/mbg_grass_1.png")}
+    50%{background-image: url("../material/mbg_grass_2.png")}
+    100%{background-image: url("../material/mbg_grass_1.png")}
+}
+@-moz-keyframes flash {
+    0%{background-image: url("../material/mbg_grass_1.png")}
+    50%{background-image: url("../material/mbg_grass_2.png")}
+    100%{background-image: url("../material/mbg_grass_1.png")}
+}
+
+
 #hand{
     background-image: url("../material/planet_happyjump.png");
     height: 30vh;
-    bottom: 28vh;
+    bottom: 20vh;
+    transform: translate(-65%,0) !important;
 }
 #readBtn{
     position: absolute;
