@@ -41,14 +41,12 @@ img{
 #main div {
   position: absolute;
   display: inline-block;
-  bottom: 15vh;
   left: 50vw;
   transform: translate(-50%, 0);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  height: 50vh;
 }
 #dialog{
   position: fixed;
@@ -92,6 +90,41 @@ img{
   top:10vh;
   height: 50vh;
   width: 100vw;
+}
+.planetMove{
+  animation: planetMove 2s ease-in 0s 1;
+  -webkit-animation: planetMove 2s ease-in 0s 1;
+  -moz-animation: planetMove 2s ease-in 0s 1;
+}
+@keyframes planetMove {
+  0%{
+    transform: translate(-50%,0);
+  }
+  100%{
+    transform: translate(50%,0) !important;
+    -webkit-transform: translate(50%,0) !important;
+    -moz-transform: translate(50%,0) !important;
+  }
+}
+@-webkit-keyframes planetMove {
+  0%{
+    transform: translate(-50%,0);
+  }
+  100%{
+    transform: translate(50%,0) !important;
+    -webkit-transform: translate(50%,0) !important;
+    -moz-transform: translate(50%,0) !important;
+  }
+}
+@-moz-keyframes planetMove {
+  0%{
+    transform: translate(-50%,0);
+  }
+  100%{
+    transform: translate(50%,0) !important;
+    -webkit-transform: translate(50%,0) !important;
+    -moz-transform: translate(50%,0) !important;
+  }
 }
 
 #flyStar{

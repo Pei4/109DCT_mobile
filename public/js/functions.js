@@ -14,9 +14,9 @@ function preload() {
 let planetDialogArray =[
     '我肚子有點餓.....', //0-4
     '謝謝你找東西給我吃！', //1-8
-    '欸！那邊好香喔！！',  //2-9跳10
-    '有東西在發光耶',  //3-
-    '我們過去看看吧',  //4-
+    '欸！那邊好香喔！！',  //2-9
+    '有東西在發光耶',  //3-13
+    '我們過去看看吧',  //4-14
     '哇～好多漂亮的花喔',  //5-
     '可以挑一朵適合的給我嗎',  //6-
     '我好喜歡～謝謝你！',  //7-
@@ -36,12 +36,13 @@ let meDialogArray =[
     '要吃什麼好呢？',  //3-6
     '所以你是從哪裡...',  //4-9
     '這傢伙完全無視我呢...',  //5-11
-    '剛剛發生了...什麼事？',  //6-
-    '你要回去哪裡？！', //7-
-    '......' //8-
+    '不要亂跑啊！！',  //6-15
+    '剛剛發生了...什麼事？',  //7-
+    '你要回去哪裡？！', //8-
+    '......' //9-
 ];
-let planetCont = [4,8];
-let meCont = [1,2,5,6,9];
+let planetCont = [4,8,13,14];
+let meCont = [1,2,5,6,9,11,15];
 
 function showSth(sth){
     document.getElementById(sth).style.display = 'block';
@@ -134,8 +135,9 @@ function dialogControl(){
             hideSth('me');
             showSth('next');
         },1000);
+        setTimeout(()=>addClass('hand','planetMove'),1500);
     }
-    if(checkpoint == 100){
+    if(checkpoint == 12){
         reUrl('lv2_1');
     }
     if(meCont.includes(checkpoint)){

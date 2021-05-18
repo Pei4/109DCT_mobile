@@ -41,7 +41,6 @@ body {
     font-weight: normal;
     font-size: 50px;
     line-height: 40px;
-    display: flex;
     align-items: center;
     text-align: center;
     letter-spacing: -0.41px;
@@ -64,11 +63,13 @@ body {
     color: white;
 }
 #object{
-    height: 28vh !important;
-    bottom: 25vh !important;
+    height: 28vh;
+    bottom: 25vh;
 }
 #hand{
     background-image: url("../material/handplanet_0.png");
+    height: 50vh;
+    bottom: 15vh;
 }
 
 /*星球喝*/

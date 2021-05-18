@@ -6,22 +6,24 @@
     <title>lv2</title>
     <link rel=stylesheet type="text/css" href="../reset.css">
     <link rel="stylesheet" type="text/css" href="../scss/mobile.css">
+    <link rel="stylesheet" type="text/css" href="../scss/lv2_1.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../js/functions.js" crossorigin="anonymous"></script>
     <script src="../js/lv2_1.js" crossorigin="anonymous"></script>
+    <script src="../js/functions.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<input id="id" hidden><br>
-<input type="button" onclick="read()" value="read">
-<input type="button" onclick="water()" value="water">
-<div id="star"><img src="../material/star_000.png"></div>
+<div id="star"><img id="starImg" src="../material/star_220.png"></div>
+<input type="button" id="readBtn" onclick="read()" value="加入">
+<input type="button" id="waterBtn" onclick="water()" value="water">
 <div id="main">
-    <img src="../material/handplanet_0.png">
+    <div id="hand"></div>
+    <div id="object"></div>
+    <img id="flyStar" src="../material/star_fly.png" style="display: none">
 </div>
-<div id="dialog">
-    <a id="me" style="display: block"></a>
-    <a id="planet" style="display: none"></a>
-    <button id="nextBtn" onclick="dialogControl()">下</button>
+<div id="dialog" onclick="dialogControl()">
+    <a id="me" style="display: none"></a>
+    <a id="planet">我好乾好渴喔......</a>
+    <img id="next" src="../material/next.png">
 </div>
 </body>
 </html>

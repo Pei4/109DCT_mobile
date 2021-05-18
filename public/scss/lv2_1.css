@@ -1,0 +1,40 @@
+body{
+    background-image: url("../material/mbg_grass_1.png");
+}
+#hand{
+    background-image: url("../material/planet_happyjump.png");
+    height: 30vh;
+    bottom: 28vh;
+}
+#readBtn{
+    position: absolute;
+    display: inline-block;
+    height: 7vh;
+    bottom: 30vh;
+    left: 50vw;
+    font-family: Noto Sans CJK TC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 40px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.41px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: #FFE352;
+    border: 4px solid #F3D63B;
+    width: 22vw;
+    transform: translate(-50%,0);
+    color: white;
+}
+#waterBtn{
+    position: absolute;
+    display: inline-block;
+    height: 30vh;
+    top: 20vh;
+    left: 50vw;
+    width: auto;
+    max-width: 48vw;
+    transform: translate(-80%,0);
+}
