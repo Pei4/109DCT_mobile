@@ -145,7 +145,7 @@ body {
 }
 /*喝茶動畫*/
 .drink_pack{
-    left: 60vw !important;
+    transform: translate(-47%,0) !important;
     animation: packAnim 4s step-end 0s 1;
     -webkit-animation: packAnim 4s step-end 0s 1;
     -moz-animation: packAnim 4s step-end 0s 1;

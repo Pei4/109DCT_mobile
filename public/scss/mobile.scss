@@ -67,12 +67,14 @@ img{
   }
 }
 #next{
-  position: absolute;
+  position: fixed;
   display: inline-block;
   left: 50vw;
   bottom: .1vh;
   width: 15vw;
   height: auto;
+  max-width: 100px;
+  max-height: 10vh;
   transform: translate(200%,0);
 }
 #me{
