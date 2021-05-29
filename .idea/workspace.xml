@@ -20,19 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f04ad6df-73fa-4367-9788-90d2fd4086d0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/material/flower_blue_small.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/material/flower_red_small.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/material/flower_white_small.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/html/lv2_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/lv2_1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/functions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/lv1.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/lv1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/lv2_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/lv2_1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/scss/lv1.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/lv1.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/scss/lv2_1.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/lv2_1.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/scss/mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/mobile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/scss/mobile.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/mobile.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/scss/mobile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/mobile.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +38,8 @@
       <list>
         <option value="package.json" />
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -87,10 +81,7 @@
       <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion\public" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.js2test.js">
-    <configuration name="functions.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/public/js/functions.js" working-dir="$PROJECT_DIR$/public/js">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Node.js.test.js (1)">
     <configuration name="js2test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/public/js/js2test.js" working-dir="$PROJECT_DIR$/public/js">
       <method v="2" />
     </configuration>
@@ -100,16 +91,19 @@
     <configuration name="spreadSheet.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/public/js/spreadSheet.js" working-dir="$PROJECT_DIR$/public/js">
       <method v="2" />
     </configuration>
+    <configuration name="test.js (1)" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/mt/test.js" working-dir="$PROJECT_DIR$/mt">
+      <method v="2" />
+    </configuration>
     <configuration name="test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/public/js/test.js" working-dir="$PROJECT_DIR$/public/js">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.test.js (1)" />
         <item itemvalue="Node.js.js2test.js" />
         <item itemvalue="Node.js.lv2_1.js" />
         <item itemvalue="Node.js.test.js" />
         <item itemvalue="Node.js.spreadSheet.js" />
-        <item itemvalue="Node.js.functions.js" />
       </list>
     </recent_temporary>
   </component>
@@ -164,6 +158,8 @@
       <workItem from="1621070713669" duration="32458000" />
       <workItem from="1621183956498" duration="1720000" />
       <workItem from="1621316873828" duration="12281000" />
+      <workItem from="1621673845484" duration="7166000" />
+      <workItem from="1622208363411" duration="18721000" />
     </task>
     <servers />
   </component>
@@ -189,41 +185,29 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="104" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1609826875800">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="0" y="104" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1609826875800" />
     <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614604768614">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1614604768614" />
-    <state x="421" y="82" key="FileChooserDialogImpl" timestamp="1609571660874">
+    <state width="1259" height="154" key="GridCell.Tab.0.bottom" timestamp="1621704166468">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="82" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1609571660874" />
-    <state width="1259" height="154" key="GridCell.Tab.0.bottom" timestamp="1615525544952">
+    <state width="1259" height="154" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1621704166468" />
+    <state width="1259" height="154" key="GridCell.Tab.0.center" timestamp="1621704166467">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="154" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1615525544952" />
-    <state width="1259" height="154" key="GridCell.Tab.0.center" timestamp="1615525544951">
+    <state width="1259" height="154" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1621704166467" />
+    <state width="1259" height="154" key="GridCell.Tab.0.left" timestamp="1621704166467">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="154" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1615525544951" />
-    <state width="1259" height="154" key="GridCell.Tab.0.left" timestamp="1615525544951">
+    <state width="1259" height="154" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1621704166467" />
+    <state width="1259" height="154" key="GridCell.Tab.0.right" timestamp="1621704166468">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="154" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1615525544951" />
-    <state width="1259" height="154" key="GridCell.Tab.0.right" timestamp="1615525544952">
+    <state width="1259" height="154" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1621704166468" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1622292445229">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="154" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1615525544952" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1611303689253">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1611303689253" />
-    <state x="753" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1611563448017">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="753" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1611563448017" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1622292445229" />
   </component>
 </project>

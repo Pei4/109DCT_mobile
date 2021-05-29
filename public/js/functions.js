@@ -1,13 +1,11 @@
 let id = parseInt(localStorage.getItem('id'));
-let checkpoint = parseInt(localStorage.getItem('checkPoint'));
-let planetDialogNum = parseInt(localStorage.getItem('planetDialogNum'));
-let meDialogNum = parseInt(localStorage.getItem('meDialogNum'));
 let images = new Array();
 
 function preload() {
     for (let i = 0; i < preload.arguments.length; i++) {
-        images[i] = new Image()
-        images[i].src = preload.arguments[i]
+        images[i] = new Image();
+        images[i].src = preload.arguments[i];
+        enableSth('dialog');
     }
 }
 
@@ -85,9 +83,6 @@ function stopStar(state,starUrl){
 function reUrl(url){
     //更新 localStorage
     localStorage.setItem('id', id.toString());
-    localStorage.setItem('checkPoint', checkpoint.toString());
-    localStorage.setItem('planetDialogNum', planetDialogNum.toString());
-    localStorage.setItem('meDialogNum', meDialogNum.toString());
     location.href=`http://localhost:63342/109DCT_mobile/public/html/${url}.html`;
 }
 
@@ -141,11 +136,23 @@ function dialogControl(){
         reUrl('lv2_1');
     }
     if(checkpoint == 14){
+        disableSth('dialog');
         changeAnimSrc('hand','planet_run');
         setTimeout(()=>{
             changeAnimSrc('hand','planet_runaway');
             addClass('hand','planetMove2');
-        },500)
+        },1000)
+        setTimeout(()=>{
+            hideSth('hand');
+            enableSth('dialog');
+            showSth('next');
+        },2300)
+    }
+    if(checkpoint == 16){
+        hideSth('dialog');
+        document.body.className = '';
+        showSth('instruct');
+        showSth('readBtn');
     }
     if(meCont.includes(checkpoint)){
         meDialogNum ++;

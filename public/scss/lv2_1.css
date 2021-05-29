@@ -1,4 +1,7 @@
 body{
+    background-image: url("../material/mbg_grass_3.png");
+}
+.flash{
     animation: flash 1.3s linear 0s infinite;
     -webkit-animation: flash 1.3s linear 0s infinite;
     -moz-animation: flash 1.3s linear 0s infinite;
@@ -18,43 +21,141 @@ body{
     50%{background-image: url("../material/mbg_grass_2.png")}
     100%{background-image: url("../material/mbg_grass_1.png")}
 }
-
-
-#hand{
+#main div{
     background-image: url("../material/planet_happyjump.png");
     height: 30vh;
     bottom: 20vh;
-    transform: translate(-65%,0) !important;
+    transform: translate(-65%,0);
 }
-#readBtn{
-    position: absolute;
-    display: inline-block;
-    height: 7vh;
-    bottom: 30vh;
-    left: 50vw;
+#instruct{
+    background-image: none !important;
+    height: 17vh !important;
+    left: 0vw !important;
+    bottom: 50vh !important;
+    transform: translate(0, 40%) !important;;
+    background: rgba(196, 196, 196, 0.5);
+    backdrop-filter: blur(11px);
     font-family: Noto Sans CJK TC;
-    font-style: normal;
-    font-weight: normal;
     font-size: 50px;
-    line-height: 40px;
+    line-height: 80px;
+    display: flex;
     align-items: center;
     text-align: center;
     letter-spacing: -0.41px;
-    box-sizing: border-box;
-    border-radius: 10px;
+    color: #1E1E1E;
+}
+#readBtn{
+    bottom: 32.5vh;
+    left: 50vw;
+    transform-origin: center;
+    transform: translate(-50%,0);
     background: #FFE352;
     border: 4px solid #F3D63B;
     width: 22vw;
-    transform: translate(-50%,0);
-    color: white;
+    color: rgba(195, 138, 28, 1);
 }
+.loader {
+    position: absolute;
+    display: inline-block;
+    bottom: 36vh;
+    left: 50vw;
+    transform: translate(-50%,50%);
+    border: 4px solid rgba(196, 138, 28, 0.3); /* Light grey */
+    border-top: 4px solid #C48A1C; /* Blue */
+    border-right: 4px solid #C48A1C;
+    border-bottom: 4px solid #C48A1C;
+    border-radius: 50%;
+    width: 5vw;
+    height: 5vw;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform:translate(-50%,50%) rotate(0deg); }
+    100% { transform:translate(-50%,50%) rotate(360deg); }
+}
+
 #waterBtn{
     position: absolute;
     display: inline-block;
-    height: 30vh;
-    top: 20vh;
+    height: 20vh;
+    top: 15vh;
     left: 50vw;
-    width: auto;
+    width: 100%;
     max-width: 48vw;
     transform: translate(-80%,0);
+    background: none;
+    border: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.planetMove2{
+    animation: planetMove2 1500ms ease-in 0s 1;
+    -webkit-animation: planetMove2 1500ms ease-in 0s 1;
+    -moz-animation: planetMove2 1500ms ease-in 0s 1;
+}
+@keyframes planetMove2 {
+    0%{
+        transform: translate(-65%,0);
+    }
+    100%{
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+        transform: translate(-30%,-60%) scale(0,0);
+        -webkit-transform: translate(-30%,-60%) scale(0,0);
+        -moz-transform: translate(-30%,-60%) scale(0,0);
+    }
+}
+@-webkit-keyframes planetMove2 {
+    0%{
+        transform: translate(-65%,0);
+    }
+    100%{
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+        transform: translate(-30%,-60%) scale(0,0);
+        -webkit-transform: translate(-30%,-60%) scale(0,0);
+        -moz-transform: translate(-30%,-60%) scale(0,0);
+    }
+}
+@-moz-keyframes planetMove2 {
+    0%{
+        transform: translate(-65%,0);
+    }
+    100%{
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+        transform: translate(-30%,-60%) scale(0,0);
+        -webkit-transform: translate(-30%,-60%) scale(0,0);
+        -moz-transform: translate(-30%,-60%) scale(0,0);
+    }
+}
+@keyframes circle {
+    0%{
+        transform: translate(-50%,50%) translateY(50%) rotate(0deg) ;
+    }
+    100%{
+        transform: translate(-50%,50%) translateY(50%) rotate(360deg) ;
+    }
+}
+@-webkit-keyframes circle {
+    0%{
+        transform: translate(-50%,50%) translateY(50%) rotate(0deg) ;
+    }
+    100%{
+        transform: translate(-50%,50%) translateY(50%) rotate(360deg) ;
+    }
+}
+@-moz-keyframes circle {
+    0%{
+        transform: translate(-50%,50%) translateY(50%) rotate(0deg) ;
+    }
+    100%{
+        transform: translate(-50%,50%) translateY(50%) rotate(360deg) ;
+    }
 }

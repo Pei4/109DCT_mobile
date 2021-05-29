@@ -1,7 +1,6 @@
 window.googleDocCallback = function () { return true; };
 let check = 0; // Default/continue 0, overload/almost 1, ready 2
 window.onload = function(){
-    dialogControl();
     preload(
         "../material/planet_run.png",
         "../material/planet_runaway.png",
@@ -13,6 +12,9 @@ window.onload = function(){
         "../material/waterer_red.png",
     )
 }
+let checkpoint = 13;
+let planetDialogNum = 3;
+let meDialogNum = 5;
 function callGas(method,successFnt){
     $.ajax({
         type: "get",
@@ -33,22 +35,32 @@ function test(e){
 };
 function tryCheck(e){
     if(e == "overload"){
-        alert("overload, wait for 5 sec");  //人數過多，請稍待
+        console.log("overload");
+        htmlContent('instruct',`<br>人數已達上限<br>請靜待下一輪`);
         check = 1;
     }
     if(e == "almost"){
-        alert("almost, wait for 5 sec");  //快完成了，靜候下一輪
+        console.log("almost");
+        htmlContent('instruct',`<br>即將有小花成長茁壯<br>請靜待下一輪`);
         check = 1;
     }
     if(e == "continue"){
         check = 0;
     }
     if(e == "ready"){
-        alert("success");
+        console.log("success");
         check = 2;
+        //GAS回傳第幾個玩家!!!!!!!!!!
+        changeAnimSrc('waterBtn','waterer_red');
+        showSth('waterBtn');
+        hideSth('loader');
+        enableSth('readBtn');
+        htmlContent('instruct',`<br>請點擊澆水器<br>幫花澆水`);
+        document.getElementById('readBtn').value = '確定';
     }
 }
 function goCheck(){
+    callGas("addPlayer",tryCheck);
     if(check < 2){
         if(check == 0){  //快速檢查是否登錄
             let connectInterval = setInterval(function (){
@@ -79,9 +91,12 @@ function goCheck(){
 }
 
 function read() {
-    alert('connecting');  //通知連接中
-    callGas("addPlayer",tryCheck);
-    goCheck();
+    showSth('loader');
+    htmlContent('instruct',`<br>連線中`);
+    document.getElementById('readBtn').value = '';
+    disableSth('readBtn');
+    disableSth('waterBtn');
+    console.log('connecting');  //通知連接中
     preload(
         "../material/flower_blue_small.png",
         "../material/flower_red_small.png",
@@ -90,8 +105,18 @@ function read() {
         "../material/planet_happy_blue.png",
         "../material/planet_happy_red.png",
         "../material/planet_happy_white.png"
-    )
+    );
+    document.getElementById( 'readBtn' ).setAttribute( "onclick", "javascript: goWater();" );
+    setTimeout(()=>{
+        goCheck();
+    },1);
 };
+function goWater(){
+    hideSth('readBtn');
+    hideSth('instruct');
+    enableSth('waterBtn');
+}
 function water(){
+    console.log('water');
     callGas("goWater",test);
 }
