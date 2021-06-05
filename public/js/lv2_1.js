@@ -1,5 +1,9 @@
 window.googleDocCallback = function () { return true; };
-let check = 0; // Default/continue 0, overload/almost 1, ready 2
+//初始設定
+let checkpoint = 13;
+let planetDialogNum = 3;
+let meDialogNum = 5;
+//變數
 let countMin = 0; //分鐘數
 let countSec = 0; //秒數
 let countStop = 0; //Default 0, 完成 1
@@ -19,9 +23,6 @@ window.onload = function(){
         "../material/sprout.png"
     )
 }
-let checkpoint = 13;
-let planetDialogNum = 3;
-let meDialogNum = 5;
 
 function callPlayer(){
     $.ajax({

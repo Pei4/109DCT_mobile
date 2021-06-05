@@ -1,18 +1,18 @@
+window.googleDocCallback = function () { return true; };
+//初始設定
+let id;
+checkpoint = 0
+planetDialogNum = -1;
+meDialogNum = -1;
+//變數
 let chooseCheck = 0;  //  Default/掃描中 0, 掃描到 1
 let option;
 let optSrc;
 
-//localStorage 初始化
-localStorage.setItem('id', '2');
-localStorage.setItem('checkPoint','0');
-localStorage.setItem('planetDialogNum','-1');
-localStorage.setItem('meDialogNum','-1');
-
-window.googleDocCallback = function () { return true; };
 function callGas(method,choose,successFnt){
     $.ajax({
         type: "get",
-        url: "https://script.google.com/macros/s/AKfycbyWybm7KgqrlukAA516BCr_KCGBd-pxYdh0lGemGBeyXftUfC813fXVNpq4_2MaJIrKGg/exec?callback=googleDocCallback",
+        url: "https://script.google.com/macros/s/AKfycbz34Hlx6cYl-BLTACrvu00B2SYYb_D7eE4zGxIGA0IOTnMSwRPXyrRPcXanavVkmo3IyA/exec?callback=googleDocCallback",
         data: {
             "method": method,
             "id":id+1,
@@ -22,6 +22,15 @@ function callGas(method,choose,successFnt){
             successFnt(response);
         }
     });
+}
+
+window.onload = function (){
+    callGas('add','',getId);
+}
+
+function getId(e){
+    id = parseInt(e.toString());
+    localStorage.setItem('id',id);
 }
 
 function correct(){  //再考慮看看

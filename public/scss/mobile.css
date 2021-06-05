@@ -112,7 +112,7 @@ img {
   display: inline-block;
   left: 50vw;
   bottom: 40vh;
-  transform: translate(-50%, 0) scale(5,5);
+  transform: translate(-50%, 0) scale(3,3);
 }
 
 .starFly {
@@ -123,23 +123,23 @@ img {
 
 @keyframes starFly {
   100% {
-    transform: translate(15vw, -45vh) scale(5,5);
-    -webkit-transform: translate(15vw, -45vh) scale(5,5);
-    -moz-transform: translate(15vw, -45vh) scale(5,5);
+    transform: translate(15vw, -45vh) scale(3,3);
+    -webkit-transform: translate(15vw, -45vh) scale(3,3);
+    -moz-transform: translate(15vw, -45vh) scale(3,3);
   }
 }
 @-webkit-keyframes starFly {
   100% {
-    transform: translate(15vw, -45vh) scale(5,5);
-    -webkit-transform: translate(15vw, -45vh) scale(5,5);
-    -moz-transform: translate(15vw, -45vh) scale(5,5);
+    transform: translate(15vw, -45vh) scale(3,3);
+    -webkit-transform: translate(15vw, -45vh) scale(3,3);
+    -moz-transform: translate(15vw, -45vh) scale(3,3);
   }
 }
 @-moz-keyframes starFly {
   100% {
-    transform: translate(15vw, -45vh) scale(5,5);
-    -webkit-transform: translate(15vw, -45vh) scale(5,5);
-    -moz-transform: translate(15vw, -45vh) scale(5,5);
+    transform: translate(15vw, -45vh) scale(3,3);
+    -webkit-transform: translate(15vw, -45vh) scale(3,3);
+    -moz-transform: translate(15vw, -45vh) scale(3,3);
   }
 }
 .state1 {
