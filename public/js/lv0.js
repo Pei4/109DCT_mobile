@@ -6,7 +6,7 @@ let shineImg,planetImg,planetR,planetW,planetB;
 function updatePlanets(){
     $.ajax({
         type: "get",
-        url: "https://script.google.com/macros/s/AKfycbzQMjajnn5fGrSWYlmjhDI6ZCDfotrGI-6QrLnTCVzUBNJb2vcAIss1qZy94JKPOadS-w/exec?callback=googleDocCallback",
+        url: "https://script.google.com/macros/s/AKfycbw5jMnpWb8bCInqWOh_zWnGV9HDgJpM2k9dAj64ZwhGjaqDnW_EN61HIvF0PAS9SLmccQ/exec?callback=googleDocCallback",
         success: function(response) {
             planets.length = 0;
             let responseString = response.split(",");

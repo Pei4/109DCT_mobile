@@ -15,10 +15,10 @@ let planetDialogArray =[
     '欸！那邊好香喔！！',  //2-9
     '有東西在發光耶',  //3-13
     '我們過去看看吧',  //4-14
-    '哇～好多漂亮的花喔',  //5-
-    '可以挑一朵適合的給我嗎',  //6-
-    '我好喜歡～謝謝你！',  //7-
-    '哎呀...我好像該回去了...',  //8-
+    '哇～好多漂亮的花喔',  //5-17
+    '可以挑一朵適合的給我嗎',  //6-18
+    '我好喜歡～謝謝你！',  //7-19
+    '哎呀...我好像該回去了...',  //8-21
     '我好像該回去了...',  //9-
     '其實我是新生的小星球',  //10-
     '要在某處遊歷之後',  //11-
@@ -35,12 +35,12 @@ let meDialogArray =[
     '所以你是從哪裡...',  //4-9
     '這傢伙完全無視我呢...',  //5-11
     '不要亂跑啊！！',  //6-15
-    '剛剛發生了...什麼事？',  //7-
-    '你要回去哪裡？！', //8-
+    '剛剛發生了...什麼事？',  //7-20(自動)
+    '你要回去哪裡？！', //8-22
     '......' //9-
 ];
-let planetCont = [4,8,13,14];
-let meCont = [1,2,5,6,9,11,15];
+let planetCont = [4,8,13,14,17,18,19,21];
+let meCont = [1,2,5,6,9,11,15,22];
 
 function showSth(sth){
     document.getElementById(sth).style.display = 'block';
@@ -74,10 +74,10 @@ function goStar(state){
     addClass('flyStar','starFly');
     addClass('hand',state);
 }
-function stopStar(state,starUrl){
+function stopStar(starUrl){
     hideSth('flyStar');
-    removeClass('flyStar','starFly');
-    removeClass('hand',state);
+    removeClass('flyStar');
+    removeClass('hand');
     changeSource('starImg',starUrl);
 }
 function reUrl(url){
@@ -153,6 +153,34 @@ function dialogControl(){
         document.body.className = '';
         showSth('instruct');
         showSth('readBtn');
+    }
+    if(checkpoint == 17){
+        showSth('dialog');
+        enableSth('dialog');
+        removeClass('hand');
+        addClass('hand','planetReset');
+        showSth('hand');
+        changeAnimSrc('hand','planet_watereye');
+        hideSth('finish');
+    }
+    if(checkpoint == 18){
+        disableSth('dialog');
+        enableSmall();
+    }
+    if (checkpoint == 19){
+        enableSth('dialog');
+    }
+    if (checkpoint == 20){
+        showSth('mask');
+        addClass('mask','shine');
+        setTimeout(()=>{
+            changeAnimSrc('hand','planet_sadsmile_2');
+            addClass('hand','planetShine');
+            meDialogNum ++;
+            htmlContent('me',meDialogArray[meDialogNum]);
+            showSth('me');
+            hideSth('planet');
+        },1200);
     }
     if(meCont.includes(checkpoint)){
         meDialogNum ++;

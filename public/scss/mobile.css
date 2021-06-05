@@ -59,7 +59,7 @@ img {
   font-family: Noto Sans CJK TC;
   font-style: normal;
   font-weight: normal;
-  font-size: 50px;
+  font-size: 60px;
 }
 .opt{
   position: absolute;
@@ -81,12 +81,12 @@ img {
   position: fixed;
   display: inline-block;
   left: 50vw;
-  bottom: 0.1vh;
+  bottom: 15vh;
   width: 15vw;
   height: auto;
   max-width: 100px;
   max-height: 10vh;
-  transform: translate(200%, 0);
+  transform: translate(100%, 100%);
 }
 
 #me {
@@ -112,7 +112,7 @@ img {
   display: inline-block;
   left: 50vw;
   bottom: 40vh;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, 0) scale(5,5);
 }
 
 .starFly {
@@ -123,23 +123,23 @@ img {
 
 @keyframes starFly {
   100% {
-    transform: translate(15vw, -45vh);
-    -webkit-transform: translate(15vw, -45vh);
-    -moz-transform: translate(15vw, -45vh);
+    transform: translate(15vw, -45vh) scale(5,5);
+    -webkit-transform: translate(15vw, -45vh) scale(5,5);
+    -moz-transform: translate(15vw, -45vh) scale(5,5);
   }
 }
 @-webkit-keyframes starFly {
   100% {
-    transform: translate(15vw, -45vh);
-    -webkit-transform: translate(15vw, -45vh);
-    -moz-transform: translate(15vw, -45vh);
+    transform: translate(15vw, -45vh) scale(5,5);
+    -webkit-transform: translate(15vw, -45vh) scale(5,5);
+    -moz-transform: translate(15vw, -45vh) scale(5,5);
   }
 }
 @-moz-keyframes starFly {
   100% {
-    transform: translate(15vw, -45vh);
-    -webkit-transform: translate(15vw, -45vh);
-    -moz-transform: translate(15vw, -45vh);
+    transform: translate(15vw, -45vh) scale(5,5);
+    -webkit-transform: translate(15vw, -45vh) scale(5,5);
+    -moz-transform: translate(15vw, -45vh) scale(5,5);
   }
 }
 .state1 {

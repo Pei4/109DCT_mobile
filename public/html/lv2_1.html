@@ -7,24 +7,46 @@
     <link rel=stylesheet type="text/css" href="../reset.css">
     <link rel="stylesheet" type="text/css" href="../scss/mobile.css">
     <link rel="stylesheet" type="text/css" href="../scss/lv2_1.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../js/lv2_1.js" crossorigin="anonymous"></script>
     <script src="../js/functions.js" crossorigin="anonymous"></script>
 </head>
 <body class="flash">
 <div id="star"><img id="starImg" src="../material/star_220.png"></div>
+<div id="timer" style="display: none">
+    <img src="../material/clock.png">
+    <a id="min">00</a><a id="colon">:</a><a id="sec">00</a>
+</div>
+<div id="finish" style="display: none">
+    <a id="spend">耗時 17 秒!</a>
+    <a id="avg">—其他玩家平均耗時10秒—</a>
+    <input type="button" id="chooseFlower" class="opt" value="確定" onclick="dialogControl()">
+</div>
 <input type="button" id="readBtn" class="opt" onclick="read()" value="加入" style="display: none">
 <div id="loader" class="loader" style="display: none"></div>
-<input type="button" id="waterBtn" onclick="water()" style="display: inline-block">
+<input type="button" id="waterBtn" onclick="water()" style="display: none">
+<img id="waterDrop" src="../material/water.png">
 <div id="main">
     <div id="hand"></div>
-    <div id="instruct" style="display: none"><br>請移動至相同場景的區域後<br>按下「加入」</div>
+    <div id="instruct" style="display: none"><br>這裡有顆發光的種子<br>需要你幫忙灌溉！</div>
+    <img id="flower" src="../material/seed.png" style="display: none">
     <img id="flyStar" src="../material/star_fly.png" style="display: none">
+</div>
+<div id="smallFlower" style="display: none">
+    <img src="../material/flower_blue_small.png" id="blue_1" onclick="goFlower(this)">
+    <img src="../material/flower_blue_small.png" id="blue_2" onclick="goFlower(this)">
+    <img src="../material/flower_red_small.png" id="red_3" onclick="goFlower(this)">
+    <img src="../material/flower_red_small.png" id="red_4" onclick="goFlower(this)">
+    <img src="../material/flower_white_small.png" id="white_5" onclick="goFlower(this)">
+    <img src="../material/flower_white_small.png" id="white_6" onclick="goFlower(this)">
 </div>
 <div id="dialog" onclick="dialogControl()">
     <a id="me" style="display: none"></a>
     <a id="planet">有東西在發光耶！</a>
     <img id="next" src="../material/next.png">
 </div>
+<div id="mask"></div>
 </body>
 </html>

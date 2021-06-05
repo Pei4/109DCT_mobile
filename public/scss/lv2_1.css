@@ -6,6 +6,81 @@ body{
     -webkit-animation: flash 1.3s linear 0s infinite;
     -moz-animation: flash 1.3s linear 0s infinite;
 }
+#timer{
+    position: absolute;
+    display: inline-block;
+    left: 50vw;
+    top: 70px;
+    width: 260px;
+    height: 78px;
+    transform: translate(-150%,0);
+    vertical-align: bottom;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 43px rgba(255, 255, 255, 0.8);
+    border-radius: 60px;
+}
+#timer img{
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    width: 6vw;
+    max-width: 100%;
+    max-height: 100%;
+}
+#timer a{
+    position: relative;
+    display: inline-block;
+    top: -20px;
+    padding-top: -50px;
+    font-family: 'Passion One', cursive;
+    font-size: 60px;
+    letter-spacing: 3.5px;
+    color: #FFFFFF;
+    -webkit-text-stroke: 2px rgba(0, 0, 0, 0.7);
+}
+#spend{
+    display: inline-block;
+    position: absolute;
+    font-family: Noto Sans CJK TC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 120px;
+    line-height: 80px;
+    width: 100%;
+    left: 50vw;
+    top: 32vh;
+    transform: translate(-50%,0);
+    align-items: center;
+    text-align: center;
+    letter-spacing: 7px;
+    color: #FFE352;
+    -webkit-text-stroke: 4px rgba(195, 138, 28, 1);
+}
+#avg{
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    left: 50vw;
+    top: 40vh;
+    transform: translate(-50%,0);
+    align-items: center;
+    text-align: center;
+    letter-spacing: 7px;
+    font-family: Noto Sans CJK TC;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 80px;
+    color: #F3D63B;
+}
+#chooseFlower{
+    background: #FFE352;
+    border: 4px solid #F3D63B;
+    width: 22vw;
+    transform: translate(-50%,0);
+    color: rgba(195, 138, 28, 1);
+    top: 55vh;
+}
 @keyframes flash {
     0%{background-image: url("../material/mbg_grass_1.png")}
     50%{background-image: url("../material/mbg_grass_2.png")}
@@ -74,16 +149,15 @@ body{
     0% { transform:translate(-50%,50%) rotate(0deg); }
     100% { transform:translate(-50%,50%) rotate(360deg); }
 }
-
 #waterBtn{
     position: absolute;
     display: inline-block;
     height: 20vh;
-    top: 15vh;
+    top: 18vh;
     left: 50vw;
     width: 100%;
     max-width: 48vw;
-    transform: translate(-80%,0);
+    transform: translate(-10%,0) scale(-1,1);
     background: none;
     border: none;
     background-size: contain;
@@ -91,6 +165,19 @@ body{
     background-position: center;
 }
 
+#flower{
+    display: inline-block;
+    position: absolute;
+    bottom: 15vh;
+    left: 50vw;
+    transform: translate(-50%,0);
+}
+#waterDrop{
+    display: none;
+    position: absolute;
+    top: 40vh;
+    left: 50vw;
+}
 .planetMove2{
     animation: planetMove2 1500ms ease-in 0s 1;
     -webkit-animation: planetMove2 1500ms ease-in 0s 1;
@@ -101,12 +188,12 @@ body{
         transform: translate(-65%,0);
     }
     100%{
-        animation-fill-mode: forwards;
-        -webkit-animation-fill-mode: forwards;
-        -moz-animation-fill-mode: forwards;
         transform: translate(-30%,-60%) scale(0,0);
         -webkit-transform: translate(-30%,-60%) scale(0,0);
         -moz-transform: translate(-30%,-60%) scale(0,0);
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
     }
 }
 @-webkit-keyframes planetMove2 {
@@ -114,12 +201,12 @@ body{
         transform: translate(-65%,0);
     }
     100%{
-        animation-fill-mode: forwards;
-        -webkit-animation-fill-mode: forwards;
-        -moz-animation-fill-mode: forwards;
         transform: translate(-30%,-60%) scale(0,0);
         -webkit-transform: translate(-30%,-60%) scale(0,0);
         -moz-transform: translate(-30%,-60%) scale(0,0);
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
     }
 }
 @-moz-keyframes planetMove2 {
@@ -127,14 +214,22 @@ body{
         transform: translate(-65%,0);
     }
     100%{
-        animation-fill-mode: forwards;
-        -webkit-animation-fill-mode: forwards;
-        -moz-animation-fill-mode: forwards;
         transform: translate(-30%,-60%) scale(0,0);
         -webkit-transform: translate(-30%,-60%) scale(0,0);
         -moz-transform: translate(-30%,-60%) scale(0,0);
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
     }
 }
+.planetReset{
+    transform: translate(-50%,-50%) !important;
+}
+.planetShine{
+    transform: translate(-50%,-25%) !important;
+    height: 40vh !important;
+}
+
 @keyframes circle {
     0%{
         transform: translate(-50%,50%) translateY(50%) rotate(0deg) ;
@@ -157,5 +252,240 @@ body{
     }
     100%{
         transform: translate(-50%,50%) translateY(50%) rotate(360deg) ;
+    }
+}
+.dropDown{
+    animation: dropAnim 1s ease-out 0s 1;
+    -webkit-animation: dropAnim 1s ease-out 0s 1;
+    -moz-animation: dropAnim 1s ease-out 0s 1;
+}
+@keyframes dropAnim{
+    0%{
+        top: 40vh;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        top: 60vh;
+        opacity: 0;
+    }
+}
+@-webkit-keyframes dropAnim{
+    0%{
+        top: 40vh;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        top: 60vh;
+        opacity: 0;
+    }
+}
+@-moz-keyframes dropAnim{
+    0%{
+        top: 40vh;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        top: 60vh;
+        opacity: 0;
+    }
+}
+#smallFlower img{
+    display: inline-block;
+    position: absolute;
+    bottom: 20vh;
+    left: 50vw;
+    transform: translate(-50%,0);
+    pointer-events: none;
+}
+.explode1{
+    animation: explode1 300ms ease-out 0s 1 forwards;
+    -webkit-animation: explode1 300ms ease-out 0s 1 forwards;
+    -moz-animation: explode1 300ms ease-out 0s 1 forwards;
+}
+@keyframes explode1{
+    0%{transform: translate(-50%,0)}
+    100%{
+        transform: translate(-120%,30%);
+    }
+}
+@-webkit-keyframes explode1{
+    0%{transform: translate(-50%,0)}
+    100%{
+        transform: translate(-120%,30%);
+    }
+}
+@-moz-keyframes explode1{
+    0%{transform: translate(-50%,0)}
+    100%{
+        transform: translate(-120%,30%);
+    }
+}
+.explode2{
+    animation: explode2 300ms ease-out 0s 1 forwards;
+    -webkit-animation: explode2 300ms ease-out 0s 1 forwards;
+    -moz-animation: explode2 300ms ease-out 0s 1 forwards;
+}
+@keyframes explode2{
+    0%{transform: translate(-50%,0)}
+    100%{
+        transform: translate(150%,-210%);
+    }
+}
+@-webkit-keyframes explode2{
+    0%{transform: translate(-50%,0)}
+    100%{
+        transform: translate(150%,-210%);
+    }
+}
+@-moz-keyframes explode2{
+    0%{transform: translate(-50%,0)}
+    100%{
+        transform: translate(150%,-210%);
+    }
+}
+.explode3{
+    animation: explode3 300ms ease-out 0s 1 forwards;
+    -webkit-animation: explode3 300ms ease-out 0s 1 forwards;
+    -moz-animation: explode3 300ms ease-out 0s 1 forwards;
+}
+@keyframes explode3{
+    0%{transform: translate(-50%,0)}
+    100%{
+        transform: translate(-230%,-160%);
+    }
+}
+@-webkit-keyframes explode3{
+    0%{transform: translate(-50%,0)}
+    100%{
+        transform: translate(-230%,-160%);
+    }
+}
+@-moz-keyframes explode3{
+    0%{transform: translate(-50%,0)}
+    100%{
+        transform: translate(-230%,-160%);
+    }
+}
+.explode4{
+    animation: explode4 300ms ease-out 0s 1 forwards;
+    -webkit-animation: explode4 300ms ease-out 0s 1 forwards;
+    -moz-animation: explode4 300ms ease-out 0s 1 forwards;
+}
+@keyframes explode4{
+    0%{transform: translate(-50%,0)}
+    100%{
+        transform:translate(160%,0%);
+    }
+}
+@-webkit-keyframes explode4{
+    0%{transform: translate(-50%,0)}
+    100%{
+        transform:translate(160%,0%);
+    }
+}
+@-moz-keyframes explode4{
+    0%{transform: translate(-50%,0)}
+    100%{
+        transform:translate(160%,0%);
+    }
+}
+.explode5{
+    animation: explode5 300ms ease-out 0s 1 forwards;
+    -webkit-animation: explode5 300ms ease-out 0s 1 forwards;
+    -moz-animation: explode5 300ms ease-out 0s 1 forwards;
+}
+@keyframes explode5{
+    0%{transform: translate(-50%,0)}
+    100%{
+        transform:translate(-230%,-30%);
+    }
+}
+@-webkit-keyframes explode5{
+    0%{transform: translate(-50%,0)}
+    100%{
+        transform:translate(-230%,-30%);
+    }
+}
+@-moz-keyframes explode5{
+    0%{transform: translate(-50%,0)}
+    100%{
+        transform:translate(-230%,-30%);
+    }
+}
+.explode6{
+    animation: explode6 300ms ease-out 0s 1 forwards;
+    -webkit-animation: explode6 300ms ease-out 0s 1 forwards;
+    -moz-animation: explode6 300ms ease-out 0s 1 forwards;
+}
+@keyframes explode6{
+    0%{transform: translate(-50%,0)}
+    100%{
+        transform:translate(20%,-30%);
+    }
+}
+@-webkit-keyframes explode6{
+    0%{transform: translate(-50%,0)}
+    100%{
+        transform:translate(20%,-30%);
+    }
+}
+@-moz-keyframes explode6{
+    0%{transform: translate(-50%,0)}
+    100%{
+        transform:translate(20%,-30%);
+    }
+}
+#mask{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: #FFFFFF;
+    opacity: 0;
+}
+.shine{
+    animation: shineAnim 2s ease-out 0s 1;
+    -webkit-animation: shineAnim 2s ease-out 0s 1;
+    -moz-animation: shineAnim 2s ease-out 0s 1;
+}
+@keyframes shineAnim {
+    0%{opacity: 0}
+    30%{opacity: 1}
+    70%{opacity: 1}
+    100%{
+        opacity: 0;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+    }
+}
+@-webkit-keyframes shineAnim {
+    0%{opacity: 0}
+    30%{opacity: 1}
+    70%{opacity: 1}
+    100%{
+        opacity: 0;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+    }
+}
+@-moz-keyframes shineAnim {
+    0%{opacity: 0}
+    30%{opacity: 1}
+    70%{opacity: 1}
+    100%{
+        opacity: 0;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
     }
 }
