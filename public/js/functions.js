@@ -1,5 +1,4 @@
 let images = new Array();
-
 function preload() {
     for (let i = 0; i < preload.arguments.length; i++) {
         images[i] = new Image();
@@ -18,7 +17,6 @@ let planetDialogArray =[
     '可以挑一朵適合的給我嗎',  //6-18
     '我好喜歡～謝謝你！',  //7-19
     '哎呀...我好像該回去了...',  //8-21
-    '我好像該回去了...',  //9-
     '其實我是新生的小星球',  //10-
     '要在某處遊歷之後',  //11-
     '才能回到宇宙的行列',  //12-
@@ -81,7 +79,6 @@ function stopStar(starUrl){
 }
 function reUrl(url){
     //更新 localStorage
-    localStorage.setItem('id', id.toString());
     location.href=`http://localhost:63342/109DCT_mobile/public/html/${url}.html`;
 }
 
@@ -91,7 +88,12 @@ function dialogControl(){
     if(checkpoint == 1){  //飲料關
         showSth('lv1Btn');
         disableSth('dialog');
-        callGas('add','',getId);
+        if(localStorage.getItem('id') == null){
+            callGas('add','',getId);
+        }
+        else {
+            id = parseInt(localStorage.getItem('id'));
+        }
     }
     if(checkpoint == 3){  //選完開始喝
         showSth('main');
@@ -180,7 +182,11 @@ function dialogControl(){
             htmlContent('me',meDialogArray[meDialogNum]);
             showSth('me');
             hideSth('planet');
+            hideSth('mask');
         },1200);
+    }
+    if (checkpoint == 24){
+        reUrl('lv3_1');
     }
     if(meCont.includes(checkpoint)){
         meDialogNum ++;
