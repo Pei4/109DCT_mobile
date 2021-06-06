@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name=”viewport” content=”width=device-width,user-scalable=0,maximum-scale=1.0">
+    <title>lv4</title>
+    <link rel=stylesheet type="text/css" href="../reset.css">
+    <link rel="stylesheet" type="text/css" href="../scss/mobile.css">
+    <link rel="stylesheet" type="text/css" href="../scss/lv4.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/lv4.js" crossorigin="anonymous"></script>
+    <script src="../js/functions.js" crossorigin="anonymous"></script>
+</head>
+<a id="title">小星球寄來了一封信！</a>
+<img id="notice" src="../material/notice.png">
+<div id="letterDiv">
+    <img id="letter" onclick="openLetter()" src="../material/letter_before.png">
+    <div id="word" style="display: none">
+        <a>哈囉！好久不見，</a>
+        <a>這是關於飲料的分析飲料的分析飲料的分析</a>
+        <a>這是關於食物的分析食物的分析食物的分析</a>
+        <a>這是關於花的分析花的分析花的分析</a>
+        <a>希望我們有朝一日能再次相遇！</a>
+    </div>
+    <img id="photo" src="../material/postcard_01.png" style="display: none" onclick="browse()">
+</div>
+<div id="photoMask" style="display: none">
+    <img id="back" src="../material/back.png" onclick="back()">
+    <img id="photo2" src="../material/postcard_01.png">
+</div>
+<div id="mask2" class="shine2"></div>
+</body>
+</html>

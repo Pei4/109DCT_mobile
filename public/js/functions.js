@@ -17,12 +17,12 @@ let planetDialogArray =[
     '可以挑一朵適合的給我嗎',  //6-18
     '我好喜歡～謝謝你！',  //7-19
     '哎呀...我好像該回去了...',  //8-21
-    '其實我是新生的小星球',  //10-
-    '要在某處遊歷之後',  //11-
-    '才能回到宇宙的行列',  //12-
-    '成為一顆獨立的星球',  //13-
-    '這段日子',  //14-
-    '謝謝你的陪伴！',  //15-
+    '其實我是新生的小星球',  //9-24
+    '要在某處遊歷之後',  //10-26
+    '才能回到宇宙的行列',  //11-27
+    '成為一顆獨立的星球',  //12-28
+    '這段日子',  //14-30
+    '謝謝你的陪伴！',  //15-31
     '在回去之前\n想和你留下最後的回憶'];  //16-
 let meDialogArray =[
     '是不是該找點喝的東西給它呢...',  //0-1
@@ -34,10 +34,12 @@ let meDialogArray =[
     '不要亂跑啊！！',  //6-15
     '剛剛發生了...什麼事？',  //7-20(自動)
     '你要回去哪裡？！', //8-22
-    '......' //9-
+    '......', //9-29
+    '啊......已經回去了嗎', //10-32（自動）
+    '不曉得是哪顆發亮的星星呢......' //11-33
 ];
-let planetCont = [4,8,13,14,17,18,19,21];
-let meCont = [1,2,5,6,9,11,15,22];
+let planetCont = [4,8,13,14,17,18,19,21,24,26,27,28,30,31];
+let meCont = [1,2,5,6,9,11,15,22,29,32,33];
 
 function showSth(sth){
     document.getElementById(sth).style.display = 'block';
@@ -80,6 +82,22 @@ function stopStar(starUrl){
 function reUrl(url){
     //更新 localStorage
     location.href=`http://localhost:63342/109DCT_mobile/public/html/${url}.html`;
+}
+function goMask(){
+    showSth('mask');
+    addClass('mask','shine');
+    setTimeout(()=>{
+        meDialogNum++;
+        htmlContent('me', meDialogArray[meDialogNum]);
+        showSth('dialog');
+        showSth('next');
+        enableSth('dialog');
+        showSth('me');
+        hideSth('planet');
+    },1000);
+    setTimeout(()=> {
+        hideSth('mask');
+    },2000);
 }
 
 function dialogControl(){
@@ -173,20 +191,41 @@ function dialogControl(){
         enableSth('dialog');
     }
     if (checkpoint == 20){
-        showSth('mask');
-        addClass('mask','shine');
+        goMask();
         setTimeout(()=>{
             changeAnimSrc('hand','planet_sadsmile_2');
             addClass('hand','planetShine');
-            meDialogNum ++;
-            htmlContent('me',meDialogArray[meDialogNum]);
-            showSth('me');
-            hideSth('planet');
-            hideSth('mask');
         },1200);
     }
-    if (checkpoint == 24){
+    if (checkpoint == 23){
         reUrl('lv3_1');
+    }
+    if (checkpoint > 25 && checkpoint < 29){
+        if (checkpoint == 28){
+            document.body.style.backgroundImage = `url("../material/mbg_story3.png")`;
+        }
+        else {
+            document.body.style.backgroundImage = `url("../material/mbg_story${checkpoint-24}.png")`;
+        }
+    }
+    if (checkpoint == 29){
+        document.body.style.backgroundImage = `url("../material/mbg_grass_6.png")`;
+        changeAnimSrc('hand','planet_smile_2');
+    }
+    if (checkpoint == 31){
+        changeAnimSrc('hand','planet_bigsmile');
+    }
+    if (checkpoint == 32){
+        hideSth('dialog');
+        disableSth('dialog');
+        showSth('instruct');
+        showSth('trackBtn');
+    }
+    if (checkpoint == 34){
+        goMask();
+        setTimeout(()=>{
+            reUrl('lv4');
+        },1000)
     }
     if(meCont.includes(checkpoint)){
         meDialogNum ++;

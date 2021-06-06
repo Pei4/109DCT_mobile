@@ -13,12 +13,21 @@
 </head>
 <div id="main">
     <div id="hand"></div>
-    <div id="instruct" style="display: none"><br>這裡有顆發光的種子<br>需要你幫忙灌溉！</div>
+    <div id="instruct" style="display: none"><br>請循著星星軌跡的引導<br>幫助小星球回到宇宙</div>
+    <input type="button" id="trackBtn" class="opt" onclick="goTrack()" style="display: none" value="確定">
 </div>
+<div id="trackInput" style="display: none">
+    <input type="text" id="track_S" maxlength="1">
+    <input type="text" id="track_T" maxlength="1">
+    <input type="text" id="track_A" maxlength="1">
+    <input type="text" id="track_R" maxlength="1">
+</div>
+<img id="fly" src="../material/star_after.png" style="display: none">
 <div id="dialog" onclick="dialogControl()">
     <a id="me" style="display: none"></a>
-    <a id="planet">有東西在發光耶！</a>
+    <a id="planet">其實我是新生的小星球</a>
     <img id="next" src="../material/next.png">
 </div>
+<div id="mask"></div>
 </body>
 </html>

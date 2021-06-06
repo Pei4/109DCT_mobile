@@ -425,50 +425,5 @@ body{
     }
 }
 #mask{
-    display: none;
-    position: fixed;
-    bottom: 0;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    background: #FFFFFF;
-    opacity: 0;
-}
-.shine{
-    animation: shineAnim 2s ease-out 0s 1;
-    -webkit-animation: shineAnim 2s ease-out 0s 1;
-    -moz-animation: shineAnim 2s ease-out 0s 1;
-}
-@keyframes shineAnim {
-    0%{opacity: 0}
-    30%{opacity: 1}
-    70%{opacity: 1}
-    100%{
-        opacity: 0;
-        animation-fill-mode: forwards;
-        -webkit-animation-fill-mode: forwards;
-        -moz-animation-fill-mode: forwards;
-    }
-}
-@-webkit-keyframes shineAnim {
-    0%{opacity: 0}
-    30%{opacity: 1}
-    70%{opacity: 1}
-    100%{
-        opacity: 0;
-        animation-fill-mode: forwards;
-        -webkit-animation-fill-mode: forwards;
-        -moz-animation-fill-mode: forwards;
-    }
-}
-@-moz-keyframes shineAnim {
-    0%{opacity: 0}
-    30%{opacity: 1}
-    70%{opacity: 1}
-    100%{
-        opacity: 0;
-        animation-fill-mode: forwards;
-        -webkit-animation-fill-mode: forwards;
-        -moz-animation-fill-mode: forwards;
-    }
+    background: #FFF;
 }

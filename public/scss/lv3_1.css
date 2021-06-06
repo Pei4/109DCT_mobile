@@ -1,0 +1,96 @@
+body{
+    background-image: url("../material/mbg_story1.png");
+}
+#hand{
+    transform: translate(-50%,0);
+    bottom: 30vh;
+    height: 40vh;
+}
+#trackBtn{
+    bottom: 32.5vh;
+    left: 50vw;
+    transform-origin: center;
+    transform: translate(-50%,0);
+    background: #FFE352;
+    border: 4px solid #F3D63B;
+    width: 22vw;
+    color: rgba(195, 138, 28, 1);
+}
+#trackInput{
+    position: absolute;
+    bottom: 50vh;
+    left: 50vw;
+    transform: translate(-50%,50%);
+    overflow: hidden;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+#trackInput input{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    background-image: url("../material/star_before.png");
+    background-color: rgba(0,0,0,0);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 15px;
+    width: 17vh;
+    height: 17vh;
+    outline: none;
+    overflow: hidden;
+    border-style: none;
+    font-family: Noto Sans CJK TC;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 84px;
+    color: #272727;
+    line-height: 44px;
+    text-align: center;
+    text-transform: uppercase;
+    transition-duration: 500ms;
+    transition-timing-function: ease-out;
+}
+.correct{
+    background-image: url("../material/star_after.png") !important;
+    color: #FFF !important;
+}
+.error{
+    background-image: url("../material/star_error.png") !important;
+    width: 20vh !important;
+    height: 20vh !important;
+    color: #FF96A8 !important;
+    text-transform: uppercase;
+    transition-duration: 500ms;
+}
+
+#fly{
+    position: absolute;
+    left: 50vw;
+    bottom: 50vh;
+    height: 17vh;
+    width: auto;
+    transform: translate(-50%,50%) scale(1);
+}
+.fly{
+    animation: flyAnim 3s ease-out 0s 1 forwards;
+    -webkit-animation: flyAnim 3s ease-out 0s 1 forwards;
+    -moz-animation: flyAnim 3s ease-out 0s 1 forwards;
+}
+@keyframes flyAnim {
+    0%{
+        transform: translate(-50%,50%) scale(1);
+    }
+    50%{
+        transform: translate(10vw,-20vh) scale(0);
+    }
+    75%{
+        transform: translate(10vw,-20vh) scale(0.5);
+    }
+    100%{
+        transform: translate(10vw,-20vh) scale(0);
+    }
+}
+#mask{
+    background: #000;
+}
