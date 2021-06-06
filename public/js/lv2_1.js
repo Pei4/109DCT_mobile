@@ -3,6 +3,7 @@ window.googleDocCallback = function () { return true; };
 let checkpoint = 13;
 let planetDialogNum = 3;
 let meDialogNum = 5;
+let id = parseInt(localStorage.getItem('id'));
 //變數
 let countMin = 0; //分鐘數
 let countSec = 0; //秒數

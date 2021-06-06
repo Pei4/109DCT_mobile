@@ -1,13 +1,21 @@
 window.googleDocCallback = function () { return true; };
 //初始設定
 let id;
-checkpoint = 0
-planetDialogNum = -1;
-meDialogNum = -1;
+let checkpoint = 0
+let planetDialogNum = -1;
+let meDialogNum = -1;
 //變數
 let chooseCheck = 0;  //  Default/掃描中 0, 掃描到 1
 let option;
 let optSrc;
+
+window.onload = function (){
+    preload(
+        "../material/drink_bottle.png",
+        "../material/drink_pack.png",
+        "../material/drink_tea_3.png"
+    )
+}
 
 function callGas(method,choose,successFnt){
     $.ajax({
@@ -22,10 +30,6 @@ function callGas(method,choose,successFnt){
             successFnt(response);
         }
     });
-}
-
-window.onload = function (){
-    callGas('add','',getId);
 }
 
 function getId(e){

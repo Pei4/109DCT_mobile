@@ -1,4 +1,3 @@
-let id = parseInt(localStorage.getItem('id'));
 let images = new Array();
 
 function preload() {
@@ -92,6 +91,7 @@ function dialogControl(){
     if(checkpoint == 1){  //飲料關
         showSth('lv1Btn');
         disableSth('dialog');
+        callGas('add','',getId);
     }
     if(checkpoint == 3){  //選完開始喝
         showSth('main');
