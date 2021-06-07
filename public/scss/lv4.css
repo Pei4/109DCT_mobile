@@ -4,6 +4,11 @@ html{
 body{
     background: linear-gradient(180deg, #F6EEE6 0%, #F2E8CF 53.65%, #F3E1C5 97.92%);
 }
+.fadeout{
+    animation: fadeAnim 1s ease-out 0s 1;
+    -webkit-animation: fadeAnim 1s ease-out 0s 1;
+    -moz-animation: fadeAnim 1s ease-out 0s 1;
+}
 #mask2{
     display: block;
     position: fixed;
@@ -46,6 +51,91 @@ body{
         -moz-animation-fill-mode: forwards;
     }
 }
+
+.show{
+    animation: showAnim 2s ease-out 0s 1;
+    -webkit-animation: showAnim 2s ease-out 0s 1;
+    -moz-animation: showAnim 2s ease-out 0s 1;
+}
+@keyframes showAnim {
+    0%{opacity: 0}
+    50%{opacity: 0}
+    100%{
+        opacity: 1;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+    }
+}
+@-webkit-keyframes showAnim {
+    0%{opacity: 0}
+    50%{opacity: 0}
+    100%{
+        opacity: 1;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+    }
+}
+@-moz-keyframes showAnim {
+    0%{opacity: 0}
+    50%{opacity: 0}
+    100%{
+        opacity: 1;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+    }
+}
+.showBtn{
+    position: absolute;
+    display: inline-block;
+    height: 7vh;
+    left: 50vw;
+    font-family: Noto Sans CJK TC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 40px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.41px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    animation: showBtnAnim 2s ease-out 0s 1;
+    -webkit-animation: showBtnAnim 2s ease-out 0s 1;
+    -moz-animation: showBtnAnim 2s ease-out 0s 1;
+}
+@keyframes showBtnAnim {
+    0%{opacity: 0}
+    50%{opacity: 0}
+    100%{
+        opacity: 1;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+    }
+}
+@-webkit-keyframes showBtnAnim {
+    0%{opacity: 0}
+    50%{opacity: 0}
+    100%{
+        opacity: 1;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+    }
+}
+@-moz-keyframes showBtnAnim {
+    0%{opacity: 0}
+    50%{opacity: 0}
+    100%{
+        opacity: 1;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+    }
+}
 #letterDiv{
     position: absolute;
     display: inline-block;
@@ -81,9 +171,25 @@ body{
     left: 50vw;
     top: 50vh;
     transform: translate(30vw,-100%);
-    width: 10vw;
+    width: 15vw;
     height: auto;
+    animation: flashAnim 1s ease-out 0s infinite;
+    -webkit-animation: flashAnim 1s ease-out 0s infinite;
+    -moz-animation: flashAnim 1s ease-out 0s infinite;
 }
+@keyframes flashAnim {
+    0%{opacity: 1}
+    100%{opacity: 0}
+}
+@-webkit-keyframes flashAnim {
+    0%{opacity: 1}
+    100%{opacity: 0}
+}
+@-moz-keyframes flashAnim {
+    0%{opacity: 1}
+    100%{opacity: 0}
+}
+
 #word{
     display: inline-block;
     position: fixed;
@@ -140,4 +246,46 @@ body{
     width: 100%;
     max-height: 100%;
     max-width: 100%;
+}
+
+#end{
+    bottom: 8vh;
+    left: 50vw;
+    transform: translate(-80%,0);
+    padding: 40px;
+    color: #C48A1C;
+    background: #FFFFFF;
+    border: 4px solid #C48A1C;
+}
+#download{
+    bottom: 8vh;
+    left: 50vw;
+    transform: translate(80%,0);
+    text-decoration: none;
+    width: 22vw;
+    margin: 0;
+    padding: 40px;
+    color: #C48A1C;
+    background: #FFE352;
+    border: 4px solid #F3D63B;
+}
+#doneDownload{
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%,-50%);
+    padding: 100px;
+    background: #FFFFFF;
+    border: 4px solid #747373;
+    box-sizing: border-box;
+    font-family: Noto Sans CJK TC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 44px;
+    letter-spacing: -0.82px;
+    color: #1E1E1E;
+    height: 270px;
+    width: 650px;
+    text-align: center;
 }

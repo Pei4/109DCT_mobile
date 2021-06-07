@@ -14,7 +14,6 @@
 <a id="title">小星球寄來了一封信！</a>
 <img id="notice" src="../material/notice.png">
 <div id="letterDiv">
-    <img id="letter" onclick="openLetter()" src="../material/letter_before.png">
     <div id="word" style="display: none">
         <a>哈囉！好久不見，</a>
         <a>這是關於飲料的分析飲料的分析飲料的分析</a>
@@ -22,12 +21,16 @@
         <a>這是關於花的分析花的分析花的分析</a>
         <a>希望我們有朝一日能再次相遇！</a>
     </div>
-    <img id="photo" src="../material/postcard_01.png" style="display: none" onclick="browse()">
+    <img id="photo" src="../material/postcard_01.png" onclick="browse()" style="display: none">
+    <img id="letter" onclick="openLetter()" src="../material/letter_before.png">
 </div>
 <div id="photoMask" style="display: none">
     <img id="back" src="../material/back.png" onclick="back()">
     <img id="photo2" src="../material/postcard_01.png">
 </div>
+<button id="end" onclick="toEnd()" style="display: none">不下載，結束旅程</button>
+<a id="download" href="../material/planet_01.png" download="my_planet" style="display: none">下載</a>
+<div id="doneDownload" style="display: none">✓ 照片已下載</div>
 <div id="mask2" class="shine2"></div>
 </body>
 </html>
