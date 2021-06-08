@@ -25,122 +25,22 @@ window.onload = function(){
     )
 }
 
-function callPlayer(){
+function callPlayer(time){
     $.ajax({
         type: "get",
         async: false,
-        url: "https://script.google.com/macros/s/AKfycbwCNY6-uawI2TMxpmK8CDPUnCR2q1nyYRzciz6e5GiFnvyIuALceFf6-aGVljq31jx1rg/exec?callback=googleDocCallback",
+        url: "https://script.google.com/macros/s/AKfycbzRIn_ZgYQJA5zMU-bR5htlr0VbjEfJvSYgPKt5GTTi5N8fz3hEHdaBPG0yffM9uJI5oA/exec?callback=googleDocCallback",
         data: {
             "id":id+1,
-            "time":countSec
+            "time":time
         },
         success: function(response) {
-            if(countSec == 0){
-                getPoint(response);
-            }
-            else {
-                getTime(response);
-            }
+            if(time == 0){getPoint(response)}
+            else if(time > 4) {getTime(response)}
         }
     });
 }
-/*
-function callWater(){
-    $.ajax({
-        type: "get",
-        async: false,
-        url: "https://script.google.com/macros/s/AKfycbxTho3IqNqjynhM19BZSAosRXLPFjJe-HaFmrY6CCxW/dev?callback=googleDocCallback",
-        data: {
-            "id2":id2,
-            "point":point
-        },
-        success: function(response) {
-            console.log(response);
-            if (response>=50){
-                changeSource('flower','../material/sprout.png');
-            }
-            else if(response=='full'){
-                countStop = 1;
-                explose();
-            }
-        }
-    });
-}
-function tryCheck(e){
-    if(e == "overload"){
-        console.log("overload");
-        htmlContent('instruct',`<br>人數已達上限<br>請靜待下一輪`);
-        check = 1;
-    }
-    if(e == "almost"){
-        console.log("almost");
-        htmlContent('instruct',`<br>即將有小花成長茁壯<br>請靜待下一輪`);
-        check = 1;
-    }
-    if(e.toString().includes('continue') == true){
-        console.log('true');
-        check = 0;
-        id2 = e.toString().split(',')[1];
-        console.log(id2);
-    }
-    else{
-        point = e;
-        console.log(point);
-        check = 2;
-        showSth('waterBtn');
-        hideSth('loader');
-        enableSth('readBtn');
-        htmlContent('instruct',`<br>請點擊澆水器<br>幫花澆水`);
-        document.getElementById('readBtn').value = '確定';
-        if(id2 == 2){
-            changeAnimSrc('waterBtn','waterer_red');
-        }
-        else if(id2 == 3){
-            changeAnimSrc('waterBtn','waterer_purple');
-        }
-        else if(id2 == 4){
-            changeAnimSrc('waterBtn','waterer_orange');
-        }
-        else if(id2 == 5){
-            changeAnimSrc('waterBtn','waterer_green');
-        }
-        else{
-            changeAnimSrc('waterBtn','waterer_blue');
-        }
-        document.getElementById('waterDrop').style.transform = 'translate(-50%,0) scale(0.3, 0.3)';
-    }
-}
-function goCheck(){
-    callPlayer();
-    if(check < 2){
-        if(check == 0){  //快速檢查是否登錄
-            let connectInterval = setInterval(function (){
-                callPlayer();
-                if(check == 2){
-                    clearInterval(connectInterval);
-                }
-                if(check == 1){
-                    clearInterval(connectInterval);
-                    let retryInterval = setInterval(function (){
-                        callPlayer();
-                        if(check == 2){
-                            clearInterval(retryInterval);
-                        }
-                    },5000);
-                }
-            },2000);
-        }
-        if (check == 1) {  //太多人時過久一點再試
-            let retryInternal = setInterval(async function () {
-                callPlayer();
-                if (check == 2){
-                    clearInterval(retryInternal);
-                }
-            }, 5000);
-        }
-    }
-}
-*/
+
 function read() {
     showSth('loader');
     htmlContent('instruct',`<br>連線中`);
@@ -160,7 +60,7 @@ function read() {
     );
     document.getElementById( 'readBtn' ).setAttribute( "onclick", "javascript: goWater();" );
     setTimeout(()=>{
-        callPlayer()
+        callPlayer(countSec)
     },1);
 };
 function getPoint(e){
@@ -236,8 +136,8 @@ function explode(){
         addClass(flower,`explode${num}`);
     })
     setTimeout(()=>{
-        callPlayer();
-    },10);
+        callPlayer(countSec);
+    },1);
 }
 function getTime(e){
     showSth('finish');
@@ -251,22 +151,28 @@ function enableSmall(){
     })
 }
 function goFlower(e){
-    if(e.id.includes('blue') == true){
-        changeAnimSrc('hand','planet_happy_blue');
-    }
-    else if(e.id.includes('red')==true){
-        changeAnimSrc('hand','planet_happy_red');
-    }
-    else {
-        changeAnimSrc('hand','planet_happy_white');
-    }
-    goStar();
-    addClass('hand','planetReset');
-    hideSth('smallFlower');
-    enableSth('dialog');
+    hideSth(e.id);
     setTimeout(()=>{
-        stopStar('../material/star_222.png');
+        if(e.id.includes('blue') == true){
+            changeAnimSrc('hand','planet_happy_blue');
+            callPlayer(3);
+        }
+        else if(e.id.includes('red')==true){
+            changeAnimSrc('hand','planet_happy_red');
+            callPlayer(1);
+        }
+        else {
+            changeAnimSrc('hand','planet_happy_white');
+            callPlayer(2);
+        }
+        goStar();
         addClass('hand','planetReset');
-    },1000)
-    dialogControl();
+        hideSth('smallFlower');
+        enableSth('dialog');
+        setTimeout(()=>{
+            stopStar('../material/star_222.png');
+            addClass('hand','planetReset');
+        },1000)
+        dialogControl();
+    },5)
 }

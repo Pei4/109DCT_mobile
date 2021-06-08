@@ -2,17 +2,17 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name=”viewport” content=”width=device-width,user-scalable=no">
-    <title>Template</title>
+    <meta name=”viewport” content=”width=device-width,user-scalable=0,maximum-scale=1.0">
+    <title>宇宙</title>
     <link rel=stylesheet type="text/css" href="../reset.css">
     <link rel="stylesheet" type="text/css" href="../scss/lv0.css">
-    <script src="https://cdn.jsdelivr.net/npm/p5"></script>
+    <link rel="stylesheet" type="text/css" href="../scss/mobile.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../js/lv0.js" crossorigin="anonymous"></script>
+    <script src="../js/functions.js"></script>
 </head>
 <body>
-    <input id="getNum" type="text">
-    <input type="button" onclick="updatePlanets()">
-    <input type="button" onclick="makeBlur()">
+<div id="mask"></div>
+<button id="endBtn" class="opt" onclick="reUrl('end')">結束旅程</button>
 </body>
 </html>

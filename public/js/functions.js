@@ -6,6 +6,14 @@ function preload() {
         enableSth('dialog');
     }
 }
+setTimeout(()=>{
+    checkDevice();
+},1);
+function checkDevice(){
+    if(window.innerWidth > 400 || window.innerHeight > 850){
+        alert('too much');
+    }
+}
 
 let planetDialogArray =[
     '我肚子有點餓.....', //0-4
@@ -81,7 +89,7 @@ function stopStar(starUrl){
 }
 function reUrl(url){
     //更新 localStorage
-    location.href=`http://localhost:63342/109DCT_mobile/public/html/${url}.html`;
+    location.href=`https://pei4.github.io/109DCT_mobile/public/html/${url}.html`;
 }
 function goMask(){
     showSth('mask');
@@ -195,6 +203,7 @@ function dialogControl(){
         setTimeout(()=>{
             changeAnimSrc('hand','planet_sadsmile_2');
             addClass('hand','planetShine');
+            hideSth('star');
         },1200);
     }
     if (checkpoint == 23){

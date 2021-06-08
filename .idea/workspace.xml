@@ -20,10 +20,81 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f04ad6df-73fa-4367-9788-90d2fd4086d0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/html/end.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/A11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/A12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/A13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/A21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/A22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/A23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/A31.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/A32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/A33.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/B11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/B12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/B13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/B21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/B22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/B23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/B31.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/B32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/B33.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/C11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/C12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/C13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/C21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/C22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/C23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/C31.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/C32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/C33.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/material/IG.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scss/end.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/html/lv0.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/lv0.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/html/lv2_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/lv2_2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/html/lv4.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/lv4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/functions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/lv0.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/lv0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/lv2_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/lv2_1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/lv2_2.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/lv2_Archived.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/lv4.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/lv4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/planet_blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/planet_red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/planet_white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/material/postcard_27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/scss/lv0.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/lv0.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/scss/lv4.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/lv4.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/scss/mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/mobile.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,26 +127,26 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/scss" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\109DCT_mobile\public\html" />
-      <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\109DCT_mobile\public\scss" />
-      <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\109DCT_mobile\public\js" />
-      <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion" />
-      <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion\public" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\109DCT_mobile\public\scss" />
       <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\109DCT_mobile\public\js" />
       <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\109DCT_mobile\public\js\json" />
       <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion\web_scss" />
       <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\109DCT_mobile\public\scss" />
+      <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\109DCT_mobile\public\html" />
+      <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\109DCT_mobile\public\js" />
+      <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion" />
+      <recent name="C:\Users\沛四\Google 雲端硬碟 (105303004@mail2.nccu.tw)\畢製-長伴\LongCompanion\public" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.test.js (1)">
@@ -160,6 +231,7 @@
       <workItem from="1622466618388" duration="42465000" />
       <workItem from="1622944082936" duration="42436000" />
       <workItem from="1623072780798" duration="6582000" />
+      <workItem from="1623119354563" duration="32398000" />
     </task>
     <servers />
   </component>
@@ -205,9 +277,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1259" height="154" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1621704166468" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1622991480400">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1623136730726">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1622991480400" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1623136730726" />
   </component>
 </project>
