@@ -21,7 +21,7 @@ function callPlayer(){
     $.ajax({
         type: "get",
         async: false,
-        url: "https://script.google.com/macros/s/AKfycbzRIn_ZgYQJA5zMU-bR5htlr0VbjEfJvSYgPKt5GTTi5N8fz3hEHdaBPG0yffM9uJI5oA/exec?callback=googleDocCallback",
+        url: "https://script.google.com/macros/s/AKfycbxs2N3QRV-r6r3aI5IGarPWEFoKoj4b9zSCug2ipMV9Jx5wO-9v0B6h2-23cmNuaw7_tg/exec?callback=googleDocCallback",
         data: {
             "id":id+1,
             "time":-1
