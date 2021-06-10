@@ -21,8 +21,15 @@
   <component name="ChangeListManager">
     <list default="true" id="f04ad6df-73fa-4367-9788-90d2fd4086d0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/lv2_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/lv2_1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/lv4.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/lv4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/html/end.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/end.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/html/lv0.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/lv0.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/html/lv1.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/lv1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/html/lv2_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/lv2_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/html/lv3_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/lv3_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/html/lv4.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/lv4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/functions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/lv1.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/lv1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/scss/mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/mobile.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +167,8 @@
       <workItem from="1622944082936" duration="42436000" />
       <workItem from="1623072780798" duration="6582000" />
       <workItem from="1623119354563" duration="32496000" />
-      <workItem from="1623329746989" duration="276000" />
+      <workItem from="1623329746989" duration="3736000" />
+      <workItem from="1623333540663" duration="922000" />
     </task>
     <servers />
   </component>

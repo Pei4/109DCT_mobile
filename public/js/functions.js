@@ -10,8 +10,8 @@ setTimeout(()=>{
     checkDevice();
 },1);
 function checkDevice(){
-    if(window.innerWidth > 400 || window.innerHeight > 850){
-        alert('too much');
+    if(screen.width > 400 || screen.height > 850){
+        showSth('screen');
     }
 }
 
@@ -115,7 +115,7 @@ function dialogControl(){
         showSth('lv1Btn');
         disableSth('dialog');
         if(localStorage.getItem('id') == null){
-            callGas('add','',getId);
+            lv1Gas('add','',getId);
         }
         else {
             id = parseInt(localStorage.getItem('id'));

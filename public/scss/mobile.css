@@ -8,7 +8,22 @@ body {
   height: 100%;
   overflow: hidden;
 }
-
+#screen{
+  display: none;
+  position: fixed;
+  padding: 0;
+  left: 0;
+  transform: translate(0,0);
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  opacity: 1;
+  background-color: black;
+  color: #FFFFFF;
+  text-align: center;
+  animation:none;
+}
 img {
   max-width: 80%;
   max-height: 50%;
@@ -221,5 +236,3 @@ img {
     -moz-animation-fill-mode: forwards;
   }
 }
-
-/*# sourceMappingURL=mobile.css.map */

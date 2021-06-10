@@ -17,7 +17,7 @@ window.onload = function (){
     )
 }
 
-function callGas(method,choose,successFnt){
+function lv1Gas(method,choose,successFnt){
     $.ajax({
         type: "get",
         url: "https://script.google.com/macros/s/AKfycbz34Hlx6cYl-BLTACrvu00B2SYYb_D7eE4zGxIGA0IOTnMSwRPXyrRPcXanavVkmo3IyA/exec?callback=googleDocCallback",
@@ -52,7 +52,7 @@ function sure(){  //確定
     showSth('me');
     dialogControl();
     if(checkpoint < 4){
-        callGas("drink",option);
+        lv1Gas("drink",option);
         addClass('object',`${optSrc}`);
         addClass('hand','drinkAnim');
         document.body.style.backgroundImage = 'url("../material/mbg_pink.png")';
@@ -70,7 +70,7 @@ function sure(){  //確定
         optSrc = '';
     }
     else{
-        callGas("food",option);
+        lv1Gas("food",option);
         addClass('object',`${optSrc}`);
         addClass('hand','eatAnim');
         document.body.style.backgroundImage = 'url("../material/mbg_pink.png")';
