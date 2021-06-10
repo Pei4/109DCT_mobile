@@ -217,7 +217,7 @@ function btnCheck(){  //開始掃描
         video.srcObject = stream;
     }
     function handleError(error) {
-        alert(`getUserMedia error: ${error}`);
+        console.log(`getUserMedia error`, error);
     }
     navigator.mediaDevices.getUserMedia(constraints)
         .then(handleSuccess)
