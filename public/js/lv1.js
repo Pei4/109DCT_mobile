@@ -9,13 +9,13 @@ let chooseCheck = 0;  //  Default/掃描中 0, 掃描到 1
 let option;
 let optSrc;
 
-window.onload = function (){
+setTimeout(()=>{
     preload(
         "../material/drink_bottle.png",
         "../material/drink_pack.png",
         "../material/drink_tea_3.png"
     )
-}
+},1)
 
 function lv1Gas(method,choose,successFnt){
     $.ajax({
