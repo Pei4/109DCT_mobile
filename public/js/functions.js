@@ -9,6 +9,7 @@ function preload() {
 setTimeout(()=>{
     checkDevice();
 },1);
+
 function checkDevice(){
     if(screen.width > 400 || screen.height > 850){
         showSth('screen');
