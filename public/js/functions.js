@@ -210,13 +210,12 @@ function dialogControl(){
     if (checkpoint == 23){
         reUrl('lv3_1');
     }
-    if (checkpoint > 25 && checkpoint < 29){
-        if (checkpoint == 28){
-            document.body.style.backgroundImage = `url("../material/mbg_story3.png")`;
-        }
-        else {
-            document.body.style.backgroundImage = `url("../material/mbg_story${checkpoint-24}.png")`;
-        }
+    if (checkpoint > 25 && checkpoint < 28){
+        enableSth('dialog');
+        document.body.style.backgroundImage = `url("../material/mbg_story${checkpoint-24}.png")`;
+    }
+    if (checkpoint == 28){
+        document.body.style.backgroundImage = `url("../material/mbg_story3.png")`;
     }
     if (checkpoint == 29){
         document.body.style.backgroundImage = `url("../material/mbg_grass_6.png")`;

@@ -22,7 +22,7 @@ body{
     left: 50vw;
     padding-left: 20vw;
     padding-right: 20vw;
-    transform: translate(-50%,70%);
+    transform: translate(-50%,60%);
     overflow: hidden;
     transition-duration: 1s;
     transition-timing-function: ease-out;

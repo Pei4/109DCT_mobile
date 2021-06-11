@@ -16,7 +16,7 @@ window.onload = function(){
         "../material/mbg_universe.png",
         "../material/mbg_grass_6.png",
         "../material/planet_smile_2.png",
-        "../material/planet_bigsmile.png"
+        "../material/planet_bigSmile.png"
     );
     keyArray.forEach(key=> {
         document.getElementById(`track_${key}`).addEventListener("focus",checkFocus);
@@ -39,14 +39,14 @@ function goTrack(){
 }
 function checkFocus(e){
     focusKey = keyArray.indexOf(e.target.id.split('_')[1]);
-    inputHeight = 95 - 25*focusKey;
+    inputHeight = 85 - 25*focusKey;
     document.getElementById('trackInput').style.transform = `translate(-50%, ${inputHeight}%)`;
 }
 function goBlur(e){
-    document.getElementById('trackInput').style.transform = `translate(-50%, 70%)`;
+    document.getElementById('trackInput').style.transform = `translate(-50%, 60%)`;
 }
 function checkKey(e){
-    document.getElementById('trackInput').style.transform = `translate(-50%, 70%)`;
+    document.getElementById('trackInput').style.transform = `translate(-50%, 60%)`;
     document.getElementById(e.target.id).blur();
     if (e.target.value.toUpperCase() == keyArray[focusKey]){ //輸入正確
         checkPass ++;
@@ -60,10 +60,10 @@ function checkKey(e){
                     document.getElementById(`track_${key}`).style.transitionDuration = '1s';
                     document.getElementById(`track_${key}`).style.transitionTimingFunction = 'ease-out';
                     document.getElementById(`track_${key}`).style.margin = '0';
-                    document.getElementById(`track_S`).style.transform='translate(-50%,120%)';
-                    document.getElementById(`track_T`).style.transform='translate(-50%,40%)';
-                    document.getElementById(`track_A`).style.transform='translate(-50%,-40%)';
-                    document.getElementById(`track_R`).style.transform='translate(-50%,-120%)';
+                    document.getElementById(`track_S`).style.transform='translate(-50%,110%)';
+                    document.getElementById(`track_T`).style.transform='translate(-50%,30%)';
+                    document.getElementById(`track_A`).style.transform='translate(-50%,-50%)';
+                    document.getElementById(`track_R`).style.transform='translate(-50%,-130%)';
                     setTimeout(()=>{
                         hideSth('trackInput');
                         showSth('fly');
