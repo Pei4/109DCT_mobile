@@ -71,7 +71,7 @@ function checkKey(e){
                     },1000)
                     setTimeout(()=>{
                         changeSource('fly','../material/subtract.png');
-                    },2500)
+                    },2400)
                 })
                 setTimeout(()=>{
                     meDialogNum --;
