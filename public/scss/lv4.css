@@ -245,7 +245,9 @@ body{
 }
 #back{
     position: absolute;
-    margin: 10vh 0 0 5vh;
+    top: 50vh;
+    left: 5vh;
+    transform: translate(0,-700%);
 }
 #photo2{
     position: absolute;
