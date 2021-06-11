@@ -225,7 +225,7 @@ function dialogControl(){
         changeAnimSrc('hand','planet_smile_2');
     }
     if (checkpoint == 31){
-        changeAnimSrc('hand','planet_bigsmile');
+        changeAnimSrc('hand','planet_bigSmile');
     }
     if (checkpoint == 32){
         hideSth('dialog');
