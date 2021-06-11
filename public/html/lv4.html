@@ -21,18 +21,18 @@
         <a>這是關於花的分析花的分析花的分析</a>
         <a>希望我們有朝一日能再次相遇！</a>
     </div>
-    <img id="photo" src="../material/postcard_01.png" onclick="browse()" style="display: none">
+    <img id="photo" onclick="browse()" style="display: none">
     <img id="letter" onclick="openLetter()" src="../material/letter_before.png">
 </div>
 <button id="endBtn" onclick="reUrl('lv0')" style="display: none">不下載，前往宇宙</button>
-<a id="downloadBtn" href="../material/planet_01.png" download="my_planet" style="display: none">下載</a>
+<a id="downloadBtn" download="my_planet" style="display: none">下載</a>
 <div id="photoMask" style="display: none">
     <img id="back" src="../material/back.png" onclick="back()">
-    <img id="photo2" src="../material/postcard_01.png">
+    <img id="photo2">
     <a id="iosNotice" style="display: none">iOS 請長按圖片後儲存</a>
 </div>
 <div id="doneDownload" style="display: none">✓ 照片已下載</div>
-<button id="universeBtn" class="opt" style="display: none">欣賞浩瀚的宇宙</button>
+<button id="universeBtn" class="opt" onclick="reUrl('lv0')" style="display: none">欣賞浩瀚的宇宙</button>
 <div id="mask2" class="shine2"></div>
 <div id="screen"><br><br><br><br><br><br>請使用行動裝置，以獲取最佳遊戲體驗 :)</div>
 </body>

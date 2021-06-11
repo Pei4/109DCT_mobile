@@ -3,6 +3,10 @@ window.googleDocCallback = function () { return true; };
 let id = parseInt(localStorage.getItem('id'));
 let iosList = ['iPad Simulator', 'iPhone Simulator', 'iPod Simulator', 'iPad', 'iPhone', 'iPod'];
 
+window.onload = function (){
+    preload('../material/letter_after.png')
+}
+
 setTimeout(()=>{
     hideSth('mask2');
     document.getElementById('downloadBtn').addEventListener('mousedown',()=>{
@@ -12,10 +16,6 @@ setTimeout(()=>{
         else {goDownload();}
     });
 },1000);
-
-window.onload = function (){
-    preload('../material/letter_after.png')
-}
 
 function callPlayer(){
     $.ajax({

@@ -1,11 +1,5 @@
 let images = new Array();
-function preload() {
-    for (let i = 0; i < preload.arguments.length; i++) {
-        images[i] = new Image();
-        images[i].src = preload.arguments[i];
-        enableSth('dialog');
-    }
-}
+
 setTimeout(()=>{
     checkDevice();
 },1);
@@ -107,6 +101,13 @@ function goMask(){
     setTimeout(()=> {
         hideSth('mask');
     },2000);
+}
+function preload() {
+    for (let i = 0; i < preload.arguments.length; i++) {
+        images[i] = new Image();
+        images[i].src = preload.arguments[i];
+        enableSth('dialog');
+    }
 }
 
 function dialogControl(){
@@ -220,6 +221,7 @@ function dialogControl(){
     }
     if (checkpoint == 29){
         document.body.style.backgroundImage = `url("../material/mbg_grass_6.png")`;
+        document.body.className = "";
         changeAnimSrc('hand','planet_smile_2');
     }
     if (checkpoint == 31){

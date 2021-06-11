@@ -8,6 +8,9 @@ body {
   height: 100%;
   overflow: hidden;
 }
+.small{
+  background-size: auto 85vh;
+}
 #screen{
   display: none;
   position: fixed;

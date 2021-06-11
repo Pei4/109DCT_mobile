@@ -25,6 +25,10 @@ window.onload = function(){
     })
 }
 
+setTimeout(()=>{
+    document.body.className = 'small';
+},1);
+
 function goTrack(){
     document.body.style.backgroundImage = `url("../material/mbg_universe.png")`;
     hideSth('hand');
