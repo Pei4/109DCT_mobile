@@ -16,7 +16,7 @@ a{
     top: 50vh;
     z-index: 5;
 }
-.opt{
+#startBtn{
     bottom: 50vh;
     left: 50vw;
     width: 312px !important;
