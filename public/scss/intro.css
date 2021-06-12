@@ -20,7 +20,7 @@ body{
     color: rgba(195, 138, 28, 1);
 }
 
-#introVid {
+#introVid{
     position: absolute;
     transform: rotate(90deg);
     transform-origin: bottom left;
