@@ -36,7 +36,7 @@ img {
   height: 17vh !important;
   left: 0vw !important;
   bottom: 50vh !important;
-  transform: translate(0, 40%) !important;;
+  transform: translate(0, 40%) !important;
   background: rgba(196, 196, 196, 0.5);
   backdrop-filter: blur(11px);
   font-family: Noto Sans CJK TC;

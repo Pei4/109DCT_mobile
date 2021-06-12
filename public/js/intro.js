@@ -5,8 +5,8 @@ $(function(){
     });
 });
 
-function open(){
-    window.open( this.href, '_system' );
-    this.href = "javascript:void(0)";
-    this.preventDefault();
+function start(){
+    hideSth('main');
+    showSth('introVid');
+    document.getElementById('introVid').play();
 }

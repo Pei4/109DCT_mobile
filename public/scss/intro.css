@@ -1,3 +1,33 @@
+html{
+    margin: 0;
+}
 body{
     background-image: url("../material/mbg_universe.png");
+    margin: 0;
+}
+#instruct{
+    color: #FFF !important;
+}
+.opt{
+    bottom: 50vh;
+    left: 50vw;
+    width: 312px !important;
+    transform-origin: center;
+    transform: translate(-50%,250%);
+    background: #FFE352;
+    border: 4px solid #F3D63B;
+    width: 22vw;
+    color: rgba(195, 138, 28, 1);
+}
+
+#introVid {
+    position: absolute;
+    transform: rotate(90deg);
+    transform-origin: bottom left;
+    width: 100vh;
+    height: 100vw;
+    margin-top: -100vw;
+    object-fit: cover;
+    z-index: 4;
+    visibility: visible;
 }

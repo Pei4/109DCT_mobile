@@ -47,7 +47,7 @@ function decideArray(response){
     document.getElementById('photo2').src = `../material/${resStr}.png`;
     document.getElementById('downloadBtn').href = `../material/${resStr}.png`;
     preload(`../material/${response.toString()}.png`);
-    document.getElementById('a1').innerHTML = `跟你相處的時間雖然不長，但我能感覺到：你是個${letterList[resArray[0].charCodeAt(0)-65]}的好人，而且你很懂得${letterList[parseInt(resArray[1])+2]}。`;
+    document.getElementById('a1').innerHTML = `跟你相處的時間雖然不長，但我能感覺到你是個${letterList[resArray[0].charCodeAt(0)-65]}的好人，而且你很懂得${letterList[parseInt(resArray[1])+2]}。`;
     document.getElementById('a2').innerHTML = `即使未來遭遇困難，你也一定能${letterList[parseInt(resArray[2])+5]}地前進。`;
 }
 

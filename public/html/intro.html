@@ -12,11 +12,14 @@
 </head>
 <body>
 <div id="main">
-    <div id="instruct" style="display: none"><br>請使用「預設瀏覽器」開啟<br>以獲得最佳的遊戲體驗</div>
+    <div id="instruct"><br>請使用「預設瀏覽器」開啟<br>以獲得最佳的遊戲體驗</div>
     <input type="button" class="opt" onclick="start()" value="進入遊戲">
 </div>
-
-<iframe id="video" src="../material/intro.mp4?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen;" allowfullscreen style="display: none"></iframe>
+<!--<iframe id="introVid" src="https://www.youtube.com/embed/WJCgTECzF0s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+<!--<iframe id="video" src="https://www.youtube.com/embed/WJCgTECzF0s?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen;" allowfullscreen style="display: none"></iframe>-->
+<video id="introVid" style="display: none">
+    <source src="../material/intro.mp4">
+</video>
 <div id="screen"><br><br><br><br><br><br>請使用行動裝置，以獲取最佳遊戲體驗 :)</div>
 </body>
 </html>
