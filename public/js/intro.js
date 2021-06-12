@@ -8,6 +8,7 @@ $(function(){
 function start(){
     hideSth('main');
     showSth('introVid');
+    document.body.style.backgroundImage = 'none !important';
     document.getElementById('introVid').play();
     document.getElementById('introVid').autoplay = false;
     document.getElementById('introVid').controls = false;
@@ -18,10 +19,9 @@ function end(){
     if(document.exitFullscreen){
         document.exitFullscreen();
     }
-    else if (document.webkitExitFullscreen) { /* Safari */
+    else if (document.webkitExitFullscreen) {
         document.webkitExitFullscreen();
     }
-    hideSth('introVid');
     reUrl('lv1');
 }
 /*function onYouTubeIframeAPIReady() {

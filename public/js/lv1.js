@@ -17,6 +17,10 @@ setTimeout(()=>{
     )
 },1)
 
+setTimeout(()=>{
+    hideSth('mask2');
+},1000);
+
 function lv1Gas(method,choose,successFnt){
     $.ajax({
         type: "get",

@@ -307,3 +307,7 @@ body {
         -moz-animation-fill-mode: forwards;
     }
 }
+
+#mask2{
+    background: #000;
+}

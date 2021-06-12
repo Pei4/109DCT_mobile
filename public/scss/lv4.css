@@ -4,48 +4,6 @@ html{
 body{
     background: linear-gradient(180deg, #F6EEE6 0%, #F2E8CF 53.65%, #F3E1C5 97.92%);
 }
-#mask2{
-    display: block;
-    position: fixed;
-    bottom: 0;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    background: #000;
-    opacity: 1;
-}
-.shine2{
-    animation: shine2Anim 1s ease-out 0s 1;
-    -webkit-animation: shine2Anim 1s ease-out 0s 1;
-    -moz-animation: shine2Anim 1s ease-out 0s 1;
-}
-@keyframes shine2Anim {
-    0%{opacity: 1}
-    100%{
-        opacity: 0;
-        animation-fill-mode: forwards;
-        -webkit-animation-fill-mode: forwards;
-        -moz-animation-fill-mode: forwards;
-    }
-}
-@-webkit-keyframes shine2Anim {
-    0%{opacity: 1}
-    100%{
-        opacity: 0;
-        animation-fill-mode: forwards;
-        -webkit-animation-fill-mode: forwards;
-        -moz-animation-fill-mode: forwards;
-    }
-}
-@-moz-keyframes shine2Anim {
-    0%{opacity: 1}
-    100%{
-        opacity: 0;
-        animation-fill-mode: forwards;
-        -webkit-animation-fill-mode: forwards;
-        -moz-animation-fill-mode: forwards;
-    }
-}
 
 .show{
     animation: showAnim 2s ease-out 0s 1;
