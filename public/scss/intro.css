@@ -8,6 +8,13 @@ body{
 #instruct{
     color: #FFF !important;
 }
+a{
+    position: absolute;
+    display: inline-block;
+    color: white;
+    left: 50vw;
+    top: 50vh;
+}
 .opt{
     bottom: 50vh;
     left: 50vw;
