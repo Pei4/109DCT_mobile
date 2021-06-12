@@ -62,8 +62,8 @@ function checkKey(e){
                     document.getElementById(`track_${key}`).style.margin = '0';
                     document.getElementById(`track_S`).style.transform='translate(-50%,110%)';
                     document.getElementById(`track_T`).style.transform='translate(-50%,30%)';
-                    document.getElementById(`track_A`).style.transform='translate(-50%,-50%)';
-                    document.getElementById(`track_R`).style.transform='translate(-50%,-130%)';
+                    document.getElementById(`track_A`).style.transform='translate(-50%,-10%)';
+                    document.getElementById(`track_R`).style.transform='translate(-50%,-30%)';
                     setTimeout(()=>{
                         hideSth('trackInput');
                         showSth('fly');
