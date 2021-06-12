@@ -62,7 +62,7 @@ function sure(){  //確定
             goStar('state1');
         },4000);
         setTimeout(()=>{
-            stopStar('state1','../material/star_200.png');
+            stopStar('../material/star_200.png');
             document.body.style.backgroundImage = 'url("../material/mbg_sea.png")';
             dialogControl();
         },5000)
@@ -80,7 +80,7 @@ function sure(){  //確定
             goStar('state2');
         },4000);
         setTimeout(()=>{
-            stopStar('state2','../material/star_220.png');
+            stopStar('../material/star_220.png');
             document.body.style.backgroundImage = 'url("../material/mbg_sea.png")';
             dialogControl();
         },5000);
