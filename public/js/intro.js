@@ -8,6 +8,7 @@ $(function(){
 function start(){
     hideSth('main');
     showSth('introVid');
+    document.getElementById('introVid').play();
 }
 
 /*function onYouTubeIframeAPIReady() {
