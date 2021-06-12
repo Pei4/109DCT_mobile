@@ -27,15 +27,6 @@ a{
     width: 22vw;
     color: rgba(195, 138, 28, 1);
 }
-#hideEmbed{
-    position: fixed;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    opacity: 0;
-    z-index: 10;
-}
 #introVid{
     position: absolute;
     transform: rotate(90deg);
