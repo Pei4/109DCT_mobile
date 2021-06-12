@@ -15,6 +15,12 @@ function start(){
 }
 
 function end(){
+    if(document.exitFullscreen){
+        document.exitFullscreen();
+    }
+    else if (document.webkitExitFullscreen) { /* Safari */
+        document.webkitExitFullscreen();
+    }
     hideSth('introVid');
 }
 /*function onYouTubeIframeAPIReady() {
