@@ -7,9 +7,9 @@ body{
 div{
     display: inline-block;
     position: absolute;
-    padding: 10px;
+    padding: 5vh 10px 10px 10px;
     left: 50vw;
-    transform: translate(-50%,5%);
+    transform: translate(-50%,0);
     top: 0;
     animation: scrollAnim 8s linear 0s 1;
     -webkit-animation: scrollAnim 8s linear 0s 1;
@@ -17,10 +17,10 @@ div{
 }
 @keyframes scrollAnim {
     0%{
-        transform: translate(-50%,150%);
+        transform: translate(-50%,100%);
     }
     100%{
-        transform: translate(-50%,5%);
+        transform: translate(-50%,0);
         animation-play-state: paused;
         -webkit-animation-play-state: paused;
         -moz-animation-play-state: paused;
