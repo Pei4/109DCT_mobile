@@ -40,7 +40,7 @@ function goTrack(){
 }
 function checkFocus(e){
     focusKey = keyArray.indexOf(e.target.id.split('_')[1]);
-    inputHeight = 85 - 25*focusKey;
+    inputHeight = 72.5 - 25/2*focusKey;
     document.getElementById('trackInput').style.transform = `translate(-50%, ${inputHeight}%)`;
 }
 function goBlur(e){
@@ -61,10 +61,10 @@ function checkKey(e){
                     document.getElementById(`track_${key}`).style.transitionDuration = '1s';
                     document.getElementById(`track_${key}`).style.transitionTimingFunction = 'ease-out';
                     document.getElementById(`track_${key}`).style.margin = '0';
-                    document.getElementById(`track_S`).style.transform='translate(-50%,110%)';
-                    document.getElementById(`track_T`).style.transform='translate(-50%,30%)';
-                    document.getElementById(`track_A`).style.transform='translate(-50%,10%)';
-                    document.getElementById(`track_R`).style.transform='translate(-50%,0%)';
+                    document.getElementById(`track_S`).style.transform='translate(-50%,120%)';
+                    document.getElementById(`track_T`).style.transform='translate(-50%,40%)';
+                    document.getElementById(`track_A`).style.transform='translate(-50%,-40%)';
+                    document.getElementById(`track_R`).style.transform='translate(-50%,-120%)';
                     setTimeout(()=>{
                         hideSth('trackInput');
                         showSth('fly');
