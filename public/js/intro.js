@@ -9,6 +9,8 @@ function start(){
     hideSth('main');
     showSth('introVid');
     document.getElementById('introVid').play();
+    document.getElementById('introVid').autoplay = false;
+    document.getElementById('introVid').controls = false;
 }
 
 /*function onYouTubeIframeAPIReady() {
