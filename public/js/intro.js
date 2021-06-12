@@ -8,6 +8,7 @@ $(function(){
 function start(){
     hideSth('main');
     showSth('introVid');
+    showSth('hideEmbed');
     document.getElementById('introVid').play();
     document.getElementById('introVid').autoplay = false;
     document.getElementById('introVid').controls = false;
@@ -15,6 +16,7 @@ function start(){
 }
 
 function end(){
+    hideSth('hideEmbed');
     if(document.exitFullscreen){
         document.exitFullscreen();
     }
