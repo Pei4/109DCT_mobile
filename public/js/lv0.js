@@ -5,6 +5,11 @@ let btn;
 
 setTimeout(()=>{
     updatePlanets();
+    preload(
+        '../material/planetR.png',
+        '../material/planetW.png',
+        '../material/planetB.png'
+    )
 },1);
 
 //呼叫 Google Apps Script
@@ -42,8 +47,6 @@ class Planet{
         else if(color == 3){
             this.colorString = planetB;
         }
-        this.size = shine/7*25+50;
-        this.fade = 1;
         console.log(this.colorString);
     }
     createPlanet(){

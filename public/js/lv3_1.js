@@ -36,6 +36,7 @@ function goTrack(){
     hideSth('instruct');
     hideSth('trackBtn');
     showSth('trackInput');
+    preload('../material/subtract.png');
 }
 function checkFocus(e){
     focusKey = keyArray.indexOf(e.target.id.split('_')[1]);

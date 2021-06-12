@@ -11,32 +11,34 @@ body{
     border: none;
 }
 #endBtn{
-    bottom: 10vh;
+    bottom: 5vh;
     left: 50vw;
     height: 5vh;
     padding: 10px;
-    transform: translate(150%,0);
+    transform: translate(130%,0);
     color: #C48A1C;
     background: #FFFFFF;
     border: 4px solid #C48A1C;
     font-size: 42px;
+    z-index: 3;
 }
 div{
     position: absolute;
     display: inline-block;
     border-radius: 100px;
     border: 4px solid rgba(223,223,223,.5);
+    transform: translate(0,0);
     background-repeat: no-repeat;
     background-position: center;
     margin: auto;
     overflow: visible;
     transform-origin: center;
+    z-index: 1;
 }
-div[class^='size']{}
 .size2{
-    background-size: 80px 80px;
-    width: 80px;
-    height: 80px;
+    background-size: 70px 70px;
+    width: 70px;
+    height: 70px;
     animation: s2Anim 1.5s ease-out 0s infinite;
     -webkit-animation: s2Anim 1.5s ease-out 0s infinite;
     -moz-animation: s2Anim 1.5s ease-out 0s infinite;
@@ -44,49 +46,49 @@ div[class^='size']{}
 @keyframes s2Anim {
     0%{
         transform: translate(0,0);
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
         border: 4px solid rgba(223,223,223,.5);
     }
     100%{
         transform: translate(-10px,-10px);
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
         border: 4px solid rgba(223,223,223,0);
     }
 }
 @-webkit-keyframes s2Anim {
     0%{
         transform: translate(0,0);
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
         border: 4px solid rgba(223,223,223,.5);
     }
     100%{
         transform: translate(-10px,-10px);
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
         border: 4px solid rgba(223,223,223,0);
     }
 }
 @-moz-keyframes s2Anim {
     0%{
         transform: translate(0,0);
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
         border: 4px solid rgba(223,223,223,.5);
     }
     100%{
         transform: translate(-10px,-10px);
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
         border: 4px solid rgba(223,223,223,0);
     }
 }
 .size3{
-    background-size: 90px 90px;
-    width: 90px;
-    height: 90px;
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
     animation: s3Anim 2s ease-out 0s infinite;
     -webkit-animation: s3Anim 2s ease-out 0s infinite;
     -moz-animation: s3Anim 2s ease-out 0s infinite;
@@ -94,49 +96,49 @@ div[class^='size']{}
 @keyframes s3Anim {
     0%{
         transform: translate(0,0);
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
         border: 4px solid rgba(223,223,223,.5);
     }
     100%{
         transform: translate(-20px,-20px);
-        width: 130px;
-        height: 130px;
+        width: 120px;
+        height: 120px;
         border: 4px solid rgba(223,223,223,0);
     }
 }
 @-webkit-keyframes s3Anim {
     0%{
         transform: translate(0,0);
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
         border: 4px solid rgba(223,223,223,.5);
     }
     100%{
         transform: translate(-20px,-20px);
-        width: 130px;
-        height: 130px;
+        width: 120px;
+        height: 120px;
         border: 4px solid rgba(223,223,223,0);
     }
 }
 @-moz-keyframes s3Anim {
     0%{
         transform: translate(0,0);
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
         border: 4px solid rgba(223,223,223,.5);
     }
     100%{
         transform: translate(-20px,-20px);
-        width: 130px;
-        height: 130px;
+        width: 120px;
+        height: 120px;
         border: 4px solid rgba(223,223,223,0);
     }
 }
 .size4{
-    background-size: 100px 100px;
-    width: 100px;
-    height: 100px;
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
     animation: s4Anim 2.5s ease-out 0s infinite;
     -webkit-animation: s4Anim 2.5s ease-out 0s infinite;
     -moz-animation: s4Anim 2.5s ease-out 0s infinite;
@@ -144,49 +146,49 @@ div[class^='size']{}
 @keyframes s4Anim {
     0%{
         transform: translate(0,0);
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
         border: 4px solid rgba(223,223,223,.5);
     }
     100%{
         transform: translate(-30px,-30px);
-        width: 160px;
-        height: 160px;
+        width: 150px;
+        height: 150px;
         border: 4px solid rgba(223,223,223,0);
     }
 }
 @-webkit-keyframes s4Anim {
     0%{
         transform: translate(0,0);
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
         border: 4px solid rgba(223,223,223,.5);
     }
     100%{
         transform: translate(-30px,-30px);
-        width: 160px;
-        height: 160px;
+        width: 150px;
+        height: 150px;
         border: 4px solid rgba(223,223,223,0);
     }
 }
 @-moz-keyframes s4Anim {
     0%{
         transform: translate(0,0);
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
         border: 4px solid rgba(223,223,223,.5);
     }
     100%{
         transform: translate(-30px,-30px);
-        width: 160px;
-        height: 160px;
+        width: 150px;
+        height: 150px;
         border: 4px solid rgba(223,223,223,0);
     }
 }
 .size5{
-    background-size: 110px 110px;
-    width: 110px;
-    height: 110px;
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
     animation: s5Anim 3s ease-out 0s infinite;
     -webkit-animation: s5Anim 3s ease-out 0s infinite;
     -moz-animation: s5Anim 3s ease-out 0s infinite;
@@ -194,49 +196,49 @@ div[class^='size']{}
 @keyframes s5Anim {
     0%{
         transform: translate(0,0);
-        width: 110px;
-        height: 110px;
+        width: 100px;
+        height: 100px;
         border: 4px solid rgba(223,223,223,.5);
     }
     100%{
         transform: translate(-40px,-40px);
-        width: 190px;
-        height: 190px;
+        width: 180px;
+        height: 180px;
         border: 4px solid rgba(223,223,223,0);
     }
 }
 @-webkit-keyframes s5Anim {
     0%{
         transform: translate(0,0);
-        width: 110px;
-        height: 110px;
+        width: 100px;
+        height: 100px;
         border: 4px solid rgba(223,223,223,.5);
     }
     100%{
         transform: translate(-40px,-40px);
-        width: 190px;
-        height: 190px;
+        width: 180px;
+        height: 180px;
         border: 4px solid rgba(223,223,223,0);
     }
 }
 @-moz-keyframes s5Anim {
     0%{
         transform: translate(0,0);
-        width: 110px;
-        height: 110px;
+        width: 100px;
+        height: 100px;
         border: 4px solid rgba(223,223,223,.5);
     }
     100%{
         transform: translate(-40px,-40px);
-        width: 190px;
-        height: 190px;
+        width: 180px;
+        height: 180px;
         border: 4px solid rgba(223,223,223,0);
     }
 }
 .size6{
-    background-size: 120px 120px;
-    width: 120px;
-    height: 120px;
+    background-size: 110px 110px;
+    width: 110px;
+    height: 110px;
     animation: s6Anim 3.5s ease-out 0s infinite;
     -webkit-animation: s6Anim 3.5s ease-out 0s infinite;
     -moz-animation: s6Anim 3.5s ease-out 0s infinite;
@@ -244,49 +246,49 @@ div[class^='size']{}
 @keyframes s6Anim {
     0%{
         transform: translate(0,0);
-        width: 120px;
-        height: 120px;
+        width: 110px;
+        height: 110px;
         border: 4px solid rgba(223,223,223,.5);
     }
     100%{
         transform: translate(-50px,-50px);
-        width: 220px;
-        height: 220px;
+        width: 210px;
+        height: 210px;
         border: 4px solid rgba(223,223,223,0);
     }
 }
 @-webkit-keyframes s6Anim {
     0%{
         transform: translate(0,0);
-        width: 120px;
-        height: 120px;
+        width: 110px;
+        height: 110px;
         border: 4px solid rgba(223,223,223,.5);
     }
     100%{
         transform: translate(-50px,-50px);
-        width: 220px;
-        height: 220px;
+        width: 210px;
+        height: 210px;
         border: 4px solid rgba(223,223,223,0);
     }
 }
 @-moz-keyframes s6Anim {
     0%{
         transform: translate(0,0);
-        width: 120px;
-        height: 120px;
+        width: 110px;
+        height: 110px;
         border: 4px solid rgba(223,223,223,.5);
     }
     100%{
         transform: translate(-50px,-50px);
-        width: 220px;
-        height: 220px;
+        width: 210px;
+        height: 210px;
         border: 4px solid rgba(223,223,223,0);
     }
 }
 .size7{
-    background-size: 130px 130px;
-    width: 130px;
-    height: 130px;
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
     animation: s7Anim 4s ease-out 0s infinite;
     -webkit-animation: s7Anim 4s ease-out 0s infinite;
     -moz-animation: s7Anim 4s ease-out 0s infinite;
@@ -294,42 +296,42 @@ div[class^='size']{}
 @keyframes s7Anim {
     0%{
         transform: translate(0,0);
-        width: 130px;
-        height: 130px;
+        width: 120px;
+        height: 120px;
         border: 4px solid rgba(223,223,223,.5);
     }
     100%{
         transform: translate(-60px,-60px);
-        width: 250px;
-        height: 250px;
+        width: 240px;
+        height: 240px;
         border: 4px solid rgba(223,223,223,0);
     }
 }
 @-webkit-keyframes s7Anim {
     0%{
         transform: translate(0,0);
-        width: 130px;
-        height: 130px;
+        width: 120px;
+        height: 120px;
         border: 4px solid rgba(223,223,223,.5);
     }
     100%{
         transform: translate(-60px,-60px);
-        width: 250px;
-        height: 250px;
+        width: 240px;
+        height: 240px;
         border: 4px solid rgba(223,223,223,0);
     }
 }
 @-moz-keyframes s7Anim {
     0%{
         transform: translate(0,0);
-        width: 130px;
-        height: 130px;
+        width: 120px;
+        height: 120px;
         border: 4px solid rgba(223,223,223,.5);
     }
     100%{
         transform: translate(-60px,-60px);
-        width: 250px;
-        height: 250px;
+        width: 240px;
+        height: 240px;
         border: 4px solid rgba(223,223,223,0);
     }
 }
