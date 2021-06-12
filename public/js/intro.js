@@ -11,8 +11,12 @@ function start(){
     document.getElementById('introVid').play();
     document.getElementById('introVid').autoplay = false;
     document.getElementById('introVid').controls = false;
+    document.getElementById('introVid').addEventListener('ended',()=>{end()});
 }
 
+function end(){
+    hideSth('introVid');
+}
 /*function onYouTubeIframeAPIReady() {
     let player;
     player = new YT.Player('YouTubeVideoPlayerAPI', {
