@@ -63,8 +63,8 @@ function checkKey(e){
                     document.getElementById(`track_${key}`).style.margin = '0';
                     document.getElementById(`track_S`).style.transform='translate(-50%,110%)';
                     document.getElementById(`track_T`).style.transform='translate(-50%,30%)';
-                    document.getElementById(`track_A`).style.transform='translate(-50%,0%)';
-                    document.getElementById(`track_R`).style.transform='translate(-50%,-15%)';
+                    document.getElementById(`track_A`).style.transform='translate(-50%,10%)';
+                    document.getElementById(`track_R`).style.transform='translate(-50%,0%)';
                     setTimeout(()=>{
                         hideSth('trackInput');
                         showSth('fly');
@@ -72,7 +72,7 @@ function checkKey(e){
                     },1000)
                     setTimeout(()=>{
                         changeSource('fly','../material/subtract.png');
-                    },2100)
+                    },2200)
                 })
                 setTimeout(()=>{
                     meDialogNum --;
