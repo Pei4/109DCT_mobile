@@ -305,7 +305,7 @@ body{
     bottom: 20vh;
     left: 50vw;
     padding: 40px;
-    transform: translate(-50%,0);
+    transform: translate(-50%,50%);
     max-width: 100%;
     color: #C48A1C;
     background: #FFE352;

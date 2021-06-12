@@ -5,10 +5,11 @@ let iosList = ['iPad Simulator', 'iPhone Simulator', 'iPod Simulator', 'iPad', '
 let letterList = [
     '樸實自然','單純可愛','活潑熱情', //A-0 B-1 C-2
     '享受豐富趣味的生活','顧及周遭人的感受','把善意回饋給世界',  //1-3 2-4 3-5
-    '知足且樂觀','溫柔且堅定','勇敢且積極'  //1-6 2-7 3-8
+    '知足且樂觀','溫柔且堅定','勇敢且積極'   //1-6 2-7 3-8
 ]
 let resStr;
 let resArray;
+let done = 0;
 
 window.onload = function (){
     preload('../material/letter_after.png')
@@ -76,12 +77,17 @@ function openLetter(){
 }
 function browse(){
     showSth('photoMask');
+    if(done == 1){
+        hideSth('universeBtn');
+    }
 }
 function back(){
     hideSth('photoMask');
     hideSth('iosNotice');
     hideSth('universeBtn');
-    hideSth('endBtn2');
+    if(done == 1){
+        showSth('universeBtn');
+    }
 }
 function goiOS(){
     showSth('photoMask');
@@ -89,6 +95,7 @@ function goiOS(){
     showSth('universeBtn');
 }
 function goDownload(){
+    done = 1;
     hideSth('endBtn');
     hideSth('downloadBtn');
     showSth('universeBtn');
