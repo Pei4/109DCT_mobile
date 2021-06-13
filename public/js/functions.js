@@ -118,11 +118,12 @@ function dialogControl(){
     if(checkpoint == 1){  //飲料關
         showSth('lv1Btn');
         disableSth('dialog');
-        if(localStorage.getItem('id') == null){
+        if(localStorage.getItem('id') === null){
             lv1Gas('add','',getId);
         }
         else {
             id = parseInt(localStorage.getItem('id'));
+            lv1Gas('add');
         }
     }
     if(checkpoint == 3){  //選完開始喝

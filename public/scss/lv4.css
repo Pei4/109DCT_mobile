@@ -222,6 +222,7 @@ body{
     bottom: 8vh;
     left: 50vw;
     transform: translate(-80%,0);
+    width: 50vw;
     color: #C48A1C;
     background: #FFFFFF;
     border: 4px solid #C48A1C;
@@ -231,9 +232,12 @@ body{
     left: 50vw;
     transform: translate(80%,0);
     text-decoration: none;
-    width: 22vw;
+    width: 25vw;
     margin: 0;
+    padding: 20px 40px 20px 40px;
     color: #C48A1C;
+    font-size: 50px;
+    line-height: 75px;
     background: #FFE352;
     border: 4px solid #F3D63B;
 }

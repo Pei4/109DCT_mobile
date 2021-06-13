@@ -24,7 +24,7 @@ setTimeout(()=>{
 function lv1Gas(method,choose,successFnt){
     $.ajax({
         type: "get",
-        url: "https://script.google.com/macros/s/AKfycbz34Hlx6cYl-BLTACrvu00B2SYYb_D7eE4zGxIGA0IOTnMSwRPXyrRPcXanavVkmo3IyA/exec?callback=googleDocCallback",
+        url: "https://script.google.com/macros/s/AKfycbw5rhZDQ6TlpuMjHXN7DMrI2oFpMygIJ3r2b_Pxk6jSrHglt9FIsh3AoYXT7rEfYJ-dLA/exec?callback=googleDocCallback",
         data: {
             "method": method,
             "id":id+1,

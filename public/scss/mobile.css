@@ -26,6 +26,9 @@ body {
   color: #FFFFFF;
   text-align: center;
   animation:none;
+  z-index: 10;
+  border: none;
+  border-radius: 0;
 }
 img {
   max-width: 80%;

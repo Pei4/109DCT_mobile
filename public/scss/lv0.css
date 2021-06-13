@@ -20,6 +20,7 @@ body{
     background: #FFFFFF;
     border: 4px solid #C48A1C;
     font-size: 42px;
+    line-height: 63px;
     z-index: 3;
 }
 div{
@@ -39,9 +40,9 @@ div{
     background-size: 70px 70px;
     width: 70px;
     height: 70px;
-    animation: s2Anim 1.5s ease-out 0s infinite;
-    -webkit-animation: s2Anim 1.5s ease-out 0s infinite;
-    -moz-animation: s2Anim 1.5s ease-out 0s infinite;
+    animation: s2Anim 1.5s linear 0s infinite;
+    -webkit-animation: s2Anim 1.5s linear 0s infinite;
+    -moz-animation: s2Anim 1.5s linear 0s infinite;
 }
 @keyframes s2Anim {
     0%{
@@ -89,9 +90,9 @@ div{
     background-size: 80px 80px;
     width: 80px;
     height: 80px;
-    animation: s3Anim 2s ease-out 0s infinite;
-    -webkit-animation: s3Anim 2s ease-out 0s infinite;
-    -moz-animation: s3Anim 2s ease-out 0s infinite;
+    animation: s3Anim 2s linear 0s infinite;
+    -webkit-animation: s3Anim 2s linear 0s infinite;
+    -moz-animation: s3Anim 2s linear 0s infinite;
 }
 @keyframes s3Anim {
     0%{
@@ -139,9 +140,9 @@ div{
     background-size: 90px 90px;
     width: 90px;
     height: 90px;
-    animation: s4Anim 2.5s ease-out 0s infinite;
-    -webkit-animation: s4Anim 2.5s ease-out 0s infinite;
-    -moz-animation: s4Anim 2.5s ease-out 0s infinite;
+    animation: s4Anim 2.5s linear 0s infinite;
+    -webkit-animation: s4Anim 2.5s linear 0s infinite;
+    -moz-animation: s4Anim 2.5s linear 0s infinite;
 }
 @keyframes s4Anim {
     0%{
@@ -189,9 +190,9 @@ div{
     background-size: 100px 100px;
     width: 100px;
     height: 100px;
-    animation: s5Anim 3s ease-out 0s infinite;
-    -webkit-animation: s5Anim 3s ease-out 0s infinite;
-    -moz-animation: s5Anim 3s ease-out 0s infinite;
+    animation: s5Anim 3s linear 0s infinite;
+    -webkit-animation: s5Anim 3s linear 0s infinite;
+    -moz-animation: s5Anim 3s linear 0s infinite;
 }
 @keyframes s5Anim {
     0%{
@@ -239,9 +240,9 @@ div{
     background-size: 110px 110px;
     width: 110px;
     height: 110px;
-    animation: s6Anim 3.5s ease-out 0s infinite;
-    -webkit-animation: s6Anim 3.5s ease-out 0s infinite;
-    -moz-animation: s6Anim 3.5s ease-out 0s infinite;
+    animation: s6Anim 3.5s linear 0s infinite;
+    -webkit-animation: s6Anim 3.5s linear 0s infinite;
+    -moz-animation: s6Anim 3.5s linear 0s infinite;
 }
 @keyframes s6Anim {
     0%{
@@ -289,9 +290,9 @@ div{
     background-size: 120px 120px;
     width: 120px;
     height: 120px;
-    animation: s7Anim 4s ease-out 0s infinite;
-    -webkit-animation: s7Anim 4s ease-out 0s infinite;
-    -moz-animation: s7Anim 4s ease-out 0s infinite;
+    animation: s7Anim 4s linear 0s infinite;
+    -webkit-animation: s7Anim 4s linear 0s infinite;
+    -moz-animation: s7Anim 4s linear 0s infinite;
 }
 @keyframes s7Anim {
     0%{
