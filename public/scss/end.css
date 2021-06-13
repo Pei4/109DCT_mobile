@@ -31,10 +31,10 @@ div{
 }
 @-webkit-keyframes scrollAnim {
     0%{
-        transform: translate(-50%,150%);
+        transform: translate(-50%,100%);
     }
     100%{
-        transform: translate(-50%,5%);
+        transform: translate(-50%,0);
         animation-play-state: paused;
         -webkit-animation-play-state: paused;
         -moz-animation-play-state: paused;
@@ -45,10 +45,10 @@ div{
 }
 @-moz-keyframes scrollAnim {
     0%{
-        transform: translate(-50%,150%);
+        transform: translate(-50%,100%);
     }
     100%{
-        transform: translate(-50%,5%);
+        transform: translate(-50%,0);
         animation-play-state: paused;
         -webkit-animation-play-state: paused;
         -moz-animation-play-state: paused;
