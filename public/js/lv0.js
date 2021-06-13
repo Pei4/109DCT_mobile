@@ -6,9 +6,9 @@ let btn;
 setTimeout(()=>{
     updatePlanets();
     preload(
-        '../material/planetR.png',
-        '../material/planetW.png',
-        '../material/planetB.png'
+        '../material/3.png',
+        '../material/1.png',
+        '../material/2.png'
     )
 },1);
 
@@ -38,16 +38,6 @@ class Planet{
         this.y = y;
         this.shine = shine;
         this.color = color;
-        if (color == 1){
-            this.colorString = planetR;
-        }
-        else if(color == 2){
-            this.colorString = planetW;
-        }
-        else if(color == 3){
-            this.colorString = planetB;
-        }
-        console.log(this.colorString);
     }
     createPlanet(){
         let planet = document.createElement("div");
@@ -55,6 +45,7 @@ class Planet{
         planet.className = `size${this.shine}`;
         planet.style.left = `${this.x}vw`;
         planet.style.top = `${this.y}vh`;
+        planet.style.transform = 'translate(0,0)';
         document.body.appendChild(planet);
     }
     /*drawShine(){
