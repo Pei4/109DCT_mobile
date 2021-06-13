@@ -158,6 +158,9 @@ function dialogControl(){
             changeAnimSrc('hand','planet_smell');
             hideSth('me');
             showSth('next');
+            setTimeout(()=>{
+                hideSth('hand');
+            },2000)
         },1000);
         setTimeout(()=>addClass('hand','planetMove1'),1300);
     }
