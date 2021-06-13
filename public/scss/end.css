@@ -7,20 +7,20 @@ body{
 div{
     display: inline-block;
     position: absolute;
-    padding: 5vh 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
     left: 50vw;
-    transform: translate(-50%,0);
-    top: 0;
+    transform: translate(-50%,-50%);
+    top: 50vh;
     animation: scrollAnim 8s linear 0s 1;
     -webkit-animation: scrollAnim 8s linear 0s 1;
     -moz-animation: scrollAnim 8s linear 0s 1;
 }
 @keyframes scrollAnim {
     0%{
-        transform: translate(-50%,100%);
+        transform: translate(-50%,60%);
     }
     100%{
-        transform: translate(-50%,0);
+        transform: translate(-50%,-50%);
         animation-play-state: paused;
         -webkit-animation-play-state: paused;
         -moz-animation-play-state: paused;
@@ -31,10 +31,10 @@ div{
 }
 @-webkit-keyframes scrollAnim {
     0%{
-        transform: translate(-50%,100%);
+        transform: translate(-50%,60%);
     }
     100%{
-        transform: translate(-50%,0);
+        transform: translate(-50%,-50%);
         animation-play-state: paused;
         -webkit-animation-play-state: paused;
         -moz-animation-play-state: paused;
@@ -45,10 +45,10 @@ div{
 }
 @-moz-keyframes scrollAnim {
     0%{
-        transform: translate(-50%,100%);
+        transform: translate(-50%,60%);
     }
     100%{
-        transform: translate(-50%,0);
+        transform: translate(-50%,-50%);
         animation-play-state: paused;
         -webkit-animation-play-state: paused;
         -moz-animation-play-state: paused;
@@ -65,18 +65,19 @@ p{
     align-items: center;
     text-align: left;
     color: #FFFFFF;
-    font-size: 48px;
-    line-height: 80px;
+    font-size: 40px;
+    line-height: 60px;
 }
 .title{
+    margin-bottom: -10px;
     padding-top: 20px;
-    padding-bottom: 20px;
-    font-size: 72px;
-    line-height: 44px;
+    padding-bottom: 10px;
+    font-size: 60px;
+    line-height: 40px;
 }
 img{
     margin-top: 60px;
     position: relative;
     left: 50%;
-    transform: translate(-40%,0) scale(1.5,1.5);
+    transform: translate(-40%,0) scale(1.2,1.2);
 }
