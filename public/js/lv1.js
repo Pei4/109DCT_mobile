@@ -190,11 +190,9 @@ function btnCheck(){  //開始掃描
     let constraints = {video: {facingMode: { exact: "environment" }}};
     let video = document.querySelector('#preview');
     function handleSuccess(stream) {
-        alert('success');
         const codeReader = new ZXing.BrowserQRCodeReader();
         codeReader.decodeFromVideoDevice(undefined, 'preview', (result, err) => {
             if (result) { //掃後結果在這裡
-                alert('code');
                 if(chooseCheck == 0){
                     optSrc = result.text;
                     if(checkpoint < 4){
