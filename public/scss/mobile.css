@@ -82,8 +82,8 @@ img {
 #dialog {
   position: fixed;
   bottom: 0;
+  left: 0;
   background-color: #1E1E1E;
-  transform: translate(10px,10px);
   width: 100vw;
   height: 15vh;
 }
@@ -91,6 +91,7 @@ img {
   position: absolute;
   display: block;
   margin: 15px;
+  transform: translate(20px,20px);
   font-family: Noto Sans CJK TC;
   font-style: normal;
   font-weight: normal;
@@ -105,12 +106,13 @@ img {
   font-style: normal;
   font-weight: normal;
   font-size: 50px;
-  line-height: 40px;
+  line-height: 75px;
   align-items: center;
   text-align: center;
   letter-spacing: -0.41px;
   box-sizing: border-box;
   border-radius: 10px;
+  padding: 20px 40px 20px 40px;
 }
 #next {
   position: fixed;

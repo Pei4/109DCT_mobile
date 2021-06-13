@@ -24,9 +24,12 @@ let planetDialogArray =[
     '要在某處遊歷之後',  //10-26
     '才能回到宇宙的行列',  //11-27
     '成為一顆獨立的星球',  //12-28
-    '這段日子',  //14-30
-    '謝謝你的陪伴！',  //15-31
-    '在回去之前\n想和你留下最後的回憶'];  //16-
+    '這段日子',  //13-30
+    '謝謝你的陪伴！',  //14-31
+    '旅程已經結束了呢...',  //15-35
+    '不知道你願不願意...',  //16-36
+    '和我分享這趟旅程的心得呢！'  //17-37
+];
 let meDialogArray =[
     '是不是該找點喝的東西給它呢...',  //0-1
     '要喝什麼好呢？',  //1-2
@@ -41,7 +44,7 @@ let meDialogArray =[
     '啊......已經回去了嗎', //10-32（自動）
     '不曉得是哪顆發亮的星星呢......' //11-33
 ];
-let planetCont = [4,8,13,14,17,18,19,21,24,26,27,28,30,31];
+let planetCont = [4,8,13,14,17,18,19,21,24,26,27,28,30,31,35,36,37];
 let meCont = [1,2,5,6,9,11,15,22,29,32,33];
 
 function showSth(sth){
@@ -239,6 +242,17 @@ function dialogControl(){
         setTimeout(()=>{
             reUrl('lv4');
         },1000)
+    }
+    if(checkpoint == 36){
+        preload('../material/planet_water_2.png');
+    }
+    if (checkpoint == 37){
+        changeAnimSrc('hand','planet_water_2');
+    }
+    if (checkpoint == 38){
+        hideSth('dialog');
+        showSth('toEnd');
+        showSth('cake');
     }
     if(meCont.includes(checkpoint)){
         meDialogNum ++;

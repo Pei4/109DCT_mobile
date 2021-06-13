@@ -222,7 +222,6 @@ body{
     bottom: 8vh;
     left: 50vw;
     transform: translate(-80%,0);
-    padding: 40px;
     color: #C48A1C;
     background: #FFFFFF;
     border: 4px solid #C48A1C;
@@ -234,7 +233,6 @@ body{
     text-decoration: none;
     width: 22vw;
     margin: 0;
-    padding: 40px;
     color: #C48A1C;
     background: #FFE352;
     border: 4px solid #F3D63B;
@@ -262,7 +260,6 @@ body{
 #universeBtn{
     bottom: 20vh;
     left: 50vw;
-    padding: 40px;
     transform: translate(-50%,50%);
     max-width: 100%;
     color: #C48A1C;
