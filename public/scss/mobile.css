@@ -83,6 +83,7 @@ img {
   position: fixed;
   bottom: 0;
   background-color: #1E1E1E;
+  transform: translate(10px,10px);
   width: 100vw;
   height: 15vh;
 }
