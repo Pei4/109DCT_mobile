@@ -25,10 +25,6 @@ window.onload = function(){
     })
 }
 
-setTimeout(()=>{
-    document.body.className = 'small';
-},1);
-
 function goTrack(){
     document.body.style.backgroundImage = `url("../material/mbg_universe.png")`;
     hideSth('hand');
@@ -40,7 +36,7 @@ function goTrack(){
 }
 function checkFocus(e){
     focusKey = keyArray.indexOf(e.target.id.split('_')[1]);
-    inputHeight = 70 - 25/2*focusKey;
+    inputHeight = 70 - 30/2*focusKey;
     document.getElementById('trackInput').style.transform = `translate(-50%, ${inputHeight}%)`;
 }
 function goBlur(e){
@@ -72,7 +68,7 @@ function checkKey(e){
                     },1000)
                     setTimeout(()=>{
                         changeSource('fly','../material/subtract.png');
-                    },2200)
+                    },2300)
                 })
                 setTimeout(()=>{
                     meDialogNum --;

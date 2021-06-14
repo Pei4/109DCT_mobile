@@ -9,7 +9,7 @@ div{
     position: absolute;
     padding: 10px 10px 10px 10px;
     left: 50vw;
-    transform: translate(-50%,-70%);
+    transform: translate(-50%,-60%);
     top: 50vh;
     animation: scrollAnim 8s linear 0s 1;
     -webkit-animation: scrollAnim 8s linear 0s 1;
@@ -20,7 +20,7 @@ div{
         transform: translate(-50%,60%);
     }
     100%{
-        transform: translate(-50%,-70%);
+        transform: translate(-50%,-60%);
         animation-play-state: paused;
         -webkit-animation-play-state: paused;
         -moz-animation-play-state: paused;
@@ -34,7 +34,7 @@ div{
         transform: translate(-50%,60%);
     }
     100%{
-        transform: translate(-50%,-70%);
+        transform: translate(-50%,-60%);
         animation-play-state: paused;
         -webkit-animation-play-state: paused;
         -moz-animation-play-state: paused;
@@ -48,7 +48,7 @@ div{
         transform: translate(-50%,60%);
     }
     100%{
-        transform: translate(-50%,-70%);
+        transform: translate(-50%,-60%);
         animation-play-state: paused;
         -webkit-animation-play-state: paused;
         -moz-animation-play-state: paused;
