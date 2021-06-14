@@ -333,19 +333,19 @@ body{
 @keyframes explode2{
     0%{transform: translate(-50%,0)}
     100%{
-        transform: translate(150%,-180%);
+        transform: translate(150%,-170%);
     }
 }
 @-webkit-keyframes explode2{
     0%{transform: translate(-50%,0)}
     100%{
-        transform: translate(150%,-180%);
+        transform: translate(150%,-170%);
     }
 }
 @-moz-keyframes explode2{
     0%{transform: translate(-50%,0)}
     100%{
-        transform: translate(150%,-180%);
+        transform: translate(150%,-170%);
     }
 }
 .explode3{
