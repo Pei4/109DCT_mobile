@@ -62,7 +62,7 @@ body{
     width: 100%;
     left: 50vw;
     top: 40vh;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-0%);
     align-items: center;
     text-align: center;
     letter-spacing: 7px;
@@ -333,19 +333,19 @@ body{
 @keyframes explode2{
     0%{transform: translate(-50%,0)}
     100%{
-        transform: translate(150%,-210%);
+        transform: translate(150%,-180%);
     }
 }
 @-webkit-keyframes explode2{
     0%{transform: translate(-50%,0)}
     100%{
-        transform: translate(150%,-210%);
+        transform: translate(150%,-180%);
     }
 }
 @-moz-keyframes explode2{
     0%{transform: translate(-50%,0)}
     100%{
-        transform: translate(150%,-210%);
+        transform: translate(150%,-180%);
     }
 }
 .explode3{
