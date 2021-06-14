@@ -19,6 +19,7 @@ window.onload = function(){
         "../material/planet_runaway.png",
         "../material/mbg_grass_3.png",
         "../material/waterer_small.png",
+        "..material/waterer_small_shine.png",
         "../material/mbg_grass_6.png",
         "../material/seed.png",
         "../material/sprout.png"
