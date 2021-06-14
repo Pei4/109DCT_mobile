@@ -36,7 +36,7 @@ function goTrack(){
 }
 function checkFocus(e){
     focusKey = keyArray.indexOf(e.target.id.split('_')[1]);
-    inputHeight = 70 - 30/2*focusKey;
+    inputHeight = 70 - 20/2*focusKey;
     document.getElementById('trackInput').style.transform = `translate(-50%, ${inputHeight}%)`;
 }
 function goBlur(e){

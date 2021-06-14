@@ -9,7 +9,7 @@ body {
   overflow: hidden;
 }
 .small{
-  background-size: auto 85vh;
+  background-size: auto 85vh !important;
 }
 #screen{
   display: none;
