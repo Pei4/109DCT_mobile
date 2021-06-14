@@ -18,7 +18,7 @@ window.onload = function(){
         "../material/planet_run.png",
         "../material/planet_runaway.png",
         "../material/mbg_grass_3.png",
-        "../material/waterer_red.png",
+        "../material/waterer_small.png",
         "../material/mbg_grass_6.png",
         "../material/seed.png",
         "../material/sprout.png"
@@ -67,17 +67,21 @@ function getPoint(e){
     point = parseInt(e.toString());
     console.log(point);
     showSth('waterBtn');
+    showSth('waterMask');
     hideSth('loader');
     enableSth('readBtn');
     htmlContent('instruct',`<br>請點擊澆水器<br>幫花澆水`);
     document.getElementById('readBtn').value = '確定';
-    changeAnimSrc('waterBtn','waterer_red');
+    changeAnimSrc('waterBtn','waterer_small');
     scale = point/21*2;
     document.getElementById('waterDrop').style.transform = `translate(-50%,0) scale(${scale}, ${scale})`;
 }
 function goWater(){
     hideSth('readBtn');
     hideSth('instruct');
+    hideSth('waterMask');
+    changeAnimSrc('waterBtn','waterer_small_shine');
+    document.getElementById('waterBtn').style.height = '25vh';
     enableSth('waterBtn');
     showSth('timer');
     showSth('flower');

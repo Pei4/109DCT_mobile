@@ -79,7 +79,7 @@ body{
     width: 22vw;
     transform: translate(-50%,0);
     color: rgba(195, 138, 28, 1);
-    top: 55vh;
+    bottom: 45vh;
 }
 @keyframes flash {
     0%{background-image: url("../material/mbg_grass_1.png")}
@@ -132,6 +132,14 @@ body{
     0% { transform:translate(-50%,50%) rotate(0deg); }
     100% { transform:translate(-50%,50%) rotate(360deg); }
 }
+@-webkit-keyframes spin {
+    0% { transform:translate(-50%,50%) rotate(0deg); }
+    100% { transform:translate(-50%,50%) rotate(360deg); }
+}
+@-moz-keyframes spin {
+    0% { transform:translate(-50%,50%) rotate(0deg); }
+    100% { transform:translate(-50%,50%) rotate(360deg); }
+}
 #waterBtn{
     position: absolute;
     display: inline-block;
@@ -147,7 +155,15 @@ body{
     background-repeat: no-repeat;
     background-position: center;
 }
-
+#waterMask{
+    position: fixed;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    opacity: 0.2;
+    background-color: #000;
+}
 #flower{
     display: inline-block;
     position: absolute;
@@ -287,9 +303,9 @@ body{
     pointer-events: none;
 }
 .explode1{
-    animation: explode1 300ms ease-out 0s 1 forwards;
-    -webkit-animation: explode1 300ms ease-out 0s 1 forwards;
-    -moz-animation: explode1 300ms ease-out 0s 1 forwards;
+    animation: explode1 600ms ease-out 0s 1 forwards;
+    -webkit-animation: explode1 600ms ease-out 0s 1 forwards;
+    -moz-animation: explode1 600ms ease-out 0s 1 forwards;
 }
 @keyframes explode1{
     0%{transform: translate(-50%,0)}
@@ -310,9 +326,9 @@ body{
     }
 }
 .explode2{
-    animation: explode2 300ms ease-out 0s 1 forwards;
-    -webkit-animation: explode2 300ms ease-out 0s 1 forwards;
-    -moz-animation: explode2 300ms ease-out 0s 1 forwards;
+    animation: explode2 600ms ease-out 0s 1 forwards;
+    -webkit-animation: explode2 600ms ease-out 0s 1 forwards;
+    -moz-animation: explode2 600ms ease-out 0s 1 forwards;
 }
 @keyframes explode2{
     0%{transform: translate(-50%,0)}
@@ -333,9 +349,9 @@ body{
     }
 }
 .explode3{
-    animation: explode3 300ms ease-out 0s 1 forwards;
-    -webkit-animation: explode3 300ms ease-out 0s 1 forwards;
-    -moz-animation: explode3 300ms ease-out 0s 1 forwards;
+    animation: explode3 600ms ease-out 0s 1 forwards;
+    -webkit-animation: explode3 600ms ease-out 0s 1 forwards;
+    -moz-animation: explode3 600ms ease-out 0s 1 forwards;
 }
 @keyframes explode3{
     0%{transform: translate(-50%,0)}
@@ -356,9 +372,9 @@ body{
     }
 }
 .explode4{
-    animation: explode4 300ms ease-out 0s 1 forwards;
-    -webkit-animation: explode4 300ms ease-out 0s 1 forwards;
-    -moz-animation: explode4 300ms ease-out 0s 1 forwards;
+    animation: explode4 600ms ease-out 0s 1 forwards;
+    -webkit-animation: explode4 600ms ease-out 0s 1 forwards;
+    -moz-animation: explode4 600ms ease-out 0s 1 forwards;
 }
 @keyframes explode4{
     0%{transform: translate(-50%,0)}
@@ -379,9 +395,9 @@ body{
     }
 }
 .explode5{
-    animation: explode5 300ms ease-out 0s 1 forwards;
-    -webkit-animation: explode5 300ms ease-out 0s 1 forwards;
-    -moz-animation: explode5 300ms ease-out 0s 1 forwards;
+    animation: explode5 600ms ease-out 0s 1 forwards;
+    -webkit-animation: explode5 600ms ease-out 0s 1 forwards;
+    -moz-animation: explode5 600ms ease-out 0s 1 forwards;
 }
 @keyframes explode5{
     0%{transform: translate(-50%,0)}
@@ -402,9 +418,9 @@ body{
     }
 }
 .explode6{
-    animation: explode6 300ms ease-out 0s 1 forwards;
-    -webkit-animation: explode6 300ms ease-out 0s 1 forwards;
-    -moz-animation: explode6 300ms ease-out 0s 1 forwards;
+    animation: explode6 600ms ease-out 0s 1 forwards;
+    -webkit-animation: explode6 600ms ease-out 0s 1 forwards;
+    -moz-animation: explode6 600ms ease-out 0s 1 forwards;
 }
 @keyframes explode6{
     0%{transform: translate(-50%,0)}

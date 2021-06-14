@@ -42,6 +42,7 @@ img {
   transform: translate(0, 40%) !important;
   background: rgba(196, 196, 196, 0.5);
   backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
   font-family: Noto Sans CJK TC;
   font-size: 50px;
   line-height: 80px;
@@ -151,7 +152,7 @@ img {
   position: absolute;
   display: inline-block;
   left: 50vw;
-  bottom: 40vh;
+  top: 60vh;
   transform: translate(-50%, 0) scale(3,3);
 }
 

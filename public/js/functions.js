@@ -201,6 +201,12 @@ function dialogControl(){
     }
     if(checkpoint == 18){
         disableSth('dialog');
+        changeSource('blue_1','../material/flower_blue_small.png');
+        changeSource('blue_2','../material/flower_blue_small.png');
+        changeSource('red_3','../material/flower_red_small.png');
+        changeSource('red_4','../material/flower_red_small.png');
+        changeSource('white_5','../material/flower_white_small.png');
+        changeSource('white_6','../material/flower_white_small.png');
         enableSmall();
     }
     if (checkpoint == 19){
