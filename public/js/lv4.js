@@ -29,7 +29,7 @@ function callPlayer(){
     $.ajax({
         type: "get",
         async: false,
-        url: "https://script.google.com/macros/s/AKfycbzuyms8xH-ehiA4CuL-Ce-aZ7IswtOVBu63BmhgDBVx9W35tzM_IRTzd28EsJLGz-EqOQ/exec?callback=googleDocCallback",
+        url: "https://script.google.com/macros/s/AKfycbzzGBNH-cmfYl_TCnqYRarZN-1M8pLOTzbKxQr8QzzK3UIqacmeJisiydb5mS8-4s9DLA/exec?callback=googleDocCallback",
         data: {
             "id":id+1,
             "time":-1
