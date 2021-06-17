@@ -47,6 +47,9 @@ let meDialogArray =[
 let planetCont = [4,8,13,14,17,18,19,21,24,26,27,28,30,31,35,36,37];
 let meCont = [1,2,5,6,9,11,15,22,29,32,33];
 
+function playAud(){
+    document.getElementById('audio').play();
+}
 function showSth(sth){
     document.getElementById(sth).style.display = 'block';
 }
@@ -116,6 +119,7 @@ function dialogControl(){
     checkpoint ++;
     console.log(checkpoint);
     if(checkpoint == 1){  //飲料關
+        playAud();
         showSth('lv1Btn');
         disableSth('dialog');
         if(localStorage.getItem('id') === null){
@@ -172,6 +176,7 @@ function dialogControl(){
         reUrl('lv2_1');
     }
     if(checkpoint == 14){
+        playAud();
         disableSth('dialog');
         changeAnimSrc('hand','planet_run');
         setTimeout(()=>{
@@ -223,6 +228,9 @@ function dialogControl(){
     if (checkpoint == 23){
         reUrl('lv3_1');
     }
+    if (checkpoint == 26){
+        playAud();
+    }
     if (checkpoint > 25 && checkpoint < 28){
         enableSth('dialog');
         document.body.style.backgroundImage = `url("../material/mbg_story${checkpoint-24}.png")`;
@@ -247,6 +255,8 @@ function dialogControl(){
     if (checkpoint == 34){
         goMask(2000,'shine');
         setTimeout(()=>{
+            localStorage.setItem('audio',document.getElementById('audio').currentTime);
+            console.log(localStorage.getItem('audio'));
             reUrl('lv4');
         },800)
     }

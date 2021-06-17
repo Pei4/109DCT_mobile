@@ -22,7 +22,7 @@ window.onload = function(){
         document.getElementById(`track_${key}`).addEventListener("focus",checkFocus);
         document.getElementById(`track_${key}`).addEventListener("blur",goBlur);
         document.getElementById(`track_${key}`).addEventListener("keyup",checkKey);
-    })
+    });
 }
 
 function goTrack(){
