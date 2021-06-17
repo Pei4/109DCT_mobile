@@ -49,7 +49,7 @@ body {
 }
 #object{
     height: 28vh;
-    bottom: 30vh;
+    bottom: 15vh;
 }
 #hand{
     background-image: url("../material/handplanet_0.png");
