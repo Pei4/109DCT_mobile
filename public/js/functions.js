@@ -248,7 +248,7 @@ function dialogControl(){
         goMask(2000,'shine');
         setTimeout(()=>{
             reUrl('lv4');
-        },1000)
+        },800)
     }
     if(checkpoint == 36){
         preload('../material/planet_water_2.png');
