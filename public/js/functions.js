@@ -89,9 +89,9 @@ function reUrl(url){
     //更新 localStorage
     location.href=`https://pei4.github.io/109DCT_mobile/public/html/${url}.html`;
 }
-function goMask(){
+function goMask(sec, anim){ //2000
     showSth('mask');
-    addClass('mask','shine');
+    addClass('mask',anim);
     setTimeout(()=>{
         meDialogNum++;
         htmlContent('me', meDialogArray[meDialogNum]);
@@ -100,10 +100,10 @@ function goMask(){
         enableSth('dialog');
         showSth('me');
         hideSth('planet');
-    },1000);
+    },sec/2);
     setTimeout(()=> {
         hideSth('mask');
-    },2000);
+    },sec);
 }
 function preload() {
     for (let i = 0; i < preload.arguments.length; i++) {
@@ -213,12 +213,12 @@ function dialogControl(){
         enableSth('dialog');
     }
     if (checkpoint == 20){
-        goMask();
+        goMask(3000,'shine2');
         setTimeout(()=>{
             changeAnimSrc('hand','planet_sadsmile_2');
             addClass('hand','planetShine');
             hideSth('star');
-        },1200);
+        },1500);
     }
     if (checkpoint == 23){
         reUrl('lv3_1');
@@ -245,7 +245,7 @@ function dialogControl(){
         showSth('trackBtn');
     }
     if (checkpoint == 34){
-        goMask();
+        goMask(2000,'shine');
         setTimeout(()=>{
             reUrl('lv4');
         },1000)

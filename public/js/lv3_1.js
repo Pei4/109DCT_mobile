@@ -72,7 +72,7 @@ function checkKey(e){
                 })
                 setTimeout(()=>{
                     meDialogNum --;
-                    goMask();
+                    goMask(2000,'shine');
                 },4400)
             },1000)
         }
