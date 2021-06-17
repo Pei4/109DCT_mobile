@@ -59,7 +59,8 @@ body {
 
 /*星球喝*/
 .drinkAnim{
-    bottom: 25vh !important;
+    bottom: 50vh !important;
+    transform: translate(-50%,50%) !important;
     animation: drinkAnim 1s steps(1, end) 0s infinite;
     -webkit-animation: drinkAnim 1s steps(1, end) 0s infinite;
     -moz-animation: drinkAnim 1s steps(1, end) 0s infinite;
@@ -83,7 +84,7 @@ body {
 /*星球吃*/
 .eatAnim{
     bottom: 50vh !important;
-    transform: translate(0,50%) !important;
+    transform: translate(-50%,50%) !important;
     animation: eatAnim 1s steps(1, end) 0s infinite;
     -webkit-animation: eatAnim 1s steps(1, end) 0s infinite;
     -moz-animation: eatAnim 1s steps(1, end) 0s infinite;
