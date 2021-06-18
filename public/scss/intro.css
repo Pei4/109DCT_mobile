@@ -7,6 +7,7 @@ body{
 }
 #instruct{
     color: #FFF !important;
+    padding-top: 50px;
 }
 a{
     position: absolute;
