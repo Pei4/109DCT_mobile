@@ -48,11 +48,11 @@
             .catch(handleError)
     }
     vid.addEventListener('loadedmetadata', function() {
-        ratio = vid.videoWidth / vid.videoHeight;
+        /*ratio = vid.videoWidth / vid.videoHeight;
         w = vid.videoWidth - 100;
-        h = parseInt(w / ratio, 10);
-        canvas.width = w;
-        canvas.height = h;
+        h = parseInt(w / ratio, 10);*/
+        canvas.width = vid.videoWidth;
+        canvas.height = vid.videoHeight;
     }, false);
 
     function screenShot(){
