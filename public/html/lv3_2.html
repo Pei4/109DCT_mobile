@@ -5,16 +5,17 @@
     <meta name=”viewport” content=”width=device-width,initial-scale=0">
     <title>lv3</title>
     <link rel=stylesheet type="text/css" href="../reset.css">
-    <link rel="stylesheet" type="text/css" href="../scss/lv3.css">
-    <script src="../js/lv3_Archived.js"></script>
+    <link rel="stylesheet" type="text/css" href="../scss/lv3_2.css">
+    <script src="../js/lv3_2.js"></script>
     <script src="../js/html2canvas.js"></script>
 </head>
 <body>
 <div id="takePhoto"> <!--拍照有關的功能-->
     <video id="preview" autoplay loop playsinline></video>
+    <img id="planet0" src="../material/demoPlanet.png">
     <div id="capture" class="before"> <!--要存檔的東西放這邊-->
         <canvas id="shotCanvas"></canvas>
-        <img id="demoPlanet" src="../material/button_drink.png">
+        <img id="demoPlanet" src="">
     </div>
     <button onclick="screenShot()"></button>
     <button onclick="runVid()"></button>
@@ -29,7 +30,7 @@
     let w, h, ratio;
 
     function runVid(){
-        let constraints = {video: {facingMode: { exact: "environment" }}};
+        let constraints = {video: {facingMode: { exact: "user" }}};
         //let video = document.querySelector('#preview');
         //存取相機
         function handleSuccess(stream) {
