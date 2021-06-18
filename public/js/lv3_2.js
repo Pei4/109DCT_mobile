@@ -6,6 +6,7 @@ let resArray;
 
 setTimeout(()=>{
     callPlayer();
+    alert(resArray);
 },1);
 
 function callPlayer(){
