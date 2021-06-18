@@ -56,10 +56,12 @@
 
     function screenShot(){
         document.querySelector('#capture').setAttribute('class','after');
+        hideSth('planet0');
         context.fillRect(0, 0, w, h);
         context.drawImage(vid, 0, 0, w, h);
     };
     function reverse(){
         document.querySelector('#capture').setAttribute('class','before');
+        showSth('planet0');
     }
 </script>
