@@ -18,7 +18,7 @@
     </div>
     <img id="planet0" src="../material/demoPlanet.png">
     <button onclick="screenShot()">拍照</button>
-    <button onclick="reverse()"></button>
+    <button onclick="reverse()">重拍</button>
 </div>
 </body>
 </html>
@@ -32,6 +32,7 @@
     let w, h, ratio;
 
     function runVid(){
+        document.getElementById('demoPlanet').src = `../material/p_${resStr}.png`;
         let constraints = {video: {facingMode: { exact: "user" }}};
         //let video = document.querySelector('#preview');
         //存取相機

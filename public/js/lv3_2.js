@@ -25,8 +25,7 @@ function callPlayer(){
 }
 
 //截圖（拍照）
-function screenshot(){
-    document.getElementById('demoPlanet').src = `../material/p_${resStr}.png`;
+/*function screenshot(){
     //影片比例
     context.fillRect(0, 0, w, h);
     context.drawImage(vid, 0, 0, w, h);
@@ -46,14 +45,13 @@ function screenshot(){
             a.download = 'photo.jpg';
             a.click();
         }
-    });
-    //
+    });*/
+
  /*下載
     let a = document.createElement("a");
     a.href = getshot.src;
     a.download = "workout_log.png";
     a.click();
     document.getElementById('capture').removeChild(img);*/
-}
 
 
