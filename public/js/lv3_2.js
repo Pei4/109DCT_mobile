@@ -7,7 +7,7 @@ let resArray;
 setTimeout(()=>{
     callPlayer();
     alert(resArray);
-},1);
+},10);
 
 function callPlayer(){
     $.ajax({
