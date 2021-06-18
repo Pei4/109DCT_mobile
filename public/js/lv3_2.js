@@ -6,7 +6,6 @@ let resArray;
 
 setTimeout(()=>{
     callPlayer();
-    runVid();
 },1);
 
 function callPlayer(){

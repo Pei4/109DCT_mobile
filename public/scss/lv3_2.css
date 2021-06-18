@@ -12,9 +12,13 @@
     width: 100vw;
     height: 90vh;
 }
+#planet0{
+    position: absolute;
+    transform: translate(200%,50%) scale(.3,.3);
+}
 #demoPlanet{
     position: absolute;
-    transform: translate(200%,50%);
+    transform: translate(200%,50%) scale(.3,.3);
 }
 .before{
     visibility: hidden;

@@ -6,7 +6,7 @@
     <title>lv3</title>
     <link rel=stylesheet type="text/css" href="../reset.css">
     <link rel="stylesheet" type="text/css" href="../scss/lv3_2.css">
-    <script src="../js/lv3_2.js"></script>
+    <script src="../js/lv3_2.js" crossorigin="anonymous"></script>
     <script src="../js/html2canvas.js"></script>
 </head>
 <body>
@@ -17,13 +17,15 @@
         <canvas id="shotCanvas"></canvas>
         <img id="demoPlanet" src="">
     </div>
-    <button onclick="screenShot()"></button>
-    <button onclick="runVid()"></button>
+    <button onclick="screenShot()">拍照</button>
     <button onclick="reverse()"></button>
 </div>
 </body>
 </html>
 <script>
+    setTimeout(()=>{
+        runVid();
+    },1);
     let vid = document.querySelector('#preview');
     let canvas = document.querySelector('#shotCanvas')
     let context = canvas.getContext('2d');
