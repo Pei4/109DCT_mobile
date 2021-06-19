@@ -10,6 +10,12 @@ setTimeout(()=>{
     callPlayer();
 },1);
 
+document.querySelectorAll('#view,#shotCanvas,#prepare').addEventListener('touchmove', function (event) {
+    event.preventDefault();
+}, {
+    passive: false
+});
+
 function callPlayer(){
     $.ajax({
         type: "get",
