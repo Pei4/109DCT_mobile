@@ -68,8 +68,8 @@
         hideSth('view');
         context.fillRect(0, 0, w, h);
         context.drawImage(vid, 0, 0, w, h);
-        let dataURL = canvas.toDataURL('image/png');
-        downloadImg.setAttribute('src', dataURL);
+        /*let dataURL = canvas.toDataURL('image/png');
+        downloadImg.setAttribute('src', dataURL);*/
         html2canvas(document.getElementById('capture')).then(function(canvas) {
             imgURL = canvas.toDataURL("image/png");
             downloadImg.setAttribute('src', imgURL);
