@@ -23,9 +23,6 @@
 </body>
 </html>
 <script>
-    setTimeout(()=>{
-        runVid();
-    },1);
     let vid = document.querySelector('#preview');
     let canvas = document.querySelector('#shotCanvas')
     let context = canvas.getContext('2d');
@@ -34,7 +31,6 @@
     function runVid(){
         document.getElementById('demoPlanet').src = `../material/p_${resStr}.png`;
         let constraints = {video: {facingMode: { exact: "user" }}};
-        //let video = document.querySelector('#preview');
         //存取相機
         function handleSuccess(stream) {
             window.stream = stream;
@@ -51,8 +47,10 @@
         /*ratio = vid.videoWidth / vid.videoHeight;
         w = vid.videoWidth - 100;
         h = parseInt(w / ratio, 10);*/
-        canvas.width = vid.videoWidth;
-        canvas.height = vid.videoHeight;
+        w = vid.videoWidth;
+        h = vid.videoHeight;
+        canvas.width = w;
+        canvas.height = h;
     }, false);
 
     function screenShot(){

@@ -2,12 +2,12 @@ window.googleDocCallback = function () { return true; };
 //初始設定
 let id = parseInt(localStorage.getItem('id'));
 let iosList = ['iPad Simulator', 'iPhone Simulator', 'iPod Simulator', 'iPad', 'iPhone', 'iPod'];
-let resArray;
+let resStr;
 
 setTimeout(()=>{
+    runVid();
     callPlayer();
-    alert(resArray);
-},10);
+},1);
 
 function callPlayer(){
     $.ajax({
@@ -19,7 +19,8 @@ function callPlayer(){
             "time":-1
         },
         success: function(response) {
-            resArray = response.toString().split('');
+            resStr = response.toString();
+            alert(resArray);
         }
     });
 }

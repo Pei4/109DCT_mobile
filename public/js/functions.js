@@ -258,7 +258,7 @@ function dialogControl(){
             localStorage.setItem('audio',document.getElementById('audio').currentTime);
             console.log(localStorage.getItem('audio'));
             reUrl('lv4');
-        },800)
+        },500)
     }
     if(checkpoint == 36){
         preload('../material/planet_water_2.png');
