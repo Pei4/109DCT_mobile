@@ -79,9 +79,7 @@
         html2canvas(document.getElementById('capture')).then(function(canvas) {
             if(iosList.includes(navigator.platform)==true|| (navigator.userAgent.includes("Mac") && "ontouchend" in document)==true){
                 imgURL = imgURL.replace("image/png", "image/octet-stream");
-                //window.open(imgURL);
-                let w = window.open("");
-                w.document.write(downloadImg.outerHTML);
+                window.open(imgURL);
             }
             else {
                 $('#down_qr').attr('download','our_picture');
