@@ -18,11 +18,13 @@
     <video id="view" autoplay loop playsinline></video>
     <div id="capture"> <!--要存檔的東西放這邊-->
         <canvas id="shotCanvas"></canvas>
-        <img id="planet0" ontouchstart="down()" ontouchmove="over(event)" ontouchend="up()">
+        <img id="planet0" ontouchstart="down()" ontouchmove="over(event)" ontouchend="up()" src="">
+        <img id="prepare">
     </div>
-    <img id="prepare">
     <button id="shot" class="opt" onclick="screenShot()">拍照</button>
     <button id="rev" class="opt" onclick="reverse()">重拍</button>
+    <button id="goDownloadBtn" class="opt" onclick="goDownload()">下載</button>
+    <a id="down_qr" href="#" style="display: none"></a>
 </div>
 <div id="screen"><br><br><br><br><br><br>請使用行動裝置，以獲取最佳遊戲體驗 :)</div>
 </body>
@@ -31,7 +33,10 @@
     let vid = document.querySelector('#view');
     let canvas = document.querySelector('#shotCanvas')
     let context = canvas.getContext('2d');
+    let capture = document.getElementById('capture');
+    let downloadImg = document.getElementById('prepare');
     let w, h, ratio;
+    let imgURL;
 
     function runVid(){
         document.getElementById('planet0').src = `../material/p_A12.png`; //${resStr}
@@ -54,15 +59,35 @@
         h = parseInt(w / ratio, 10);
         canvas.width = w;
         canvas.height = h;
+        downloadImg.style.width = `${w}px`;
+        downloadImg.style.height = `${h}px`;
     }, false);
 
     function screenShot(){
         //addClass('shotCanvas','after');
         context.fillRect(0, 0, w, h);
         context.drawImage(vid, 0, 0, w, h);
-        console.log(context);
+        /*let dataURL = canvas.toDataURL('image/png');
+        downloadImg.setAttribute('src', dataURL);*/
         hideSth('view');
-    };
+        html2canvas(document.getElementById('capture')).then(function(canvas) {
+            imgURL = canvas.toDataURL("image/png");
+            downloadImg.setAttribute('src', imgURL);
+        });
+    }
+    function goDownload(){
+        html2canvas(document.getElementById('capture')).then(function(canvas) {
+            if(iosList.includes(navigator.platform)==true|| (navigator.userAgent.includes("Mac") && "ontouchend" in document)==true){
+                imgURL = imgURL.replace("image/png", "image/octet-stream");
+                window.open(imgURL);
+            }
+            else {
+                $('#down_qr').attr('download',imgURL);
+                $('#down_qr').attr('href',imgURL);
+                document.getElementById('down_qr').click();
+            }
+        });
+    }
     function reverse(){
         //addClass('shotCanvas','before');
         showSth('view');

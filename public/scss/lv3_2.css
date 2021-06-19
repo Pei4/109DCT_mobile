@@ -11,6 +11,9 @@ div, video, canvas{
     top: 10vh;
     background: black;
 }
+#prepare{
+
+}
 #view{
     position: absolute;
     display: inline-block;
@@ -35,14 +38,14 @@ div, video, canvas{
     height: auto;
     z-index: 3;
 }
-/*.before{
+.before{
     visibility: hidden;
 }
 .after{
     position: absolute;
     top: 0;
     left: 0;
-}*/
+}
 .opt{
     position: fixed;
     background: #FFE352;
