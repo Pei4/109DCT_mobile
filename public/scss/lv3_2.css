@@ -7,12 +7,12 @@ div, video, canvas{
 }
 #capture{
     position: absolute;
-    display: block;
+    display: table;
     top: 10vh;
     background: black;
 }
 #prepare{
-
+    width: 100vw;
 }
 #view{
     position: absolute;

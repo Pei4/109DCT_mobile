@@ -56,11 +56,10 @@
     vid.addEventListener('loadedmetadata', function() {
         ratio = vid.videoWidth / vid.videoHeight;
         w = vid.videoWidth - 100;
-        h = parseInt(w / ratio, 10);
+        h = parseInt(w/ratio, 10);
         canvas.width = w;
         canvas.height = h;
-        downloadImg.style.width = `${w}px`;
-        downloadImg.style.height = `${h}px`;
+        downloadImg.style.height = `${parseInt(100/ratio, 10)}vw`;
     }, false);
 
     function screenShot(){
