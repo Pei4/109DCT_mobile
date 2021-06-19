@@ -2,7 +2,7 @@ body{
     overflow: hidden;
     height: 100vh;
 }
-div, video, canvas{
+div, video, canvas {
     overflow: hidden;
 }
 #capture{
@@ -47,32 +47,47 @@ div, video, canvas{
 .after{
     visibility: visible;
 }
-.opt{
+#flipBtn{
+    display: inline-block;
+    position: absolute;
+    left: 100vw;
+    transform: translate(-150%,50%);
+}
+#shotBtn{
+    display: inline-block;
     position: fixed;
-    background: #FFE352;
-    border: 4px solid #F3D63B;
-    width: 22vw;
-    color: rgba(195, 138, 28, 1);
+    left: 50vw;
     bottom: 10vh;
     z-index: 3;
 }
-#shot{
-    transform: translate(-130%,0);
+.opt{
+    position: fixed;
+    width: 22vw;
+    bottom: 10vh;
+    z-index: 3;
 }
-#rev{
+#revBtn{
+    transform: translate(-130%,0);
+    background: #FFFFFF;
+    border: 2px solid #C48A1C;
+    color: #C48A1C;
+}
+#goDownloadBtn{
     transform: translate(30%,0);
+    background: #FFE352;
+    border: 4px solid #F3D63B;
+    color: rgba(195, 138, 28, 1);
 }
 a{
-    position: absolute;
+    position: relative;
     display: inline-block;
     width: 100%;
     font-family: Noto Sans CJK TC;
+    top: 5vh;
+    left: 10vw;
     font-style: normal;
     font-weight: 300;
     font-size: 50px;
     color: rgba(224,224,224,.7);
-    top: 5vh;
-    left: 50vw;
-    text-align: center;
-    transform: translate(-50%,-50%);
+    text-align: left;
 }

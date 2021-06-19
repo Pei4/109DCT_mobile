@@ -14,6 +14,7 @@
 </head>
 <body>
 <a>拖曳小星球於喜歡的合照位置</a>
+<img id="flipBtn" src="../material/flip.png">
 <div id="takePhoto"> <!--拍照有關的功能-->
     <video id="view" autoplay loop playsinline></video>
     <div id="capture"> <!--要存檔的東西放這邊-->
@@ -21,8 +22,8 @@
         <img id="planet0" ontouchstart="down()" ontouchmove="over(event)" ontouchend="up()" src="">
         <img id="prepare">
     </div>
-    <button id="shot" class="opt" onclick="screenShot()">拍照</button>
-    <button id="rev" class="opt" onclick="reverse()">重拍</button>
+    <img id="shotBtn" src="../material/shot.png" onclick="screenShot()">
+    <button id="revBtn" onclick="reverse()">重拍</button>
     <button id="goDownloadBtn" class="opt" onclick="goDownload()">下載</button>
     <a id="downA" href="#" style="display: none"></a>
 </div>
@@ -37,6 +38,7 @@
     let downloadImg = document.getElementById('prepare');
     let w, h, ratio;
     let imgURL;
+    let face = "user";
 
     function runVid(){
         document.getElementById('planet0').src = `../material/p_A12.png`; //${resStr}
@@ -49,6 +51,15 @@
         function handleError(error) {
             console.log('getUserMedia error: ', error);
         }
+        document.getElementById('flipBtn').addEventListener('click',(constraints)=>{
+            if (face === 'user'){
+                console.log()
+                constraints = {video:{facingMode: {exact: "environment"}}};
+            }
+            else {
+                constraints = {video:{facingMode: {exact: "user"}}};
+            }
+        })
         navigator.mediaDevices.getUserMedia(constraints)
             .then(handleSuccess)
             .catch(handleError)
