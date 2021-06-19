@@ -2,16 +2,19 @@ body{
     overflow: hidden;
     height: 100vh;
 }
+div, video, canvas{
+    overflow: hidden;
+}
 #capture{
     position: absolute;
     display: block;
-    top: 20vh;
+    top: 25vh;
     background: black;
 }
 #view{
     position: absolute;
     display: inline-block;
-    top: 20vh;
+    top: 25vh;
     width: 100vw;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
@@ -28,29 +31,43 @@ body{
 #planet0{
     position: fixed;
     display: inline-block;
-    left: 0;
-    top: 0;
-    transform:scale(.3,.3);
+    width: 30%;
+    height: auto;
     z-index: 3;
 }
-.before{
+/*.before{
     visibility: hidden;
 }
 .after{
     position: absolute;
     top: 0;
     left: 0;
-}
+}*/
 .opt{
     background: #FFE352;
     border: 4px solid #F3D63B;
     width: 22vw;
     color: rgba(195, 138, 28, 1);
-    bottom: 20vh;
+    bottom: 10vh;
+    z-index: 3;
 }
 #shot{
-    transform: translate(-150%,0);
+    transform: translate(-130%,0);
 }
 #rev{
-    transform: translate(50%,0);
+    transform: translate(30%,0);
+}
+a{
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    font-family: Noto Sans CJK TC;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 50px;
+    color: rgba(224,224,224,.7);
+    top: 10vh;
+    left: 50vw;
+    text-align: center;
+    transform: translate(-50%,-50%);
 }

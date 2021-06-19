@@ -3,6 +3,7 @@ window.googleDocCallback = function () { return true; };
 let id = parseInt(localStorage.getItem('id'));
 let iosList = ['iPad Simulator', 'iPhone Simulator', 'iPod Simulator', 'iPad', 'iPhone', 'iPod'];
 let resStr;
+let isDown = false;
 
 setTimeout(()=>{
     runVid();
@@ -20,10 +21,31 @@ function callPlayer(){
         },
         success: function(response) {
             resStr = response.toString();
-            alert(resStr);
         }
     });
 }
+
+function down() {
+    isDown = true;
+    console.log('down');
+}
+
+function over(event) {
+    if (!isDown) return;
+    document.getElementById('planet0').style.transform = `translate(${event.touches[0].clientX/window.innerWidth*100-1}vw,${event.touches[0].clientY/window.innerHeight*100-25}vh)`;
+    //console.log(`${event.touches[0].clientX/window.innerWidth},${event.touches[0].clientY/window.innerHeight}`);
+}
+
+function up(){
+    isDown = false;
+    console.log('up');
+}
+/*const move = document.querySelector('#planet0');
+move.addEventListener('mousedown', down);
+move.addEventListener('mousemove', over);
+move.addEventListener('mouseup', up);*/
+
+
 
 //截圖（拍照）
 /*function screenshot(){
