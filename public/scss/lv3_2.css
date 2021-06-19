@@ -22,6 +22,7 @@ div, video, canvas{
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
     z-index: 1;
+    touch-action: none;
 }
 #shotCanvas{
     position: absolute;
@@ -30,6 +31,7 @@ div, video, canvas{
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
     z-index: 1;
+    touch-action: none;
 }
 #planet0{
     position: fixed;
