@@ -42,9 +42,7 @@ div, video, canvas{
     visibility: hidden;
 }
 .after{
-    position: absolute;
-    top: 0;
-    left: 0;
+    visibility: visible;
 }
 .opt{
     position: fixed;
