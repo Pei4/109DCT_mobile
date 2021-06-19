@@ -21,8 +21,8 @@
         <img id="planet0" ontouchstart="down()" ontouchmove="over(event)" ontouchend="up()">
     </div>
     <img id="prepare">
-    <button id="shot" class="opt" ontouchstart="screenShot()">拍照</button>
-    <button id="rev" class="opt" ontouchstart="reverse()">重拍</button>
+    <button id="shot" class="opt" onclick="screenShot()">拍照</button>
+    <button id="rev" class="opt" onclick="reverse()">重拍</button>
 </div>
 <div id="screen"><br><br><br><br><br><br>請使用行動裝置，以獲取最佳遊戲體驗 :)</div>
 </body>
@@ -58,13 +58,13 @@
 
     function screenShot(){
         //addClass('shotCanvas','after');
-        //hideSth('view');
-        console.log(vid);
         context.fillRect(0, 0, w, h);
         context.drawImage(vid, 0, 0, w, h);
+        console.log(context);
+        hideSth('view');
     };
     function reverse(){
         //addClass('shotCanvas','before');
-        //showSth('view');
+        showSth('view');
     }
 </script>
