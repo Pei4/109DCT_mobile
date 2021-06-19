@@ -81,15 +81,15 @@
                 downloadImg.crossOrigin = "Anonymous";
                 downloadImg.src = imgURL;
                 document.body.appendChild(downloadImg);
-                $('downA').href = downloadImg.src;
-                $('downA').download = "our_picture.png";
-                $('downA').click();
+                $('#downA').href = downloadImg.src;
+                $('#downA').download = "our_picture.png";
+                $('#downA').click();
                 document.body.removeChild(downloadImg);
             }
             else {
                 $('#downA').attr('download','our_picture');
                 $('#downA').attr('href',imgURL);
-                document.getElementById('down_qr').click();
+                document.getElementById('downA').click();
             }
         });
     }
