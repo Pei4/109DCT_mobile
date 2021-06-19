@@ -1,24 +1,37 @@
+body{
+    overflow: hidden;
+    height: 100vh;
+}
 #capture{
+    position: absolute;
     display: block;
+    top: 20vh;
     background: black;
 }
-#preview{
+#view{
+    position: absolute;
+    display: inline-block;
+    top: 20vh;
     width: 100vw;
-    height: 90vh;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    z-index: 1;
 }
 #shotCanvas{
     position: absolute;
     background: aquamarine;
     width: 100vw;
-    height: 90vh;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    z-index: 1;
 }
 #planet0{
-    position: absolute;
-    transform: translate(200%,50%) scale(.3,.3);
-}
-#demoPlanet{
-    position: absolute;
-    transform: translate(200%,50%) scale(.3,.3);
+    position: fixed;
+    display: inline-block;
+    left: 0;
+    top: 0;
+    transform:scale(.3,.3);
+    z-index: 3;
 }
 .before{
     visibility: hidden;
@@ -27,4 +40,17 @@
     position: absolute;
     top: 0;
     left: 0;
+}
+.opt{
+    background: #FFE352;
+    border: 4px solid #F3D63B;
+    width: 22vw;
+    color: rgba(195, 138, 28, 1);
+    bottom: 20vh;
+}
+#shot{
+    transform: translate(-150%,0);
+}
+#rev{
+    transform: translate(50%,0);
 }

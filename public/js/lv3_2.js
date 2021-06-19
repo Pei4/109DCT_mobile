@@ -20,7 +20,7 @@ function callPlayer(){
         },
         success: function(response) {
             resStr = response.toString();
-            alert(resArray);
+            alert(resStr);
         }
     });
 }

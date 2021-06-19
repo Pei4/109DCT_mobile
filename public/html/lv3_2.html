@@ -6,30 +6,34 @@
     <title>lv3</title>
     <link rel=stylesheet type="text/css" href="../reset.css">
     <link rel="stylesheet" type="text/css" href="../scss/lv3_2.css">
+    <link rel="stylesheet" type="text/css" href="../scss/mobile.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../js/lv3_2.js" crossorigin="anonymous"></script>
+    <script src="../js/functions.js"></script>
     <script src="../js/html2canvas.js"></script>
 </head>
 <body>
 <div id="takePhoto"> <!--拍照有關的功能-->
-    <video id="preview" autoplay loop playsinline></video>
+    <img id="planet0">
+    <video id="view" autoplay loop playsinline></video>
     <div id="capture" class="before"> <!--要存檔的東西放這邊-->
         <canvas id="shotCanvas"></canvas>
-        <img id="demoPlanet" src="">
+        <img id="blank" src="">
     </div>
-    <img id="planet0" src="../material/demoPlanet.png">
-    <button onclick="screenShot()">拍照</button>
-    <button onclick="reverse()">重拍</button>
+    <button id="shot" class="opt" onclick="screenShot()">拍照</button>
+    <button id="rev" class="opt" onclick="reverse()">重拍</button>
 </div>
+<div id="screen"><br><br><br><br><br><br>請使用行動裝置，以獲取最佳遊戲體驗 :)</div>
 </body>
 </html>
 <script>
-    let vid = document.querySelector('#preview');
+    let vid = document.querySelector('#view');
     let canvas = document.querySelector('#shotCanvas')
     let context = canvas.getContext('2d');
     let w, h, ratio;
 
     function runVid(){
-        document.getElementById('demoPlanet').src = `../material/p_A12.png`; //${resStr}
+        document.getElementById('planet0').src = `../material/p_A12.png`; //${resStr}
         let constraints = {video: {facingMode: { exact: "user" }}};
         //存取相機
         function handleSuccess(stream) {
@@ -44,23 +48,19 @@
             .catch(handleError)
     }
     vid.addEventListener('loadedmetadata', function() {
-        /*ratio = vid.videoWidth / vid.videoHeight;
+        ratio = vid.videoWidth / vid.videoHeight;
         w = vid.videoWidth - 100;
-        h = parseInt(w / ratio, 10);*/
-        w = vid.videoWidth;
-        h = vid.videoHeight;
+        h = parseInt(w / ratio, 10);
         canvas.width = w;
         canvas.height = h;
     }, false);
 
     function screenShot(){
         document.querySelector('#capture').setAttribute('class','after');
-        hideSth('planet0');
         context.fillRect(0, 0, w, h);
         context.drawImage(vid, 0, 0, w, h);
     };
     function reverse(){
         document.querySelector('#capture').setAttribute('class','before');
-        showSth('planet0');
     }
 </script>
