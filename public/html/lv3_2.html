@@ -24,7 +24,7 @@
     <button id="shot" class="opt" onclick="screenShot()">拍照</button>
     <button id="rev" class="opt" onclick="reverse()">重拍</button>
     <button id="goDownloadBtn" class="opt" onclick="goDownload()">下載</button>
-    <a id="down_qr" href="#" style="display: none"></a>
+    <a id="downA" href="#" style="display: none"></a>
 </div>
 <div id="screen"><br><br><br><br><br><br>請使用行動裝置，以獲取最佳遊戲體驗 :)</div>
 </body>
@@ -79,11 +79,18 @@
         html2canvas(document.getElementById('capture')).then(function(canvas) {
             if(iosList.includes(navigator.platform)==true|| (navigator.userAgent.includes("Mac") && "ontouchend" in document)==true){
                 imgURL = imgURL.replace("image/png", "image/octet-stream");
-                window.open(imgURL);
+                //window.open(imgURL);
+                downloadImg.crossOrigin = "Anonymous";
+                downloadImg.src = imgURL;
+                document.body.appendChild(downloadImg);
+                $('downA').href = downloadImg.src;
+                $('downA').download = "our_picture.png";
+                $('downA').click();
+                document.body.removeChild(downloadImg);
             }
             else {
-                $('#down_qr').attr('download','our_picture');
-                $('#down_qr').attr('href',imgURL);
+                $('#downA').attr('download','our_picture');
+                $('#downA').attr('href',imgURL);
                 document.getElementById('down_qr').click();
             }
         });
