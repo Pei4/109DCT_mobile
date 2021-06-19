@@ -32,7 +32,9 @@ function down() {
 
 function over(event) {
     if (!isDown) return;
-    document.getElementById('planet0').style.transform = `translate(${event.touches[0].clientX/window.innerWidth*100-1}vw,${event.touches[0].clientY/window.innerHeight*100-25}vh)`;
+    let transX = event.touches[0].clientX/window.innerWidth*100-5;
+    let transY = event.touches[0].clientY/window.innerHeight*100-25;
+    document.getElementById('planet0').style.transform = `translate(${transX}vw,${transY}vh)`;
     //console.log(`${event.touches[0].clientX/window.innerWidth},${event.touches[0].clientY/window.innerHeight}`);
 }
 
