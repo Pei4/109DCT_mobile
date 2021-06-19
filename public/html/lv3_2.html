@@ -23,8 +23,8 @@
         <img id="prepare">
     </div>
     <img id="shotBtn" src="../material/shot.png" onclick="screenShot()">
-    <button id="revBtn" onclick="reverse()">重拍</button>
-    <button id="goDownloadBtn" class="opt" onclick="goDownload()">下載</button>
+    <button id="revBtn" class="opt" onclick="reverse()" style="display: none">重拍</button>
+    <button id="goDownloadBtn" class="opt" onclick="goDownload()" style="display: none">下載</button>
     <a id="downA" href="#" style="display: none"></a>
 </div>
 <div id="screen"><br><br><br><br><br><br>請使用行動裝置，以獲取最佳遊戲體驗 :)</div>
@@ -38,7 +38,7 @@
     let downloadImg = document.getElementById('prepare');
     let w, h, ratio;
     let imgURL;
-    let face = "user";
+    let face = 1;
 
     function runVid(){
         document.getElementById('planet0').src = `../material/p_A12.png`; //${resStr}
@@ -52,11 +52,12 @@
             console.log('getUserMedia error: ', error);
         }
         document.getElementById('flipBtn').addEventListener('click',(constraints)=>{
-            if (face === 'user'){
+            if (face == 1){
                 console.log()
                 constraints = {video:{facingMode: {exact: "environment"}}};
             }
             else {
+                face = 1;
                 constraints = {video:{facingMode: {exact: "user"}}};
             }
         })
@@ -77,6 +78,9 @@
         addClass('shotCanvas','after');
         addClass('prepare','after');
         hideSth('view');
+        hideSth('shotBtn');
+        showSth('goDownloadBtn');
+        showSth('revBtn');
         context.fillRect(0, 0, w, h);
         context.drawImage(vid, 0, 0, w, h);
         html2canvas(document.getElementById('capture')).then(function(canvas) {
@@ -87,15 +91,11 @@
     function goDownload(){
         html2canvas(document.getElementById('capture')).then(function(canvas) {
             if(iosList.includes(navigator.platform)==true|| (navigator.userAgent.includes("Mac") && "ontouchend" in document)==true){
-                imgURL = imgURL.replace("image/png", "image/octet-stream");
+                window.open().document.write('<img src="'+imgURL+'"/>');
+                //imgURL = imgURL.replace("image/png", "image/octet-stream");
                 //window.open(imgURL);
-                downloadImg.crossOrigin = "Anonymous";
-                downloadImg.src = imgURL;
-                document.body.appendChild(downloadImg);
-                $('#downA').href = downloadImg.src;
-                $('#downA').download = "our_picture.png";
-                $('#downA').click();
-                document.body.removeChild(downloadImg);
+                //downloadImg.crossOrigin = "Anonymous";
+                //downloadImg.src = imgURL;
             }
             else {
                 $('#downA').attr('download','our_picture');
@@ -108,5 +108,8 @@
         addClass('shotCanvas','before');
         addClass('prepare','before');
         showSth('view');
+        showSth('shotBtn');
+        hideSth('revBtn');
+        hideSth('goDownloadBtn');
     }
 </script>

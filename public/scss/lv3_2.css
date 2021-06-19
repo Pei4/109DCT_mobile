@@ -51,19 +51,20 @@ div, video, canvas {
     display: inline-block;
     position: absolute;
     left: 100vw;
-    transform: translate(-150%,50%);
+    transform: translate(-150%,0);
 }
 #shotBtn{
     display: inline-block;
     position: fixed;
     left: 50vw;
-    bottom: 10vh;
+    transform: translate(-50%,0);
+    bottom: 5vh;
     z-index: 3;
 }
 .opt{
     position: fixed;
     width: 22vw;
-    bottom: 10vh;
+    bottom: 5vh;
     z-index: 3;
 }
 #revBtn{
@@ -81,10 +82,10 @@ div, video, canvas {
 a{
     position: relative;
     display: inline-block;
-    width: 100%;
+    max-width: 100%;
     font-family: Noto Sans CJK TC;
-    top: 5vh;
-    left: 10vw;
+    top: 3vh;
+    padding-left: 10vw;
     font-style: normal;
     font-weight: 300;
     font-size: 50px;
