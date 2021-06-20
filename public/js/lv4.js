@@ -77,7 +77,7 @@ function openLetter(){
             showSth('downloadBtn');
             setTimeout(()=>{
                 addClass('photo','jump');
-                removeClass('show');
+                removeClass('talk');
             },1000);
         },500)
     },1000);
@@ -131,4 +131,13 @@ function goEgg(){
     open = 1;
     showSth('egg');
     document.getElementById('egg').setAttribute('src','lv3_2.html');
+    window.addEventListener('message', function(e) {
+        console.log(e.data);
+        if(e.data == 'open'){
+            showSth('back');
+        }
+        else if(e.data == 'close'){
+            hideSth('back');
+        }
+    }, false);
 }

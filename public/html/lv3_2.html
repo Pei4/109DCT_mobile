@@ -28,9 +28,9 @@
     <a id="downA" href="#" style="display: none"></a>
 </div>
 <div id="photoMask" style="display: none">
-    <img id="back" src="../material/back.png" onclick="back()">
     <img id="photo2">
     <a>iOS 請長按圖片後儲存</a>
+    <img id="back" src="../material/back.png" onclick="back()">
 </div>
 <div id="screen"><br><br><br><br><br><br>請使用行動裝置，以獲取最佳遊戲體驗 :)</div>
 </body>
@@ -123,15 +123,16 @@
             imgURL = canvas.toDataURL("image/png");
             downloadImg.setAttribute('src', imgURL);
             document.getElementById('photo2').src = imgURL;
+            a.setAttribute('href',imgURL);
+            a.setAttribute('download','our_picture');
         });
     }
     function goDownload(){
+        window.parent.postMessage('close','*');
         if(iosList.includes(navigator.platform)==true|| (navigator.userAgent.includes("Mac") && "ontouchend" in document)==true){
             showSth('photoMask');
         }
         else {
-            a.setAttribute('href',imgURL);
-            a.setAttribute('download','our_picture');
             a.click();
         }
     }

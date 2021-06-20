@@ -24,6 +24,7 @@ function up(){
 }
 function back(){
     hideSth('photoMask');
+    window.parent.postMessage('open','*');
 }
 /*const move = document.querySelector('#planet0');
 move.addEventListener('mousedown', down);
