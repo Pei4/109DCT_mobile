@@ -8,7 +8,7 @@ div, video, canvas {
 #capture{
     position: absolute;
     display: table;
-    top: 10vh;
+    top: 8vh;
     background: black;
 }
 #prepare{
