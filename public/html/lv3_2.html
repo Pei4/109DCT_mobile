@@ -70,16 +70,18 @@
             window.stream = stream;
             vid.srcObject = stream;
             document.getElementById('flipBtn').addEventListener('click',(constraints)=>{
+                const track = stream.getTracks()[0];
+                const cons = track.getConstraints();
                 if (face == 1){
                     face --;
-                    stream.facingMode = 'environment';
-                    console.log(stream);
+                    cons.facingMode = 'environment';
                 }
                 else {
                     face ++;
-                    stream.facingMode = 'user';
-                    console.log(stream);
+                    cons.facingMode = 'user';
                 }
+                track.applyConstraints(cons);
+                console.log(cons);
             })
         }
         function handleError(error) {
