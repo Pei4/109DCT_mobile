@@ -102,14 +102,8 @@ a{
     z-index: 4;
 }
 #photoMask a{
-    position: absolute;
-    padding: 0;
-    width: 100%;
-    top: auto;
-    bottom: 20vh;
-    left: 50vw;
+    padding-left: 15vw;
     text-align: center;
-    transform: translate(-50%,50%);
 }
 #back{
     position: absolute;
