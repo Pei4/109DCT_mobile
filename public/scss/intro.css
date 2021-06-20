@@ -20,12 +20,11 @@ a{
 .opt{
     bottom: 50vh;
     left: 50vw;
-    width: 22vw;
     transform-origin: center;
-    transform: translate(-50%,250%);
+    transform: translate(-50%,300%);
     background: #FFE352;
     border: 4px solid #F3D63B;
-    width: 40vw;
+    width: 32vw;
     color: rgba(195, 138, 28, 1);
 }
 #introVid{
