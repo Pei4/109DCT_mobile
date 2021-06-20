@@ -124,4 +124,5 @@ a{
     left: 50vw;
     transform: translate(-50%,0);
     width: 100vw;
+    max-height: 100%;
 }

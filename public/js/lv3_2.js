@@ -4,7 +4,6 @@ let id = parseInt(localStorage.getItem('id'));
 let iosList = ['iPad Simulator', 'iPhone Simulator', 'iPod Simulator', 'iPad', 'iPhone', 'iPod'];
 let resStr;
 let isDown = false;
-let constraints;
 
 setTimeout(()=>{
     runVid();
