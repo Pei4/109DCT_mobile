@@ -53,7 +53,7 @@ function decideArray(response){
 
 function openLetter(){
     changeSource('letter','../material/letter_after.png');
-    document.getElementById('letter').style.transform = 'translate(0,-10%)';
+    document.getElementById('letter').style.transform = 'translate(0,-5%)';
     hideSth('notice');
     setTimeout(()=>{
         callPlayer();
@@ -84,7 +84,7 @@ function openLetter(){
 function browse(){
     showSth('photoMask');
     removeClass('photo');
-    hideSth('talk');
+    document.getElementById('talk').style.visibility = 'hidden';
     if(done == 1){
         hideSth('universeBtn');
     }
