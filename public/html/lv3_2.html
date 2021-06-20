@@ -46,6 +46,7 @@
     let w, h, ratio;
     let imgURL;
     let face = 1;
+    let cam = 'user';
 
     function callPlayer(){
         $.ajax({
@@ -64,25 +65,11 @@
 
     function runVid(){
         document.getElementById('planet0').src = `../material/p_A12.png`; //${resStr}
-        constraints = {video: {facingMode: {exact:'user'}}};
+        constraints = {video: {facingMode: {exact:cam}}};
         //存取相機
         function handleSuccess(stream) {
             window.stream = stream;
             vid.srcObject = stream;
-            document.getElementById('flipBtn').addEventListener('click',(constraints)=>{
-                const track = stream.getTracks()[0];
-                const cons = track.getConstraints();
-                if (face == 1){
-                    face --;
-                    cons.facingMode = {exact:'environment'};
-                }
-                else {
-                    face ++;
-                    cons.facingMode = {exact:'user'};
-                }
-                track.applyConstraints(cons);
-                alert(cons);
-            })
         }
         function handleError(error) {
             console.log('getUserMedia error: ', error);
@@ -92,6 +79,21 @@
             .catch(handleError)
     };
 
+    document.getElementById('flipBtn').addEventListener('click',(constraints)=>{
+        if(window.stream){
+            window.stream.getTracks().forEach(track => {
+                track.stop()});
+        };
+        if (face == 1){
+            face --;
+            cam = 'environment';
+        }
+        else {
+            face ++;
+            cam = 'user';
+        }
+        runVid();
+    })
 
     setTimeout(()=>{
         runVid();
