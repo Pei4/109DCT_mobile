@@ -64,7 +64,7 @@
 
     function runVid(){
         document.getElementById('planet0').src = `../material/p_A12.png`; //${resStr}
-        constraints = {video: {facingMode: 'user'}};
+        constraints = {video: {facingMode: 'environment'}};
         //存取相機
         function handleSuccess(stream) {
             window.stream = stream;
