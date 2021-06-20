@@ -13,6 +13,7 @@ div, video, canvas {
 }
 #prepare{
     width: 100vw;
+    max-width: 100%;
     touch-action: none;
 }
 #view{
