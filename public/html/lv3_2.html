@@ -60,26 +60,14 @@
         }
         document.getElementById('flipBtn').addEventListener('click',(constraints)=>{
             if (face == 1){
-                console.log('toEnv');
                 face --;
-                window.stream.stop();
-                vid.srcObject = null;
-                constraints = {video:{facingMode: 'environment'}};
-                setTimeout(()=>{
-                    window.stream = stream;
-                    vid.srcObject = stream;
-                },100);
+                constraints.facingMode = 'environment';
+                console.log(constraints);
             }
             else {
-                console.log('toUser');
                 face ++;
-                window.stream.stop();
-                vid.srcObject = null;
-                constraints = {video:{facingMode: 'user'}};
-                setTimeout(()=>{
-                    window.stream = stream;
-                    vid.srcObject = stream;
-                },100);
+                constraints.facingMode = 'user';
+                console.log(constraints);
             }
         })
         navigator.mediaDevices.getUserMedia(constraints)
