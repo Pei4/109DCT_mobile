@@ -20,7 +20,7 @@
     <div id="capture"> <!--要存檔的東西放這邊-->
         <canvas id="shotCanvas" class="before"></canvas>
         <img id="planet0" ontouchstart="down()" ontouchmove="over(event)" ontouchend="up()" src="">
-        <img id="prepare">
+        <!--<img id="prepare">-->
     </div>
     <img id="shotBtn" src="../material/shot.png" onclick="screenShot()">
     <button id="revBtn" class="opt" onclick="reverse()" style="display: none">重拍</button>
@@ -40,7 +40,7 @@
     let canvas = document.querySelector('#shotCanvas')
     let context = canvas.getContext('2d');
     let capture = document.getElementById('capture');
-    let downloadImg = document.getElementById('prepare');
+    //let downloadImg = document.getElementById('prepare');
     let p2 = document.getElementById('photo2');
     let a = document.getElementById('downA');
     let w, h, ratio;
@@ -86,7 +86,7 @@
 
     function screenShot(){
         addClass('shotCanvas','after');
-        addClass('prepare','after');
+        //addClass('prepare','after');
         hideSth('view');
         hideSth('shotBtn');
         showSth('goDownloadBtn');
@@ -111,7 +111,7 @@
     }
     function reverse(){
         addClass('shotCanvas','before');
-        addClass('prepare','before');
+        //addClass('prepare','before');
         showSth('view');
         showSth('shotBtn');
         hideSth('revBtn');

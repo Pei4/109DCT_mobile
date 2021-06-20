@@ -114,8 +114,8 @@ a{
 #back{
     position: absolute;
     top: 50vh;
-    left: 5vh;
-    transform: translate(0,-700%);
+    left: 3vh;
+    transform: translate(0,-750%);
 }
 #photo2{
     position: fixed;
