@@ -62,11 +62,6 @@
         });
     }
 
-    setTimeout(()=>{
-        runVid();
-        callPlayer();
-    },1);
-
     function runVid(){
         document.getElementById('planet0').src = `../material/p_A12.png`; //${resStr}
         constraints = {video: {facingMode: 'user'}};
@@ -93,7 +88,14 @@
         navigator.mediaDevices.getUserMedia(constraints)
             .then(handleSuccess)
             .catch(handleError)
-    }
+    };
+
+
+    setTimeout(()=>{
+        runVid();
+        callPlayer();
+    },1);
+
     vid.addEventListener('loadedmetadata', function() {
         ratio = vid.videoWidth / vid.videoHeight;
         w = vid.videoWidth - 100;
