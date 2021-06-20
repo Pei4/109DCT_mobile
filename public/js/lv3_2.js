@@ -5,26 +5,6 @@ let iosList = ['iPad Simulator', 'iPhone Simulator', 'iPod Simulator', 'iPad', '
 let resStr;
 let isDown = false;
 
-setTimeout(()=>{
-    runVid();
-    callPlayer();
-},1);
-
-function callPlayer(){
-    $.ajax({
-        type: "get",
-        async: false,
-        url: "https://script.google.com/macros/s/AKfycbzzGBNH-cmfYl_TCnqYRarZN-1M8pLOTzbKxQr8QzzK3UIqacmeJisiydb5mS8-4s9DLA/exec?callback=googleDocCallback",
-        data: {
-            "id":id+1,
-            "time":-1
-        },
-        success: function(response) {
-            resStr = response.toString();
-        }
-    });
-}
-
 function down() {
     isDown = true;
     console.log('down');
