@@ -91,7 +91,7 @@ a{
     font-weight: 300;
     font-size: 50px;
     color: rgba(224,224,224,.7);
-    text-align: left;
+    text-align: center;
 }
 #photoMask{
     position: absolute;

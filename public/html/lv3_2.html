@@ -39,6 +39,7 @@
     let vid = document.querySelector('#view');
     let canvas = document.querySelector('#shotCanvas')
     let context = canvas.getContext('2d');
+    let cam = 'user';
     let capture = document.getElementById('capture');
     let downloadImg = document.getElementById('prepare');
     let p2 = document.getElementById('photo2');
@@ -46,7 +47,6 @@
     let w, h, ratio;
     let imgURL;
     let face = 1;
-    let cam = 'user';
 
     function callPlayer(){
         $.ajax({

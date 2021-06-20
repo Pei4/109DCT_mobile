@@ -232,11 +232,21 @@ body{
     text-align: center;
     transform: translate(-50%,50%);
 }
+#eggBtn{
+    bottom: 20vh;
+    left: 50vw;
+    transform: translate(-50%,50%);
+    max-width: 100%;
+    color: #C48A1C;
+    background: #FFE352;
+    border: 4px solid #F3D63B;
+}
 #back{
     position: absolute;
     top: 50vh;
     left: 5vh;
     transform: translate(0,-700%);
+    z-index: 3;
 }
 #photo2{
     position: absolute;
@@ -300,4 +310,10 @@ body{
     color: #C48A1C;
     background: #FFE352;
     border: 4px solid #F3D63B;
+}
+#egg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
 }

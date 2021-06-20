@@ -10,6 +10,7 @@ let letterList = [
 let resStr;
 let resArray;
 let done = 0;
+let open = 0;
 
 window.onload = function (){
     preload('../material/letter_after.png')
@@ -83,6 +84,8 @@ function openLetter(){
 }
 function browse(){
     showSth('photoMask');
+    showSth('eggNotice');
+    showSth('eggBtn');
     removeClass('photo');
     document.getElementById('talk').style.visibility = 'hidden';
     if(done == 1){
@@ -90,11 +93,19 @@ function browse(){
     }
 }
 function back(){
-    hideSth('photoMask');
-    hideSth('iosNotice');
-    hideSth('universeBtn');
-    if(done == 1){
-        showSth('universeBtn');
+    if (open == 0){
+        hideSth('photoMask');
+        hideSth('iosNotice');
+        hideSth('universeBtn');
+        hideSth('eggNotice');
+        hideSth('eggBtn');
+        if(done == 1){
+            showSth('universeBtn');
+        }
+    }
+    else if(open == 1){
+        hideSth('egg');
+        open = 0;
     }
 }
 function goiOS(){
@@ -115,4 +126,9 @@ function goDownload(){
             hideSth('doneDownload');
         },1000)
     },1000)
+}
+function goEgg(){
+    open = 1;
+    showSth('egg');
+    document.getElementById('egg').setAttribute('src','lv3_2.html');
 }
