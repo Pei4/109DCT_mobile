@@ -41,6 +41,7 @@
     let context = canvas.getContext('2d');
     let capture = document.getElementById('capture');
     let downloadImg = document.getElementById('prepare');
+    let p2 = document.getElementById('photo2');
     let a = document.getElementById('downA');
     let w, h, ratio;
     let imgURL;
@@ -79,7 +80,8 @@
         h = parseInt(w/ratio, 10);
         canvas.width = w;
         canvas.height = h;
-        downloadImg.style.height = `${parseInt(100/ratio, 10)}vw`;
+        downloadImg.style.height = `${100/ratio}vw`;
+        p2.style.height = `${100/ratio}vw`;
     }, false);
 
     function screenShot(){

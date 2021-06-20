@@ -118,12 +118,10 @@ a{
     transform: translate(0,-700%);
 }
 #photo2{
-    position: absolute;
+    position: fixed;
     display: inline-block;
-    top: 50vh;
+    top: 8vh;
     left: 50vw;
-    transform: translate(-50%,-50%);
-    width: 100%;
-    max-height: 100%;
-    max-width: 100%;
+    transform: translate(-50%,0);
+    width: 100vw;
 }
