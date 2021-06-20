@@ -50,6 +50,10 @@ let meCont = [1,2,5,6,9,11,15,22,29,32,33];
 function playAud(){
     document.getElementById('audio').play();
 }
+function saveAud(){
+    localStorage.setItem('audio',document.getElementById('audio').currentTime);
+    console.log(localStorage.getItem('audio'));
+}
 function showSth(sth){
     document.getElementById(sth).style.display = 'block';
 }
@@ -253,12 +257,11 @@ function dialogControl(){
         showSth('trackBtn');
     }
     if (checkpoint == 34){
-        goMask(2000,'shine');
+        goMask(1000,'shine0');
         setTimeout(()=>{
-            localStorage.setItem('audio',document.getElementById('audio').currentTime);
-            console.log(localStorage.getItem('audio'));
+            saveAud();
             reUrl('lv4');
-        },500)
+        },800)
     }
     if(checkpoint == 36){
         preload('../material/planet_water_2.png');

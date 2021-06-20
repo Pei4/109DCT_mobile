@@ -94,20 +94,18 @@
         html2canvas(document.getElementById('capture')).then(function(canvas) {
             imgURL = canvas.toDataURL("image/png");
             downloadImg.setAttribute('src', imgURL);
+            document.getElementById('photo2').src = imgURL;
         });
     }
     function goDownload(){
-        html2canvas(document.getElementById('capture')).then(function(canvas) {
-            if(iosList.includes(navigator.platform)==true|| (navigator.userAgent.includes("Mac") && "ontouchend" in document)==true){
-                showSth('photoMask');
-                document.getElementById('photo2').src = imgURL;
-            }
-            else {
-                a.setAttribute('href',imgURL);
-                a.setAttribute('download','our_picture');
-                a.click();
-            }
-        });
+        if(iosList.includes(navigator.platform)==true|| (navigator.userAgent.includes("Mac") && "ontouchend" in document)==true){
+            showSth('photoMask');
+        }
+        else {
+            a.setAttribute('href',imgURL);
+            a.setAttribute('download','our_picture');
+            a.click();
+        }
     }
     function reverse(){
         addClass('shotCanvas','before');

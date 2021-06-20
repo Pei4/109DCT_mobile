@@ -96,3 +96,35 @@ body{
 #mask{
     background: #000;
 }
+.shine0{
+    animation: shine0Anim 1s ease-out 0s 1;
+    -webkit-animation: shine0Anim 1s ease-out 0s 1;
+    -moz-animation: shine0Anim 1s ease-out 0s 1;
+}
+@keyframes shine0Anim {
+    0%{opacity: 0}
+    100%{
+        opacity: 1;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+    }
+}
+@-webkit-keyframes shine0Anim {
+    0%{opacity: 0}
+    100%{
+        opacity: 1;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+    }
+}
+@-moz-keyframes shine0Anim {
+    0%{opacity: 0}
+    100%{
+        opacity: 1;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+    }
+}

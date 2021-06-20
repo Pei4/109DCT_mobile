@@ -18,7 +18,7 @@ div, video, canvas {
 #view{
     position: absolute;
     display: inline-block;
-    top: 10vh;
+    top: 8vh;
     width: 100vw;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
