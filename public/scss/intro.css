@@ -17,10 +17,10 @@ a{
     top: 50vh;
     z-index: 5;
 }
-#startBtn{
+.opt{
     bottom: 50vh;
     left: 50vw;
-    width: 312px !important;
+    width: 22vw;
     transform-origin: center;
     transform: translate(-50%,250%);
     background: #FFE352;
