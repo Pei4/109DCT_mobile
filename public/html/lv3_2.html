@@ -91,13 +91,13 @@
     }
     function goDownload(){
         html2canvas(document.getElementById('capture')).then(function(canvas) {
+            a.setAttribute('href',imgURL);
+            a.setAttribute('download','our_picture');
             if(iosList.includes(navigator.platform)==true|| (navigator.userAgent.includes("Mac") && "ontouchend" in document)==true){
                 let newImg = new Image();
                 newImg.crossOrigin = "Anonymous";
                 newImg.src = imgURL;
                 document.body.appendChild(newImg);
-                a.setAttribute('href',imgURL);
-                a.setAttribute('download','our_picture');
                 a.click();
                 document.body.removeChild(newImg);
                 //imgURL = imgURL.replace("image/png", "image/octet-stream");
@@ -106,9 +106,7 @@
                 //downloadImg.src = imgURL;
             }
             else {
-                a.setAttribute('download','our_picture');
-                a.setAttribute('href',imgURL);
-                document.getElementById('downA').click();
+                a.click();
             }
         });
     }
