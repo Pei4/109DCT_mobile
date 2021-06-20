@@ -57,26 +57,34 @@ function openLetter(){
     hideSth('notice');
     setTimeout(()=>{
         callPlayer();
-    },10);
+    },900);
     setTimeout(()=>{
         addClass('title','shine2');
         addClass('letter','shine2');
-        addClass('word','show');
-        addClass('photo','show');
-        addClass('endBtn','showBtn');
-        addClass('downloadBtn','showBtn');
-        showSth('word');
-        showSth('photo');
-        showSth('endBtn');
-        showSth('downloadBtn');
+        setTimeout(()=>{
+            hideSth('title');
+            hideSth('letter');
+            addClass('word','show');
+            addClass('photo','show');
+            addClass('talk','show');
+            addClass('endBtn','showBtn');
+            addClass('downloadBtn','showBtn');
+            showSth('word');
+            showSth('photo');
+            showSth('talk');
+            showSth('endBtn');
+            showSth('downloadBtn');
+            setTimeout(()=>{
+                addClass('photo','jump');
+                removeClass('show');
+            },1000);
+        },500)
     },1000);
-    setTimeout(()=>{
-        hideSth('title');
-        hideSth('letter');
-    },2000);
 }
 function browse(){
     showSth('photoMask');
+    removeClass('photo');
+    hideSth('talk');
     if(done == 1){
         hideSth('universeBtn');
     }

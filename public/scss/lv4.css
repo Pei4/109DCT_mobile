@@ -151,10 +151,11 @@ body{
     padding: 65px;
     transform: translate(-50%,0);
     width: 600px;
-    height: 45vh;
+    height: 40vh;
     background: #FFFFFF;
     border-radius: 10px;
     filter: drop-shadow(16px 28px 40px rgba(57, 51, 23, 0.1));
+    z-index: 1;
 }
 #word a{
     display: inline-block;
@@ -168,16 +169,46 @@ body{
     letter-spacing: -0.41px;
     color: #1E1E1E;
 }
-#photo{
-    display: inline-block;
+#talk{
+    position: relative;
+    left: 50vw;
+    bottom: -20vh;
+    transform: translate(-130%,60%);
+    z-index: 2;
+}
+#photo {
     position: fixed;
     left: 50vw;
     bottom: -20vh;
-    transform: translate(-30%,0);
+    transform: translate(-30%, 0);
     width: 20vh;
     height: auto;
     max-height: 100vh;
     filter: drop-shadow(16px 28px 40px rgba(57, 51, 23, 0.36));
+    z-index: 1;
+}
+.jump{
+    animation: jumpAnim 1s ease-out 1s infinite;
+    -webkit-animation: jumpAnim 1s ease-out 1s infinite;
+    -moz-animation: jumpAnim 1s ease-out 1s infinite;
+}
+@keyframes jumpAnim{
+    0%{transform: translate(-30%,0);}
+    25%{transform: translate(-30%,-10%);}
+    50%{transform: translate(-30%,0);}
+    100%{transform: translate(-30%,0);}
+}
+@-webkit-keyframes jumpAnim{
+    0%{transform: translate(-30%,0);}
+    25%{transform: translate(-30%,-10%);}
+    50%{transform: translate(-30%,0);}
+    100%{transform: translate(-30%,0);}
+}
+@-moz-keyframes jumpAnim{
+    0%{transform: translate(-30%,0);}
+    25%{transform: translate(-30%,-10%);}
+    50%{transform: translate(-30%,0);}
+    100%{transform: translate(-30%,0);}
 }
 #photoMask{
     position: absolute;
