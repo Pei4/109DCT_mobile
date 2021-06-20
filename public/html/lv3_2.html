@@ -54,22 +54,22 @@
         function handleSuccess(stream) {
             window.stream = stream;
             vid.srcObject = stream;
+            document.getElementById('flipBtn').addEventListener('click',(constraints)=>{
+                if (face == 1){
+                    face --;
+                    stream.facingMode = 'environment';
+                    console.log(stream);
+                }
+                else {
+                    face ++;
+                    stream.facingMode = 'user';
+                    console.log(stream);
+                }
+            })
         }
         function handleError(error) {
             console.log('getUserMedia error: ', error);
         }
-        document.getElementById('flipBtn').addEventListener('click',(constraints)=>{
-            if (face == 1){
-                face --;
-                constraints.facingMode = 'environment';
-                console.log(constraints);
-            }
-            else {
-                face ++;
-                constraints.facingMode = 'user';
-                console.log(constraints);
-            }
-        })
         navigator.mediaDevices.getUserMedia(constraints)
             .then(handleSuccess)
             .catch(handleError)
