@@ -36,6 +36,7 @@
     let context = canvas.getContext('2d');
     let capture = document.getElementById('capture');
     let downloadImg = document.getElementById('prepare');
+    let a = document.getElementById('downA');
     let w, h, ratio;
     let imgURL;
     let face = 1;
@@ -91,15 +92,22 @@
     function goDownload(){
         html2canvas(document.getElementById('capture')).then(function(canvas) {
             if(iosList.includes(navigator.platform)==true|| (navigator.userAgent.includes("Mac") && "ontouchend" in document)==true){
-                window.open().document.write('<img src="'+imgURL+'"/>');
+                let newImg = new Image();
+                newImg.crossOrigin = "Anonymous";
+                newImg.src = imgURL;
+                document.body.appendChild(newImg);
+                a.setAttribute('href',imgURL);
+                a.setAttribute('download','our_picture');
+                a.click();
+                document.body.removeChild(newImg);
                 //imgURL = imgURL.replace("image/png", "image/octet-stream");
                 //window.open(imgURL);
                 //downloadImg.crossOrigin = "Anonymous";
                 //downloadImg.src = imgURL;
             }
             else {
-                $('#downA').attr('download','our_picture');
-                $('#downA').attr('href',imgURL);
+                a.setAttribute('download','our_picture');
+                a.setAttribute('href',imgURL);
                 document.getElementById('downA').click();
             }
         });

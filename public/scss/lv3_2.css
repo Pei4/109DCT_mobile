@@ -51,7 +51,7 @@ div, video, canvas {
     display: inline-block;
     position: absolute;
     left: 100vw;
-    transform: translate(-150%,0);
+    transform: translate(-150%,10%);
 }
 #shotBtn{
     display: inline-block;
