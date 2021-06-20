@@ -64,7 +64,7 @@
 
     function runVid(){
         document.getElementById('planet0').src = `../material/p_A12.png`; //${resStr}
-        constraints = {video: {facingMode: 'environment'}};
+        constraints = {video: {facingMode: {exact:'user'}}};
         //存取相機
         function handleSuccess(stream) {
             window.stream = stream;
@@ -74,11 +74,11 @@
                 const cons = track.getConstraints();
                 if (face == 1){
                     face --;
-                    cons.facingMode = 'environment';
+                    cons.facingMode = {exact:'environment'};
                 }
                 else {
                     face ++;
-                    cons.facingMode = 'user';
+                    cons.facingMode = {exact:'user'};
                 }
                 track.applyConstraints(cons);
                 alert(cons);
