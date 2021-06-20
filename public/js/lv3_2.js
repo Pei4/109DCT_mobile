@@ -1,13 +1,15 @@
-window.googleDocCallback = function () { return true; };
 //初始設定
-let id = parseInt(localStorage.getItem('id'));
 let iosList = ['iPad Simulator', 'iPhone Simulator', 'iPod Simulator', 'iPad', 'iPhone', 'iPod'];
 let resStr;
 let isDown = false;
 
+window.addEventListener('message',function (e){
+    resStr = e.data;
+    document.getElementById('planet0').src = `../material/p_${resStr}.png`;
+},false);
+
 function down() {
     isDown = true;
-    console.log('down');
 }
 
 function over(event) {
@@ -20,7 +22,6 @@ function over(event) {
 
 function up(){
     isDown = false;
-    console.log('up');
 }
 function back(){
     hideSth('photoMask');

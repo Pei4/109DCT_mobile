@@ -52,7 +52,7 @@ div, video, canvas {
     display: inline-block;
     position: absolute;
     left: 100vw;
-    transform: translate(-150%,10%);
+    transform: translate(-120%,10%);
 }
 #shotBtn{
     display: inline-block;
@@ -86,7 +86,7 @@ a{
     max-width: 100%;
     font-family: Noto Sans CJK TC;
     top: 3vh;
-    padding-left: 10vw;
+    padding-left: 15vw;
     font-style: normal;
     font-weight: 300;
     font-size: 50px;
@@ -102,15 +102,11 @@ a{
     background-color: black;
     z-index: 4;
 }
-#photoMask a{
-    padding-left: 15vw;
-    text-align: center;
-}
 #back{
     position: absolute;
     top: 50vh;
-    left: 3vh;
-    transform: translate(0,-750%);
+    left: 5vh;
+    transform: translate(0,-700%);
 }
 #photo2{
     position: fixed;

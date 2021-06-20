@@ -44,10 +44,14 @@ function callPlayer(){
 function decideArray(response){
     resStr = response.toString();
     resArray = resStr.split('');
+    //window.frames[0].postMessage(resStr,'*');
     document.getElementById('photo').src = `../material/${resStr}.png`;
     document.getElementById('photo2').src = `../material/${resStr}.png`;
     document.getElementById('downloadBtn').href = `../material/${resStr}.png`;
-    preload(`../material/${response.toString()}.png`);
+    preload(
+        `../material/${resStr}.png`,
+        `../material/p_${resStr}.png`
+    );
     document.getElementById('a1').innerHTML = `跟你相處的時間雖然不長，但我能感覺到你是個${letterList[resArray[0].charCodeAt(0)-65]}的好人，而且你很懂得${letterList[parseInt(resArray[1])+2]}。`;
     document.getElementById('a2').innerHTML = `即使未來遭遇困難，你也一定能${letterList[parseInt(resArray[2])+5]}地前進。`;
 }
@@ -58,29 +62,31 @@ function openLetter(){
     hideSth('notice');
     setTimeout(()=>{
         callPlayer();
-    },900);
+    },1400);
     setTimeout(()=>{
         addClass('title','shine2');
         addClass('letter','shine2');
         setTimeout(()=>{
             hideSth('title');
             hideSth('letter');
-            addClass('word','show');
-            addClass('photo','show');
-            addClass('talk','show');
-            addClass('endBtn','showBtn');
-            addClass('downloadBtn','showBtn');
-            showSth('word');
-            showSth('photo');
-            showSth('talk');
-            showSth('endBtn');
-            showSth('downloadBtn');
-            setTimeout(()=>{
-                addClass('photo','jump');
-                removeClass('talk');
-            },1000);
-        },500)
-    },1000);
+        },800);
+    },500);
+    setTimeout(()=>{
+        addClass('word','show');
+        addClass('photo','show');
+        addClass('talk','show');
+        addClass('endBtn','showBtn');
+        addClass('downloadBtn','showBtn');
+        showSth('word');
+        showSth('photo');
+        showSth('talk');
+        showSth('endBtn');
+        showSth('downloadBtn');
+        setTimeout(()=>{
+            addClass('photo','jump');
+            removeClass('talk');
+        },1000);
+    },1400)
 }
 function browse(){
     showSth('photoMask');
@@ -129,10 +135,13 @@ function goDownload(){
 }
 function goEgg(){
     open = 1;
-    showSth('egg');
-    document.getElementById('egg').setAttribute('src','lv3_2.html');
+    let eggIframe = document.getElementById('egg');
+    eggIframe.setAttribute('src','lv3_2.html');
+    setTimeout(()=>{
+        eggIframe.contentWindow.postMessage(resStr, '*');
+        showSth('egg');
+    },1000);
     window.addEventListener('message', function(e) {
-        console.log(e.data);
         if(e.data == 'open'){
             showSth('back');
         }
