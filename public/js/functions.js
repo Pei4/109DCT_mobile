@@ -10,12 +10,6 @@ function checkDevice(){
     }
 }
 
-document.body.addEventListener('touchmove', function (event) {
-    event.preventDefault();
-}, {
-    passive: false
-});
-
 let planetDialogArray =[
     '我肚子有點餓.....', //0-4
     '謝謝你找東西給我吃！', //1-8

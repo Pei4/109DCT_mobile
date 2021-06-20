@@ -4,17 +4,12 @@ let id = parseInt(localStorage.getItem('id'));
 let iosList = ['iPad Simulator', 'iPhone Simulator', 'iPod Simulator', 'iPad', 'iPhone', 'iPod'];
 let resStr;
 let isDown = false;
+let constraints;
 
 setTimeout(()=>{
     runVid();
     callPlayer();
 },1);
-
-document.querySelectorAll('#view,#shotCanvas,#prepare').addEventListener('touchmove', function (event) {
-    event.preventDefault();
-}, {
-    passive: false
-});
 
 function callPlayer(){
     $.ajax({
@@ -47,6 +42,9 @@ function over(event) {
 function up(){
     isDown = false;
     console.log('up');
+}
+function back(){
+    hideSth('photoMask');
 }
 /*const move = document.querySelector('#planet0');
 move.addEventListener('mousedown', down);

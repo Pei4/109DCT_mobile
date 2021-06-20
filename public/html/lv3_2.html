@@ -27,6 +27,11 @@
     <button id="goDownloadBtn" class="opt" onclick="goDownload()" style="display: none">下載</button>
     <a id="downA" href="#" style="display: none"></a>
 </div>
+<div id="photoMask" style="display: none">
+    <img id="back" src="../material/back.png" onclick="back()">
+    <img id="photo2">
+    <a>iOS 請長按圖片後儲存</a>
+</div>
 <div id="screen"><br><br><br><br><br><br>請使用行動裝置，以獲取最佳遊戲體驗 :)</div>
 </body>
 </html>
@@ -43,7 +48,7 @@
 
     function runVid(){
         document.getElementById('planet0').src = `../material/p_A12.png`; //${resStr}
-        let constraints = {video: {facingMode: { exact: "user" }}};
+        constraints = {video: {facingMode: { exact: "user" }}};
         //存取相機
         function handleSuccess(stream) {
             window.stream = stream;
@@ -54,11 +59,13 @@
         }
         document.getElementById('flipBtn').addEventListener('click',(constraints)=>{
             if (face == 1){
-                console.log()
+                console.log('toEnv');
+                face --;
                 constraints = {video:{facingMode: {exact: "environment"}}};
             }
             else {
-                face = 1;
+                console.log('toUser');
+                face ++;
                 constraints = {video:{facingMode: {exact: "user"}}};
             }
         })
@@ -91,21 +98,13 @@
     }
     function goDownload(){
         html2canvas(document.getElementById('capture')).then(function(canvas) {
-            a.setAttribute('href',imgURL);
-            a.setAttribute('download','our_picture');
             if(iosList.includes(navigator.platform)==true|| (navigator.userAgent.includes("Mac") && "ontouchend" in document)==true){
-                let newImg = new Image();
-                newImg.crossOrigin = "Anonymous";
-                newImg.src = imgURL;
-                document.body.appendChild(newImg);
-                a.click();
-                document.body.removeChild(newImg);
-                //imgURL = imgURL.replace("image/png", "image/octet-stream");
-                //window.open(imgURL);
-                //downloadImg.crossOrigin = "Anonymous";
-                //downloadImg.src = imgURL;
+                showSth('photoMask');
+                document.getElementById('photo2').src = imgURL;
             }
             else {
+                a.setAttribute('href',imgURL);
+                a.setAttribute('download','our_picture');
                 a.click();
             }
         });
