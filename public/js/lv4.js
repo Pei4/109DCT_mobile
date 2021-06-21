@@ -166,4 +166,10 @@ function goUniverse(){
     setTimeout(()=>{
         showSth('universe');
     },1000);
+    window.addEventListener('message',function (e){
+        if(e.data == 'toQA'){
+            hideSth('universe');
+            location.href= "https://www.surveycake.com/s/OylYN";
+        }
+    })
 }
