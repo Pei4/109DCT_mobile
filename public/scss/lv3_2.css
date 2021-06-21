@@ -59,13 +59,13 @@ div, video, canvas {
     position: fixed;
     left: 50vw;
     transform: translate(-50%,0);
-    bottom: 5vh;
+    bottom: 12vh;
     z-index: 3;
 }
 .opt{
     position: fixed;
     width: 22vw;
-    bottom: 5vh;
+    bottom: 12vh;
     z-index: 3;
 }
 #revBtn{
