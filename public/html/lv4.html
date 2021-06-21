@@ -11,6 +11,9 @@
     <script src="../js/lv4.js" crossorigin="anonymous"></script>
     <script src="../js/functions.js" crossorigin="anonymous"></script>
 </head>
+<audio loop autoplay id="audio">
+    <source src="../material/star.mp3" type="audio/mp3">
+</audio>
 <a id="title">小星球寄來了一封信！</a>
 <img id="notice" src="../material/notice.png">
 <div id="letterDiv">
@@ -18,13 +21,13 @@
         <a>好久不見了，最近時常會想起你。</a>
         <a id="a1">跟你相處的時間雖然不長，但我能感覺到：你是個樸實自然的好人，而且你很懂得把善意回饋給世界。</a>
         <a id="a2">即使未來遭遇困難，你也一定能勇敢且積極地前進。</a>
-        <a>雖然你看不到我，但我會一直在這片星空下陪伴著你的。</a>
+        <a>當你想起我時，抬頭望向星空，我都會在這裡陪伴著你。</a>
     </div>
     <img id="photo" onclick="browse()" style="display: none">
     <img id="talk" src="../material/talk.png" style="display: none">
     <img id="letter" onclick="openLetter()" src="../material/letter_before.png">
 </div>
-<button id="endBtn" onclick="reUrl('lv0')" style="display: none">不下載，前往宇宙</button>
+<button id="endBtn" onclick="goUniverse()" style="display: none">不下載，前往宇宙</button>
 <a id="downloadBtn" class="opt" download="my_planet" style="display: none">下載</a>
 <div id="photoMask" style="display: none">
     <img id="back" src="../material/back.png" onclick="back()">
@@ -34,9 +37,10 @@
     <a id="iosNotice" style="display: none">iOS 請長按圖片後儲存</a>
 </div>
 <div id="doneDownload" style="display: none">✓ 照片已下載</div>
-<button id="universeBtn" class="opt" onclick="reUrl('lv0')" style="display: none">欣賞浩瀚的宇宙</button>
+<button id="universeBtn" class="opt" onclick="goUniverse()" style="display: none">欣賞浩瀚的宇宙</button>
 <div id="mask2" class="shine2"></div>
 <iframe id="egg" src="" style="display: none"></iframe>
+<iframe id="universe" src="" style="display:none"></iframe>
 <div id="screen"><br><br><br><br><br><br>請使用行動裝置，以獲取最佳遊戲體驗 :)</div>
 </body>
 </html>

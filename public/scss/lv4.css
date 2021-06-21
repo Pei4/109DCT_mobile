@@ -310,9 +310,10 @@ body{
     background: #FFE352;
     border: 4px solid #F3D63B;
 }
-#egg{
+iframe{
     position: absolute;
     width: 100%;
     height: 100%;
     border: none;
+    background-color: #010318;
 }

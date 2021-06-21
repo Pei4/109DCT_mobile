@@ -11,13 +11,15 @@ let resStr;
 let resArray;
 let done = 0;
 let open = 0;
+let startT = localStorage.getItem('audio');
 
 window.onload = function (){
-    preload('../material/letter_after.png')
+    preload('../material/letter_after.png');
 }
 
 setTimeout(()=>{
     hideSth('mask2');
+    document.getElementById('audio').currentTime = startT;
     document.getElementById('downloadBtn').addEventListener('mousedown',()=>{
         if(iosList.includes(navigator.platform)==true|| (navigator.userAgent.includes("Mac") && "ontouchend" in document)==true){
             goiOS();
@@ -57,6 +59,7 @@ function decideArray(response){
 }
 
 function openLetter(){
+    playAud();
     changeSource('letter','../material/letter_after.png');
     document.getElementById('letter').style.transform = 'translate(0,-5%)';
     hideSth('notice');
@@ -112,6 +115,10 @@ function back(){
     else if(open == 1){
         hideSth('egg');
         open = 0;
+        if(document.getElementById('egg').contentWindow.stream){
+            document.getElementById('egg').contentWindow.stream.getTracks().forEach(track => {
+                track.stop()});
+        };
     }
 }
 function goiOS(){
@@ -149,4 +156,13 @@ function goEgg(){
             hideSth('back');
         }
     }, false);
+}
+
+function goUniverse(){
+    hideSth('back');
+    let uniIframe = document.getElementById('universe');
+    uniIframe.setAttribute('src','lv0.html');
+    setTimeout(()=>{
+        showSth('universe');
+    },1000);
 }
