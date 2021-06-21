@@ -95,8 +95,6 @@ function browse(){
     showSth('photoMask');
     showSth('eggNotice');
     showSth('eggBtn');
-    removeClass('photo');
-    document.getElementById('talk').style.visibility = 'hidden';
     if(done == 1){
         hideSth('universeBtn');
     }
