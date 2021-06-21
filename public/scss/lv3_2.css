@@ -103,10 +103,10 @@ a{
     z-index: 4;
 }
 #back{
-    position: absolute;
-    top: 50vh;
-    left: 5vh;
-    transform: translate(0,-700%);
+    position: relative;
+    top: 3vh;
+    left: 5vw;
+    z-index: 3;
 }
 #photo2{
     position: fixed;
