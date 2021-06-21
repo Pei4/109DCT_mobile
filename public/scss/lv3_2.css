@@ -50,20 +50,21 @@ div, video, canvas {
 }
 #flipBtn{
     display: inline-block;
-    position: absolute;
+    position: relative;
+    top: 3vh;
     left: 100vw;
     transform: translate(-120%,10%);
 }
 #shotBtn{
     display: inline-block;
-    position: fixed;
+    position:absolute;
     left: 50vw;
     transform: translate(-50%,0);
     bottom: 5vh;
     z-index: 3;
 }
 .opt{
-    position: fixed;
+    position: absolute;
     width: 22vw;
     bottom: 5vh;
     z-index: 3;
