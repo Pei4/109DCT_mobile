@@ -15,8 +15,11 @@ let startT = localStorage.getItem('audio');
 
 window.onload = function (){
     preload('../material/letter_after.png');
-    document.getElementById('audio').currentTime = startT;
 }
+
+setTimeout(()=>{
+    document.getElementById('audio').currentTime = startT;
+},1);
 
 setTimeout(()=>{
     hideSth('mask2');
