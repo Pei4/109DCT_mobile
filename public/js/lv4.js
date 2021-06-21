@@ -15,11 +15,11 @@ let startT = localStorage.getItem('audio');
 
 window.onload = function (){
     preload('../material/letter_after.png');
+    document.getElementById('audio').currentTime = startT;
 }
 
 setTimeout(()=>{
     hideSth('mask2');
-    document.getElementById('audio').currentTime = startT;
     document.getElementById('downloadBtn').addEventListener('mousedown',()=>{
         if(iosList.includes(navigator.platform)==true|| (navigator.userAgent.includes("Mac") && "ontouchend" in document)==true){
             goiOS();
