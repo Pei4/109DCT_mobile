@@ -179,8 +179,8 @@ body{
 #photo {
     position: fixed;
     left: 50vw;
-    top: 25vh;
-    transform: translate(-30%, 0);
+    bottom: -15vh;
+    transform: translate(-30%, 50%);
     width: 20vh;
     height: auto;
     max-height: 100vh;
