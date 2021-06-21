@@ -5,7 +5,7 @@ setTimeout(()=>{
 },1);
 
 function checkDevice(){
-    if(screen.width > 400 || screen.height > 850){
+    if(screen.width > 500 || screen.height > 1000){
         showSth('screen');
     }
 }
