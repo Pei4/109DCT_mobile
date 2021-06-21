@@ -193,22 +193,22 @@ body{
     -moz-animation: jumpAnim 1s linear 1s infinite;
 }
 @keyframes jumpAnim{
-    0%{transform: translate(-30%,50);}
+    0%{transform: translate(-30%,50%);}
     25%{transform: translate(-30%,40%);}
-    50%{transform: translate(-30%,50);}
-    100%{transform: translate(-30%,50);}
+    50%{transform: translate(-30%,50%);}
+    100%{transform: translate(-30%,50%);}
 }
 @-webkit-keyframes jumpAnim{
-    0%{transform: translate(-30%,50);}
+    0%{transform: translate(-30%,50%);}
     25%{transform: translate(-30%,40%);}
-    50%{transform: translate(-30%,50);}
-    100%{transform: translate(-30%,50);}
+    50%{transform: translate(-30%,50%);}
+    100%{transform: translate(-30%,50%);}
 }
 @-moz-keyframes jumpAnim{
-    0%{transform: translate(-30%,50);}
+    0%{transform: translate(-30%,50%);}
     25%{transform: translate(-30%,40%);}
-    50%{transform: translate(-30%,50);}
-    100%{transform: translate(-30%,50);}
+    50%{transform: translate(-30%,50%);}
+    100%{transform: translate(-30%,50%);}
 }
 #photoMask{
     position: absolute;
