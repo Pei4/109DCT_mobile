@@ -242,7 +242,7 @@ body{
     border: 4px solid #F3D63B;
 }
 #back{
-    position: relative;
+    position: absolute;
     top: 3vh;
     left: 5vw;
     z-index: 3;
