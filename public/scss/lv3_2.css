@@ -102,6 +102,9 @@ a{
     background-color: black;
     z-index: 4;
 }
+#photoMask a{
+    top: 1.5vh;
+}
 #back{
     position: relative;
     top: 3vh;
@@ -111,7 +114,7 @@ a{
 #photo2{
     position: fixed;
     display: inline-block;
-    top: 8vh;
+    top: 8.5vh;
     left: 50vw;
     transform: translate(-50%,0);
     width: 100vw;
