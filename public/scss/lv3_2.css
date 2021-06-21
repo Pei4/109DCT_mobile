@@ -8,7 +8,7 @@ div, video, canvas {
 #capture{
     position: absolute;
     display: table;
-    top: 8vh;
+    top: 8.5vh;
     background: black;
 }
 #prepare{
@@ -19,7 +19,7 @@ div, video, canvas {
 #view{
     position: absolute;
     display: inline-block;
-    top: 8vh;
+    top: 8.5vh;
     width: 100vw;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);

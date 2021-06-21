@@ -13,7 +13,7 @@
     <script src="../js/html2canvas.js"></script>
 </head>
 <body>
-<a>拖曳小星球於喜歡的合照位置</a>
+<a id="dragNotice">拖曳小星球於喜歡的合照位置</a>
 <img id="flipBtn" src="../material/flip.png">
 <div id="takePhoto"> <!--拍照有關的功能-->
     <video id="view" autoplay loop playsinline></video>
@@ -98,6 +98,8 @@
         addClass('prepare','after');
         hideSth('view');
         hideSth('shotBtn');
+        hideSth('dragNotice');
+        hideSth('flipBtn');
         showSth('goDownloadBtn');
         showSth('revBtn');
         context.fillRect(0, 0, w, h);
@@ -124,6 +126,8 @@
         addClass('prepare','before');
         showSth('view');
         showSth('shotBtn');
+        showSth('dragNotice');
+        showSth('flipBtn');
         hideSth('revBtn');
         hideSth('goDownloadBtn');
     }
